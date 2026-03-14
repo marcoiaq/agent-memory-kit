@@ -33,9 +33,10 @@ export async function GET() {
     })
 
     return NextResponse.redirect(session.url!)
-  } catch (error) {
-    console.error('Stripe error:', error)
-    return NextResponse.json({ error: 'Failed to create checkout session' }, { status: 500 })
+  } catch (error: unknown) {
+    const msg = error instanceof Error ? error.message : String(error)
+    console.error('Stripe error:', msg)
+    return NextResponse.json({ error: msg }, { status: 500 })
   }
 }
 
