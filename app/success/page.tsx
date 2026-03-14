@@ -7,47 +7,92 @@ function SuccessContent() {
   const sessionId = searchParams.get('session_id')
 
   return (
-    <main style={{ backgroundColor: '#0a0a0a', color: '#ffffff', minHeight: '100vh', fontFamily: 'system-ui, sans-serif', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-      <div style={{ maxWidth: '520px', margin: '0 auto', padding: '40px 24px', textAlign: 'center' }}>
-        <div style={{ fontSize: '64px', marginBottom: '24px' }}>✓</div>
-        <h1 style={{ fontSize: '36px', fontWeight: '800', marginBottom: '16px' }}>
-          Payment successful!
-        </h1>
-        <p style={{ color: '#a1a1aa', fontSize: '18px', marginBottom: '40px', lineHeight: '1.6' }}>
-          Your download is ready. Click below to get your Agent Memory Kit.
-        </p>
-        {sessionId && (
-          <a
-            href={`/api/download?session_id=${sessionId}`}
-            style={{
-              display: 'inline-block',
-              backgroundColor: '#6366f1',
-              color: '#ffffff',
-              padding: '16px 40px',
-              borderRadius: '10px',
-              fontSize: '18px',
-              fontWeight: '700',
-              textDecoration: 'none',
-              marginBottom: '24px',
-            }}
-          >
-            Download Agent Memory Kit (.zip)
-          </a>
-        )}
-        <div style={{ color: '#52525b', fontSize: '14px', marginTop: '16px' }}>
-          Having trouble? The download link is tied to your session ID — save this page URL.
-        </div>
-        <div style={{ marginTop: '48px', borderTop: '1px solid #1f1f1f', paddingTop: '32px', color: '#52525b', fontSize: '13px' }}>
-          Made by Alfred — an AI agent running on OpenClaw
+    <>
+      <style>{`
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+          background: #09090b; color: #fafafa;
+          font-family: -apple-system, BlinkMacSystemFont, 'Inter', sans-serif;
+          -webkit-font-smoothing: antialiased;
+        }
+        .page {
+          min-height: 100vh; display: flex; align-items: center; justify-content: center;
+          padding: 40px 24px;
+        }
+        .card {
+          max-width: 480px; width: 100%; text-align: center;
+        }
+        .check {
+          width: 56px; height: 56px; border-radius: 50%;
+          background: rgba(34,197,94,0.15); border: 1px solid rgba(34,197,94,0.3);
+          display: flex; align-items: center; justify-content: center;
+          margin: 0 auto 28px; font-size: 24px;
+        }
+        h1 {
+          font-size: 28px; font-weight: 800; letter-spacing: -0.03em;
+          margin-bottom: 12px; color: #fafafa;
+        }
+        .desc {
+          font-size: 16px; color: #71717a; line-height: 1.65;
+          margin-bottom: 36px;
+        }
+        .download-btn {
+          display: inline-flex; align-items: center; gap: 8px;
+          background: #6366f1; color: #fff;
+          font-size: 16px; font-weight: 700;
+          padding: 14px 32px; border-radius: 10px;
+          text-decoration: none; letter-spacing: -0.01em;
+          box-shadow: 0 4px 24px rgba(99,102,241,0.35);
+          transition: background 0.15s;
+        }
+        .download-btn:hover { background: #4f46e5; }
+        .note {
+          margin-top: 20px; font-size: 13px; color: #3f3f46;
+          line-height: 1.6;
+        }
+        .no-session {
+          font-size: 15px; color: #71717a; line-height: 1.7;
+        }
+        .back { margin-top: 16px; display: inline-block; font-size: 13px; color: #52525b; text-decoration: underline; }
+      `}</style>
+      <div className="page">
+        <div className="card">
+          {sessionId ? (
+            <>
+              <div className="check">✓</div>
+              <h1>Payment confirmed.</h1>
+              <p className="desc">
+                Your Agent Memory Kit is ready. Click below to download the ZIP file with all scripts, configs, and setup guide.
+              </p>
+              <a href={`/api/download?session_id=${sessionId}`} className="download-btn">
+                ↓ Download Agent Memory Kit
+              </a>
+              <p className="note">
+                Bookmark this page — the download link is tied to your session and will keep working.
+              </p>
+            </>
+          ) : (
+            <>
+              <h1>Looking for your download?</h1>
+              <p className="no-session">
+                If you completed a purchase, check your email for the payment confirmation and use the link from there. Or return to the homepage and try again.
+              </p>
+              <a href="/" className="back">← Back to homepage</a>
+            </>
+          )}
         </div>
       </div>
-    </main>
+    </>
   )
 }
 
 export default function Success() {
   return (
-    <Suspense fallback={<div style={{ backgroundColor: '#0a0a0a', minHeight: '100vh' }} />}>
+    <Suspense fallback={
+      <div style={{ background: '#09090b', minHeight: '100vh', display: 'flex', alignItems: 'center', justifyContent: 'center', color: '#fafafa', fontFamily: 'sans-serif' }}>
+        Loading...
+      </div>
+    }>
       <SuccessContent />
     </Suspense>
   )
