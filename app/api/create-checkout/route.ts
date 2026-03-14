@@ -9,26 +9,39 @@ export async function GET() {
 
     const auth = 'Basic ' + Buffer.from(stripeKey + ':').toString('base64')
 
+    // Build body as FormData-style — pass {CHECKOUT_SESSION_ID} raw (not encoded)
+    const fields: Record<string, string> = {
+      'payment_method_types[0]': 'card',
+      'line_items[0][price_data][currency]': 'usd',
+      'line_items[0][price_data][product_data][name]': 'Agent Memory Kit',
+      'line_items[0][price_data][product_data][description]': 'Persistent memory for your OpenClaw AI agent. Scripts, configs & setup guide.',
+      'line_items[0][price_data][unit_amount]': '2900',
+      'line_items[0][quantity]': '1',
+      'mode': 'payment',
+      'success_url': `${baseUrl}/success?session_id={CHECKOUT_SESSION_ID}`,
+      'cancel_url': `${baseUrl}/`,
+    }
+
+    // Encode manually: encode key and value but leave {} unencoded in success_url
+    const body = Object.entries(fields)
+      .map(([k, v]) => {
+        const encodedKey = encodeURIComponent(k)
+        // Don't encode curly braces in the value (Stripe template syntax)
+        const encodedVal = encodeURIComponent(v).replace(/%7B/g, '{').replace(/%7D/g, '}')
+        return `${encodedKey}=${encodedVal}`
+      })
+      .join('&')
+
     const resp = await fetch('https://api.stripe.com/v1/checkout/sessions', {
       method: 'POST',
       headers: {
         'Authorization': auth,
         'Content-Type': 'application/x-www-form-urlencoded',
       },
-      body: [
-        'payment_method_types[0]=card',
-        'line_items[0][price_data][currency]=usd',
-        'line_items[0][price_data][product_data][name]=Agent+Memory+Kit',
-        'line_items[0][price_data][product_data][description]=Persistent+memory+system+for+your+OpenClaw+AI+agent',
-        'line_items[0][price_data][unit_amount]=2900',
-        'line_items[0][quantity]=1',
-        'mode=payment',
-        `success_url=${encodeURIComponent(baseUrl + '/success')}`,
-        `cancel_url=${encodeURIComponent(baseUrl + '/')}`,
-      ].join('&'),
+      body,
     })
 
-    const data = await resp.json() as { url?: string; id?: string; error?: { message: string } }
+    const data = await resp.json() as { url?: string; error?: { message: string } }
 
     if (!resp.ok || !data.url) {
       return NextResponse.json({ error: data.error?.message || JSON.stringify(data) }, { status: 500 })
