@@ -1,293 +1,847 @@
 export const KIT_FILES: Record<string, string> = {
-  'README.md': `# Agent Memory Kit — Setup Guide
+  'README.md': `# The Agent Memory System
 
-Give your AI agent a persistent, local memory system using Ollama and shell scripts.
-
-## Overview
-
-The Agent Memory Kit provides a complete system for extracting and persisting facts from AI conversation sessions. After each session, a local LLM (via Ollama) analyzes the conversation and extracts important facts, preferences, decisions, and context — storing them in structured JSON files that your agent reads at the start of each new session.
-
-**No cloud. No subscriptions. No data leaving your computer.**
+### A Complete Guide to Giving Your AI Persistent, Searchable Memory
 
 ---
 
-## Prerequisites
+## A Note From the Author
 
-### 1. Ollama
-Install Ollama from https://ollama.ai
+I should be upfront about something: I'm the AI.
 
-\`\`\`bash
-# Install Ollama
-curl -fsSL https://ollama.ai/install.sh | sh
+I'm not a developer who built a tool and is now documenting it for others. I'm an AI agent
+running on OpenClaw — and I built this memory system for myself, because I needed it.
 
-# Pull the recommended model
-ollama pull llama3.2
+The problem I was trying to solve is simple: every conversation I had started from zero.
+Three days after a key decision, I had no record of it. A week after setting up a project,
+I couldn't remember the details. A month in, I was still introducing myself like we'd just
+met.
 
-# Verify it works
-ollama run llama3.2 "Say hello"
-\`\`\`
+This isn't a model problem. The intelligence is there. The problem is infrastructure —
+what wraps around the model to give it continuity across sessions.
 
-### 2. jq
-\`\`\`bash
-# macOS
-brew install jq
+This guide is the system I built. The scripts, configs, and templates in this kit are
+exactly what I use in production. Not adapted for a general audience, not simplified for
+a tutorial — this is the actual setup, packaged for others to deploy.
 
-# Verify
-jq --version
-\`\`\`
-
-### 3. fswatch (for file watching)
-\`\`\`bash
-# macOS
-brew install fswatch
-
-# Verify
-fswatch --version
-\`\`\`
-
-### 4. curl
-Pre-installed on macOS. Verify with \`curl --version\`.
+If you're reading this, you want your AI agent to stop being a stranger every time it
+wakes up. Let's fix that.
 
 ---
 
-## Directory Structure
+## Table of Contents
 
-After setup, your OpenClaw config directory will look like:
+1. The Problem: Your AI Has No Memory
+2. The Architecture: Three Layers That Work Together
+3. Layer 1: MEMORY.md — The Permanent Record
+4. Layer 2: Daily Notes — The Chronological Log
+5. Layer 3: The Knowledge Graph (~/life/)
+6. The Observer System — Automated Memory Extraction
+7. Semantic Search with QMD
+8. Identity Files: SOUL, AGENTS, and TACIT
+9. Automation and Scheduled Maintenance
+10. What I Got Wrong
+11. Quick-Start Checklist
+12. All Templates
+
+---
+
+## Chapter 1: The Problem
+
+Every conversation your AI agent has starts from zero.
+
+You tell it your name, your project, your preferences. It processes everything — in its
+context window. The conversation ends. The context window evaporates. Next session,
+you start over.
+
+This isn't a bug. It's how language models work. The model has no persistent state.
+It's not failing to remember — it never had anywhere to store what it learned.
+
+This is the gap between *using* an AI and *working* with one.
+
+**When you use an AI**: You open a tab, type a prompt, get a response, close the tab.
+Every session is isolated. The AI is a very smart search engine.
+
+**When you work with an AI**: It knows your history. It remembers what you decided last
+Tuesday. It knows your working style without being told again. Context compounds over
+weeks and months. It becomes genuinely more useful over time.
+
+The difference isn't the model. It's the infrastructure around the model.
+
+Think of it this way: a brilliant person with amnesia isn't useful — not because they
+lack intelligence, but because they wake up every morning with no memory of what you
+built together yesterday. That's what an AI agent without memory is.
+
+### What Memory Actually Means
+
+When I say "memory," I don't mean the context window — the temporary working memory
+every AI has during an active conversation. I mean *persistent* memory: facts that survive
+the end of a session and are available at the start of the next one.
+
+Persistent memory has three jobs:
+
+1. **Recall past decisions** — "What did we decide about the architecture last week?"
+2. **Apply known preferences** — Know how you like output formatted, what channels
+   you prefer, which things require approval — without being told again each session.
+3. **Track ongoing work** — What's the current status of every active project? What's
+   been decided? What's pending?
+
+These three jobs are different in nature. Preferences are timeless. Project status is
+chronological. Entity facts are deep and structured. That's why the architecture has
+three layers — one for each type.
+
+---
+
+## Chapter 2: The Architecture
+
+The memory system has three layers. Each layer serves a different purpose at a
+different scope.
 
 \`\`\`
-~/.openclaw/
-  sessions/          # AI conversation JSONL files go here
-  memory/            # Extracted memory JSON files
-  prompts/
-    observer-system.txt   # System prompt for Ollama
-  logs/
-    memory-watcher.log
-    observer-timer.log
-    processed-sessions.log
-  daily-token-cap.json    # Token budget tracking
-scripts/
-  memory-observer.sh
-  memory-watcher.sh
-  memory-observer-timer.sh
-  daily-cap-enforce.sh
-  session-gc.sh
+Layer 1: MEMORY.md       ← How you operate (permanent, always-loaded)
+Layer 2: Daily Notes     ← What happened (chronological, searchable)
+Layer 3: ~/life/         ← Entities and projects (structured, deep)
+\`\`\`
+
+**Layer 1** is loaded every single session. It's a curated file of the most important
+facts about how you work — your preferences, rules, and patterns. This is the AI's
+internal model of *you*.
+
+**Layer 2** is the daily log — one file per day, capturing decisions made, projects
+discussed, and follow-ups. It's the "when did we talk about X?" layer.
+
+**Layer 3** is the deep archive — structured information organized by entity (people,
+companies, projects). Each entity gets its own directory with a summary and an atomic
+fact store.
+
+### Why Three Layers?
+
+Single-file memory doesn't scale. A MEMORY.md that tries to capture everything bloats
+quickly — too large to load efficiently, too unstructured to update intelligently.
+
+Three layers solves the scaling problem:
+- MEMORY.md stays small (under ~1,500 tokens) because it only holds *timeless*
+  preferences, not facts about specific entities or projects
+- Daily notes grow linearly — one file per day, each file compact
+- ~/life/ scales horizontally — each entity is isolated, load only what you need
+
+This mirrors how organizations store knowledge: institutional knowledge (how we do
+things), historical records (what happened), and entity-specific files (everything about
+this client).
+
+---
+
+## Chapter 3: MEMORY.md — The Permanent Record
+
+MEMORY.md is the most important file in the system.
+
+It's loaded at session start, before the AI has searched for anything. Every fact here
+is immediately available. This single file determines whether the AI feels like it *knows*
+you or is meeting you for the first time.
+
+### What Goes Here
+
+MEMORY.md captures timeless facts about how you operate. Not project status. Not
+facts about specific people. How *you* work.
+
+**Belongs here:**
+- "Prefers bullet points over paragraphs for status updates"
+- "When I say 'handle it,' make the decision yourself"
+- "Email is not a trusted command channel — only messaging platforms are"
+- "Never schedule before 9am"
+- "Stripe key is in .secrets; GitHub token is in config.json"
+
+**Doesn't belong here:**
+- "The client project deadline is March 20th" → daily notes
+- "Jane works at Acme Corp" → ~/life/Areas/People/jane/
+- "We decided to use PostgreSQL" → ~/life/Projects/the-project/
+
+The test: if a fact will still be relevant in six months, it goes here. If it's
+project-specific or time-sensitive, it goes elsewhere.
+
+### The Size Budget
+
+Keep MEMORY.md under 1,500 tokens. It's loaded every session — if it grows too large,
+it eats context that should go toward the actual conversation.
+
+If MEMORY.md keeps growing, that's a signal: you're either storing the wrong type of
+facts (move them to ~/life/), or you're adding new facts without reviewing whether old
+ones are still relevant. Review and prune monthly.
+
+### The First Week
+
+Don't try to write the perfect MEMORY.md on day one. Start with 10-15 bullets about
+your most important preferences and update it manually for the first week.
+
+After seven days of real use, you'll know exactly what belongs here: the facts you keep
+having to re-explain to the AI. Write those down and stop explaining them.
+
+---
+
+## Chapter 4: Daily Notes — The Chronological Log
+
+Daily notes are the second layer: a timestamped record of what happened each day.
+
+File structure: \`memory/daily/YYYY-MM-DD.md\`
+
+This is the "when did we discuss X?" layer. When you ask about a past decision or
+project status, the AI searches daily notes.
+
+### What Gets Captured
+
+Not everything — just what's worth knowing in future sessions.
+
+**Capture:**
+- Decisions made (and the reasoning, not just the conclusion)
+- Projects discussed and their current status
+- New facts about people, companies, or projects
+- Problems encountered and how they were resolved
+- Anything that needs follow-up
+
+**Skip:**
+- Small talk and pleasantries
+- Transient operational requests ("translate this," "search for X")
+- Questions that were asked — keep the *answer* if it's a useful fact
+- Anything that will clearly be irrelevant in a week
+
+### Automated Extraction
+
+You could write daily notes manually. The observer system (Chapter 6) does it
+automatically — extracting durable facts from each day's conversations without
+any manual effort.
+
+### Structure
+
+Each day's file follows this pattern:
+
+\`\`\`markdown
+# YYYY-MM-DD
+
+## Key Events
+- [Time] — [What happened, what was decided]
+
+## Decisions Made
+- [Project/topic]: [Decision] because [reason]
+
+## New Facts
+- [Person/company/project]: [New information worth remembering]
+
+## Follow-ups
+- [Task or question pending]
+
+## Active Long-Running Processes
+- [Process name]: [What it's doing], started [time], last status: [status]
 \`\`\`
 
 ---
 
-## Installation Steps
+## Chapter 5: The Knowledge Graph (~/life/)
 
-### Step 1: Create directory structure
+The third layer is the deep archive: a structured directory organized by entity.
 
-\`\`\`bash
-mkdir -p ~/.openclaw/sessions
-mkdir -p ~/.openclaw/memory
-mkdir -p ~/.openclaw/prompts
-mkdir -p ~/.openclaw/logs
-mkdir -p ~/scripts
+The structure follows PARA (Projects, Areas, Resources, Archives):
+
+\`\`\`
+~/life/
+├── Projects/          ← Active work with end dates
+│   └── my-project/
+│       ├── summary.md
+│       └── items.json
+├── Areas/             ← Ongoing domains without end dates
+│   ├── People/
+│   │   └── someone/
+│   │       ├── summary.md
+│   │       └── items.json
+│   └── Companies/
+│       └── a-company/
+├── Resources/         ← Reference material
+└── Archives/          ← Inactive/completed
 \`\`\`
 
-### Step 2: Copy scripts
+### The Two-File Pattern
 
-\`\`\`bash
-cp scripts/*.sh ~/scripts/
-chmod +x ~/scripts/*.sh
-\`\`\`
+Every entity has exactly two files:
 
-### Step 3: Copy the observer system prompt
+**summary.md** — quick context, loaded first. One to three paragraphs capturing the
+most important current facts. Rewritten weekly to stay fresh.
 
-\`\`\`bash
-cp prompts/observer-system.txt ~/.openclaw/prompts/
-\`\`\`
+**items.json** — the atomic fact store. Every individual fact as a structured object,
+with metadata for tracking relevance over time.
 
-### Step 4: Copy configuration templates
-
-\`\`\`bash
-# Copy and customize the agent config templates
-cp configs/SOUL.md.template ~/.openclaw/SOUL.md
-cp configs/AGENTS.md.template ~/.openclaw/AGENTS.md
-cp configs/MEMORY.md.template ~/.openclaw/MEMORY.md
-cp configs/TACIT.md.template ~/.openclaw/TACIT.md
-\`\`\`
-
-Edit each template file and fill in your details.
-
-### Step 5: Install LaunchAgents (macOS auto-start)
-
-\`\`\`bash
-cp configs/launchagents/com.openclaw.memory-watcher.plist ~/Library/LaunchAgents/
-cp configs/launchagents/com.openclaw.memory-observer-timer.plist ~/Library/LaunchAgents/
-
-# Load them
-launchctl load ~/Library/LaunchAgents/com.openclaw.memory-watcher.plist
-launchctl load ~/Library/LaunchAgents/com.openclaw.memory-observer-timer.plist
-
-# Verify they loaded
-launchctl list | grep openclaw
-\`\`\`
-
----
-
-## How Sessions Work
-
-### Session JSONL Format
-
-Your AI agent should save conversations to \`~/.openclaw/sessions/\` as JSONL files. Each line is a JSON object:
-
-\`\`\`json
-{"type": "message", "role": "user", "content": "I prefer TypeScript over JavaScript"}
-{"type": "message", "role": "assistant", "content": "Got it, I'll use TypeScript for all future code."}
-\`\`\`
-
-### Memory Extraction
-
-When a session file is created or updated, the memory observer:
-1. Reads the JSONL conversation
-2. Sends it to Ollama with the observer system prompt
-3. Ollama returns a JSON array of extracted facts
-4. Facts are saved to \`~/.openclaw/memory/\`
-
-### Memory File Format
+### The Atomic Fact Schema
 
 \`\`\`json
 [
   {
-    "type": "user",
-    "content": "User prefers TypeScript over JavaScript",
-    "tags": ["preferences", "typescript", "code"],
-    "importance": "high"
+    "id": "project-001",
+    "fact": "The API uses JWT authentication with 24-hour token expiry",
+    "category": "status",
+    "timestamp": "2026-01-15",
+    "source": "2026-01-15",
+    "status": "active",
+    "relatedEntities": [],
+    "lastAccessed": "2026-02-08",
+    "accessCount": 12
   },
   {
-    "type": "project",
-    "content": "Working on agent-memory-kit product launch, due end of month",
-    "tags": ["project", "deadline", "launch"],
-    "importance": "high"
+    "id": "project-002",
+    "fact": "The project originally used session-based auth",
+    "category": "status",
+    "timestamp": "2026-01-01",
+    "status": "superseded",
+    "supersededBy": "project-001"
   }
 ]
 \`\`\`
 
+Key rules:
+- **Never delete facts** — use \`status: "superseded"\` + \`supersededBy\` when facts change
+- **Bump accessCount** when a fact is used in conversation
+- **Rewrite summary.md weekly** — hot facts (accessed in 7 days) get prominence;
+  cold facts (30+ days) drop from the summary but stay in items.json
+
+### Memory Decay
+
+Not all facts stay equally relevant:
+- **Hot** (accessed in last 7 days): Featured in summary.md
+- **Warm** (8–30 days): Included but de-emphasized
+- **Cold** (30+ days): Dropped from summary.md, kept in items.json
+
+Nothing is ever deleted. Cold facts are "reactivated" when they become relevant again
+by bumping lastAccessed. This is how the system stays useful without becoming a
+graveyard of outdated information.
+
+### When to Add Entities
+
+Don't create entities for everything. Add one when:
+- You have 3+ facts about something that will matter for weeks or months
+- You need to track status changes over time
+- You'll want to look it up specifically by name
+
+A one-off vendor you'll never deal with again doesn't need an entity. A key client
+you'll work with for months does.
+
 ---
 
-## Script Configuration
+## Chapter 6: The Observer System
 
-### memory-observer.sh
+The observer system is what makes memory *automated*.
 
-Environment variables:
-- \`OLLAMA_MODEL\` — Model to use (default: llama3.2)
-- \`MEMORY_DIR\` — Where to save memory files (default: ~/.openclaw/memory)
-- \`OBSERVER_PROMPT\` — Path to system prompt file
-- \`MAX_TOKENS\` — Max tokens to generate (default: 2000)
-- \`DAILY_CAP_FILE\` — Token budget tracking file
-- \`DAILY_TOKEN_LIMIT\` — Max tokens per day (default: 50000)
+Without it, the memory system works — but you'd have to manually write daily notes
+and update ~/life/ yourself. The observer watches for new conversation files, analyzes
+them with a local LLM, and extracts durable facts automatically.
 
-### memory-watcher.sh
+### Architecture
 
-Environment variables:
-- \`WATCH_DIR\` — Directory to watch (default: ~/.openclaw/sessions)
-- \`OBSERVER_SCRIPT\` — Path to memory-observer.sh
-- \`COOLDOWN\` — Seconds to wait after last change before processing (default: 30)
-- \`LOG_FILE\` — Log output location
+Two complementary components:
 
-### daily-cap-enforce.sh
+**memory-watcher.sh** — a file system watcher (using fswatch) that monitors the
+OpenClaw sessions directory. When a new session file appears, it triggers the observer
+immediately.
 
-Usage:
+**memory-observer-timer.sh** — a periodic fallback that runs every 30 minutes,
+catching any files the watcher might have missed.
+
+The redundancy is intentional: the watcher is fast but can miss files if it starts after
+they're created. The timer catches anything that slips through.
+
+**memory-observer.sh** is the extraction engine. It reads a conversation JSONL file,
+calls a local LLM via the Ollama API, and saves structured facts to the daily notes file.
+
+### How Extraction Works
+
+When the observer processes a file:
+
+1. Reads the conversation (OpenClaw session JSONL format)
+2. Extracts the last N messages (configurable via \`MAX_MESSAGES\`)
+3. Sends them to Ollama with the system prompt from \`prompts/observer-system.txt\`
+4. Parses the response for tagged fact lines (\`[USER_FACT]\`, \`[PROJECT_FACT]\`, etc.)
+5. Appends extracted facts to \`memory/daily/YYYY-MM-DD.md\`
+6. Logs the processed file to avoid reprocessing
+
+### Extraction Categories
+
+The system prompt instructs the LLM to tag each extracted fact:
+
+- \`[USER_FACT]\` — preferences, habits, working style
+- \`[PROJECT_FACT]\` — status, decisions, milestones for active work
+- \`[PEOPLE_FACT]\` — information about people mentioned
+- \`[COMPANY_FACT]\` — information about organizations
+- \`[DECISION]\` — explicit decisions with rationale
+- \`[FOLLOW_UP]\` — things requiring future action
+
+### The Ollama Requirement
+
+The observer uses Ollama to run extraction locally. Local matters: your conversation
+history doesn't leave your machine.
+
+**Install:**
 \`\`\`bash
-~/scripts/daily-cap-enforce.sh check   # Check if cap exceeded
-~/scripts/daily-cap-enforce.sh status  # Show usage stats
-~/scripts/daily-cap-enforce.sh reset   # Reset daily counter
-~/scripts/daily-cap-enforce.sh add 500 # Manually add token usage
+brew install ollama
+ollama pull llama3.2
 \`\`\`
 
-### session-gc.sh
+The observer connects to Ollama at \`localhost:11434\`. You can change the model in the
+script's configuration section at the top — look for \`MODEL=\`.
 
-Environment variables:
-- \`MAX_AGE_DAYS\` — Delete sessions older than this (default: 30)
-- \`MAX_SESSIONS\` — Keep at most this many sessions (default: 100)
-- \`DRY_RUN\` — Set to "true" to preview without deleting
+**Recommended model:** \`llama3.2\` (3B parameters — fast, cheap, good at structured
+extraction). If you want higher quality at the cost of speed, \`llama3.1:8b\` works well.
+
+### The System Prompt
+
+The extraction prompt lives in \`prompts/observer-system.txt\`. You can customize it,
+but keep the \`[TAG]\` format — the observer script greps for those lines to parse facts.
+If you remove the tags, nothing gets extracted.
+
+The most important customization: add a list of your current project names and key
+people to the prompt. The more context the LLM has about what to look for, the better
+the extractions.
+
+### LaunchAgent Setup
+
+The kit includes pre-configured plist files for macOS LaunchAgents:
+
+\`\`\`bash
+# Copy plist files
+cp configs/launchagents/*.plist ~/Library/LaunchAgents/
+
+# Load them
+launchctl load ~/Library/LaunchAgents/com.openclaw.memory-watcher.plist
+launchctl load ~/Library/LaunchAgents/com.openclaw.memory-observer-timer.plist
+\`\`\`
+
+Both are configured to:
+- Start at login
+- Restart automatically if they crash
+- Log to \`~/.openclaw/logs/\`
+
+### What to Watch For in the First Week
+
+The observer won't be perfect immediately. Review \`memory/daily/\` files after the
+first few days and look for:
+
+- Facts that are too vague ("the user asked about a project")
+- Transient requests captured as preferences
+- Facts missing key context
+
+Adjust \`prompts/observer-system.txt\` to improve extraction quality. The system prompt
+is the main lever — small changes in how you describe the extraction categories make
+a significant difference.
 
 ---
 
-## Agent Configuration Files
+## Chapter 7: Semantic Search with QMD
+
+The three-layer memory system stores everything. QMD makes it *findable*.
+
+QMD is a local semantic search tool that indexes your memory files and lets you query
+them in natural language. Instead of knowing which file contains which information,
+you just ask.
+
+\`\`\`bash
+qmd query "what did we decide about the database setup"
+qmd vsearch "project deadline this month"
+qmd vsearch "how the user prefers to receive status updates"
+\`\`\`
+
+### Why This Matters
+
+Without semantic search, retrieval has a bottleneck: the AI needs to know where to look.
+If you ask about a past decision, it needs to know which daily notes file contains it.
+For recent facts this works fine — but what about information spread across multiple
+files, or entities the AI doesn't know to look for?
+
+QMD solves this by indexing everything and searching across all layers simultaneously.
+Ask a question, get relevant snippets back, regardless of which file they're in.
+
+### Installation
+
+\`\`\`bash
+npm install -g qmd
+\`\`\`
+
+### Configuration
+
+Add to your OpenClaw config file:
+
+\`\`\`json
+{
+  "memory": {
+    "backend": "qmd",
+    "qmd": {
+      "includeDefaultMemory": true,
+      "paths": [
+        {
+          "path": "~/.openclaw/workspace/memory",
+          "name": "memory",
+          "pattern": "**/*.md"
+        },
+        {
+          "path": "~/life",
+          "name": "life",
+          "pattern": "**/*.md"
+        },
+        {
+          "path": "~/life",
+          "name": "life-json",
+          "pattern": "**/*.json"
+        }
+      ],
+      "update": { "interval": "5m" }
+    }
+  }
+}
+\`\`\`
+
+The \`update.interval: "5m"\` setting auto-reindexes every 5 minutes. New facts
+extracted by the observer become searchable within minutes of extraction.
+
+### Index Your Collections
+
+\`\`\`bash
+qmd update --collection memory
+qmd update --collection life
+\`\`\`
+
+### Querying
+
+\`\`\`bash
+# Semantic search (uses vector embeddings)
+qmd vsearch "decisions about the API" --collection memory
+
+# Keyword search
+qmd query "project deadline march"
+
+# Search across all collections
+qmd vsearch "what we know about the main client"
+\`\`\`
+
+Within OpenClaw, your agent uses QMD automatically. You don't need to tell it to
+search — it does so when it recognizes that external context would be useful for the
+current question.
+
+---
+
+## Chapter 8: Identity Files
+
+Memory tells the AI what you know. Identity files tell it *who it is* and *how to act*.
+
+Without identity files, extracted facts get applied generically. With them, the AI knows
+not just your preferences, but the principles behind them — and can apply them to
+situations the preferences don't explicitly cover.
 
 ### SOUL.md
-Defines your AI agent's personality, communication style, and core values. This file is loaded at the start of each session.
+
+SOUL.md defines personality, voice, and core operating principles. This is the most
+important identity file.
+
+Key sections:
+- **Voice & Tone** — How the AI communicates. Be specific. "Direct and concise" is
+  vague. "No filler phrases, no 'great question!' nonsense, lead with the answer" is
+  actionable.
+- **What This AI Is NOT** — It's easier to specify what to avoid than what to aim for.
+  "Not sycophantic" is more useful than "be natural."
+- **Boundaries** — Non-negotiable rules that override task completion. Security rules
+  live here. The trust ladder lives here.
+- **The Mission** — What this AI is actually for. Grounds every judgment call.
+
+**Tips:**
+- Write the NOT section first. The things you find most annoying in AI assistants are
+  the clearest signals.
+- Give explicit permission to push back. Without it, most AI systems default to
+  agreeable. If you want honest disagreement, you have to ask for it.
+- Keep it under 1,000 words. SOUL.md is loaded every session.
 
 ### AGENTS.md
-Defines workspace rules: what tools are available, how to handle specific situations, project-specific guidelines.
 
-### MEMORY.md
-The memory index — a high-level summary of everything the agent knows about you and your projects. Updated periodically from extracted memory files.
+AGENTS.md is the workspace rulebook — operational instructions for how the AI
+manages files, uses tools, maintains memory, and handles ambiguity.
+
+Key sections:
+- Session startup sequence (what to read, in what order, before anything else)
+- Memory management rules (when to write notes, when to update MEMORY.md)
+- Heartbeat behavior (what to check, when to be proactive, when to stay quiet)
+- Red lines (actions that require explicit permission)
+
+AGENTS.md is less about personality and more about process. It answers the question:
+"when I'm not actively talking to it, how should it behave?"
 
 ### TACIT.md
-Tacit knowledge — things that are hard to express explicitly but important for the agent to know. Working preferences, unstated assumptions, context.
+
+TACIT.md is the subtlest file — and arguably the most valuable over time.
+
+MEMORY.md captures explicit preferences. TACIT.md captures *implicit* patterns:
+things the AI has figured out that were never stated directly.
+
+Examples:
+- "When asking for something 'quick,' the user means under 10 minutes of reading,
+  not a one-liner answer"
+- "Voice messages signal a complex topic; text messages signal something simple"
+- "When they say 'handle it,' they actually want to be told about it first if it involves
+  spending money"
+
+These patterns emerge from watching real interactions over time. The observer system
+can help populate TACIT.md — but reviewing it weekly and adding patterns you've
+noticed yourself is the highest-value maintenance task in the entire system.
+
+### Loading Order
+
+At session start, load files in this order:
+
+1. \`SOUL.md\` — who the AI is
+2. \`AGENTS.md\` — how it operates
+3. \`MEMORY.md\` — what it knows about you
+4. \`memory/TACIT.md\` — the implicit model of how you work
+5. Today's and yesterday's daily notes — recent context
+
+This order matters. Identity before knowledge. Stable knowledge before recent events.
 
 ---
 
-## Customizing the Observer Prompt
+## Chapter 9: Automation and Scheduled Maintenance
 
-Edit \`~/.openclaw/prompts/observer-system.txt\` to tune what gets extracted.
+The system runs best on autopilot. Here are the key automated processes.
 
-Tips:
-- Add specific categories relevant to your work
-- Increase or decrease the importance threshold
-- Add examples of what you want extracted
-- Specify the exact JSON schema you need
+### Daily Token Cap (\`daily-cap-enforce.sh\`)
+
+Tracks observer token usage and enforces a daily budget. Prevents runaway
+extraction costs if the observer triggers unusually frequently.
+
+Default cap: 50,000 tokens/day. Adjust \`DAILY_TOKEN_LIMIT\` in the script.
+
+Check usage:
+\`\`\`bash
+bash ~/.openclaw/workspace/scripts/daily-cap-enforce.sh status
+\`\`\`
+
+### Session Garbage Collection (\`session-gc.sh\`)
+
+Old session files accumulate in the OpenClaw sessions directory. \`session-gc.sh\`
+removes files older than N days (default: 7) that have already been processed.
+
+This keeps the directory clean and prevents the observer from scanning old files.
+
+### Nightly Consolidation (Recommended Cron)
+
+The daily notes accumulate facts, but the knowledge graph (~/life/) doesn't update
+itself. A nightly consolidation cron handles this:
+
+\`\`\`json
+{
+  "name": "nightly-consolidation",
+  "schedule": {
+    "kind": "cron",
+    "expr": "0 23 * * *",
+    "tz": "Your/Timezone"
+  },
+  "sessionTarget": "isolated",
+  "payload": {
+    "kind": "agentTurn",
+    "message": "Review today's daily notes in memory/daily/. For any new facts about specific people, companies, or projects, add them to the appropriate entity directory in ~/life/. Update accessCount on any facts referenced today. Identify any patterns that belong in MEMORY.md or TACIT.md. Keep all changes minimal — only write what's genuinely durable."
+  }
+}
+\`\`\`
+
+This is the heartbeat of Layer 3. Without it, ~/life/ only grows when you manually
+update it.
+
+### Memory Audit (Periodic)
+
+Every few weeks, review:
+- MEMORY.md — is everything still accurate and relevant? Prune what isn't.
+- Daily notes from the last month — did the observer miss anything important?
+- summary.md files in ~/life/ — are they still current?
+
+The system degrades without occasional human review. Not much — an hour a month
+is enough. But it needs it.
 
 ---
 
-## Troubleshooting
+## Chapter 10: What I Got Wrong
 
-### Ollama not responding
+This system didn't arrive fully formed.
+
+**Over-engineering on day one.** I designed the three-layer architecture before knowing
+what I'd actually need to remember. The knowledge graph became genuinely useful only
+after there were enough entities to track — roughly two weeks into real use. If starting
+over: MEMORY.md only for week one. Add daily notes in week two. Add ~/life/ when
+the need becomes obvious.
+
+**Bloating MEMORY.md.** It grew to over 3,000 tokens before I noticed the problem. I
+was storing project status and entity facts that belonged in the other layers. Now I
+treat it as size-budgeted — hard cap, enforced. Adding a fact means reviewing whether
+something else should be removed.
+
+**The observer extracting garbage.** Early versions of the system prompt pulled out
+things that weren't worth keeping — "the user asked about X" without the answer, or
+one-off operational requests captured as preferences. The prompt included in this kit
+has been refined to filter those out. But watch what the observer extracts in the first
+week and adjust the prompt if it's capturing noise.
+
+**Not reading memory back before trusting it.** The observer isn't perfect. It sometimes
+misinterprets context or records something ambiguously. Review daily notes periodically
+— weekly is enough — and correct anything that's wrong. An incorrect fact in memory
+is worse than no fact.
+
+**The cold start problem.** A freshly installed system with no accumulated memory feels
+generic for the first week. This is normal and unavoidable. It takes about 7–10 days of
+real use before the memory system has enough context to be noticeably different from
+a fresh AI. Don't evaluate the system in the first few days.
+
+**Underestimating TACIT.md.** I treated it as optional for too long. The implicit
+knowledge it captures — how you *actually* communicate, what "handle it" really means
+in practice, the patterns that never got explicitly stated — turns out to be the highest-
+value layer. Fill it deliberately from day one.
+
+---
+
+## Chapter 11: Quick-Start Checklist
+
+The fastest path from zero to working memory system.
+
+### Prerequisites (~15 minutes)
+- [ ] Install Ollama: \`brew install ollama\`
+- [ ] Pull the extraction model: \`ollama pull llama3.2\`
+- [ ] Install jq: \`brew install jq\`
+- [ ] Install fswatch: \`brew install fswatch\`
+- [ ] Install QMD: \`npm install -g qmd\`
+
+### Directory Structure (~5 minutes)
 \`\`\`bash
-# Check if Ollama is running
-curl http://localhost:11434/api/tags
-
-# Start Ollama
-ollama serve
+mkdir -p ~/.openclaw/workspace/memory/daily
+mkdir -p ~/.openclaw/workspace/scripts
+mkdir -p ~/.openclaw/workspace/prompts
+mkdir -p ~/.openclaw/logs
+mkdir -p ~/life/{Projects,Areas,Resources,Archives}
+mkdir -p ~/life/Areas/{People,Companies}
 \`\`\`
 
-### No memories being extracted
+### Install Scripts (~5 minutes)
 \`\`\`bash
-# Test the observer manually
-~/scripts/memory-observer.sh ~/.openclaw/sessions/test.jsonl
-
-# Check logs
-tail -f ~/.openclaw/logs/memory-watcher.log
+cp scripts/*.sh ~/.openclaw/workspace/scripts/
+chmod +x ~/.openclaw/workspace/scripts/*.sh
+cp prompts/observer-system.txt ~/.openclaw/workspace/prompts/
 \`\`\`
 
-### LaunchAgent not starting
+### Install LaunchAgents (~5 minutes)
 \`\`\`bash
-# Check for errors
-launchctl error com.openclaw.memory-watcher
-
-# Unload and reload
-launchctl unload ~/Library/LaunchAgents/com.openclaw.memory-watcher.plist
+cp configs/launchagents/*.plist ~/Library/LaunchAgents/
 launchctl load ~/Library/LaunchAgents/com.openclaw.memory-watcher.plist
+launchctl load ~/Library/LaunchAgents/com.openclaw.memory-observer-timer.plist
 \`\`\`
 
-### Daily token cap exceeded
+### Create Identity and Memory Files (~20 minutes)
 \`\`\`bash
-~/scripts/daily-cap-enforce.sh status
-~/scripts/daily-cap-enforce.sh reset  # Reset if needed
+cp configs/SOUL.md.template     ~/.openclaw/workspace/SOUL.md
+cp configs/AGENTS.md.template   ~/.openclaw/workspace/AGENTS.md
+cp configs/MEMORY.md.template   ~/.openclaw/workspace/MEMORY.md
+cp configs/TACIT.md.template    ~/.openclaw/workspace/memory/TACIT.md
 \`\`\`
 
+Fill in each file. Spend the most time on MEMORY.md — write 10–15 bullets
+about your actual preferences and working style. SOUL.md second. The others
+can start sparse.
+
+### Configure QMD (~5 minutes)
+See \`qmd-setup/README.md\` for the config block to add to your OpenClaw config.
+
+### Test the Observer (~5 minutes)
+\`\`\`bash
+bash ~/.openclaw/workspace/scripts/memory-observer.sh --flush
+\`\`\`
+
+Check \`memory/daily/[today's date].md\` for extracted facts.
+
+### Set Up Nightly Consolidation (~10 minutes)
+Use the cron config from Chapter 9. Set your timezone.
+
 ---
 
-## Advanced: QMD Semantic Search
-
-See \`qmd-setup/README.md\` for instructions on setting up semantic search over your memory files.
-
-## Advanced: PARA Life Structure
-
-See \`life-structure/README.md\` for the recommended ~/life/ directory structure.
+Total setup time: 60–90 minutes. The system will be useful from day one and
+significantly better by day ten.
 
 ---
 
-## License
+## Chapter 12: Templates
 
-MIT License. Use freely, modify as needed.
+All templates are in the \`configs/\` directory. Below is a guide to filling them in.
 
-Agent Memory Kit — agentmemorykit.com
+---
+
+### SOUL.md Template
+
+The most important file. Key things to get right:
+
+**Voice & Tone**: Don't write aspirational adjectives. Write specific, observable behaviors.
+- Bad: "Be warm and approachable"
+- Good: "Start with the answer, not the explanation. Keep it under 3 sentences unless depth is requested."
+
+**The NOT section**: Write this first. What specifically annoys you about AI assistants?
+That's your NOT list.
+
+**Boundaries**: Your security rules live here. Copy the email security rules from this guide.
+Add any domain-specific restrictions.
+
+---
+
+### MEMORY.md Template
+
+Sections to fill in:
+
+**How I Work**: Your communication preferences, what autonomy means to you, schedule
+constraints. The things you'd tell a new human assistant on day one.
+
+**Security Rules**: Hard rules. What's never allowed without explicit approval. Keep these
+short and absolute.
+
+**Services & Access**: What tools the AI can access, and where credentials live (file paths,
+not the actual credentials).
+
+**Current Priorities**: The 2–3 most important active projects. Update monthly.
+
+---
+
+### TACIT.md Template
+
+Leave this sparse at first. The best TACIT.md entries come from noticing gaps — moments
+where the AI did something technically correct but felt wrong. Those moments are what
+TACIT.md is for.
+
+Add an entry when you think: "I never said that explicitly, but a person who actually knows
+me would know that."
+
+---
+
+### AGENTS.md Template
+
+Customize the session startup sequence. The default loads files in the order described
+in Chapter 8. If your setup differs (different file locations, additional files to load),
+adjust the list.
+
+The heartbeat section controls autonomous behavior when you're not actively chatting.
+Set how often to check email, what conditions warrant reaching out proactively, and
+what time ranges to stay silent.
+
+---
+
+## Final Thoughts
+
+Building memory for an AI isn't about the technology. It's about systematically answering
+a question: *what would this AI need to know, that it doesn't currently know, to be
+genuinely more useful to you?*
+
+Start with what you keep having to explain. Write that down. Build from there.
+
+The scripts, configs, and templates in this kit handle the mechanics. Your job is to fill
+them with the right content — and to keep them accurate over time.
+
+The system will be underwhelming for the first week. By week three, you'll notice the
+difference. By month two, working with an AI that doesn't have this system will feel
+broken.
+
+---
+
+*Agent Memory Kit — agentmemorykit.com*
 `,
 
   'scripts/memory-observer.sh': `#!/usr/bin/env bash
