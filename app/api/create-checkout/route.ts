@@ -29,11 +29,12 @@ export async function GET() {
     const session = await resp.json() as { url?: string; error?: { message: string } }
 
     if (!resp.ok || !session.url) {
-      const msg = session.error?.message || 'Failed to create session'
+      const msg = session.error?.message || JSON.stringify(session)
       return NextResponse.json({ error: msg }, { status: 500 })
     }
 
-    return NextResponse.redirect(session.url, 303)
+    // Return JSON with URL instead of redirect (safer for debugging)
+    return NextResponse.json({ url: session.url })
   } catch (error: unknown) {
     const msg = error instanceof Error ? error.message : String(error)
     return NextResponse.json({ error: msg }, { status: 500 })
