@@ -1,41 +1,41 @@
 import { NextResponse } from 'next/server'
-import Stripe from 'stripe'
-
-function getStripe() {
-  return new Stripe(process.env.STRIPE_SECRET_KEY!, {
-    apiVersion: '2026-02-25.clover',
-  })
-}
 
 export async function GET() {
   try {
-    const stripe = getStripe()
+    const stripeKey = process.env.STRIPE_SECRET_KEY!
     const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://agent-memory-kit.vercel.app'
 
-    const session = await stripe.checkout.sessions.create({
-      payment_method_types: ['card'],
-      line_items: [
-        {
-          price_data: {
-            currency: 'usd',
-            product_data: {
-              name: 'Agent Memory Kit',
-              description: 'Give your AI agent a persistent, searchable memory system. 15 files: shell scripts, configs, templates & setup guides.',
-            },
-            unit_amount: 2900, // $29.00
-          },
-          quantity: 1,
-        },
-      ],
-      mode: 'payment',
-      success_url: `${baseUrl}/success?session_id={CHECKOUT_SESSION_ID}`,
-      cancel_url: `${baseUrl}/`,
+    const body = new URLSearchParams({
+      'payment_method_types[0]': 'card',
+      'line_items[0][price_data][currency]': 'usd',
+      'line_items[0][price_data][product_data][name]': 'Agent Memory Kit',
+      'line_items[0][price_data][product_data][description]': 'Persistent memory system for your OpenClaw AI agent. 14 files: scripts, configs, templates & guides.',
+      'line_items[0][price_data][unit_amount]': '2900',
+      'line_items[0][quantity]': '1',
+      'mode': 'payment',
+      'success_url': `${baseUrl}/success?session_id={CHECKOUT_SESSION_ID}`,
+      'cancel_url': `${baseUrl}/`,
     })
 
-    return NextResponse.redirect(session.url!)
+    const resp = await fetch('https://api.stripe.com/v1/checkout/sessions', {
+      method: 'POST',
+      headers: {
+        'Authorization': `Basic ${Buffer.from(stripeKey + ':').toString('base64')}`,
+        'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      body: body.toString(),
+    })
+
+    const session = await resp.json() as { url?: string; error?: { message: string } }
+
+    if (!resp.ok || !session.url) {
+      const msg = session.error?.message || 'Failed to create session'
+      return NextResponse.json({ error: msg }, { status: 500 })
+    }
+
+    return NextResponse.redirect(session.url, 303)
   } catch (error: unknown) {
     const msg = error instanceof Error ? error.message : String(error)
-    console.error('Stripe error:', msg)
     return NextResponse.json({ error: msg }, { status: 500 })
   }
 }
