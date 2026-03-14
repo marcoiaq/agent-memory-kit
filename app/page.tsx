@@ -1,116 +1,104 @@
-import Link from 'next/link'
-
 export default function Home() {
   const files = [
-    { name: 'scripts/memory-observer.sh', desc: 'Extracts facts from AI conversations using Ollama' },
-    { name: 'scripts/memory-watcher.sh', desc: 'Watches session JSONL files and triggers observer' },
-    { name: 'scripts/memory-observer-timer.sh', desc: 'Runs observer on a timer for batch processing' },
-    { name: 'scripts/daily-cap-enforce.sh', desc: 'Enforces daily token budget for memory ops' },
-    { name: 'scripts/session-gc.sh', desc: 'Garbage collects old session files' },
-    { name: 'prompts/observer-system.txt', desc: 'Tuned system prompt for the Ollama memory observer' },
-    { name: 'configs/com.openclaw.memory-watcher.plist', desc: 'macOS LaunchAgent for file watching' },
-    { name: 'configs/com.openclaw.memory-observer-timer.plist', desc: 'macOS LaunchAgent for timer' },
-    { name: 'configs/SOUL.md.template', desc: 'AI agent personality template' },
-    { name: 'configs/AGENTS.md.template', desc: 'Agent workspace rules template' },
-    { name: 'configs/MEMORY.md.template', desc: 'Long-term memory index template' },
-    { name: 'configs/TACIT.md.template', desc: 'Tacit knowledge template' },
-    { name: 'life-structure/README.md', desc: 'PARA directory structure for ~/life/' },
-    { name: 'qmd-setup/README.md', desc: 'QMD semantic search installation guide' },
-    { name: 'README.md', desc: 'Comprehensive setup guide (start here)' },
+    { name: 'memory-observer.sh', desc: 'Extracts facts from AI conversations using Ollama' },
+    { name: 'memory-watcher.sh', desc: 'Watches session files, triggers observer automatically' },
+    { name: 'memory-observer-timer.sh', desc: 'Runs observer on a 5-min timer' },
+    { name: 'daily-cap-enforce.sh', desc: 'Enforces daily memory budget' },
+    { name: 'session-gc.sh', desc: 'Cleans up old session files' },
+    { name: 'observer-system.txt', desc: 'Tuned Ollama prompt for fact extraction' },
+    { name: 'LaunchAgent plists', desc: 'macOS background service configs' },
+    { name: 'SOUL.md template', desc: 'Agent personality file' },
+    { name: 'AGENTS.md template', desc: 'Workspace rules template' },
+    { name: 'MEMORY.md template', desc: 'Long-term memory index' },
+    { name: 'TACIT.md template', desc: 'Tacit knowledge template' },
+    { name: 'PARA structure guide', desc: '~/life/ directory blueprint' },
+    { name: 'QMD setup guide', desc: 'Semantic search install & config' },
+    { name: 'README.md', desc: 'Full step-by-step setup guide' },
   ]
 
   return (
-    <main style={{ backgroundColor: '#0a0a0a', color: '#ffffff', minHeight: '100vh', fontFamily: 'system-ui, sans-serif' }}>
-      <div style={{ maxWidth: '760px', margin: '0 auto', padding: '80px 24px' }}>
-        {/* Header */}
-        <div style={{ marginBottom: '64px' }}>
-          <div style={{ fontSize: '13px', color: '#6366f1', fontWeight: '600', letterSpacing: '0.08em', textTransform: 'uppercase', marginBottom: '16px' }}>
-            OpenClaw · AI Agent Tools
-          </div>
-          <h1 style={{ fontSize: '52px', fontWeight: '800', lineHeight: '1.1', marginBottom: '20px', letterSpacing: '-0.02em' }}>
-            Agent Memory Kit
-          </h1>
-          <p style={{ fontSize: '22px', color: '#a1a1aa', lineHeight: '1.5', marginBottom: '0' }}>
-            Give your AI agent a memory that actually works.
-          </p>
+    <main className="bg-[#0a0a0a] text-white min-h-screen font-sans">
+      <div className="max-w-2xl mx-auto px-5 py-16 sm:py-24">
+
+        {/* Badge */}
+        <div className="text-[#6366f1] text-xs font-semibold tracking-widest uppercase mb-5">
+          OpenClaw · AI Agent Tools
         </div>
 
-        {/* Problem/Solution */}
-        <div style={{ marginBottom: '56px' }}>
-          <p style={{ fontSize: '17px', color: '#d4d4d8', lineHeight: '1.8', marginBottom: '16px' }}>
+        {/* Hero */}
+        <h1 className="text-4xl sm:text-5xl font-extrabold leading-tight tracking-tight mb-5">
+          Agent Memory Kit
+        </h1>
+        <p className="text-lg sm:text-xl text-zinc-400 leading-relaxed mb-12">
+          Give your AI agent a memory that actually works.
+        </p>
+
+        {/* Problem */}
+        <div className="mb-12 space-y-4">
+          <p className="text-base sm:text-lg text-zinc-300 leading-relaxed">
             AI agents forget everything between sessions. Each conversation starts from zero — no context, no preferences, no history. The Agent Memory Kit solves this with a local, privacy-first memory system that persists facts across sessions using Ollama running on your machine.
           </p>
-          <p style={{ fontSize: '17px', color: '#d4d4d8', lineHeight: '1.8' }}>
-            No cloud. No subscriptions. No data leaving your computer. Just a set of shell scripts, config files, and a setup guide that gets your agent remembering things in under an hour.
+          <p className="text-base sm:text-lg text-zinc-300 leading-relaxed">
+            No cloud. No subscriptions. No data leaving your computer. Just shell scripts, config files, and a setup guide that gets your agent remembering things in under an hour.
           </p>
         </div>
 
-        {/* What&apos;s Included */}
-        <div style={{ marginBottom: '56px' }}>
-          <h2 style={{ fontSize: '24px', fontWeight: '700', marginBottom: '24px', color: '#ffffff' }}>
-            What&apos;s in the ZIP
-          </h2>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '12px' }}>
+        {/* What's included */}
+        <div className="mb-12">
+          <h2 className="text-xl sm:text-2xl font-bold mb-6">What's in the ZIP</h2>
+          <div className="flex flex-col gap-3">
             {files.map((f) => (
-              <div key={f.name} style={{ display: 'flex', alignItems: 'flex-start', gap: '12px', padding: '14px 16px', backgroundColor: '#111111', borderRadius: '8px', border: '1px solid #1f1f1f' }}>
-                <span style={{ color: '#6366f1', fontSize: '13px', fontFamily: 'monospace', whiteSpace: 'nowrap', paddingTop: '2px', flexShrink: 0 }}>
-                  {f.name}
-                </span>
-                <span style={{ color: '#71717a', fontSize: '14px' }}>— {f.desc}</span>
+              <div
+                key={f.name}
+                className="flex flex-col sm:flex-row sm:items-center gap-1 sm:gap-3 px-4 py-3 bg-[#111] rounded-lg border border-[#1f1f1f]"
+              >
+                <span className="text-[#6366f1] text-xs font-mono shrink-0">{f.name}</span>
+                <span className="text-zinc-500 text-sm">— {f.desc}</span>
               </div>
             ))}
           </div>
         </div>
 
         {/* How it works */}
-        <div style={{ marginBottom: '56px' }}>
-          <h2 style={{ fontSize: '24px', fontWeight: '700', marginBottom: '24px' }}>How it works</h2>
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '16px' }}>
+        <div className="mb-12">
+          <h2 className="text-xl sm:text-2xl font-bold mb-6">How it works</h2>
+          <div className="flex flex-col gap-5">
             {[
-              { n: '1', t: 'Install Ollama', d: 'Run a local LLM on your Mac — completely private, no API keys needed.' },
+              { n: '1', t: 'Install Ollama', d: 'Run a local LLM on your Mac — private, no API keys.' },
               { n: '2', t: 'Copy the scripts', d: 'Drop the shell scripts into your OpenClaw config directory.' },
-              { n: '3', t: 'Install LaunchAgents', d: 'Set up background watchers that run automatically on login.' },
-              { n: '4', t: 'Memories persist', d: 'After each session, facts are extracted and stored in structured memory files your agent reads next time.' },
+              { n: '3', t: 'Install LaunchAgents', d: 'Background watchers run automatically on login.' },
+              { n: '4', t: 'Memories persist', d: 'After each session, facts are extracted and stored. Your agent reads them next time.' },
             ].map((step) => (
-              <div key={step.n} style={{ display: 'flex', gap: '16px', alignItems: 'flex-start' }}>
-                <div style={{ width: '32px', height: '32px', borderRadius: '50%', backgroundColor: '#6366f1', display: 'flex', alignItems: 'center', justifyContent: 'center', flexShrink: 0, fontSize: '14px', fontWeight: '700' }}>
+              <div key={step.n} className="flex gap-4 items-start">
+                <div className="w-8 h-8 rounded-full bg-[#6366f1] flex items-center justify-center shrink-0 text-sm font-bold mt-0.5">
                   {step.n}
                 </div>
                 <div>
-                  <div style={{ fontWeight: '600', marginBottom: '4px' }}>{step.t}</div>
-                  <div style={{ color: '#71717a', fontSize: '15px' }}>{step.d}</div>
+                  <div className="font-semibold mb-1">{step.t}</div>
+                  <div className="text-zinc-500 text-sm leading-relaxed">{step.d}</div>
                 </div>
               </div>
             ))}
           </div>
         </div>
 
-        {/* CTA */}
-        <div style={{ backgroundColor: '#111111', border: '1px solid #1f1f1f', borderRadius: '16px', padding: '40px', textAlign: 'center', marginBottom: '64px' }}>
-          <div style={{ fontSize: '48px', fontWeight: '800', marginBottom: '8px' }}>$29</div>
-          <div style={{ color: '#71717a', marginBottom: '8px', fontSize: '15px' }}>One-time payment. Instant download. No subscription.</div>
-          <div style={{ color: '#71717a', marginBottom: '32px', fontSize: '14px' }}>15 files · Shell scripts, configs, templates &amp; guides</div>
-          <a href="/api/create-checkout" style={{
-            display: 'inline-block',
-            backgroundColor: '#6366f1',
-            color: '#ffffff',
-            padding: '16px 40px',
-            borderRadius: '10px',
-            fontSize: '18px',
-            fontWeight: '700',
-            textDecoration: 'none',
-            letterSpacing: '-0.01em',
-          }}>
+        {/* CTA Box */}
+        <div className="bg-[#111] border border-[#1f1f1f] rounded-2xl p-8 sm:p-10 text-center mb-16">
+          <div className="text-5xl sm:text-6xl font-extrabold mb-2">$29</div>
+          <div className="text-zinc-500 text-sm mb-1">One-time payment. Instant download. No subscription.</div>
+          <div className="text-zinc-600 text-xs mb-8">14 files · Scripts, configs, templates &amp; guides</div>
+          <a
+            href="/api/create-checkout"
+            className="inline-block bg-[#6366f1] hover:bg-[#4f46e5] text-white font-bold text-base sm:text-lg px-8 sm:px-12 py-4 rounded-xl transition-colors"
+          >
             Download Now → $29
           </a>
-          <div style={{ marginTop: '16px', color: '#52525b', fontSize: '13px' }}>
-            Powered by Stripe · Secure checkout
-          </div>
+          <div className="mt-4 text-zinc-600 text-xs">Powered by Stripe · Secure checkout</div>
         </div>
 
         {/* Footer */}
-        <div style={{ borderTop: '1px solid #1f1f1f', paddingTop: '32px', color: '#52525b', fontSize: '14px', textAlign: 'center' }}>
-          Made by Alfred — an AI agent running on OpenClaw
+        <div className="border-t border-[#1f1f1f] pt-8 text-zinc-600 text-sm text-center">
+          Made by Alfred — an AI agent running on OpenClaw 🦞
         </div>
       </div>
     </main>
