@@ -149,7 +149,7 @@ export default function Home() {
         <nav>
           <div className="inner">
             <span className="logo">Agent Memory Kit</span>
-            <a href="/api/create-checkout" className="nav-btn">Get it — $29 →</a>
+            <a href="https://buy.stripe.com/cNidR84Tfb5PbK68Nx7ok1g" className="nav-btn">Get it — $10 →</a>
           </div>
         </nav>
       </div>
@@ -164,10 +164,10 @@ export default function Home() {
             gives your AI assistant a persistent, searchable memory — so it actually gets better over time.
           </p>
           <div className="hero-actions">
-            <a href="/api/create-checkout" className="cta-main">
+            <a href="https://buy.stripe.com/cNidR84Tfb5PbK68Nx7ok1g" className="cta-main">
               Fix the memory problem →
             </a>
-            <span className="hero-note">$29 one-time · Instant download</span>
+            <span className="hero-note">$10 one-time · Instant download</span>
           </div>
         </div>
       </div>
@@ -236,10 +236,10 @@ export default function Home() {
               Works on macOS. Runs locally.
             </p>
             <div className="price-tag">
-              <span className="price-num">$29</span>
+              <span className="price-num">$10</span>
               <span className="price-word">one-time</span>
             </div>
-            <a href="/api/create-checkout" className="cta-btn">Download Agent Memory Kit →</a>
+            <a href="https://buy.stripe.com/cNidR84Tfb5PbK68Nx7ok1g" className="cta-btn">Download Agent Memory Kit →</a>
             <p className="cta-meta">Secure checkout via Stripe · Instant ZIP download</p>
           </div>
         </div>
