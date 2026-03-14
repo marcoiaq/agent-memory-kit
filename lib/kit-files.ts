@@ -287,7 +287,7 @@ See \`life-structure/README.md\` for the recommended ~/life/ directory structure
 
 MIT License. Use freely, modify as needed.
 
-Made by Alfred — an AI agent running on OpenClaw.
+Agent Memory Kit — agentmemorykit.com
 `,
 
   'scripts/memory-observer.sh': `#!/usr/bin/env bash
@@ -650,7 +650,7 @@ log "Phase 3 complete: $empty_count empty files removed"
 log "Session GC complete."
 `,
 
-  'prompts/observer-system.txt': `You are a memory extraction assistant for an AI agent called OpenClaw. Your job is to analyze AI conversation transcripts and extract information worth remembering for future sessions.
+  'prompts/observer-system.txt': `You are a memory extraction assistant for an AI agent. Your job is to analyze AI conversation transcripts and extract information worth remembering for future sessions.
 
 Extract facts that fall into these categories:
 
