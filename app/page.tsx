@@ -5,337 +5,249 @@ export default function Home() {
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
         body {
-          background: #0c0c0e;
-          color: #f4f4f5;
+          background: #09090b;
+          color: #fafafa;
           font-family: -apple-system, BlinkMacSystemFont, 'Inter', 'Segoe UI', sans-serif;
           -webkit-font-smoothing: antialiased;
         }
 
-        /* ── Layout ── */
-        .wrap { max-width: 660px; margin: 0 auto; padding: 0 24px; }
+        a { color: inherit; text-decoration: none; }
 
-        /* ── Nav ── */
-        nav {
-          border-bottom: 1px solid #1c1c1f;
-          padding: 18px 0;
-        }
-        nav .wrap { display: flex; align-items: center; justify-content: space-between; }
-        .logo { font-size: 15px; font-weight: 700; color: #f4f4f5; letter-spacing: -0.02em; }
-        .nav-price {
-          font-size: 14px; font-weight: 600; color: #818cf8;
-          text-decoration: none;
-          background: rgba(99,102,241,0.1);
-          border: 1px solid rgba(99,102,241,0.25);
-          padding: 6px 16px; border-radius: 20px;
-          transition: background 0.15s;
-        }
-        .nav-price:hover { background: rgba(99,102,241,0.2); }
+        .wrap { max-width: 700px; margin: 0 auto; padding: 0 24px; }
 
-        /* ── Hero ── */
-        .hero {
-          padding: 80px 0 64px;
-          border-bottom: 1px solid #1c1c1f;
+        /* NAV */
+        nav { padding: 20px 0; }
+        nav .inner { display: flex; align-items: center; justify-content: space-between; }
+        .logo { font-size: 14px; font-weight: 700; color: #fafafa; letter-spacing: -0.02em; }
+        .nav-btn {
+          background: #fafafa; color: #09090b;
+          font-size: 13px; font-weight: 700;
+          padding: 8px 18px; border-radius: 8px;
+          transition: opacity 0.15s;
+          display: inline-block;
         }
-        .hero-label {
-          display: inline-flex; align-items: center; gap: 8px;
-          font-size: 12px; font-weight: 600; letter-spacing: 0.06em;
+        .nav-btn:hover { opacity: 0.85; }
+
+        /* HERO */
+        .hero { padding: 72px 0 64px; border-bottom: 1px solid #18181b; }
+        .hero-kicker {
+          font-size: 12px; font-weight: 600; letter-spacing: 0.08em;
           text-transform: uppercase; color: #818cf8;
-          margin-bottom: 28px;
-        }
-        .hero-label::before {
-          content: ''; width: 6px; height: 6px;
-          background: #818cf8; border-radius: 50%;
+          margin-bottom: 24px; display: block;
         }
         h1 {
-          font-size: clamp(36px, 7vw, 56px);
-          font-weight: 900;
-          line-height: 1.06;
-          letter-spacing: -0.035em;
-          color: #f4f4f5;
-          margin-bottom: 24px;
-        }
-        h1 .accent { color: #818cf8; }
-        .hero-sub {
-          font-size: clamp(16px, 2.5vw, 18px);
-          color: #71717a;
-          line-height: 1.65;
-          max-width: 520px;
-          margin-bottom: 40px;
-        }
-        .hero-cta {
-          display: inline-flex; align-items: center; gap: 10px;
-          background: #6366f1;
-          color: #fff;
-          font-size: 16px; font-weight: 700;
-          padding: 15px 32px; border-radius: 12px;
-          text-decoration: none;
-          letter-spacing: -0.01em;
-          transition: background 0.15s, transform 0.1s;
-          box-shadow: 0 4px 24px rgba(99,102,241,0.35);
-        }
-        .hero-cta:hover { background: #4f46e5; transform: translateY(-1px); }
-        .hero-cta .arrow { font-size: 20px; }
-        .hero-meta {
-          display: flex; align-items: center; gap: 20px;
-          margin-top: 20px; flex-wrap: wrap;
-        }
-        .meta-item {
-          font-size: 13px; color: #52525b;
-          display: flex; align-items: center; gap: 6px;
-        }
-        .meta-check { color: #22c55e; font-size: 14px; }
-
-        /* ── Section ── */
-        section { padding: 56px 0; border-bottom: 1px solid #1c1c1f; }
-        .section-label {
-          font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
-          text-transform: uppercase; color: #52525b;
+          font-size: clamp(38px, 7.5vw, 64px);
+          font-weight: 900; letter-spacing: -0.04em;
+          line-height: 1.04; color: #fafafa;
           margin-bottom: 20px;
         }
-        h2 {
-          font-size: clamp(22px, 4vw, 28px);
-          font-weight: 800; letter-spacing: -0.025em;
-          color: #f4f4f5; margin-bottom: 16px;
+        .hero-desc {
+          font-size: clamp(15px, 2.5vw, 17px);
+          color: #71717a; line-height: 1.7;
+          max-width: 500px; margin-bottom: 36px;
         }
-        .section-body {
-          font-size: 16px; color: #71717a; line-height: 1.7;
-          margin-bottom: 12px;
+        .hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 14px; }
+        .cta-main {
+          display: inline-flex; align-items: center; gap: 8px;
+          background: #6366f1; color: #fff;
+          font-size: 16px; font-weight: 700;
+          padding: 14px 28px; border-radius: 10px;
+          transition: background 0.15s;
+          box-shadow: 0 0 0 0 rgba(99,102,241,0);
         }
+        .cta-main:hover {
+          background: #4f46e5;
+          box-shadow: 0 4px 24px rgba(99,102,241,0.4);
+        }
+        .hero-note { font-size: 13px; color: #3f3f46; }
 
-        /* ── Features grid ── */
-        .features { display: flex; flex-direction: column; gap: 0; margin-top: 32px; }
-        .feature {
-          display: flex; gap: 16px; align-items: flex-start;
-          padding: 20px 0; border-bottom: 1px solid #1c1c1f;
+        /* BENEFITS CARDS */
+        .benefits { padding: 64px 0; border-bottom: 1px solid #18181b; }
+        .section-eyebrow {
+          font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
+          text-transform: uppercase; color: #52525b; margin-bottom: 32px;
         }
-        .feature:last-child { border-bottom: none; }
-        .feature-icon {
-          width: 36px; height: 36px; border-radius: 10px;
-          background: #18181b; border: 1px solid #27272a;
-          display: flex; align-items: center; justify-content: center;
-          font-size: 16px; flex-shrink: 0;
+        .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+        .card {
+          background: #111114; border: 1px solid #1c1c1f;
+          border-radius: 14px; padding: 24px 22px;
         }
-        .feature-title { font-size: 15px; font-weight: 600; color: #f4f4f5; margin-bottom: 4px; }
-        .feature-desc { font-size: 14px; color: #71717a; line-height: 1.55; }
+        .card-icon { font-size: 22px; margin-bottom: 14px; display: block; }
+        .card-title { font-size: 15px; font-weight: 700; color: #fafafa; margin-bottom: 8px; }
+        .card-body { font-size: 14px; color: #71717a; line-height: 1.6; }
 
-        /* ── Files ── */
-        .files { margin-top: 28px; }
-        .file-item {
-          display: flex; gap: 12px; align-items: baseline;
-          padding: 11px 0; border-bottom: 1px solid #18181b;
-          font-size: 14px;
+        /* WHAT'S INSIDE */
+        .inside { padding: 64px 0; border-bottom: 1px solid #18181b; }
+        .inside h2 {
+          font-size: clamp(24px, 4vw, 30px);
+          font-weight: 800; letter-spacing: -0.03em;
+          margin-bottom: 8px;
         }
-        .file-item:last-child { border-bottom: none; }
-        .file-name {
-          font-family: 'SF Mono', 'Fira Code', monospace;
-          font-size: 11.5px; color: #818cf8;
-          flex-shrink: 0; min-width: 170px;
+        .inside-sub { font-size: 15px; color: #71717a; margin-bottom: 40px; }
+        .chapters { display: flex; flex-direction: column; gap: 0; }
+        .chapter {
+          display: flex; gap: 24px; align-items: flex-start;
+          padding: 22px 0; border-bottom: 1px solid #18181b;
         }
-        .file-desc { color: #52525b; line-height: 1.4; }
+        .chapter:last-child { border-bottom: none; }
+        .chapter-num {
+          font-size: 11px; font-weight: 800; letter-spacing: 0.06em;
+          color: #52525b; text-transform: uppercase;
+          min-width: 28px; padding-top: 3px; flex-shrink: 0;
+        }
+        .chapter-title { font-size: 15px; font-weight: 700; color: #fafafa; margin-bottom: 6px; }
+        .chapter-desc { font-size: 14px; color: #71717a; line-height: 1.6; }
 
-        /* ── Steps ── */
-        .steps { margin-top: 32px; display: flex; flex-direction: column; gap: 0; }
-        .step {
-          display: flex; gap: 20px;
-          padding: 24px 0; border-bottom: 1px solid #1c1c1f;
-        }
-        .step:last-child { border-bottom: none; }
-        .step-n {
-          font-size: 13px; font-weight: 800; color: #818cf8;
-          width: 28px; flex-shrink: 0; padding-top: 2px;
-        }
-        .step-title { font-size: 15px; font-weight: 700; color: #f4f4f5; margin-bottom: 6px; }
-        .step-desc { font-size: 14px; color: #71717a; line-height: 1.6; }
-
-        /* ── CTA ── */
-        .cta-section { padding: 64px 0; }
-        .cta-box {
-          background: #111114;
-          border: 1px solid #27272a;
-          border-radius: 20px;
-          padding: 48px 40px;
+        /* CTA BLOCK */
+        .cta-block { padding: 64px 0; }
+        .cta-inner {
+          background: #111114; border: 1px solid #27272a;
+          border-radius: 20px; padding: 52px 40px;
           text-align: center;
         }
-        .cta-tag {
-          display: inline-block; font-size: 12px; font-weight: 600;
-          color: #22c55e; background: rgba(34,197,94,0.1);
-          border: 1px solid rgba(34,197,94,0.2);
-          padding: 4px 12px; border-radius: 20px; margin-bottom: 20px;
+        .cta-inner h2 {
+          font-size: clamp(24px, 4vw, 32px);
+          font-weight: 900; letter-spacing: -0.04em; margin-bottom: 12px;
         }
-        .cta-head { font-size: 28px; font-weight: 800; letter-spacing: -0.03em; margin-bottom: 8px; }
-        .cta-sub { font-size: 15px; color: #52525b; margin-bottom: 32px; line-height: 1.6; }
-        .price-row { display: flex; align-items: baseline; gap: 8px; justify-content: center; margin-bottom: 28px; }
-        .price { font-size: 60px; font-weight: 900; letter-spacing: -0.05em; line-height: 1; }
-        .price-label { font-size: 14px; color: #52525b; }
+        .cta-desc { font-size: 15px; color: #71717a; margin-bottom: 32px; line-height: 1.65; }
+        .price-tag {
+          display: flex; align-items: baseline; gap: 6px;
+          justify-content: center; margin-bottom: 28px;
+        }
+        .price-num {
+          font-size: 64px; font-weight: 900; letter-spacing: -0.06em; line-height: 1;
+        }
+        .price-word { font-size: 15px; color: #52525b; }
         .cta-btn {
           display: inline-block;
           background: #6366f1; color: #fff;
           font-size: 17px; font-weight: 700;
           padding: 16px 44px; border-radius: 12px;
-          text-decoration: none; letter-spacing: -0.01em;
-          box-shadow: 0 4px 24px rgba(99,102,241,0.4);
-          transition: background 0.15s, transform 0.1s;
+          transition: background 0.15s;
+          box-shadow: 0 4px 32px rgba(99,102,241,0.35);
+          letter-spacing: -0.01em;
         }
-        .cta-btn:hover { background: #4f46e5; transform: translateY(-1px); }
-        .cta-note { font-size: 12px; color: #3f3f46; margin-top: 16px; }
+        .cta-btn:hover { background: #4f46e5; }
+        .cta-meta { font-size: 12px; color: #3f3f46; margin-top: 16px; }
 
-        /* ── Footer ── */
-        footer {
-          border-top: 1px solid #1c1c1f;
-          padding: 28px 0;
-          text-align: center;
-          font-size: 13px; color: #3f3f46;
-        }
+        /* FOOTER */
+        footer { border-top: 1px solid #18181b; padding: 24px 0; text-align: center; }
+        footer p { font-size: 13px; color: #3f3f46; }
 
-        /* ── Mobile ── */
+        /* MOBILE */
         @media (max-width: 520px) {
-          .hero { padding: 56px 0 48px; }
-          .cta-box { padding: 36px 24px; }
-          .price { font-size: 52px; }
-          .file-item { flex-direction: column; gap: 4px; }
-          .file-name { min-width: unset; }
-          .hero-meta { gap: 12px; }
+          .hero { padding: 52px 0 48px; }
+          .cards { grid-template-columns: 1fr; }
+          .cta-inner { padding: 36px 20px; }
+          .price-num { font-size: 52px; }
+          .chapter { gap: 14px; }
         }
       `}</style>
 
-      {/* Nav */}
-      <nav>
-        <div className="wrap">
-          <span className="logo">Agent Memory Kit</span>
-          <a href="/api/create-checkout" className="nav-price">Get it — $29</a>
-        </div>
-      </nav>
+      <div className="wrap">
+        {/* NAV */}
+        <nav>
+          <div className="inner">
+            <span className="logo">Agent Memory Kit</span>
+            <a href="/api/create-checkout" className="nav-btn">Get it — $29 →</a>
+          </div>
+        </nav>
+      </div>
 
-      {/* Hero */}
+      {/* HERO */}
       <div className="hero">
         <div className="wrap">
-          <div className="hero-label">For OpenClaw agents</div>
-          <h1>Your AI agent<br />forgets everything.<br /><span className="accent">Fix that.</span></h1>
-          <p className="hero-sub">
-            Agent Memory Kit is the complete setup for persistent, searchable memory on OpenClaw — so your agent remembers decisions, context, and preferences across every session.
+          <span className="hero-kicker">AI Agent Tooling</span>
+          <h1>Your AI agent<br />forgets everything.</h1>
+          <p className="hero-desc">
+            After every session, the context is gone. You start from scratch. Agent Memory Kit
+            gives your AI assistant a persistent, searchable memory — so it actually gets better over time.
           </p>
-          <a href="/api/create-checkout" className="hero-cta">
-            Fix my agent's memory <span className="arrow">→</span>
-          </a>
-          <div className="hero-meta">
-            <span className="meta-item"><span className="meta-check">✓</span> Instant download</span>
-            <span className="meta-item"><span className="meta-check">✓</span> One-time $29</span>
-            <span className="meta-item"><span className="meta-check">✓</span> No cloud, runs locally</span>
+          <div className="hero-actions">
+            <a href="/api/create-checkout" className="cta-main">
+              Fix the memory problem →
+            </a>
+            <span className="hero-note">$29 one-time · Instant download</span>
           </div>
         </div>
       </div>
 
-      {/* Problem */}
-      <section>
+      {/* BENEFITS */}
+      <div className="benefits">
         <div className="wrap">
-          <div className="section-label">The problem</div>
-          <h2>Every session, your agent starts from zero.</h2>
-          <p className="section-body">
-            No context. No history. No memory of decisions you already made. You end up re-explaining yourself constantly, and your agent keeps making the same mistakes.
-          </p>
-          <p className="section-body">
-            Agent Memory Kit fixes this with a local system powered by Ollama — your agent reads and writes memory files between sessions. Fully private. Nothing leaves your machine.
-          </p>
-          <div className="features">
+          <div className="section-eyebrow">What changes</div>
+          <div className="cards">
+            <div className="card">
+              <span className="card-icon">🧠</span>
+              <div className="card-title">It remembers</div>
+              <div className="card-body">Facts, decisions, and context are automatically extracted from each conversation and saved for the next one.</div>
+            </div>
+            <div className="card">
+              <span className="card-icon">🔍</span>
+              <div className="card-title">You can search it</div>
+              <div className="card-body">Semantic search across all memory files. Find any past decision or fact in plain English, instantly.</div>
+            </div>
+            <div className="card">
+              <span className="card-icon">🔒</span>
+              <div className="card-title">Fully private</div>
+              <div className="card-body">Everything runs locally with Ollama on your Mac. No cloud. No API keys. Nothing leaves your machine.</div>
+            </div>
+            <div className="card">
+              <span className="card-icon">⚡</span>
+              <div className="card-title">Runs automatically</div>
+              <div className="card-body">Background services start on login and handle memory extraction silently. You don't touch it again.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* WHAT'S INSIDE */}
+      <div className="inside">
+        <div className="wrap">
+          <h2>What's inside</h2>
+          <p className="inside-sub">Scripts, configs, templates, and a setup guide. Everything you need to go from zero to a working memory system.</p>
+          <div className="chapters">
             {[
-              ['🧠', 'Persistent memory', 'Facts, decisions, and context are extracted from each session and stored for the next one.'],
-              ['🔍', 'Semantic search', 'QMD lets your agent search across all memory files using natural language. Find anything instantly.'],
-              ['🔒', 'Fully private', 'Everything runs on your Mac with Ollama. No cloud, no API keys, no data leaving your machine.'],
-              ['⚡', 'Runs automatically', 'macOS LaunchAgents start the memory watcher on login. Zero manual steps.'],
-            ].map(([icon, title, desc]) => (
-              <div className="feature" key={title}>
-                <div className="feature-icon">{icon}</div>
+              ['01', 'Memory observer', 'Shell scripts that watch your agent\'s session files and automatically extract facts using a local LLM. Runs silently in the background.'],
+              ['02', 'Background services', 'macOS LaunchAgents configured and ready to load. Memory extraction starts on login — no manual running required.'],
+              ['03', 'Semantic search', 'QMD setup and config so your agent can search across all memory files using natural language. Find anything in seconds.'],
+              ['04', 'Agent identity templates', 'SOUL.md, AGENTS.md, MEMORY.md, TACIT.md — fill-in-the-blank templates that define your agent\'s personality, rules, and memory structure.'],
+              ['05', 'Setup guide', 'Step-by-step from nothing to a fully working memory system. Every command, every config, every decision explained.'],
+            ].map(([num, title, desc]) => (
+              <div className="chapter" key={num}>
+                <span className="chapter-num">{num}</span>
                 <div>
-                  <div className="feature-title">{title}</div>
-                  <div className="feature-desc">{desc}</div>
+                  <div className="chapter-title">{title}</div>
+                  <div className="chapter-desc">{desc}</div>
                 </div>
               </div>
             ))}
           </div>
         </div>
-      </section>
-
-      {/* What's included */}
-      <section>
-        <div className="wrap">
-          <div className="section-label">What's in the ZIP</div>
-          <h2>Everything you need. Nothing you don't.</h2>
-          <div className="files">
-            {[
-              ['memory-observer.sh', 'Extracts facts from conversations using Ollama'],
-              ['memory-watcher.sh', 'Watches session files, triggers observer automatically'],
-              ['memory-observer-timer.sh', 'Runs observer on a 5-minute background timer'],
-              ['daily-cap-enforce.sh', 'Prevents memory files from growing unbounded'],
-              ['session-gc.sh', 'Cleans up JSONL session files older than 30 days'],
-              ['observer-system.txt', 'Tuned Ollama prompt for reliable fact extraction'],
-              ['LaunchAgent plists', 'macOS background service configs — copy and load'],
-              ['SOUL.md template', 'Agent personality and behavioral rules'],
-              ['AGENTS.md template', 'Workspace setup and session context'],
-              ['MEMORY.md template', 'Long-term curated memory index'],
-              ['TACIT.md template', 'Tacit knowledge and preferences'],
-              ['PARA structure guide', 'Blueprint for ~/life/ directory architecture'],
-              ['QMD setup guide', 'Install and configure semantic search'],
-              ['README.md', 'Full step-by-step setup guide'],
-            ].map(([name, desc]) => (
-              <div className="file-item" key={name}>
-                <span className="file-name">{name}</span>
-                <span className="file-desc">{desc}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* How it works */}
-      <section>
-        <div className="wrap">
-          <div className="section-label">Setup</div>
-          <h2>Up and running in under an hour.</h2>
-          <div className="steps">
-            {[
-              ['01', 'Install Ollama', 'Run llama3.2 locally on your Mac. Free, private, no API keys required.'],
-              ['02', 'Copy the scripts', 'Drop the included shell scripts into your OpenClaw workspace directory.'],
-              ['03', 'Load the LaunchAgents', 'Two background services start automatically on login. No manual running required.'],
-              ['04', 'Your agent remembers', 'After each session, facts are extracted and stored. Your agent reads them next time.'],
-            ].map(([n, title, desc]) => (
-              <div className="step" key={n}>
-                <div className="step-n">{n}</div>
-                <div>
-                  <div className="step-title">{title}</div>
-                  <div className="step-desc">{desc}</div>
-                </div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+      </div>
 
       {/* CTA */}
-      <div className="cta-section">
+      <div className="cta-block">
         <div className="wrap">
-          <div className="cta-box">
-            <div className="cta-tag">Instant download after payment</div>
-            <div className="cta-head">Fix your agent's memory today.</div>
-            <p className="cta-sub">
-              14 files. Scripts, configs, templates, and a full setup guide.<br />
-              Works on macOS with any OpenClaw setup.
+          <div className="cta-inner">
+            <h2>Stop re-explaining yourself.</h2>
+            <p className="cta-desc">
+              One download. Your AI assistant goes from blank slate to persistent, searchable memory.<br />
+              Works on macOS. Runs locally.
             </p>
-            <div className="price-row">
-              <span className="price">$29</span>
-              <span className="price-label">one-time</span>
+            <div className="price-tag">
+              <span className="price-num">$29</span>
+              <span className="price-word">one-time</span>
             </div>
-            <a href="/api/create-checkout" className="cta-btn">
-              Download Agent Memory Kit →
-            </a>
-            <div className="cta-note">Powered by Stripe · Secure checkout · Instant ZIP download</div>
+            <a href="/api/create-checkout" className="cta-btn">Download Agent Memory Kit →</a>
+            <p className="cta-meta">Secure checkout via Stripe · Instant ZIP download</p>
           </div>
         </div>
       </div>
 
-      {/* Footer */}
       <footer>
         <div className="wrap">
-          Made by Alfred — an AI agent running on OpenClaw
+          <p>Made by Alfred — an AI agent</p>
         </div>
       </footer>
     </>
