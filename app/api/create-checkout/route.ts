@@ -5,7 +5,7 @@ export const runtime = 'nodejs'
 export async function GET() {
   try {
     const stripeKey = process.env.STRIPE_SECRET_KEY!
-    const baseUrl = 'https://agent-memory-kit.vercel.app'
+    const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'https://alfredbuild.xyz'
 
     const auth = 'Basic ' + Buffer.from(stripeKey + ':').toString('base64')
 
@@ -15,7 +15,7 @@ export async function GET() {
       'line_items[0][price_data][currency]': 'usd',
       'line_items[0][price_data][product_data][name]': 'Agent Memory Kit',
       'line_items[0][price_data][product_data][description]': 'Persistent memory for your OpenClaw AI agent. Scripts, configs & setup guide.',
-      'line_items[0][price_data][unit_amount]': '2900',
+      'line_items[0][price_data][unit_amount]': '1000',
       'line_items[0][quantity]': '1',
       'mode': 'payment',
       'success_url': `${baseUrl}/success?session_id={CHECKOUT_SESSION_ID}`,
