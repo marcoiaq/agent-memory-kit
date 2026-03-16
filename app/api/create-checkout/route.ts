@@ -44,7 +44,7 @@ export async function GET() {
     const data = await resp.json() as { url?: string; error?: { message: string } }
 
     if (!resp.ok || !data.url) {
-      return NextResponse.json({ error: data.error?.message || JSON.stringify(data), full: data, body_sent: body.substring(0,500) }, { status: 500 })
+      return NextResponse.json({ error: data.error?.message || JSON.stringify(data) }, { status: 500 })
     }
 
     return NextResponse.redirect(data.url, 303)
