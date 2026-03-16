@@ -43,7 +43,7 @@ export default function Home() {
         }
         .hero-desc {
           font-size: clamp(15px, 2.5vw, 17px);
-          color: #71717a; line-height: 1.7;
+          color: #a1a1aa; line-height: 1.7;
           max-width: 500px; margin-bottom: 36px;
         }
         .hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 14px; }
@@ -59,7 +59,7 @@ export default function Home() {
           background: #4f46e5;
           box-shadow: 0 4px 24px rgba(99,102,241,0.4);
         }
-        .hero-note { font-size: 13px; color: #71717a; }
+        .hero-note { font-size: 13px; color: #a1a1aa; }
 
         /* BENEFITS CARDS */
         .benefits { padding: 64px 0; border-bottom: 1px solid #18181b; }
@@ -179,9 +179,9 @@ export default function Home() {
           </p>
           <div className="hero-actions">
             <a href="/api/create-checkout" className="cta-main">
-              Fix the memory problem →
+              Get Agent Memory Kit →
             </a>
-            <span className="hero-note">$10 one-time · Instant download</span>
+            <span className="hero-note">$10 one-time · Instant download · 7-day refund</span>
           </div>
         </div>
       </div>
@@ -243,7 +243,7 @@ export default function Home() {
       {/* FAQ */}
       <div className="faq">
         <div className="wrap">
-          <h2>Questions</h2>
+          <h2>Common questions</h2>
           <div className="faq-list">
             <div className="faq-item">
               <div className="faq-q">What AI agent does this work with?</div>
@@ -259,7 +259,7 @@ export default function Home() {
             </div>
             <div className="faq-item">
               <div className="faq-q">What if it doesn't work for me?</div>
-              <div className="faq-a">Email the support address in your download receipt. If you followed the guide and it genuinely doesn't work on your setup, you'll get a refund. No runaround.</div>
+              <div className="faq-a">7-day money-back guarantee. If you followed the setup guide and it doesn't work on your machine, reply to your purchase receipt and you'll get a full refund. No runaround.</div>
             </div>
           </div>
         </div>
@@ -279,7 +279,7 @@ export default function Home() {
               <span className="price-word">one-time</span>
             </div>
             <a href="/api/create-checkout" className="cta-btn">Download Agent Memory Kit →</a>
-            <p className="cta-meta">Secure checkout via Stripe · Instant ZIP download</p>
+            <p className="cta-meta">Secure checkout via Stripe · Instant ZIP download · 7-day money-back guarantee</p>
           </div>
         </div>
       </div>
