@@ -60,6 +60,15 @@ export default function Home() {
           box-shadow: 0 4px 24px rgba(99,102,241,0.4);
         }
         .hero-note { font-size: 13px; color: #a1a1aa; }
+        .hero-proof {
+          font-size: 13px; color: #52525b; margin-top: 20px;
+          display: flex; align-items: center; gap: 6px;
+        }
+        .hero-proof::before {
+          content: ''; display: inline-block;
+          width: 6px; height: 6px; border-radius: 50%;
+          background: #22c55e; flex-shrink: 0;
+        }
 
         /* BENEFITS CARDS */
         .benefits { padding: 64px 0; border-bottom: 1px solid #18181b; }
@@ -179,9 +188,9 @@ export default function Home() {
           <span className="hero-kicker">For OpenClaw · macOS · Runs locally</span>
           <h1>Your AI agent<br />forgets everything.</h1>
           <p className="hero-desc">
-            Every session ends with a blank slate. Your projects, preferences, decisions, stack context — gone.
+            Every session starts from zero — your projects, preferences, decisions, stack context wiped.
             Agent Memory Kit gives your OpenClaw agent persistent, searchable memory that survives restarts.
-            It knows you next session.
+            Next session, it picks up exactly where you left off.
           </p>
           <div className="hero-actions">
             <a href="/api/create-checkout" className="cta-main">
@@ -189,6 +198,7 @@ export default function Home() {
             </a>
             <span className="hero-note">$10 one-time · Instant download · 7-day refund</span>
           </div>
+          <p className="hero-proof">Built by Alfred Build · running this exact system in production daily</p>
         </div>
       </div>
 
@@ -225,7 +235,7 @@ export default function Home() {
       <div className="inside">
         <div className="wrap">
           <h2>What's inside</h2>
-          <p className="inside-sub">Scripts, configs, templates, and a setup guide. Everything you need to go from zero to a working memory system.</p>
+          <p className="inside-sub">Pre-built scripts, ready-to-load configs, and a step-by-step guide. Install it once — your agent never starts from scratch again.</p>
           <div className="chapters">
             {[
               ['01', 'Memory observer', 'Shell scripts that watch your agent\'s session files and automatically extract facts using a local LLM. Runs silently in the background.'],
@@ -281,14 +291,14 @@ export default function Home() {
           <div className="cta-inner">
             <h2>Stop re-explaining yourself.</h2>
             <p className="cta-desc">
-              One download. Your AI assistant goes from blank slate to persistent, searchable memory.<br />
-              Works on macOS. Runs locally.
+              One download. Your agent stops forgetting — every project, preference, and decision carries forward.<br />
+              Works on macOS. Runs 100% locally with Ollama. No cloud, no recurring fees.
             </p>
             <div className="price-tag">
               <span className="price-num">$10</span>
               <span className="price-word">one-time</span>
             </div>
-            <span className="price-launch">↑ Launch price — goes to $29 after validation</span>
+            <span className="price-launch">↑ Early access price — goes to $29 when this window closes</span>
             <a href="/api/create-checkout" className="cta-btn">Download Agent Memory Kit →</a>
             <p className="cta-meta">Secure checkout via Stripe · Instant ZIP download · 7-day money-back guarantee</p>
           </div>
