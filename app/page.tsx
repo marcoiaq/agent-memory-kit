@@ -59,7 +59,7 @@ export default function Home() {
           background: #4f46e5;
           box-shadow: 0 4px 24px rgba(99,102,241,0.4);
         }
-        .hero-note { font-size: 13px; color: #3f3f46; }
+        .hero-note { font-size: 13px; color: #71717a; }
 
         /* BENEFITS CARDS */
         .benefits { padding: 64px 0; border-bottom: 1px solid #18181b; }
@@ -98,6 +98,20 @@ export default function Home() {
         .chapter-title { font-size: 15px; font-weight: 700; color: #fafafa; margin-bottom: 6px; }
         .chapter-desc { font-size: 14px; color: #71717a; line-height: 1.6; }
 
+        /* FAQ */
+        .faq { padding: 64px 0; border-bottom: 1px solid #18181b; }
+        .faq h2 {
+          font-size: clamp(22px, 3.5vw, 28px);
+          font-weight: 800; letter-spacing: -0.03em; margin-bottom: 32px;
+        }
+        .faq-list { display: flex; flex-direction: column; gap: 0; }
+        .faq-item {
+          padding: 20px 0; border-bottom: 1px solid #18181b;
+        }
+        .faq-item:last-child { border-bottom: none; }
+        .faq-q { font-size: 15px; font-weight: 700; color: #fafafa; margin-bottom: 8px; }
+        .faq-a { font-size: 14px; color: #71717a; line-height: 1.65; }
+
         /* CTA BLOCK */
         .cta-block { padding: 64px 0; }
         .cta-inner {
@@ -128,7 +142,7 @@ export default function Home() {
           letter-spacing: -0.01em;
         }
         .cta-btn:hover { background: #4f46e5; }
-        .cta-meta { font-size: 12px; color: #3f3f46; margin-top: 16px; }
+        .cta-meta { font-size: 12px; color: #52525b; margin-top: 16px; }
 
         /* FOOTER */
         footer { border-top: 1px solid #18181b; padding: 24px 0; text-align: center; }
@@ -157,7 +171,7 @@ export default function Home() {
       {/* HERO */}
       <div className="hero">
         <div className="wrap">
-          <span className="hero-kicker">AI Agent Tooling</span>
+          <span className="hero-kicker">For OpenClaw · macOS · Runs locally</span>
           <h1>Your AI agent<br />forgets everything.</h1>
           <p className="hero-desc">
             After every session, the context is gone. You start from scratch. Agent Memory Kit
@@ -222,6 +236,31 @@ export default function Home() {
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </div>
+
+      {/* FAQ */}
+      <div className="faq">
+        <div className="wrap">
+          <h2>Questions</h2>
+          <div className="faq-list">
+            <div className="faq-item">
+              <div className="faq-q">What AI agent does this work with?</div>
+              <div className="faq-a">Agent Memory Kit is built for <strong style={{color:'#fafafa'}}>OpenClaw</strong> — the Claude-powered agent framework for Mac. It hooks directly into OpenClaw's session files and workspace structure. It won't work with ChatGPT, Claude.ai, or other agents out of the box.</div>
+            </div>
+            <div className="faq-item">
+              <div className="faq-q">What do I actually get?</div>
+              <div className="faq-a">A ZIP with shell scripts, macOS LaunchAgent plists, QMD config, and identity template files (SOUL.md, AGENTS.md, MEMORY.md, TACIT.md) — plus a step-by-step setup guide. Everything pre-configured. You run the installer, load the services, and it works.</div>
+            </div>
+            <div className="faq-item">
+              <div className="faq-q">Does it require any cloud services or API keys?</div>
+              <div className="faq-a">No. Memory extraction runs locally using Ollama. Search runs locally via SQLite. Nothing leaves your machine. No subscriptions, no recurring fees.</div>
+            </div>
+            <div className="faq-item">
+              <div className="faq-q">What if it doesn't work for me?</div>
+              <div className="faq-a">Email the support address in your download receipt. If you followed the guide and it genuinely doesn't work on your setup, you'll get a refund. No runaround.</div>
+            </div>
           </div>
         </div>
       </div>
