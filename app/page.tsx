@@ -179,7 +179,7 @@ export default function Home() {
           </p>
           <div className="hero-actions">
             <a href="/api/create-checkout" className="cta-main">
-              Get Agent Memory Kit →
+              Get Agent Memory Kit — $10 →
             </a>
             <span className="hero-note">$10 one-time · Instant download · 7-day refund</span>
           </div>
@@ -245,6 +245,10 @@ export default function Home() {
         <div className="wrap">
           <h2>Common questions</h2>
           <div className="faq-list">
+            <div className="faq-item">
+              <div className="faq-q">What do I need to use this?</div>
+              <div className="faq-a">A Mac running macOS 12 or later (Apple Silicon or Intel), <strong style={{color:'#fafafa'}}>OpenClaw</strong> installed, and <strong style={{color:'#fafafa'}}>Ollama</strong> running locally. Ollama is free and handles all the memory extraction — no GPU required, runs on CPU fine.</div>
+            </div>
             <div className="faq-item">
               <div className="faq-q">What AI agent does this work with?</div>
               <div className="faq-a">Agent Memory Kit is built for <strong style={{color:'#fafafa'}}>OpenClaw</strong> — the Claude-powered agent framework for Mac. It hooks directly into OpenClaw's session files and workspace structure. It won't work with ChatGPT, Claude.ai, or other agents out of the box.</div>
