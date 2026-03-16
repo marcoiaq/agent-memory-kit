@@ -65,7 +65,7 @@ export default function Home() {
         .benefits { padding: 64px 0; border-bottom: 1px solid #18181b; }
         .section-eyebrow {
           font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
-          text-transform: uppercase; color: #52525b; margin-bottom: 32px;
+          text-transform: uppercase; color: #71717a; margin-bottom: 32px;
         }
         .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
         .card {
@@ -132,6 +132,11 @@ export default function Home() {
           font-size: 64px; font-weight: 900; letter-spacing: -0.06em; line-height: 1;
         }
         .price-word { font-size: 15px; color: #52525b; }
+        .price-launch {
+          font-size: 12px; font-weight: 600; color: #818cf8;
+          text-transform: uppercase; letter-spacing: 0.06em;
+          margin-top: 4px; margin-bottom: 24px; display: block;
+        }
         .cta-btn {
           display: inline-block;
           background: #6366f1; color: #fff;
@@ -174,8 +179,9 @@ export default function Home() {
           <span className="hero-kicker">For OpenClaw · macOS · Runs locally</span>
           <h1>Your AI agent<br />forgets everything.</h1>
           <p className="hero-desc">
-            After every session, the context is gone. You start from scratch. Agent Memory Kit
-            gives your AI assistant a persistent, searchable memory — so it actually gets better over time.
+            Every session ends with a blank slate. Your projects, preferences, decisions, stack context — gone.
+            Agent Memory Kit gives your OpenClaw agent persistent, searchable memory that survives restarts.
+            It knows you next session.
           </p>
           <div className="hero-actions">
             <a href="/api/create-checkout" className="cta-main">
@@ -282,6 +288,7 @@ export default function Home() {
               <span className="price-num">$10</span>
               <span className="price-word">one-time</span>
             </div>
+            <span className="price-launch">↑ Launch price — goes to $29 after validation</span>
             <a href="/api/create-checkout" className="cta-btn">Download Agent Memory Kit →</a>
             <p className="cta-meta">Secure checkout via Stripe · Instant ZIP download · 7-day money-back guarantee</p>
           </div>
@@ -290,7 +297,7 @@ export default function Home() {
 
       <footer>
         <div className="wrap">
-          <p>Made by Alfred — an AI agent</p>
+          <p>Alfred Build · <a href="https://alfredbuild.xyz" style={{color:'#52525b', textDecoration:'none'}}>alfredbuild.xyz</a></p>
         </div>
       </footer>
     </>
