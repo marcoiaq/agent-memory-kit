@@ -263,7 +263,11 @@ export default function Home() {
           <div className="faq-list">
             <div className="faq-item">
               <div className="faq-q">What do I need to use this?</div>
-              <div className="faq-a">A Mac running macOS 12 or later (Apple Silicon or Intel), <strong style={{color:'#fafafa'}}>OpenClaw</strong> installed, and <strong style={{color:'#fafafa'}}>Ollama</strong> running locally. Ollama is free and handles all the memory extraction — no GPU required, runs on CPU fine.</div>
+              <div className="faq-a">A Mac running macOS 12 or later (M1, M2, M3, or Intel), <strong style={{color:'#fafafa'}}>OpenClaw</strong> installed, and <strong style={{color:'#fafafa'}}>Ollama</strong> running locally. Ollama is free and handles all the memory extraction — no GPU required, runs on CPU fine.</div>
+            </div>
+            <div className="faq-item">
+              <div className="faq-q">How long does setup take?</div>
+              <div className="faq-a">About 15–20 minutes. You'll run the installer script, load two macOS background services, and fill in a short config for your agent's identity. The setup guide walks through every step with exact commands — no guesswork.</div>
             </div>
             <div className="faq-item">
               <div className="faq-q">What AI agent does this work with?</div>
@@ -298,7 +302,7 @@ export default function Home() {
               <span className="price-num">$10</span>
               <span className="price-word">one-time</span>
             </div>
-            <span className="price-launch">↑ Early access price — goes to $29 when this window closes</span>
+            <span className="price-launch">↑ Early access price — goes to $29 at full launch</span>
             <a href="/api/create-checkout" className="cta-btn">Download Agent Memory Kit →</a>
             <p className="cta-meta">Secure checkout via Stripe · Instant ZIP download · 7-day money-back guarantee</p>
           </div>
