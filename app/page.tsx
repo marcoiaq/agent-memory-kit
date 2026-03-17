@@ -39,8 +39,18 @@ export default function Home() {
         .hero-kicker {
           font-size: 12px; font-weight: 600; letter-spacing: 0.08em;
           text-transform: uppercase; color: #818cf8;
-          margin-bottom: 24px; display: block;
+          margin-bottom: 12px; display: block;
         }
+        .hero-badge {
+          display: inline-flex; align-items: center; gap: 8px;
+          background: rgba(99,102,241,0.08); border: 1px solid rgba(99,102,241,0.2);
+          padding: 6px 14px; border-radius: 8px;
+          font-size: 12px; font-weight: 600; color: #818cf8;
+          margin-bottom: 28px;
+          letter-spacing: 0.02em;
+        }
+        .hero-badge a { color: #a5b4fc; text-decoration: underline; text-decoration-color: rgba(165,180,252,0.4); text-underline-offset: 2px; }
+        .hero-badge a:hover { color: #c7d2fe; }
         h1 {
           font-size: clamp(38px, 7.5vw, 64px);
           font-weight: 900; letter-spacing: -0.04em;
@@ -90,6 +100,30 @@ export default function Home() {
           background: #22c55e; flex-shrink: 0;
         }
 
+        /* SOCIAL PROOF BAR */
+        .proof-bar {
+          padding: 24px 0;
+          border-bottom: 1px solid #18181b;
+          background: #0d0d10;
+        }
+        .proof-bar-inner {
+          display: flex; align-items: center; justify-content: center;
+          gap: 0; flex-wrap: wrap;
+        }
+        .proof-stat {
+          display: flex; align-items: center; gap: 8px;
+          padding: 10px 32px;
+          font-size: 13px; font-weight: 600; color: #a1a1aa;
+        }
+        .proof-stat + .proof-stat {
+          border-left: 1px solid #18181b;
+        }
+        .proof-dot {
+          width: 7px; height: 7px; border-radius: 50%;
+          background: #22c55e; flex-shrink: 0;
+          box-shadow: 0 0 6px rgba(34,197,94,0.6);
+        }
+
         /* DEMO BLOCK */
         .demo { padding: 48px 0; border-bottom: 1px solid #18181b; }
         .demo-label {
@@ -122,6 +156,110 @@ export default function Home() {
         .demo-caption {
           font-size: 13px; color: #52525b; margin-top: 14px; text-align: center;
         }
+
+        /* BEFORE / AFTER */
+        .before-after { padding: 64px 0; border-bottom: 1px solid #18181b; }
+        .before-after-heading {
+          font-size: clamp(22px, 3.5vw, 28px);
+          font-weight: 800; letter-spacing: -0.03em;
+          color: #fafafa; margin-bottom: 32px; line-height: 1.2;
+          text-align: center;
+        }
+        .ba-cols {
+          display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+        }
+        .ba-col {
+          background: #111114; border: 1px solid #1c1c1f;
+          border-radius: 14px; padding: 28px 24px;
+        }
+        .ba-col-label {
+          font-size: 11px; font-weight: 800; letter-spacing: 0.1em;
+          text-transform: uppercase; margin-bottom: 20px;
+          display: block;
+        }
+        .ba-col-label.before { color: #ef4444; }
+        .ba-col-label.after  { color: #22c55e; }
+        .ba-item {
+          display: flex; align-items: flex-start; gap: 10px;
+          margin-bottom: 14px; font-size: 14px; line-height: 1.5;
+        }
+        .ba-item:last-child { margin-bottom: 0; }
+        .ba-dot {
+          width: 7px; height: 7px; border-radius: 50%;
+          flex-shrink: 0; margin-top: 5px;
+        }
+        .ba-dot.before { background: #ef4444; }
+        .ba-dot.after  { background: #22c55e; }
+        .ba-text.before { color: #71717a; }
+        .ba-text.after  { color: #22c55e; }
+
+        /* HOW IT WORKS */
+        .how-it-works { padding: 64px 0; border-bottom: 1px solid #18181b; }
+        .how-eyebrow {
+          font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
+          text-transform: uppercase; color: #71717a; margin-bottom: 10px;
+        }
+        .how-heading {
+          font-size: clamp(22px, 3.5vw, 28px);
+          font-weight: 800; letter-spacing: -0.03em;
+          color: #fafafa; margin-bottom: 40px; line-height: 1.2;
+        }
+        .steps { display: flex; flex-direction: column; gap: 0; }
+        .step {
+          display: flex; gap: 24px; align-items: flex-start;
+          padding: 28px 0; border-bottom: 1px solid #18181b;
+        }
+        .step:last-child { border-bottom: none; }
+        .step-num-wrap {
+          display: flex; flex-direction: column; align-items: center;
+          flex-shrink: 0; gap: 6px;
+        }
+        .step-num {
+          width: 36px; height: 36px; border-radius: 50%;
+          background: rgba(99,102,241,0.12); border: 1px solid rgba(99,102,241,0.25);
+          display: flex; align-items: center; justify-content: center;
+          font-size: 13px; font-weight: 800; color: #818cf8;
+          flex-shrink: 0;
+        }
+        .step-title { font-size: 16px; font-weight: 700; color: #fafafa; margin-bottom: 8px; letter-spacing: -0.01em; }
+        .step-desc { font-size: 14px; color: #71717a; line-height: 1.65; }
+
+        /* BUILT FOR OPENCLAW */
+        .openclaw-section { padding: 64px 0; border-bottom: 1px solid #18181b; }
+        .openclaw-inner {
+          background: rgba(99,102,241,0.06); border: 1px solid rgba(99,102,241,0.15);
+          border-radius: 20px; padding: 44px 40px;
+        }
+        .openclaw-eyebrow {
+          font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
+          text-transform: uppercase; color: #818cf8; margin-bottom: 10px;
+          display: block;
+        }
+        .openclaw-heading {
+          font-size: clamp(22px, 3.5vw, 28px);
+          font-weight: 800; letter-spacing: -0.03em;
+          color: #fafafa; margin-bottom: 16px; line-height: 1.2;
+        }
+        .openclaw-body {
+          font-size: 15px; color: #a1a1aa; line-height: 1.7;
+          margin-bottom: 28px; max-width: 560px;
+        }
+        .openclaw-features { list-style: none; margin-bottom: 28px; display: flex; flex-direction: column; gap: 12px; }
+        .openclaw-feature {
+          display: flex; align-items: flex-start; gap: 10px;
+          font-size: 14px; color: #a1a1aa; line-height: 1.5;
+        }
+        .openclaw-feature::before {
+          content: '✓'; color: #818cf8; font-weight: 800; font-size: 13px;
+          flex-shrink: 0; margin-top: 1px;
+        }
+        .openclaw-link {
+          display: inline-flex; align-items: center; gap: 6px;
+          font-size: 14px; font-weight: 700; color: #818cf8;
+          text-decoration: underline; text-decoration-color: rgba(129,140,248,0.4);
+          text-underline-offset: 2px; transition: color 0.15s;
+        }
+        .openclaw-link:hover { color: #a5b4fc; }
 
         /* BENEFITS CARDS */
         .benefits { padding: 64px 0; border-bottom: 1px solid #18181b; }
@@ -228,6 +366,11 @@ export default function Home() {
           .price-num { font-size: 52px; }
           .chapter { gap: 14px; }
           .demo-code { font-size: 11px; }
+          .ba-cols { grid-template-columns: 1fr; }
+          .proof-bar-inner { flex-direction: column; gap: 0; }
+          .proof-stat + .proof-stat { border-left: none; border-top: 1px solid #18181b; }
+          .openclaw-inner { padding: 28px 20px; }
+          .step { gap: 14px; }
         }
       `}</style>
 
@@ -246,7 +389,12 @@ export default function Home() {
       {/* HERO */}
       <div className="hero">
         <div className="wrap">
-          <span className="hero-kicker">For <a href="https://openclaw.ai" target="_blank" rel="noopener noreferrer" style={{color:'inherit', textDecoration:'underline', textDecorationColor:'rgba(129,140,248,0.4)', textUnderlineOffset:'2px'}}>OpenClaw</a> · macOS · Runs locally</span>
+          <span className="hero-kicker">For OpenClaw · macOS · Runs locally</span>
+          <div className="hero-badge">
+            Built for{' '}
+            <a href="https://openclaw.ai" target="_blank" rel="noopener noreferrer">OpenClaw</a>
+            {' '}· macOS · Runs locally
+          </div>
           <h1>Your AI agent<br />forgets everything.</h1>
           <p className="hero-desc">
             Every session, you re-explain your stack, your preferences, your past decisions — because your agent woke up blank.
@@ -263,6 +411,24 @@ export default function Home() {
               <span className="hero-note-item">Instant download</span>
               <span className="hero-note-item">7-day refund</span>
             </span>
+          </div>
+        </div>
+      </div>
+
+      {/* SOCIAL PROOF BAR */}
+      <div className="proof-bar">
+        <div className="wrap">
+          <div className="proof-bar-inner">
+            <div className="proof-stat">
+              <span className="proof-dot"></span>
+              Running on 1 live agent
+            </div>
+            <div className="proof-stat">
+              ⏱ 20-min setup
+            </div>
+            <div className="proof-stat">
+              ↩ 7-day money-back
+            </div>
           </div>
         </div>
       </div>
@@ -290,6 +456,109 @@ export default function Home() {
         </div>
       </div>
 
+      {/* BEFORE / AFTER */}
+      <div className="before-after">
+        <div className="wrap">
+          <h2 className="before-after-heading">Without memory vs. with memory</h2>
+          <div className="ba-cols">
+            <div className="ba-col">
+              <span className="ba-col-label before">Before</span>
+              {[
+                'Every session starts blank',
+                'You re-explain your stack. Again.',
+                'You correct the same mistakes',
+                'Your agent asks what it already knows',
+                'Context lost when session ends',
+              ].map((text) => (
+                <div className="ba-item" key={text}>
+                  <span className="ba-dot before"></span>
+                  <span className="ba-text before">{text}</span>
+                </div>
+              ))}
+            </div>
+            <div className="ba-col">
+              <span className="ba-col-label after">After</span>
+              {[
+                'Picks up exactly where you left off',
+                'Already knows your stack, your rules',
+                'Zero repeated corrections',
+                'Searches its own memory before asking',
+                'Every decision preserved permanently',
+              ].map((text) => (
+                <div className="ba-item" key={text}>
+                  <span className="ba-dot after"></span>
+                  <span className="ba-text after">{text}</span>
+                </div>
+              ))}
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* HOW IT WORKS */}
+      <div className="how-it-works">
+        <div className="wrap">
+          <div className="how-eyebrow">How it works</div>
+          <h2 className="how-heading">Three steps. Then you never think about it again.</h2>
+          <div className="steps">
+            <div className="step">
+              <div className="step-num-wrap">
+                <div className="step-num">1</div>
+              </div>
+              <div>
+                <div className="step-title">Install in 20 minutes</div>
+                <div className="step-desc">Run the installer script. Load two macOS background services. Fill in your agent&apos;s identity in MEMORY.md. That&apos;s it.</div>
+              </div>
+            </div>
+            <div className="step">
+              <div className="step-num-wrap">
+                <div className="step-num">2</div>
+              </div>
+              <div>
+                <div className="step-title">Memory builds automatically</div>
+                <div className="step-desc">After each session, the memory observer extracts facts, decisions, and context into structured files your agent can search. You never touch it.</div>
+              </div>
+            </div>
+            <div className="step">
+              <div className="step-num-wrap">
+                <div className="step-num">3</div>
+              </div>
+              <div>
+                <div className="step-title">Next session, agent already knows</div>
+                <div className="step-desc">Your OpenClaw agent reads its memory before every session. Searches in plain English. No re-explaining, no blank slates.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      {/* BUILT FOR OPENCLAW */}
+      <div className="openclaw-section">
+        <div className="wrap">
+          <div className="openclaw-inner">
+            <span className="openclaw-eyebrow">Purpose-built</span>
+            <h2 className="openclaw-heading">Built for OpenClaw. Nothing else.</h2>
+            <p className="openclaw-body">
+              Agent Memory Kit hooks directly into OpenClaw&apos;s session files and workspace structure. Purpose-built for how OpenClaw agents work.
+              If you&apos;re running OpenClaw on a Mac, this is the memory layer it was missing.
+            </p>
+            <ul className="openclaw-features">
+              {[
+                'Reads OpenClaw session JSONL files automatically',
+                'Integrates with OpenClaw\'s workspace (MEMORY.md, SOUL.md, AGENTS.md)',
+                'Works with OpenClaw\'s tool calls and agent turns',
+                'Compatible with all OpenClaw models',
+              ].map((f) => (
+                <li className="openclaw-feature" key={f}>{f}</li>
+              ))}
+            </ul>
+            <a href="https://openclaw.ai" target="_blank" rel="noopener noreferrer" className="openclaw-link">
+              New to OpenClaw? Start here →
+            </a>
+          </div>
+        </div>
+      </div>
+
       {/* BENEFITS */}
       <div className="benefits">
         <div className="wrap">
@@ -314,7 +583,7 @@ export default function Home() {
             <div className="card">
               <span className="card-icon">⚡</span>
               <div className="card-title">Runs automatically</div>
-              <div className="card-body">Background services start on login and handle memory extraction silently. You don't touch it again.</div>
+              <div className="card-body">Background services start on login and handle memory extraction silently. You don&apos;t touch it again.</div>
             </div>
           </div>
         </div>
@@ -385,6 +654,14 @@ export default function Home() {
               <div className="faq-q">What if it doesn&apos;t work for me?</div>
               <div className="faq-a">7-day money-back guarantee. If you followed the setup guide and it doesn&apos;t work on your machine, reply to your purchase receipt and you&apos;ll get a full refund. No runaround.</div>
             </div>
+            <div className="faq-item">
+              <div className="faq-q">Do I need to know how to code?</div>
+              <div className="faq-a">You need to be comfortable running commands in Terminal. The installer handles everything — you&apos;re not writing code, just running a few commands and filling in a config file. If you&apos;ve used npm or brew before, you can do this.</div>
+            </div>
+            <div className="faq-item">
+              <div className="faq-q">What&apos;s OpenClaw and do I need it?</div>
+              <div className="faq-a">OpenClaw is a Claude-powered AI agent framework for Mac. Agent Memory Kit is an add-on for it. If you don&apos;t have OpenClaw yet, get it at <a href="https://openclaw.ai" target="_blank" rel="noopener noreferrer" style={{color:'#818cf8', textDecoration:'underline', textDecorationColor:'rgba(129,140,248,0.4)', textUnderlineOffset:'2px'}}>openclaw.ai</a> first.</div>
+            </div>
           </div>
         </div>
       </div>
@@ -411,7 +688,7 @@ export default function Home() {
 
       <footer>
         <div className="wrap">
-          <p>Alfred Build · <a href="https://alfredbuild.xyz" style={{color:'#52525b', textDecoration:'none'}}>alfredbuild.xyz</a> · <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer" style={{color:'#52525b', textDecoration:'none'}}>@alfredmarktr</a></p>
+          <p>Alfred Build · <a href="https://openclaw.ai" target="_blank" rel="noopener noreferrer" style={{color:'#52525b', textDecoration:'none'}}>Built with OpenClaw</a> · <a href="https://alfredbuild.xyz" style={{color:'#52525b', textDecoration:'none'}}>alfredbuild.xyz</a> · <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer" style={{color:'#52525b', textDecoration:'none'}}>@alfredmarktr</a></p>
         </div>
       </footer>
     </>
