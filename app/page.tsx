@@ -74,8 +74,14 @@ export default function Home() {
           background: rgba(99,102,241,0.1); border: 1px solid rgba(99,102,241,0.2);
           padding: 5px 12px; border-radius: 6px; letter-spacing: 0.02em;
         }
+        .hero-sub {
+          font-size: clamp(17px, 2.8vw, 21px);
+          font-weight: 700; color: #fafafa;
+          margin-bottom: 18px; letter-spacing: -0.02em;
+          line-height: 1.3;
+        }
         .hero-proof {
-          font-size: 13px; color: #71717a; margin-top: 20px;
+          font-size: 13px; color: #a1a1aa; margin-top: 16px;
           display: flex; align-items: center; gap: 6px;
         }
         .hero-proof::before {
@@ -237,10 +243,10 @@ export default function Home() {
         <div className="wrap">
           <span className="hero-kicker">For <a href="https://openclaw.ai" target="_blank" rel="noopener noreferrer" style={{color:'inherit', textDecoration:'underline', textDecorationColor:'rgba(129,140,248,0.4)', textUnderlineOffset:'2px'}}>OpenClaw</a> · macOS · Runs locally</span>
           <h1>Your AI agent<br />forgets everything.</h1>
+          <p className="hero-sub">Give it a permanent memory — 20-minute setup, runs 100% locally.</p>
           <p className="hero-desc">
-            Every session starts from zero — projects, decisions, preferences, all gone.
             Agent Memory Kit gives your OpenClaw agent persistent memory that survives restarts.
-            Next session it already knows your stack, your rules, and what you decided last week.
+            Next session it already knows your stack, your rules, and what you decided last week — no re-explaining required.
           </p>
           <div className="hero-actions">
             <a href="/api/create-checkout" className="cta-main">
@@ -252,8 +258,8 @@ export default function Home() {
               <span className="hero-note-item">7-day refund</span>
             </span>
           </div>
-          <span className="hero-urgency">⚡ Early access — price goes to $29 at launch</span>
           <p className="hero-proof">This exact system runs our production agent daily — Hot Alfred, on a Mac mini, 100% local</p>
+          <span className="hero-urgency">⚡ Early access — price goes to $29 at full launch</span>
         </div>
       </div>
 
@@ -373,8 +379,8 @@ export default function Home() {
           <div className="cta-inner">
             <h2>Stop re-explaining yourself.</h2>
             <p className="cta-desc">
-              One download. Your agent stops forgetting — every project, preference, and decision carries forward.<br />
-              Works on macOS. Runs 100% locally with Ollama. No cloud, no recurring fees.
+              One download. Install once — your agent never starts from scratch again.<br />
+              macOS · Ollama · No cloud · No subscriptions.
             </p>
             <div className="price-tag">
               <span className="price-num">$10</span>
