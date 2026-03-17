@@ -193,7 +193,7 @@ export default function Home() {
       {/* HERO */}
       <div className="hero">
         <div className="wrap">
-          <span className="hero-kicker">For OpenClaw · macOS · Runs locally</span>
+          <span className="hero-kicker">For <a href="https://openclaw.ai" target="_blank" rel="noopener noreferrer" style={{color:'inherit', textDecoration:'underline', textDecorationColor:'rgba(129,140,248,0.4)', textUnderlineOffset:'2px'}}>OpenClaw</a> · macOS · Runs locally</span>
           <h1>Your AI agent<br />forgets everything.</h1>
           <p className="hero-desc">
             Every session starts from zero — your active projects, tech stack, decisions, preferences all gone.
@@ -276,7 +276,7 @@ export default function Home() {
           <div className="faq-list">
             <div className="faq-item">
               <div className="faq-q">What do I need to use this?</div>
-              <div className="faq-a">A Mac running macOS 12 or later (M1, M2, M3, or Intel), <strong style={{color:'#fafafa'}}>OpenClaw</strong> installed, and <strong style={{color:'#fafafa'}}>Ollama</strong> running locally. Ollama is free and handles all the memory extraction — no GPU required, runs on CPU fine.</div>
+              <div className="faq-a">A Mac running macOS 12 or later (M1, M2, M3, or Intel), <strong style={{color:'#fafafa'}}><a href="https://openclaw.ai" target="_blank" rel="noopener noreferrer" style={{color:'#fafafa', textDecoration:'underline', textDecorationColor:'rgba(250,250,250,0.3)', textUnderlineOffset:'2px'}}>OpenClaw</a></strong> installed, and <strong style={{color:'#fafafa'}}>Ollama</strong> running locally. Ollama is free and handles all the memory extraction — no GPU required, runs on CPU fine.</div>
             </div>
             <div className="faq-item">
               <div className="faq-q">How long does setup take?</div>
@@ -284,7 +284,7 @@ export default function Home() {
             </div>
             <div className="faq-item">
               <div className="faq-q">What AI agent does this work with?</div>
-              <div className="faq-a">Agent Memory Kit is built for <strong style={{color:'#fafafa'}}>OpenClaw</strong> — the Claude-powered agent framework for Mac. It hooks directly into OpenClaw's session files and workspace structure. It won't work with ChatGPT, Claude.ai, or other agents out of the box.</div>
+              <div className="faq-a">Agent Memory Kit is built for <strong style={{color:'#fafafa'}}><a href="https://openclaw.ai" target="_blank" rel="noopener noreferrer" style={{color:'#fafafa', textDecoration:'underline', textDecorationColor:'rgba(250,250,250,0.3)', textUnderlineOffset:'2px'}}>OpenClaw</a></strong> — the Claude-powered agent framework for Mac. It hooks directly into OpenClaw&apos;s session files and workspace structure. It won&apos;t work with ChatGPT, Claude.ai, or other agents out of the box.</div>
             </div>
             <div className="faq-item">
               <div className="faq-q">What do I actually get?</div>
@@ -324,7 +324,7 @@ export default function Home() {
 
       <footer>
         <div className="wrap">
-          <p>Alfred Build · <a href="https://alfredbuild.xyz" style={{color:'#52525b', textDecoration:'none'}}>alfredbuild.xyz</a></p>
+          <p>Alfred Build · <a href="https://alfredbuild.xyz" style={{color:'#52525b', textDecoration:'none'}}>alfredbuild.xyz</a> · <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer" style={{color:'#52525b', textDecoration:'none'}}>@alfredmarktr</a></p>
         </div>
       </footer>
     </>

@@ -4,6 +4,21 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'Agent Memory Kit — Persistent Memory for Your AI Agent',
   description: 'Give your OpenClaw AI agent a memory that actually works. Scripts, configs, and a setup guide. One download.',
+  metadataBase: new URL('https://alfredbuild.xyz'),
+  openGraph: {
+    title: 'Agent Memory Kit — Persistent Memory for Your AI Agent',
+    description: 'Your OpenClaw agent forgets everything between sessions. Agent Memory Kit fixes that — persistent, searchable memory that runs 100% locally. $10 one-time.',
+    url: 'https://alfredbuild.xyz',
+    siteName: 'Alfred Build',
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Agent Memory Kit — Persistent Memory for Your AI Agent',
+    description: 'Your OpenClaw agent forgets everything between sessions. Agent Memory Kit fixes that — persistent, searchable memory that runs 100% locally. $10 one-time.',
+    creator: '@alfredmarktr',
+    site: '@alfredmarktr',
+  },
 }
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
