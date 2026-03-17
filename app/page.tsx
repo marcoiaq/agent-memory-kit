@@ -16,6 +16,12 @@ export default function Home() {
         .wrap { max-width: 700px; margin: 0 auto; padding: 0 24px; }
 
         /* NAV */
+        .nav-sticky {
+          position: sticky; top: 0; z-index: 50;
+          background: rgba(9,9,11,0.85);
+          backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px);
+          border-bottom: 1px solid #18181b;
+        }
         nav { padding: 20px 0; }
         nav .inner { display: flex; align-items: center; justify-content: space-between; }
         .logo { font-size: 14px; font-weight: 700; color: #fafafa; letter-spacing: -0.02em; }
@@ -214,14 +220,16 @@ export default function Home() {
         }
       `}</style>
 
-      <div className="wrap">
-        {/* NAV */}
-        <nav>
-          <div className="inner">
-            <span className="logo">Agent Memory Kit</span>
-            <a href="/api/create-checkout" className="nav-btn">Get it — $10 →</a>
-          </div>
-        </nav>
+      {/* NAV — sticky so the buy button is always visible */}
+      <div className="nav-sticky">
+        <div className="wrap">
+          <nav>
+            <div className="inner">
+              <span className="logo">Agent Memory Kit</span>
+              <a href="/api/create-checkout" className="nav-btn">Get it — $10 →</a>
+            </div>
+          </nav>
+        </div>
       </div>
 
       {/* HERO */}
