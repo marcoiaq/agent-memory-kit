@@ -52,24 +52,24 @@ export default function Home() {
           color: #a1a1aa; line-height: 1.7;
           max-width: 500px; margin-bottom: 36px;
         }
-        .hero-actions { display: flex; align-items: center; flex-wrap: wrap; gap: 14px; }
+        .hero-actions { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
         .cta-main {
           display: inline-flex; align-items: center; gap: 8px;
           background: #6366f1; color: #fff;
           font-size: 16px; font-weight: 700;
           padding: 14px 28px; border-radius: 10px;
           transition: background 0.15s;
-          box-shadow: 0 0 0 0 rgba(99,102,241,0);
+          box-shadow: 0 4px 20px rgba(99,102,241,0.3);
         }
         .cta-main:hover {
           background: #4f46e5;
-          box-shadow: 0 4px 24px rgba(99,102,241,0.4);
+          box-shadow: 0 4px 28px rgba(99,102,241,0.5);
         }
         .hero-note { font-size: 13px; color: #a1a1aa; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
         .hero-note-item { display: flex; align-items: center; gap: 4px; }
         .hero-note-item::before { content: '✓'; color: #22c55e; font-weight: 700; font-size: 12px; }
         .hero-urgency {
-          display: inline-block; margin-top: 14px;
+          display: inline-block; margin-bottom: 20px;
           font-size: 12px; font-weight: 600; color: #818cf8;
           background: rgba(99,102,241,0.1); border: 1px solid rgba(99,102,241,0.2);
           padding: 5px 12px; border-radius: 6px; letter-spacing: 0.02em;
@@ -81,7 +81,7 @@ export default function Home() {
           line-height: 1.3;
         }
         .hero-proof {
-          font-size: 13px; color: #a1a1aa; margin-top: 16px;
+          font-size: 13px; color: #71717a; margin-top: 20px;
           display: flex; align-items: center; gap: 6px;
         }
         .hero-proof::before {
@@ -127,7 +127,12 @@ export default function Home() {
         .benefits { padding: 64px 0; border-bottom: 1px solid #18181b; }
         .section-eyebrow {
           font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
-          text-transform: uppercase; color: #71717a; margin-bottom: 32px;
+          text-transform: uppercase; color: #71717a; margin-bottom: 10px;
+        }
+        .section-heading {
+          font-size: clamp(22px, 3.5vw, 28px);
+          font-weight: 800; letter-spacing: -0.03em;
+          color: #fafafa; margin-bottom: 32px; line-height: 1.2;
         }
         .cards { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
         .card {
@@ -248,6 +253,7 @@ export default function Home() {
             Agent Memory Kit gives your OpenClaw agent persistent memory that survives restarts.
             Next session it already knows your stack, your rules, and what you decided last week — no re-explaining required.
           </p>
+          <span className="hero-urgency">⚡ Early access — price goes to $29 at full launch</span>
           <div className="hero-actions">
             <a href="/api/create-checkout" className="cta-main">
               Get Agent Memory Kit — $10 →
@@ -259,14 +265,13 @@ export default function Home() {
             </span>
           </div>
           <p className="hero-proof">This exact system runs our production agent daily — Hot Alfred, on a Mac mini, 100% local</p>
-          <span className="hero-urgency">⚡ Early access — price goes to $29 at full launch</span>
         </div>
       </div>
 
       {/* DEMO */}
       <div className="demo">
         <div className="wrap">
-          <div className="demo-label">What it looks like</div>
+          <div className="demo-label">Live example — memory search in action</div>
           <div className="demo-terminal">
             <div className="demo-terminal-bar">
               <span className="dot dot-r"></span>
@@ -290,6 +295,7 @@ export default function Home() {
       <div className="benefits">
         <div className="wrap">
           <div className="section-eyebrow">What you get</div>
+          <h2 className="section-heading">Your agent stops forgetting — permanently.</h2>
           <div className="cards">
             <div className="card">
               <span className="card-icon">🧠</span>
@@ -379,8 +385,8 @@ export default function Home() {
           <div className="cta-inner">
             <h2>Stop re-explaining yourself.</h2>
             <p className="cta-desc">
-              One download. Install once — your agent never starts from scratch again.<br />
-              macOS · Ollama · No cloud · No subscriptions.
+              Every session, your agent already knows your stack, your rules, and what you decided last time.<br />
+              One download. 20-minute setup. macOS · Ollama · 100% local. No cloud, no subscription, no recurring fees.
             </p>
             <div className="price-tag">
               <span className="price-num">$10</span>
