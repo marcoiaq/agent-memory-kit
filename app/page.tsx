@@ -389,7 +389,6 @@ export default function Home() {
       {/* HERO */}
       <div className="hero">
         <div className="wrap">
-          <span className="hero-kicker">For OpenClaw · macOS · Runs locally</span>
           <div className="hero-badge">
             Built for{' '}
             <a href="https://openclaw.ai" target="_blank" rel="noopener noreferrer">OpenClaw</a>
@@ -421,7 +420,7 @@ export default function Home() {
           <div className="proof-bar-inner">
             <div className="proof-stat">
               <span className="proof-dot"></span>
-              Running on 1 live agent
+              Live on a production Mac mini, daily
             </div>
             <div className="proof-stat">
               ⏱ 20-min setup
@@ -617,7 +616,7 @@ export default function Home() {
       {/* MID-FUNNEL CTA */}
       <div style={{padding:'40px 0', borderBottom:'1px solid #18181b'}}>
         <div className="wrap" style={{display:'flex', flexDirection:'column', alignItems:'center', textAlign:'center', gap:'16px'}}>
-          <p style={{fontSize:'15px', color:'#a1a1aa', maxWidth:'480px', lineHeight:'1.6'}}>Ready to stop starting from scratch every session?</p>
+          <p style={{fontSize:'15px', color:'#a1a1aa', maxWidth:'480px', lineHeight:'1.6'}}>Your agent just woke up blank. Again. Fix it once — permanently.</p>
           <a href="/api/create-checkout" className="cta-main" style={{alignSelf:'center'}}>
             Get Agent Memory Kit — $10 →
           </a>
