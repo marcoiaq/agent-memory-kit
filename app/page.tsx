@@ -91,7 +91,7 @@ export default function Home() {
           line-height: 1.3;
         }
         .hero-proof {
-          font-size: 13px; color: #71717a; margin-top: 0; margin-bottom: 20px;
+          font-size: 13px; color: #71717a; margin-top: 20px; margin-bottom: 0;
           display: flex; align-items: center; gap: 6px;
         }
         .hero-proof::before {
@@ -399,7 +399,6 @@ export default function Home() {
             Every session, you re-explain your stack, your preferences, your past decisions — because your agent woke up blank.
             Agent Memory Kit gives it persistent, searchable memory in 20 minutes. Next session it already knows everything. No re-explaining required.
           </p>
-          <p className="hero-proof">This exact system runs our production agent daily — Hot Alfred, on a Mac mini, 100% local</p>
           <span className="hero-urgency">⚡ Early access — price goes to $29 at full launch</span>
           <div className="hero-actions">
             <a href="/api/create-checkout" className="cta-main">
@@ -411,6 +410,7 @@ export default function Home() {
               <span className="hero-note-item">7-day refund</span>
             </span>
           </div>
+          <p className="hero-proof">This exact system runs our production agent daily — Hot Alfred, on a Mac mini, 100% local</p>
         </div>
       </div>
 
