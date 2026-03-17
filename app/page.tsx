@@ -81,7 +81,7 @@ export default function Home() {
           line-height: 1.3;
         }
         .hero-proof {
-          font-size: 13px; color: #71717a; margin-top: 20px;
+          font-size: 13px; color: #71717a; margin-top: 0; margin-bottom: 20px;
           display: flex; align-items: center; gap: 6px;
         }
         .hero-proof::before {
@@ -248,11 +248,11 @@ export default function Home() {
         <div className="wrap">
           <span className="hero-kicker">For <a href="https://openclaw.ai" target="_blank" rel="noopener noreferrer" style={{color:'inherit', textDecoration:'underline', textDecorationColor:'rgba(129,140,248,0.4)', textUnderlineOffset:'2px'}}>OpenClaw</a> · macOS · Runs locally</span>
           <h1>Your AI agent<br />forgets everything.</h1>
-          <p className="hero-sub">Give it a permanent memory — 20-minute setup, runs 100% locally.</p>
           <p className="hero-desc">
-            Agent Memory Kit gives your OpenClaw agent persistent memory that survives restarts.
-            Next session it already knows your stack, your rules, and what you decided last week — no re-explaining required.
+            Every session, you re-explain your stack, your preferences, your past decisions — because your agent woke up blank.
+            Agent Memory Kit gives it persistent, searchable memory in 20 minutes. Next session it already knows everything. No re-explaining required.
           </p>
+          <p className="hero-proof">This exact system runs our production agent daily — Hot Alfred, on a Mac mini, 100% local</p>
           <span className="hero-urgency">⚡ Early access — price goes to $29 at full launch</span>
           <div className="hero-actions">
             <a href="/api/create-checkout" className="cta-main">
@@ -264,7 +264,6 @@ export default function Home() {
               <span className="hero-note-item">7-day refund</span>
             </span>
           </div>
-          <p className="hero-proof">This exact system runs our production agent daily — Hot Alfred, on a Mac mini, 100% local</p>
         </div>
       </div>
 
@@ -343,6 +342,17 @@ export default function Home() {
               </div>
             ))}
           </div>
+        </div>
+      </div>
+
+      {/* MID-FUNNEL CTA */}
+      <div style={{padding:'40px 0', borderBottom:'1px solid #18181b'}}>
+        <div className="wrap" style={{display:'flex', flexDirection:'column', alignItems:'center', textAlign:'center', gap:'16px'}}>
+          <p style={{fontSize:'15px', color:'#a1a1aa', maxWidth:'480px', lineHeight:'1.6'}}>Ready to stop starting from scratch every session?</p>
+          <a href="/api/create-checkout" className="cta-main" style={{alignSelf:'center'}}>
+            Get Agent Memory Kit — $10 →
+          </a>
+          <span style={{fontSize:'12px', color:'#52525b'}}>$10 one-time · Instant download · 7-day refund</span>
         </div>
       </div>
 
