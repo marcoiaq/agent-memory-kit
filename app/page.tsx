@@ -78,6 +78,39 @@ export default function Home() {
           background: #22c55e; flex-shrink: 0;
         }
 
+        /* DEMO BLOCK */
+        .demo { padding: 48px 0; border-bottom: 1px solid #18181b; }
+        .demo-label {
+          font-size: 11px; font-weight: 700; letter-spacing: 0.1em;
+          text-transform: uppercase; color: #71717a; margin-bottom: 16px;
+        }
+        .demo-terminal {
+          background: #0d0d10; border: 1px solid #1c1c1f;
+          border-radius: 12px; overflow: hidden;
+        }
+        .demo-terminal-bar {
+          background: #111114; border-bottom: 1px solid #1c1c1f;
+          padding: 10px 16px; display: flex; align-items: center; gap: 8px;
+        }
+        .dot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+        .dot-r { background: #ff5f56; }
+        .dot-y { background: #ffbd2e; }
+        .dot-g { background: #27c93f; }
+        .demo-code {
+          padding: 20px 22px;
+          font-family: 'SF Mono', 'Fira Code', 'Menlo', monospace;
+          font-size: 13px; line-height: 1.8;
+          white-space: pre;
+          overflow-x: auto;
+        }
+        .dim { color: #52525b; }
+        .cmd { color: #818cf8; }
+        .out { color: #a1a1aa; }
+        .highlight { color: #22c55e; }
+        .demo-caption {
+          font-size: 13px; color: #52525b; margin-top: 14px; text-align: center;
+        }
+
         /* BENEFITS CARDS */
         .benefits { padding: 64px 0; border-bottom: 1px solid #18181b; }
         .section-eyebrow {
@@ -177,6 +210,7 @@ export default function Home() {
           .cta-inner { padding: 36px 20px; }
           .price-num { font-size: 52px; }
           .chapter { gap: 14px; }
+          .demo-code { font-size: 11px; }
         }
       `}</style>
 
@@ -196,9 +230,9 @@ export default function Home() {
           <span className="hero-kicker">For <a href="https://openclaw.ai" target="_blank" rel="noopener noreferrer" style={{color:'inherit', textDecoration:'underline', textDecorationColor:'rgba(129,140,248,0.4)', textUnderlineOffset:'2px'}}>OpenClaw</a> · macOS · Runs locally</span>
           <h1>Your AI agent<br />forgets everything.</h1>
           <p className="hero-desc">
-            Every session starts from zero — your active projects, tech stack, decisions, preferences all gone.
-            Agent Memory Kit gives your OpenClaw agent persistent, searchable memory that survives restarts.
-            Next session it knows your stack, your rules, and every decision you&apos;ve already made.
+            Every session starts from zero — projects, decisions, preferences, all gone.
+            Agent Memory Kit gives your OpenClaw agent persistent memory that survives restarts.
+            Next session it already knows your stack, your rules, and what you decided last week.
           </p>
           <div className="hero-actions">
             <a href="/api/create-checkout" className="cta-main">
@@ -211,7 +245,30 @@ export default function Home() {
             </span>
           </div>
           <span className="hero-urgency">⚡ Early access — price goes to $29 at launch</span>
-          <p className="hero-proof">Built by Alfred Build · running this exact system in production daily</p>
+          <p className="hero-proof">This exact system runs our production agent daily — Hot Alfred, on a Mac mini, 100% local</p>
+        </div>
+      </div>
+
+      {/* DEMO */}
+      <div className="demo">
+        <div className="wrap">
+          <div className="demo-label">What it looks like</div>
+          <div className="demo-terminal">
+            <div className="demo-terminal-bar">
+              <span className="dot dot-r"></span>
+              <span className="dot dot-y"></span>
+              <span className="dot dot-g"></span>
+            </div>
+            <div className="demo-code">
+              <span className="dim"># Your agent searches its own memory before replying</span>{'\n'}
+              <span className="cmd">$ qmd query</span>{' '}<span className="out">&quot;what stack are we using for the checkout&quot;</span>{'\n\n'}
+              <span className="highlight">→</span> <span className="out">memory/2026-03-10.md  — &quot;Using Stripe + Next.js. No PayPal, Marco hates it.&quot;</span>{'\n'}
+              <span className="highlight">→</span> <span className="out">memory/TACIT.md       — &quot;Always use pnpm, never npm. Deploy to Vercel.&quot;</span>{'\n'}
+              <span className="highlight">→</span> <span className="out">memory/DECISIONS.md   — &quot;Went with App Router, not Pages. Decided 2026-02-28.&quot;</span>{'\n\n'}
+              <span className="dim"># Context loaded. Agent answers without asking again.</span>
+            </div>
+          </div>
+          <p className="demo-caption">Runs locally with Ollama · SQLite index · No API calls</p>
         </div>
       </div>
 
@@ -222,17 +279,17 @@ export default function Home() {
           <div className="cards">
             <div className="card">
               <span className="card-icon">🧠</span>
-              <div className="card-title">It remembers</div>
+              <div className="card-title">Remembers everything</div>
               <div className="card-body">Facts, decisions, and context are automatically extracted from each conversation and saved for the next one.</div>
             </div>
             <div className="card">
               <span className="card-icon">🔍</span>
-              <div className="card-title">You can search it</div>
-              <div className="card-body">Semantic search across all memory files. Find any past decision or fact in plain English, instantly.</div>
+              <div className="card-title">Searchable in plain English</div>
+              <div className="card-body">Semantic search across all memory files. Your agent finds any past decision or fact in plain English, instantly.</div>
             </div>
             <div className="card">
               <span className="card-icon">🔒</span>
-              <div className="card-title">Fully private</div>
+              <div className="card-title">Fully private, fully local</div>
               <div className="card-body">Everything runs locally with Ollama on your Mac. No cloud. No API keys. Nothing leaves your machine.</div>
             </div>
             <div className="card">
@@ -247,7 +304,7 @@ export default function Home() {
       {/* WHAT'S INSIDE */}
       <div className="inside">
         <div className="wrap">
-          <h2>What's inside</h2>
+          <h2>What&apos;s inside</h2>
           <p className="inside-sub">Pre-built scripts, ready-to-load configs, and a step-by-step guide. Install it once — your agent never starts from scratch again.</p>
           <div className="chapters">
             {[
@@ -280,7 +337,7 @@ export default function Home() {
             </div>
             <div className="faq-item">
               <div className="faq-q">How long does setup take?</div>
-              <div className="faq-a">About 15–20 minutes. You'll run the installer script, load two macOS background services, and fill in a short config for your agent's identity. The setup guide walks through every step with exact commands — no guesswork.</div>
+              <div className="faq-a">About 15–20 minutes. You&apos;ll run the installer script, load two macOS background services, and fill in a short config for your agent&apos;s identity. The setup guide walks through every step with exact commands — no guesswork.</div>
             </div>
             <div className="faq-item">
               <div className="faq-q">What AI agent does this work with?</div>
@@ -295,8 +352,8 @@ export default function Home() {
               <div className="faq-a">No. Memory extraction runs locally using Ollama. Search runs locally via SQLite. Nothing leaves your machine. No subscriptions, no recurring fees.</div>
             </div>
             <div className="faq-item">
-              <div className="faq-q">What if it doesn't work for me?</div>
-              <div className="faq-a">7-day money-back guarantee. If you followed the setup guide and it doesn't work on your machine, reply to your purchase receipt and you'll get a full refund. No runaround.</div>
+              <div className="faq-q">What if it doesn&apos;t work for me?</div>
+              <div className="faq-a">7-day money-back guarantee. If you followed the setup guide and it doesn&apos;t work on your machine, reply to your purchase receipt and you&apos;ll get a full refund. No runaround.</div>
             </div>
           </div>
         </div>
