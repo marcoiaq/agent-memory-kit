@@ -59,9 +59,17 @@ export default function Home() {
           background: #4f46e5;
           box-shadow: 0 4px 24px rgba(99,102,241,0.4);
         }
-        .hero-note { font-size: 13px; color: #a1a1aa; }
+        .hero-note { font-size: 13px; color: #a1a1aa; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+        .hero-note-item { display: flex; align-items: center; gap: 4px; }
+        .hero-note-item::before { content: '✓'; color: #22c55e; font-weight: 700; font-size: 12px; }
+        .hero-urgency {
+          display: inline-block; margin-top: 14px;
+          font-size: 12px; font-weight: 600; color: #818cf8;
+          background: rgba(99,102,241,0.1); border: 1px solid rgba(99,102,241,0.2);
+          padding: 5px 12px; border-radius: 6px; letter-spacing: 0.02em;
+        }
         .hero-proof {
-          font-size: 13px; color: #52525b; margin-top: 20px;
+          font-size: 13px; color: #71717a; margin-top: 20px;
           display: flex; align-items: center; gap: 6px;
         }
         .hero-proof::before {
@@ -188,16 +196,21 @@ export default function Home() {
           <span className="hero-kicker">For OpenClaw · macOS · Runs locally</span>
           <h1>Your AI agent<br />forgets everything.</h1>
           <p className="hero-desc">
-            Every session starts from zero — your projects, preferences, decisions, stack context wiped.
+            Every session starts from zero — your active projects, tech stack, decisions, preferences all gone.
             Agent Memory Kit gives your OpenClaw agent persistent, searchable memory that survives restarts.
-            Next session, it picks up exactly where you left off.
+            Next session it knows your stack, your rules, and every decision you&apos;ve already made.
           </p>
           <div className="hero-actions">
             <a href="/api/create-checkout" className="cta-main">
               Get Agent Memory Kit — $10 →
             </a>
-            <span className="hero-note">$10 one-time · Instant download · 7-day refund</span>
+            <span className="hero-note">
+              <span className="hero-note-item">$10 one-time</span>
+              <span className="hero-note-item">Instant download</span>
+              <span className="hero-note-item">7-day refund</span>
+            </span>
           </div>
+          <span className="hero-urgency">⚡ Early access — price goes to $29 at launch</span>
           <p className="hero-proof">Built by Alfred Build · running this exact system in production daily</p>
         </div>
       </div>
@@ -205,7 +218,7 @@ export default function Home() {
       {/* BENEFITS */}
       <div className="benefits">
         <div className="wrap">
-          <div className="section-eyebrow">What changes</div>
+          <div className="section-eyebrow">What you get</div>
           <div className="cards">
             <div className="card">
               <span className="card-icon">🧠</span>
