@@ -60,7 +60,7 @@ export default function Home() {
         .hero-desc {
           font-size: clamp(15px, 2.5vw, 17px);
           color: #a1a1aa; line-height: 1.7;
-          max-width: 500px; margin-bottom: 36px;
+          max-width: 500px; margin-bottom: 28px;
         }
         .hero-actions { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
         .cta-main {
@@ -80,8 +80,8 @@ export default function Home() {
         .hero-note-item::before { content: '✓'; color: #22c55e; font-weight: 700; font-size: 12px; }
         .hero-urgency {
           display: inline-block; margin-bottom: 20px;
-          font-size: 12px; font-weight: 600; color: #818cf8;
-          background: rgba(99,102,241,0.1); border: 1px solid rgba(99,102,241,0.2);
+          font-size: 12px; font-weight: 700; color: #f59e0b;
+          background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.3);
           padding: 5px 12px; border-radius: 6px; letter-spacing: 0.02em;
         }
         .hero-sub {
@@ -337,7 +337,7 @@ export default function Home() {
         }
         .price-word { font-size: 15px; color: #52525b; }
         .price-launch {
-          font-size: 12px; font-weight: 600; color: #818cf8;
+          font-size: 12px; font-weight: 700; color: #f59e0b;
           text-transform: uppercase; letter-spacing: 0.06em;
           margin-top: 4px; margin-bottom: 24px; display: block;
         }
@@ -359,7 +359,9 @@ export default function Home() {
 
         /* MOBILE */
         @media (max-width: 520px) {
-          .hero { padding: 52px 0 48px; }
+          .hero { padding: 48px 0 40px; }
+          .hero-desc { margin-bottom: 20px; }
+          .hero-urgency { margin-bottom: 16px; }
           .cards { grid-template-columns: 1fr; }
           .cta-inner { padding: 36px 20px; }
           .price-num { font-size: 52px; }
@@ -396,10 +398,9 @@ export default function Home() {
           </div>
           <h1>Your AI agent<br />forgets everything.</h1>
           <p className="hero-desc">
-            Every session, your agent wakes up blank. You re-explain your stack, your rules, your past decisions — all over again.
-            Agent Memory Kit fixes that in 20 minutes. Next session it already knows everything.
+            Every session, your agent wakes up blank. Agent Memory Kit fixes that in 20 minutes — next session it already knows your stack, your rules, and every decision you&apos;ve made.
           </p>
-          <span className="hero-urgency">⚡ Early access — price goes to $29 at full launch</span>
+          <span className="hero-urgency">⚡ Early access — $10 now, goes to $29 at launch</span>
           <div className="hero-actions">
             <a href="/api/create-checkout" className="cta-main">
               Get Agent Memory Kit — $10 →
