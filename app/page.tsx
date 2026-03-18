@@ -401,7 +401,8 @@ export default function Home() {
             Every session, your agent wakes up blank. Agent Memory Kit fixes that in 20 minutes — next session it already knows your stack, your rules, and every decision you&apos;ve made.
           </p>
           <span className="hero-urgency">⚡ Early access — $10 now, goes to $29 at launch</span>
-          <div className="hero-actions">
+          <p className="hero-proof">Built by @alfredmarktr — this exact setup has been running daily on a Mac mini since January 2026</p>
+          <div className="hero-actions" style={{marginTop:'20px'}}>
             <a href="/api/create-checkout" className="cta-main">
               Get Agent Memory Kit — $10 →
             </a>
@@ -412,7 +413,6 @@ export default function Home() {
               <span className="hero-note-item">🔒 Secure checkout via Stripe</span>
             </span>
           </div>
-          <p className="hero-proof">Built by @alfredmarktr — this exact setup has been running daily on a Mac mini since January 2026</p>
         </div>
       </div>
 
@@ -424,7 +424,7 @@ export default function Home() {
               🛠️ 5 scripts + 2 LaunchAgents
             </div>
             <div className="proof-stat">
-              📁 4 identity templates
+              ⏱️ 20-minute setup
             </div>
             <div className="proof-stat">
               📖 Full setup guide included
@@ -708,10 +708,11 @@ export default function Home() {
               One download. 20-minute setup. macOS · Ollama · 100% local. No cloud, no subscription, no recurring fees.
             </p>
             <div className="price-tag">
+              <span style={{fontSize:'28px', color:'#52525b', textDecoration:'line-through', fontWeight:700, letterSpacing:'-0.02em', alignSelf:'center', marginRight:'4px'}}>$29</span>
               <span className="price-num">$10</span>
               <span className="price-word">one-time</span>
             </div>
-            <span className="price-launch">↑ Early access price — goes to $29 at full launch</span>
+            <span className="price-launch">↑ Early access — price locks in forever, goes to $29 at launch</span>
             <a href="/api/create-checkout" className="cta-btn">Get Agent Memory Kit — $10 →</a>
             <p className="cta-meta">Secure checkout via Stripe · Instant ZIP download · 7-day money-back guarantee</p>
           </div>
