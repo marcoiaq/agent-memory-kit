@@ -443,8 +443,12 @@ export default function Home() {
           <p className="hero-desc">
             Every session, your agent wakes up blank. Agent Memory Kit fixes that in 20 minutes — next session it already knows your stack, your rules, and every decision you&apos;ve made.
           </p>
-          <span className="hero-urgency">⚡ Early access — $10 now, goes to $29 at launch</span>
           <div className="hero-actions" style={{marginTop:'20px'}}>
+            <div style={{display:'flex', alignItems:'center', gap:'10px', marginBottom:'4px'}}>
+              <span style={{fontSize:'22px', color:'#52525b', textDecoration:'line-through', fontWeight:700, letterSpacing:'-0.02em'}}>$29</span>
+              <span style={{fontSize:'22px', fontWeight:900, color:'#fafafa', letterSpacing:'-0.03em'}}>$10</span>
+              <span style={{fontSize:'11px', fontWeight:700, color:'#f59e0b', background:'rgba(245,158,11,0.1)', border:'1px solid rgba(245,158,11,0.25)', padding:'3px 8px', borderRadius:'4px', letterSpacing:'0.06em', textTransform:'uppercase'}}>Early access</span>
+            </div>
             <a href="/api/create-checkout" className="cta-main">
               Get Agent Memory Kit — $10 →
             </a>
