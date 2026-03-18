@@ -412,7 +412,7 @@ export default function Home() {
               <span className="hero-note-item">🔒 Secure checkout via Stripe</span>
             </span>
           </div>
-          <p className="hero-proof">Running in production on a real Mac mini, daily — zero cloud, zero API calls, 100% local</p>
+          <p className="hero-proof">Built by @alfredmarktr — this exact setup has been running daily on a Mac mini since January 2026</p>
         </div>
       </div>
 
@@ -421,13 +421,13 @@ export default function Home() {
         <div className="wrap">
           <div className="proof-bar-inner">
             <div className="proof-stat">
-              🔒 No cloud. No subscriptions. 100% local.
+              🛠️ 5 scripts + 2 LaunchAgents
             </div>
             <div className="proof-stat">
-              ⏱ 20-min setup
+              📁 4 identity templates
             </div>
             <div className="proof-stat">
-              ↩ 7-day money-back
+              📖 Full setup guide included
             </div>
           </div>
         </div>
@@ -673,6 +673,10 @@ export default function Home() {
             <div className="faq-item">
               <div className="faq-q">Does it require any cloud services or API keys?</div>
               <div className="faq-a">No. Memory extraction runs locally using Ollama. Search runs locally via SQLite. Nothing leaves your machine. No subscriptions, no recurring fees.</div>
+            </div>
+            <div className="faq-item">
+              <div className="faq-q">Do I get updates?</div>
+              <div className="faq-a">Yes. If the scripts improve or new features get added, you get them. Reply to your purchase receipt and I&apos;ll send the updated ZIP. One price, no subscription.</div>
             </div>
             <div className="faq-item">
               <div className="faq-q">What if it doesn&apos;t work for me?</div>
