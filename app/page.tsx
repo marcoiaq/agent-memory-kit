@@ -373,6 +373,9 @@ export default function Home() {
         footer { border-top: 1px solid #18181b; padding: 24px 0; text-align: center; }
         footer p { font-size: 13px; color: #3f3f46; }
 
+        /* MOBILE STICKY BUY BAR */
+        .mobile-buy-bar { display: none; }
+
         /* MOBILE */
         @media (max-width: 520px) {
           .hero { padding: 48px 0 40px; }
@@ -389,6 +392,30 @@ export default function Home() {
           .openclaw-inner { padding: 28px 20px; }
           .step { gap: 14px; }
           .cta-main { width: 100%; justify-content: center; }
+          body { padding-bottom: 88px; }
+          .mobile-buy-bar {
+            display: block;
+            position: fixed; bottom: 0; left: 0; right: 0; z-index: 100;
+            background: rgba(9,9,11,0.97);
+            backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+            border-top: 1px solid #27272a;
+            padding: 10px 16px 18px;
+          }
+          .mobile-buy-bar-inner {
+            display: flex; align-items: center; justify-content: space-between; gap: 12px;
+          }
+          .mobile-buy-bar-text {
+            font-size: 12px; color: #71717a; line-height: 1.4;
+          }
+          .mobile-buy-bar-text strong { color: #fafafa; font-weight: 700; font-size: 13px; }
+          .mobile-buy-bar-btn {
+            display: inline-flex; align-items: center;
+            background: #6366f1; color: #fff;
+            font-size: 14px; font-weight: 700;
+            padding: 11px 20px; border-radius: 10px;
+            white-space: nowrap; flex-shrink: 0;
+            box-shadow: 0 4px 16px rgba(99,102,241,0.4);
+          }
         }
       `}</style>
 
@@ -417,7 +444,6 @@ export default function Home() {
             Every session, your agent wakes up blank. Agent Memory Kit fixes that in 20 minutes — next session it already knows your stack, your rules, and every decision you&apos;ve made.
           </p>
           <span className="hero-urgency">⚡ Early access — $10 now, goes to $29 at launch</span>
-          <p className="hero-proof">Built by <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a> — used daily since day one. This is my own production setup.</p>
           <div className="hero-actions" style={{marginTop:'20px'}}>
             <a href="/api/create-checkout" className="cta-main">
               Get Agent Memory Kit — $10 →
@@ -429,6 +455,7 @@ export default function Home() {
               <span className="hero-note-item">🔒 Secure checkout via Stripe</span>
             </span>
           </div>
+          <p className="hero-proof" style={{marginTop:'16px'}}>Built by <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a> — used daily since day one. This is my own production setup.</p>
         </div>
       </div>
 
@@ -740,6 +767,19 @@ export default function Home() {
           <p>Alfred Build · <a href="https://openclaw.ai" target="_blank" rel="noopener noreferrer" style={{color:'#52525b', textDecoration:'none'}}>Built with OpenClaw</a> · <a href="https://alfredbuild.xyz" style={{color:'#52525b', textDecoration:'none'}}>alfredbuild.xyz</a> · <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer" style={{color:'#52525b', textDecoration:'none'}}>@alfredmarktr</a></p>
         </div>
       </footer>
+
+      {/* MOBILE STICKY BUY BAR — visible only on mobile via CSS */}
+      <div className="mobile-buy-bar">
+        <div className="mobile-buy-bar-inner">
+          <div className="mobile-buy-bar-text">
+            <strong>$10 one-time</strong><br />
+            Early access · 7-day refund
+          </div>
+          <a href="/api/create-checkout" className="mobile-buy-bar-btn">
+            Get it — $10 →
+          </a>
+        </div>
+      </div>
     </>
   )
 }
