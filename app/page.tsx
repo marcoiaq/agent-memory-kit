@@ -496,6 +496,18 @@ export default function Home() {
         </div>
       </div>
 
+      {/* POST-BEFORE-AFTER CTA — catch buyers sold by the comparison */}
+      <div style={{padding:'28px 0', borderBottom:'1px solid #18181b', background:'#0d0d10'}}>
+        <div className="wrap" style={{display:'flex', alignItems:'center', justifyContent:'space-between', gap:'20px', flexWrap:'wrap'}}>
+          <p style={{fontSize:'14px', color:'#71717a', lineHeight:'1.5', margin:0}}>
+            Seen enough? Fix it now — one download, 20 minutes.
+          </p>
+          <a href="/api/create-checkout" className="cta-main" style={{flexShrink:0, fontSize:'15px', padding:'12px 24px'}}>
+            Get it — $10 →
+          </a>
+        </div>
+      </div>
+
       {/* HOW IT WORKS */}
       <div className="how-it-works">
         <div className="wrap">
@@ -674,6 +686,10 @@ export default function Home() {
             <div className="faq-item">
               <div className="faq-q">What&apos;s OpenClaw and do I need it?</div>
               <div className="faq-a">OpenClaw is a Claude-powered AI agent framework for Mac. Agent Memory Kit is an add-on for it. If you don&apos;t have OpenClaw yet, get it at <a href="https://openclaw.ai" target="_blank" rel="noopener noreferrer" style={{color:'#818cf8', textDecoration:'underline', textDecorationColor:'rgba(129,140,248,0.4)', textUnderlineOffset:'2px'}}>openclaw.ai</a> first.</div>
+            </div>
+            <div className="faq-item">
+              <div className="faq-q">Who built this?</div>
+              <div className="faq-a">Agent Memory Kit was built by <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer" style={{color:'#818cf8', textDecoration:'underline', textDecorationColor:'rgba(129,140,248,0.4)', textUnderlineOffset:'2px'}}>@alfredmarktr</a> — a developer who runs OpenClaw daily on a Mac mini and got tired of re-explaining the same context every session. This kit is the exact setup running in production. Questions? Reach out on X.</div>
             </div>
           </div>
         </div>
