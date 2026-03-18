@@ -417,7 +417,7 @@ export default function Home() {
             Every session, your agent wakes up blank. Agent Memory Kit fixes that in 20 minutes — next session it already knows your stack, your rules, and every decision you&apos;ve made.
           </p>
           <span className="hero-urgency">⚡ Early access — $10 now, goes to $29 at launch</span>
-          <p className="hero-proof">Built by <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a> — running daily on a Mac mini since January 2026</p>
+          <p className="hero-proof">Built by <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a> — used daily since day one. This is my own production setup.</p>
           <div className="hero-actions" style={{marginTop:'20px'}}>
             <a href="/api/create-checkout" className="cta-main">
               Get Agent Memory Kit — $10 →
@@ -440,7 +440,7 @@ export default function Home() {
               🛠️ Ready to run — no coding required
             </div>
             <div className="proof-stat">
-              ⏱️ 20-minute setup
+              ✅ 7-day money-back guarantee
             </div>
             <div className="proof-stat">
               📖 Full setup guide included
@@ -515,7 +515,7 @@ export default function Home() {
       <div style={{padding:'28px 0', borderBottom:'1px solid #18181b', background:'#0d0d10'}}>
         <div className="wrap" style={{display:'flex', alignItems:'center', justifyContent:'space-between', gap:'20px', flexWrap:'wrap'}}>
           <p style={{fontSize:'14px', color:'#a1a1aa', lineHeight:'1.5', margin:0}}>
-            Seen enough? Fix it now — one download, 20 minutes.
+            Seen enough? Grab it now — you&apos;ll be running in 20 minutes.
           </p>
           <a href="/api/create-checkout" className="cta-main" style={{flexShrink:0, fontSize:'15px', padding:'12px 24px'}}>
             Get it — $10 →
