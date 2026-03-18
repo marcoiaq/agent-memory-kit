@@ -91,13 +91,14 @@ export default function Home() {
           line-height: 1.3;
         }
         .hero-proof {
-          font-size: 13px; color: #a1a1aa; margin-top: 20px; margin-bottom: 0;
+          font-size: 14px; color: #d4d4d8; margin-top: 20px; margin-bottom: 0;
           display: flex; align-items: center; gap: 6px;
         }
         .hero-proof::before {
           content: ''; display: inline-block;
           width: 6px; height: 6px; border-radius: 50%;
           background: #22c55e; flex-shrink: 0;
+          box-shadow: 0 0 5px rgba(34,197,94,0.5);
         }
 
         /* SOCIAL PROOF BAR */
@@ -119,9 +120,7 @@ export default function Home() {
           border-left: 1px solid #18181b;
         }
         .proof-dot {
-          width: 7px; height: 7px; border-radius: 50%;
-          background: #22c55e; flex-shrink: 0;
-          box-shadow: 0 0 6px rgba(34,197,94,0.6);
+          display: none;
         }
 
         /* DEMO BLOCK */
@@ -421,8 +420,7 @@ export default function Home() {
         <div className="wrap">
           <div className="proof-bar-inner">
             <div className="proof-stat">
-              <span className="proof-dot"></span>
-              No cloud. No subscriptions. 100% local.
+              🔒 No cloud. No subscriptions. 100% local.
             </div>
             <div className="proof-stat">
               ⏱ 20-min setup
@@ -499,7 +497,7 @@ export default function Home() {
       {/* POST-BEFORE-AFTER CTA — catch buyers sold by the comparison */}
       <div style={{padding:'28px 0', borderBottom:'1px solid #18181b', background:'#0d0d10'}}>
         <div className="wrap" style={{display:'flex', alignItems:'center', justifyContent:'space-between', gap:'20px', flexWrap:'wrap'}}>
-          <p style={{fontSize:'14px', color:'#71717a', lineHeight:'1.5', margin:0}}>
+          <p style={{fontSize:'14px', color:'#a1a1aa', lineHeight:'1.5', margin:0}}>
             Seen enough? Fix it now — one download, 20 minutes.
           </p>
           <a href="/api/create-checkout" className="cta-main" style={{flexShrink:0, fontSize:'15px', padding:'12px 24px'}}>
