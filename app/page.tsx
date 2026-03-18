@@ -396,8 +396,8 @@ export default function Home() {
           </div>
           <h1>Your AI agent<br />forgets everything.</h1>
           <p className="hero-desc">
-            Every session, you re-explain your stack, your preferences, your past decisions — because your agent woke up blank.
-            Agent Memory Kit gives it persistent, searchable memory in 20 minutes. Next session it already knows everything. No re-explaining required.
+            Every session, your agent wakes up blank. You re-explain your stack, your rules, your past decisions — all over again.
+            Agent Memory Kit fixes that in 20 minutes. Persistent, searchable memory. Next session it already knows everything.
           </p>
           <span className="hero-urgency">⚡ Early access — price goes to $29 at full launch</span>
           <div className="hero-actions">
@@ -528,6 +528,18 @@ export default function Home() {
               </div>
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* POST-HOW-IT-WORKS CTA — catch buyers who are convinced after step 3 */}
+      <div style={{padding:'32px 0', borderBottom:'1px solid #18181b', background:'#0d0d10'}}>
+        <div className="wrap" style={{display:'flex', alignItems:'center', justifyContent:'space-between', gap:'20px', flexWrap:'wrap'}}>
+          <p style={{fontSize:'15px', color:'#a1a1aa', lineHeight:'1.5', margin:0}}>
+            Three steps. 20 minutes. Your agent never starts from scratch again.
+          </p>
+          <a href="/api/create-checkout" className="cta-main" style={{flexShrink:0, fontSize:'15px', padding:'12px 24px'}}>
+            Get it — $10 →
+          </a>
         </div>
       </div>
 
