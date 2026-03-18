@@ -371,6 +371,7 @@ export default function Home() {
           .proof-stat + .proof-stat { border-left: none; border-top: 1px solid #18181b; }
           .openclaw-inner { padding: 28px 20px; }
           .step { gap: 14px; }
+          .cta-main { width: 100%; justify-content: center; }
         }
       `}</style>
 
@@ -397,7 +398,7 @@ export default function Home() {
           <h1>Your AI agent<br />forgets everything.</h1>
           <p className="hero-desc">
             Every session, your agent wakes up blank. You re-explain your stack, your rules, your past decisions — all over again.
-            Agent Memory Kit fixes that in 20 minutes. Persistent, searchable memory. Next session it already knows everything.
+            Agent Memory Kit fixes that in 20 minutes. Next session it already knows everything.
           </p>
           <span className="hero-urgency">⚡ Early access — price goes to $29 at full launch</span>
           <div className="hero-actions">
@@ -411,7 +412,7 @@ export default function Home() {
               <span className="hero-note-item">🔒 Secure checkout via Stripe</span>
             </span>
           </div>
-          <p className="hero-proof">This exact system runs our production agent daily — Hot Alfred, on a Mac mini, 100% local</p>
+          <p className="hero-proof">Running in production on a real Mac mini, daily — zero cloud, zero API calls, 100% local</p>
         </div>
       </div>
 
@@ -421,7 +422,7 @@ export default function Home() {
           <div className="proof-bar-inner">
             <div className="proof-stat">
               <span className="proof-dot"></span>
-              Live on a production Mac mini, daily
+              No cloud. No subscriptions. 100% local.
             </div>
             <div className="proof-stat">
               ⏱ 20-min setup
