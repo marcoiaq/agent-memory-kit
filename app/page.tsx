@@ -91,7 +91,7 @@ export default function Home() {
           line-height: 1.3;
         }
         .hero-proof {
-          font-size: 13px; color: #71717a; margin-top: 20px; margin-bottom: 0;
+          font-size: 13px; color: #a1a1aa; margin-top: 20px; margin-bottom: 0;
           display: flex; align-items: center; gap: 6px;
         }
         .hero-proof::before {
@@ -408,6 +408,7 @@ export default function Home() {
               <span className="hero-note-item">$10 one-time</span>
               <span className="hero-note-item">Instant download</span>
               <span className="hero-note-item">7-day refund</span>
+              <span className="hero-note-item">🔒 Secure checkout via Stripe</span>
             </span>
           </div>
           <p className="hero-proof">This exact system runs our production agent daily — Hot Alfred, on a Mac mini, 100% local</p>
@@ -691,7 +692,7 @@ export default function Home() {
               <span className="price-word">one-time</span>
             </div>
             <span className="price-launch">↑ Early access price — goes to $29 at full launch</span>
-            <a href="/api/create-checkout" className="cta-btn">Download Agent Memory Kit →</a>
+            <a href="/api/create-checkout" className="cta-btn">Get Agent Memory Kit — $10 →</a>
             <p className="cta-meta">Secure checkout via Stripe · Instant ZIP download · 7-day money-back guarantee</p>
           </div>
         </div>
