@@ -63,6 +63,10 @@ export default function Home() {
           max-width: 500px; margin-bottom: 28px;
         }
         .hero-actions { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
+        @keyframes cta-pulse {
+          0%, 100% { box-shadow: 0 4px 20px rgba(99,102,241,0.3); }
+          50% { box-shadow: 0 6px 36px rgba(99,102,241,0.6), 0 0 0 4px rgba(99,102,241,0.1); }
+        }
         .cta-main {
           display: inline-flex; align-items: center; gap: 8px;
           background: #6366f1; color: #fff;
@@ -70,10 +74,12 @@ export default function Home() {
           padding: 14px 28px; border-radius: 10px;
           transition: background 0.15s;
           box-shadow: 0 4px 20px rgba(99,102,241,0.3);
+          animation: cta-pulse 2.8s ease-in-out infinite;
         }
         .cta-main:hover {
           background: #4f46e5;
           box-shadow: 0 4px 28px rgba(99,102,241,0.5);
+          animation: none;
         }
         .hero-note { font-size: 13px; color: #a1a1aa; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
         .hero-note-item { display: flex; align-items: center; gap: 4px; }
@@ -91,8 +97,11 @@ export default function Home() {
           line-height: 1.3;
         }
         .hero-proof {
-          font-size: 14px; color: #d4d4d8; margin-top: 20px; margin-bottom: 0;
-          display: flex; align-items: center; gap: 6px;
+          font-size: 13px; color: #a1a1aa; margin-top: 20px; margin-bottom: 0;
+          display: inline-flex; align-items: center; gap: 8px;
+          background: rgba(34,197,94,0.06); border: 1px solid rgba(34,197,94,0.18);
+          padding: 7px 14px; border-radius: 8px;
+          line-height: 1.4;
         }
         .hero-proof::before {
           content: ''; display: inline-block;
@@ -100,6 +109,8 @@ export default function Home() {
           background: #22c55e; flex-shrink: 0;
           box-shadow: 0 0 5px rgba(34,197,94,0.5);
         }
+        .hero-proof a { color: #86efac; text-decoration: underline; text-decoration-color: rgba(134,239,172,0.35); text-underline-offset: 2px; }
+        .hero-proof a:hover { color: #bbf7d0; }
 
         /* SOCIAL PROOF BAR */
         .proof-bar {
@@ -341,6 +352,10 @@ export default function Home() {
           text-transform: uppercase; letter-spacing: 0.06em;
           margin-top: 4px; margin-bottom: 24px; display: block;
         }
+        @keyframes cta-btn-pulse {
+          0%, 100% { box-shadow: 0 4px 32px rgba(99,102,241,0.35); }
+          50% { box-shadow: 0 6px 48px rgba(99,102,241,0.65), 0 0 0 5px rgba(99,102,241,0.1); }
+        }
         .cta-btn {
           display: inline-block;
           background: #6366f1; color: #fff;
@@ -349,8 +364,9 @@ export default function Home() {
           transition: background 0.15s;
           box-shadow: 0 4px 32px rgba(99,102,241,0.35);
           letter-spacing: -0.01em;
+          animation: cta-btn-pulse 2.8s ease-in-out infinite;
         }
-        .cta-btn:hover { background: #4f46e5; }
+        .cta-btn:hover { background: #4f46e5; animation: none; }
         .cta-meta { font-size: 12px; color: #52525b; margin-top: 16px; }
 
         /* FOOTER */
@@ -401,7 +417,7 @@ export default function Home() {
             Every session, your agent wakes up blank. Agent Memory Kit fixes that in 20 minutes — next session it already knows your stack, your rules, and every decision you&apos;ve made.
           </p>
           <span className="hero-urgency">⚡ Early access — $10 now, goes to $29 at launch</span>
-          <p className="hero-proof">Built by @alfredmarktr — this exact setup has been running daily on a Mac mini since January 2026</p>
+          <p className="hero-proof">Built by <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a> — running daily on a Mac mini since January 2026</p>
           <div className="hero-actions" style={{marginTop:'20px'}}>
             <a href="/api/create-checkout" className="cta-main">
               Get Agent Memory Kit — $10 →
@@ -421,7 +437,7 @@ export default function Home() {
         <div className="wrap">
           <div className="proof-bar-inner">
             <div className="proof-stat">
-              🛠️ 5 scripts + 2 LaunchAgents
+              🛠️ Ready to run — no coding required
             </div>
             <div className="proof-stat">
               ⏱️ 20-minute setup
