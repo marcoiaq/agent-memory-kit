@@ -422,8 +422,11 @@ export default function Home() {
             {' '}· macOS · Runs locally
           </div>
           <h1>Your AI agent<br />forgets everything.</h1>
+          <p style={{fontSize: 'clamp(17px, 2.8vw, 21px)', fontWeight: 700, color: '#6366f1', letterSpacing: '-0.02em', marginBottom: '14px', lineHeight: 1.3}}>
+            Fix it in 20 minutes. Never re-explain yourself again.
+          </p>
           <p className="hero-desc">
-            Every session, your agent wakes up blank — and you spend the next 10 minutes re-explaining your stack, your rules, your past decisions. Agent Memory Kit fixes that in 20 minutes. One setup. Then it never happens again.
+            Every session, your agent wakes up blank — re-explaining your stack, your rules, your past decisions. Agent Memory Kit gives it persistent, searchable memory. One setup. Runs 100% locally. Then it never happens again.
           </p>
           <div className="hero-actions" style={{marginTop:'0'}}>
             <div style={{display:'flex', alignItems:'center', gap:'10px', marginBottom:'4px'}}>
