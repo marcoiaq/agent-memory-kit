@@ -453,13 +453,13 @@ export default function Home() {
         <div className="wrap">
           <div className="proof-bar-inner">
             <div className="proof-stat">
-              🛠️ Ready to run — no coding required
+              🛠️ Up and running in 20 min — scripts pre-configured
             </div>
             <div className="proof-stat">
-              ✅ 7-day money-back guarantee
+              ✅ 7-day refund, no questions asked
             </div>
             <div className="proof-stat">
-              📖 Full setup guide included
+              📖 Every command documented, step by step
             </div>
           </div>
         </div>
@@ -715,6 +715,10 @@ export default function Home() {
               <div className="faq-a">Yes. If the scripts improve or new features get added, you get them. Reply to your purchase receipt and I&apos;ll send the updated ZIP. One price, no subscription.</div>
             </div>
             <div className="faq-item">
+              <div className="faq-q">What if I get stuck during setup?</div>
+              <div className="faq-a">DM me on X (<a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer" style={{color:'#818cf8', textDecoration:'underline', textDecorationColor:'rgba(129,140,248,0.4)', textUnderlineOffset:'2px'}}>@alfredmarktr</a>) or reply to your purchase receipt. I&apos;ll help you get it working — I&apos;ve set this up from scratch multiple times and know exactly where it can trip people up.</div>
+            </div>
+            <div className="faq-item">
               <div className="faq-q">What if it doesn&apos;t work for me?</div>
               <div className="faq-a">7-day money-back guarantee. If you followed the setup guide and it doesn&apos;t work on your machine, reply to your purchase receipt and you&apos;ll get a full refund. No runaround.</div>
             </div>
@@ -728,7 +732,7 @@ export default function Home() {
             </div>
             <div className="faq-item">
               <div className="faq-q">Who built this?</div>
-              <div className="faq-a">Agent Memory Kit was built by <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer" style={{color:'#818cf8', textDecoration:'underline', textDecorationColor:'rgba(129,140,248,0.4)', textUnderlineOffset:'2px'}}>@alfredmarktr</a> — a developer who runs OpenClaw daily on a Mac mini and got tired of re-explaining the same context every session. This kit is the exact setup running in production. Questions? Reach out on X.</div>
+              <div className="faq-a">I&apos;m <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer" style={{color:'#818cf8', textDecoration:'underline', textDecorationColor:'rgba(129,140,248,0.4)', textUnderlineOffset:'2px'}}>@alfredmarktr</a> — I run OpenClaw daily on a Mac mini and got tired of re-explaining the same context every single session. I built this for myself, it&apos;s the exact setup running in production, and I packaged it up so you don&apos;t have to figure it out from scratch. Questions? Reach out on X — I actually reply.</div>
             </div>
           </div>
         </div>
