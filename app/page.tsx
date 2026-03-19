@@ -436,7 +436,7 @@ export default function Home() {
               Get Agent Memory Kit — $10 →
             </a>
             <span style={{fontSize:'12px', color:'#f59e0b', fontWeight:600, display:'flex', alignItems:'center', gap:'5px', marginTop:'2px'}}>
-              ⏳ Early access — price goes to $29 at launch, your rate locks in forever
+              ⏳ Founding price — $10 now, $29 at launch. Buy once, own it forever.
             </span>
             <span className="hero-note">
               <span className="hero-note-item">$10 one-time</span>
@@ -716,7 +716,7 @@ export default function Home() {
             </div>
             <div className="faq-item">
               <div className="faq-q">What if I get stuck during setup?</div>
-              <div className="faq-a">DM me on X (<a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer" style={{color:'#818cf8', textDecoration:'underline', textDecorationColor:'rgba(129,140,248,0.4)', textUnderlineOffset:'2px'}}>@alfredmarktr</a>) or reply to your purchase receipt. I&apos;ll help you get it working — I&apos;ve set this up from scratch multiple times and know exactly where it can trip people up.</div>
+              <div className="faq-a">DM me on X (<a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer" style={{color:'#818cf8', textDecoration:'underline', textDecorationColor:'rgba(129,140,248,0.4)', textUnderlineOffset:'2px'}}>@alfredmarktr</a>) or reply to your purchase receipt. I typically reply same-day. I&apos;ve set this up from scratch multiple times and know exactly where it can trip people up — I&apos;ll get you unstuck.</div>
             </div>
             <div className="faq-item">
               <div className="faq-q">What if it doesn&apos;t work for me?</div>
@@ -752,7 +752,7 @@ export default function Home() {
               <span className="price-num">$10</span>
               <span className="price-word">one-time</span>
             </div>
-            <span className="price-launch">↑ Early access — price locks in forever, goes to $29 at launch</span>
+            <span className="price-launch">↑ Founding price — $10 now, goes to $29 at launch. Yours forever.</span>
             <a href="/api/create-checkout" className="cta-btn">Get Agent Memory Kit — $10 →</a>
             <p className="cta-meta">Secure checkout via Stripe · Instant ZIP download · 7-day money-back guarantee</p>
           </div>
