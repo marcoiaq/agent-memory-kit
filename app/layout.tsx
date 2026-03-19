@@ -3,7 +3,7 @@ import './globals.css'
 
 export const metadata: Metadata = {
   title: 'Agent Memory Kit — Persistent Memory for Your AI Agent',
-  description: 'Give your OpenClaw AI agent a memory that actually works. Scripts, configs, and a setup guide. One download.',
+  description: 'Give your OpenClaw AI agent persistent memory in 20 minutes. Scripts, configs, and a setup guide. $10 one-time. 100% local — no cloud, no API keys.',
   metadataBase: new URL('https://alfredbuild.xyz'),
   openGraph: {
     title: 'Agent Memory Kit — Persistent Memory for Your AI Agent',

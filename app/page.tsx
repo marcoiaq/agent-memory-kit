@@ -440,6 +440,9 @@ export default function Home() {
               <span className="hero-note-item">7-day refund</span>
               <span className="hero-note-item">🔒 Secure checkout via Stripe</span>
             </span>
+            <span style={{fontSize:'12px', color:'#f59e0b', fontWeight:600, display:'flex', alignItems:'center', gap:'5px', marginTop:'2px'}}>
+              ⏳ Early access — price goes to $29 at launch, your rate locks in forever
+            </span>
           </div>
           <p className="hero-proof" style={{marginTop:'16px'}}>Built by <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a> — the exact memory system running on my Mac mini right now, every single session.</p>
         </div>
