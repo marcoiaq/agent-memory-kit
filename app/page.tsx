@@ -433,10 +433,10 @@ export default function Home() {
               <span style={{fontSize:'11px', fontWeight:700, color:'#f59e0b', background:'rgba(245,158,11,0.1)', border:'1px solid rgba(245,158,11,0.25)', padding:'3px 8px', borderRadius:'4px', letterSpacing:'0.06em', textTransform:'uppercase'}}>Early access</span>
             </div>
             <a href="/api/create-checkout" className="cta-main">
-              Get Agent Memory Kit — $10 →
+              Fix My Agent&apos;s Memory — $10 →
             </a>
             <span style={{fontSize:'12px', color:'#f59e0b', fontWeight:600, display:'flex', alignItems:'center', gap:'5px', marginTop:'2px'}}>
-              ⏳ Founding price — $10 now, $29 at launch. Buy once, own it forever.
+              ⏳ Founding price — $10 now, goes to $29 at full launch. Buy once, own it forever.
             </span>
             <span className="hero-note">
               <span className="hero-note-item">$10 one-time</span>
@@ -699,12 +699,20 @@ export default function Home() {
               <div className="faq-a">About 15–20 minutes. You&apos;ll run the installer script, load two macOS background services, and fill in a short config for your agent&apos;s identity. The setup guide walks through every step with exact commands — no guesswork.</div>
             </div>
             <div className="faq-item">
-              <div className="faq-q">What AI agent does this work with?</div>
-              <div className="faq-a">Agent Memory Kit is built for <strong style={{color:'#fafafa'}}><a href="https://openclaw.ai" target="_blank" rel="noopener noreferrer" style={{color:'#fafafa', textDecoration:'underline', textDecorationColor:'rgba(250,250,250,0.3)', textUnderlineOffset:'2px'}}>OpenClaw</a></strong> — the Claude-powered agent framework for Mac. It hooks directly into OpenClaw&apos;s session files and workspace structure. It won&apos;t work with ChatGPT, Claude.ai, or other agents out of the box.</div>
+              <div className="faq-q">Do I need to know how to code?</div>
+              <div className="faq-a">You need to be comfortable running commands in Terminal. The installer handles everything — you&apos;re not writing code, just running a few commands and filling in a config file. If you&apos;ve used npm or brew before, you can do this.</div>
+            </div>
+            <div className="faq-item">
+              <div className="faq-q">What if it doesn&apos;t work for me?</div>
+              <div className="faq-a">7-day money-back guarantee. If you followed the setup guide and it doesn&apos;t work on your machine, reply to your purchase receipt and you&apos;ll get a full refund. No runaround.</div>
             </div>
             <div className="faq-item">
               <div className="faq-q">What do I actually get?</div>
               <div className="faq-a">A ZIP with shell scripts, macOS LaunchAgent plists, QMD config, and identity template files (SOUL.md, AGENTS.md, MEMORY.md, TACIT.md) — plus a step-by-step setup guide. Everything pre-configured. You run the installer, load the services, and it works.</div>
+            </div>
+            <div className="faq-item">
+              <div className="faq-q">What AI agent does this work with?</div>
+              <div className="faq-a">Agent Memory Kit is built for <strong style={{color:'#fafafa'}}><a href="https://openclaw.ai" target="_blank" rel="noopener noreferrer" style={{color:'#fafafa', textDecoration:'underline', textDecorationColor:'rgba(250,250,250,0.3)', textUnderlineOffset:'2px'}}>OpenClaw</a></strong> — the Claude-powered agent framework for Mac. It hooks directly into OpenClaw&apos;s session files and workspace structure. It won&apos;t work with ChatGPT, Claude.ai, or other agents out of the box.</div>
             </div>
             <div className="faq-item">
               <div className="faq-q">Does it require any cloud services or API keys?</div>
@@ -717,14 +725,6 @@ export default function Home() {
             <div className="faq-item">
               <div className="faq-q">What if I get stuck during setup?</div>
               <div className="faq-a">DM me on X (<a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer" style={{color:'#818cf8', textDecoration:'underline', textDecorationColor:'rgba(129,140,248,0.4)', textUnderlineOffset:'2px'}}>@alfredmarktr</a>) or reply to your purchase receipt. I typically reply same-day. I&apos;ve set this up from scratch multiple times and know exactly where it can trip people up — I&apos;ll get you unstuck.</div>
-            </div>
-            <div className="faq-item">
-              <div className="faq-q">What if it doesn&apos;t work for me?</div>
-              <div className="faq-a">7-day money-back guarantee. If you followed the setup guide and it doesn&apos;t work on your machine, reply to your purchase receipt and you&apos;ll get a full refund. No runaround.</div>
-            </div>
-            <div className="faq-item">
-              <div className="faq-q">Do I need to know how to code?</div>
-              <div className="faq-a">You need to be comfortable running commands in Terminal. The installer handles everything — you&apos;re not writing code, just running a few commands and filling in a config file. If you&apos;ve used npm or brew before, you can do this.</div>
             </div>
             <div className="faq-item">
               <div className="faq-q">What&apos;s OpenClaw and do I need it?</div>
