@@ -1,3 +1,5 @@
+import DesktopScrollBar from './components/DesktopScrollBar'
+
 export default function Home() {
   return (
     <>
@@ -767,6 +769,9 @@ export default function Home() {
           <p>Alfred Build · <a href="https://openclaw.ai" target="_blank" rel="noopener noreferrer" style={{color:'#52525b', textDecoration:'none'}}>Built with OpenClaw</a> · <a href="https://alfredbuild.xyz" style={{color:'#52525b', textDecoration:'none'}}>alfredbuild.xyz</a> · <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer" style={{color:'#52525b', textDecoration:'none'}}>@alfredmarktr</a></p>
         </div>
       </footer>
+
+      {/* DESKTOP STICKY SCROLL BAR — appears after scrolling past hero */}
+      <DesktopScrollBar />
 
       {/* MOBILE STICKY BUY BAR — visible only on mobile via CSS */}
       <div className="mobile-buy-bar">
