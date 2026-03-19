@@ -425,7 +425,6 @@ export default function Home() {
           <p className="hero-desc">
             Every session, your agent wakes up blank — and you spend the next 10 minutes re-explaining your stack, your rules, your past decisions. Agent Memory Kit fixes that in 20 minutes. One setup. Then it never happens again.
           </p>
-          <p className="hero-proof" style={{marginBottom:'20px'}}>Built by <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a> — the exact memory system that&apos;s been running on my Mac mini in production since day one. Every session, no exceptions.</p>
           <div className="hero-actions" style={{marginTop:'0'}}>
             <div style={{display:'flex', alignItems:'center', gap:'10px', marginBottom:'4px'}}>
               <span style={{fontSize:'22px', color:'#52525b', textDecoration:'line-through', fontWeight:700, letterSpacing:'-0.02em'}}>$29</span>
@@ -445,6 +444,7 @@ export default function Home() {
               <span className="hero-note-item">🔒 Secure checkout via Stripe</span>
             </span>
           </div>
+          <p className="hero-proof" style={{marginTop:'24px'}}>Built by <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a> — the exact memory system that&apos;s been running on my Mac mini in production since day one. Every session, no exceptions.</p>
         </div>
       </div>
 
