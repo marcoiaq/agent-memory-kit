@@ -444,7 +444,7 @@ export default function Home() {
               ⏳ Early access — price goes to $29 at launch, your rate locks in forever
             </span>
           </div>
-          <p className="hero-proof" style={{marginTop:'16px'}}>Built by <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a> — the exact memory system running on my Mac mini right now, every single session.</p>
+          <p className="hero-proof" style={{marginTop:'16px'}}>Built by <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a> — the exact memory system that&apos;s been running on my Mac mini in production since day one. Every session, no exceptions.</p>
         </div>
       </div>
 
@@ -453,13 +453,13 @@ export default function Home() {
         <div className="wrap">
           <div className="proof-bar-inner">
             <div className="proof-stat">
-              🛠️ Up and running in 20 min — scripts pre-configured
+              ⚡ 20-min setup — pre-configured scripts &amp; services
             </div>
             <div className="proof-stat">
-              ✅ 7-day refund, no questions asked
+              🔒 100% local — Ollama + SQLite, nothing leaves your machine
             </div>
             <div className="proof-stat">
-              📖 Every command documented, step by step
+              ✅ 7-day refund — doesn&apos;t work on your machine, full refund, no runaround
             </div>
           </div>
         </div>
@@ -649,7 +649,7 @@ export default function Home() {
       <div className="inside">
         <div className="wrap">
           <h2>What&apos;s inside</h2>
-          <p className="inside-sub">Pre-built scripts, ready-to-load configs, and a step-by-step guide. Install it once — your agent never starts from scratch again.</p>
+          <p className="inside-sub">One ZIP. 5 pieces. Install it once — your agent never starts from scratch again.</p>
           <div className="chapters">
             {[
               ['01', 'Memory observer', 'Shell scripts that watch your agent\'s session files and automatically extract facts using a local LLM. Runs silently in the background.'],
