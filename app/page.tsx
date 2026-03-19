@@ -423,7 +423,7 @@ export default function Home() {
           </div>
           <h1>Your AI agent<br />forgets everything.</h1>
           <p className="hero-desc">
-            Every session, your agent wakes up blank. Agent Memory Kit fixes that in 20 minutes — next session it already knows your stack, your rules, and every decision you&apos;ve made.
+            Every session, your agent wakes up blank — and you spend the next 10 minutes re-explaining your stack, your rules, your past decisions. Agent Memory Kit fixes that in 20 minutes. One setup. Then it never happens again.
           </p>
           <p className="hero-proof" style={{marginBottom:'20px'}}>Built by <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a> — the exact memory system that&apos;s been running on my Mac mini in production since day one. Every session, no exceptions.</p>
           <div className="hero-actions" style={{marginTop:'0'}}>
@@ -453,7 +453,7 @@ export default function Home() {
         <div className="wrap">
           <div className="proof-bar-inner">
             <div className="proof-stat">
-              ⚡ 20-min setup — pre-configured scripts &amp; services
+              ⚡ Saves ~10 min/session — never re-explain your stack again
             </div>
             <div className="proof-stat">
               🔒 100% local — Ollama + SQLite, nothing leaves your machine
@@ -712,7 +712,7 @@ export default function Home() {
             </div>
             <div className="faq-item">
               <div className="faq-q">Do I get updates?</div>
-              <div className="faq-a">Yes. If the scripts improve or new features get added, you get them. Reply to your purchase receipt and I&apos;ll send the updated ZIP. One price, no subscription.</div>
+              <div className="faq-a">Yes. If the scripts improve or new features get added, you get them. I&apos;ll email all buyers directly with the updated ZIP — you don&apos;t have to ask. One price, you own it forever.</div>
             </div>
             <div className="faq-item">
               <div className="faq-q">What if I get stuck during setup?</div>
