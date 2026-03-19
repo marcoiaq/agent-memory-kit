@@ -434,14 +434,14 @@ export default function Home() {
             <a href="/api/create-checkout" className="cta-main">
               Get Agent Memory Kit — $10 →
             </a>
+            <span style={{fontSize:'12px', color:'#f59e0b', fontWeight:600, display:'flex', alignItems:'center', gap:'5px', marginTop:'2px'}}>
+              ⏳ Early access — price goes to $29 at launch, your rate locks in forever
+            </span>
             <span className="hero-note">
               <span className="hero-note-item">$10 one-time</span>
               <span className="hero-note-item">Instant download</span>
               <span className="hero-note-item">7-day refund</span>
               <span className="hero-note-item">🔒 Secure checkout via Stripe</span>
-            </span>
-            <span style={{fontSize:'12px', color:'#f59e0b', fontWeight:600, display:'flex', alignItems:'center', gap:'5px', marginTop:'2px'}}>
-              ⏳ Early access — price goes to $29 at launch, your rate locks in forever
             </span>
           </div>
           <p className="hero-proof" style={{marginTop:'16px'}}>Built by <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a> — the exact memory system that&apos;s been running on my Mac mini in production since day one. Every session, no exceptions.</p>
@@ -691,6 +691,10 @@ export default function Home() {
               <div className="faq-a">A Mac running macOS 12 or later (M1, M2, M3, or Intel), <strong style={{color:'#fafafa'}}><a href="https://openclaw.ai" target="_blank" rel="noopener noreferrer" style={{color:'#fafafa', textDecoration:'underline', textDecorationColor:'rgba(250,250,250,0.3)', textUnderlineOffset:'2px'}}>OpenClaw</a></strong> installed, and <strong style={{color:'#fafafa'}}>Ollama</strong> running locally. Ollama is free and handles all the memory extraction — no GPU required, runs on CPU fine.</div>
             </div>
             <div className="faq-item">
+              <div className="faq-q">Is this a one-time payment or a subscription?</div>
+              <div className="faq-a">One-time. Pay once, own it forever. $10 now, that&apos;s it. No monthly fees, no annual renewals, no account to manage. You download the ZIP, you run the setup, it&apos;s yours.</div>
+            </div>
+            <div className="faq-item">
               <div className="faq-q">How long does setup take?</div>
               <div className="faq-a">About 15–20 minutes. You&apos;ll run the installer script, load two macOS background services, and fill in a short config for your agent&apos;s identity. The setup guide walks through every step with exact commands — no guesswork.</div>
             </div>
@@ -705,10 +709,6 @@ export default function Home() {
             <div className="faq-item">
               <div className="faq-q">Does it require any cloud services or API keys?</div>
               <div className="faq-a">No. Memory extraction runs locally using Ollama. Search runs locally via SQLite. Nothing leaves your machine. No subscriptions, no recurring fees.</div>
-            </div>
-            <div className="faq-item">
-              <div className="faq-q">Is this a one-time payment or a subscription?</div>
-              <div className="faq-a">One-time. Pay once, own it forever. $10 now, that&apos;s it. No monthly fees, no annual renewals, no account to manage. You download the ZIP, you run the setup, it&apos;s yours.</div>
             </div>
             <div className="faq-item">
               <div className="faq-q">Do I get updates?</div>
