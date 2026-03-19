@@ -36,11 +36,6 @@ export default function Home() {
 
         /* HERO */
         .hero { padding: 72px 0 64px; border-bottom: 1px solid #18181b; }
-        .hero-kicker {
-          font-size: 12px; font-weight: 600; letter-spacing: 0.08em;
-          text-transform: uppercase; color: #818cf8;
-          margin-bottom: 12px; display: block;
-        }
         .hero-badge {
           display: inline-flex; align-items: center; gap: 8px;
           background: rgba(99,102,241,0.08); border: 1px solid rgba(99,102,241,0.2);
@@ -84,18 +79,6 @@ export default function Home() {
         .hero-note { font-size: 13px; color: #a1a1aa; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
         .hero-note-item { display: flex; align-items: center; gap: 4px; }
         .hero-note-item::before { content: '✓'; color: #22c55e; font-weight: 700; font-size: 12px; }
-        .hero-urgency {
-          display: inline-block; margin-bottom: 20px;
-          font-size: 12px; font-weight: 700; color: #f59e0b;
-          background: rgba(245,158,11,0.1); border: 1px solid rgba(245,158,11,0.3);
-          padding: 5px 12px; border-radius: 6px; letter-spacing: 0.02em;
-        }
-        .hero-sub {
-          font-size: clamp(17px, 2.8vw, 21px);
-          font-weight: 700; color: #fafafa;
-          margin-bottom: 18px; letter-spacing: -0.02em;
-          line-height: 1.3;
-        }
         .hero-proof {
           font-size: 13px; color: #a1a1aa; margin-top: 20px; margin-bottom: 0;
           display: inline-flex; align-items: center; gap: 8px;
@@ -380,7 +363,6 @@ export default function Home() {
         @media (max-width: 520px) {
           .hero { padding: 48px 0 40px; }
           .hero-desc { margin-bottom: 20px; }
-          .hero-urgency { margin-bottom: 16px; }
           .cards { grid-template-columns: 1fr; }
           .cta-inner { padding: 36px 20px; }
           .price-num { font-size: 52px; }
@@ -459,7 +441,7 @@ export default function Home() {
               <span className="hero-note-item">🔒 Secure checkout via Stripe</span>
             </span>
           </div>
-          <p className="hero-proof" style={{marginTop:'16px'}}>Built by <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a> — used daily since day one. This is my own production setup.</p>
+          <p className="hero-proof" style={{marginTop:'16px'}}>Built by <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a> — the exact memory system running on my Mac mini right now, every single session.</p>
         </div>
       </div>
 
@@ -720,6 +702,10 @@ export default function Home() {
             <div className="faq-item">
               <div className="faq-q">Does it require any cloud services or API keys?</div>
               <div className="faq-a">No. Memory extraction runs locally using Ollama. Search runs locally via SQLite. Nothing leaves your machine. No subscriptions, no recurring fees.</div>
+            </div>
+            <div className="faq-item">
+              <div className="faq-q">Is this a one-time payment or a subscription?</div>
+              <div className="faq-a">One-time. Pay once, own it forever. $10 now, that&apos;s it. No monthly fees, no annual renewals, no account to manage. You download the ZIP, you run the setup, it&apos;s yours.</div>
             </div>
             <div className="faq-item">
               <div className="faq-q">Do I get updates?</div>
