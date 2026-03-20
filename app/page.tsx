@@ -659,9 +659,14 @@ export default function Home() {
                 <li className="openclaw-feature" key={f}>{f}</li>
               ))}
             </ul>
-            <a href="https://openclaw.ai" target="_blank" rel="noopener noreferrer" className="openclaw-link">
-              New to OpenClaw? Start here →
-            </a>
+            <div style={{display:'flex', alignItems:'center', gap:'16px', flexWrap:'wrap'}}>
+              <a href="/api/create-checkout" className="cta-main" style={{fontSize:'15px', padding:'12px 24px'}}>
+                Get it — $10 →
+              </a>
+              <a href="https://openclaw.ai" target="_blank" rel="noopener noreferrer" className="openclaw-link">
+                New to OpenClaw? Start here →
+              </a>
+            </div>
           </div>
         </div>
       </div>
@@ -692,6 +697,12 @@ export default function Home() {
               <div className="card-title">Runs automatically</div>
               <div className="card-body">Background services start on login and handle memory extraction silently. You don&apos;t touch it again.</div>
             </div>
+          </div>
+          <div style={{marginTop:'32px', display:'flex', alignItems:'center', gap:'16px', flexWrap:'wrap'}}>
+            <a href="/api/create-checkout" className="cta-main" style={{fontSize:'15px', padding:'12px 24px'}}>
+              Get Agent Memory Kit — $10 →
+            </a>
+            <span style={{fontSize:'12px', color:'#52525b'}}>$10 one-time · Instant download · 7-day refund</span>
           </div>
         </div>
       </div>
@@ -828,7 +839,7 @@ export default function Home() {
             </div>
             <span className="price-launch">↑ Founding price — $10 now, goes to $29 at launch. Yours forever.</span>
             <a href="/api/create-checkout" className="cta-btn">Get Agent Memory Kit — $10 →</a>
-            <p className="cta-meta" style={{marginTop:'14px', marginBottom:'8px'}}>Secure checkout via Stripe · Instant download · 7-day money-back guarantee</p>
+            <p className="cta-meta" style={{marginTop:'14px', marginBottom:'8px', color:'#71717a'}}>Secure checkout via Stripe · Instant download · 7-day money-back guarantee</p>
             <p style={{fontSize:'12px', color:'#3f3f46', marginTop:'6px'}}>
               You pay → get download link by email in seconds → run 1 installer command → done in 20 min
             </p>
@@ -850,7 +861,7 @@ export default function Home() {
         <div className="mobile-buy-bar-inner">
           <div className="mobile-buy-bar-text">
             <strong>$10 one-time</strong><br />
-            Early access · 7-day refund
+            Founding price · 7-day refund
           </div>
           <a href="/api/create-checkout" className="mobile-buy-bar-btn">
             Get it — $10 →
