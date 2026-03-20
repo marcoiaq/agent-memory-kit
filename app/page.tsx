@@ -478,7 +478,7 @@ export default function Home() {
             Is this for you?
           </div>
           <h2 style={{fontSize:'clamp(20px, 3.5vw, 26px)', fontWeight:800, letterSpacing:'-0.03em', color:'#fafafa', marginBottom:'24px', lineHeight:1.2}}>
-            Check all that apply:
+            Sound familiar?
           </h2>
           <div className="who-grid" style={{display:'grid', gridTemplateColumns:'1fr 1fr', gap:'12px'}}>
             {[
@@ -496,7 +496,7 @@ export default function Home() {
             ))}
           </div>
           <p style={{fontSize:'13px', color:'#52525b', marginTop:'20px', lineHeight:1.6}}>
-            If you checked even two of these — this is for you. $10, 20 minutes, done.
+            If two of these hit — this is for you. $10, 20 minutes, done.
           </p>
           <div style={{marginTop:'24px', display:'flex', alignItems:'center', gap:'16px', flexWrap:'wrap'}}>
             <a href="/api/create-checkout" className="cta-main" style={{fontSize:'15px', padding:'12px 24px'}}>
@@ -788,7 +788,7 @@ export default function Home() {
             <h2>Stop re-explaining yourself.</h2>
             <p className="cta-desc">
               Every session, your agent already knows your stack, your rules, and what you decided last time.<br />
-              One download. 20-minute setup. macOS · Ollama · 100% local. No cloud, no subscription, no recurring fees.
+              One download. 20 minutes. Runs 100% on your Mac — no cloud, no subscriptions, nothing recurring.
             </p>
             <div className="price-tag">
               <span style={{fontSize:'28px', color:'#52525b', textDecoration:'line-through', fontWeight:700, letterSpacing:'-0.02em', alignSelf:'center', marginRight:'4px'}}>$29</span>
@@ -797,7 +797,10 @@ export default function Home() {
             </div>
             <span className="price-launch">↑ Founding price — $10 now, goes to $29 at launch. Yours forever.</span>
             <a href="/api/create-checkout" className="cta-btn">Get Agent Memory Kit — $10 →</a>
-            <p className="cta-meta">Secure checkout via Stripe · Instant ZIP download · 7-day money-back guarantee</p>
+            <p className="cta-meta" style={{marginTop:'14px', marginBottom:'8px'}}>Secure checkout via Stripe · Instant download · 7-day money-back guarantee</p>
+            <p style={{fontSize:'12px', color:'#3f3f46', marginTop:'6px'}}>
+              You pay → get download link by email in seconds → run 1 installer command → done in 20 min
+            </p>
           </div>
         </div>
       </div>
