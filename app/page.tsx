@@ -721,6 +721,28 @@ export default function Home() {
         </div>
       </div>
 
+      {/* GUARANTEE BLOCK */}
+      <div style={{padding:'40px 0', borderBottom:'1px solid #18181b', background:'#0d0d10'}}>
+        <div className="wrap">
+          <div style={{
+            display:'flex', alignItems:'flex-start', gap:'20px',
+            background:'rgba(34,197,94,0.05)', border:'1px solid rgba(34,197,94,0.18)',
+            borderRadius:'16px', padding:'28px 28px',
+          }}>
+            <span style={{fontSize:'32px', flexShrink:0, lineHeight:1, marginTop:'2px'}}>🛡️</span>
+            <div>
+              <div style={{fontSize:'16px', fontWeight:800, color:'#fafafa', marginBottom:'8px', letterSpacing:'-0.02em'}}>
+                7-Day Money-Back Guarantee
+              </div>
+              <p style={{fontSize:'14px', color:'#a1a1aa', lineHeight:'1.65', margin:0, marginBottom:'10px'}}>
+                Follow the setup guide and it doesn&apos;t work on your machine — reply to your purchase receipt and I&apos;ll refund you same-day. No forms, no runaround, no questions. You shouldn&apos;t pay for something that doesn&apos;t work.
+              </p>
+              <span style={{fontSize:'13px', color:'#52525b', fontStyle:'italic'}}>— @alfredmarktr</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
       {/* MID-FUNNEL CTA */}
       <div style={{padding:'40px 0', borderBottom:'1px solid #18181b'}}>
         <div className="wrap" style={{display:'flex', flexDirection:'column', alignItems:'center', textAlign:'center', gap:'16px'}}>
