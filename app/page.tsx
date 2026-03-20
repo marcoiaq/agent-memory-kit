@@ -443,6 +443,7 @@ export default function Home() {
             <span style={{fontSize:'12px', color:'#f59e0b', fontWeight:600, display:'flex', alignItems:'center', gap:'5px', marginTop:'2px'}}>
               ⏳ Founding price — $10 now, goes to $29 at full launch. Buy once, own it forever.
             </span>
+            <p className="hero-proof" style={{marginTop:'4px', marginBottom:0}}>Built by <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a> — the exact memory system that&apos;s been running on my Mac mini in production since day one. Every session, no exceptions.</p>
             <span className="hero-note">
               <span className="hero-note-item">$10 one-time</span>
               <span className="hero-note-item">Instant download</span>
@@ -453,7 +454,6 @@ export default function Home() {
               Requires: macOS 12+ · OpenClaw · <a href="#faq" style={{color:'#71717a', textDecoration:'underline', textDecorationColor:'rgba(113,113,122,0.4)', textUnderlineOffset:'2px'}}>Ollama (free)</a> — all free, all local
             </span>
           </div>
-          <p className="hero-proof" style={{marginTop:'24px'}}>Built by <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a> — the exact memory system that&apos;s been running on my Mac mini in production since day one. Every session, no exceptions.</p>
         </div>
       </div>
 
