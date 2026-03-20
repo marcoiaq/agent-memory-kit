@@ -108,7 +108,7 @@ export default function DesktopScrollBar() {
             </div>
           </div>
           <a href="/api/create-checkout" className="desktop-scroll-bar-btn">
-            Get it — $10 →
+            Fix My Agent&apos;s Memory — $10 →
           </a>
         </div>
       </div>
