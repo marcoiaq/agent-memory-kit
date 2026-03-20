@@ -457,18 +457,18 @@ export default function Home() {
         </div>
       </div>
 
-      {/* SOCIAL PROOF BAR */}
+      {/* DELIVERY + TRUST BAR */}
       <div className="proof-bar">
         <div className="wrap">
           <div className="proof-bar-inner">
             <div className="proof-stat">
-              ⚡ 20 min setup — works on your first session
+              📦 Pay → download link in your email within seconds
             </div>
             <div className="proof-stat">
-              🔒 100% local — no cloud, no API keys, no subscriptions
+              🔒 100% local — zero cloud, zero API keys, zero subscriptions. Ever.
             </div>
             <div className="proof-stat">
-              ✅ 7-day refund — if it doesn&apos;t work, you get every cent back
+              ✅ 7-day refund — doesn&apos;t work on your Mac? Full refund, no questions.
             </div>
           </div>
         </div>
@@ -530,6 +530,12 @@ export default function Home() {
             </div>
           </div>
           <p className="demo-caption">Runs locally with Ollama · SQLite index · No API calls</p>
+          <div style={{marginTop:'24px', display:'flex', alignItems:'center', gap:'14px', flexWrap:'wrap'}}>
+            <a href="/api/create-checkout" className="cta-main" style={{fontSize:'15px', padding:'12px 24px'}}>
+              Get it — $10 →
+            </a>
+            <span style={{fontSize:'12px', color:'#52525b'}}>Instant download · 7-day refund</span>
+          </div>
         </div>
       </div>
 
@@ -694,7 +700,7 @@ export default function Home() {
       <div className="inside">
         <div className="wrap">
           <h2>What&apos;s inside</h2>
-          <p className="inside-sub">One ZIP. 5 pieces. Install it once — your agent never starts from scratch again.</p>
+          <p className="inside-sub">Pre-configured and ready. Run one command — your agent never starts from scratch again.</p>
           <div className="chapters">
             {[
               ['01', 'Memory observer', 'Shell scripts that watch your agent\'s session files and automatically extract facts using a local LLM. Runs silently in the background.'],
