@@ -429,7 +429,7 @@ export default function Home() {
             Fix it in 20 minutes. Never re-explain yourself again.
           </p>
           <p className="hero-desc">
-            Every session, your OpenClaw agent wakes up blank — re-explaining your stack, your rules, your past decisions. Agent Memory Kit gives it persistent, searchable memory. One setup. Runs 100% locally on your Mac. Then it never happens again.
+            Every session, your OpenClaw agent wakes up blank — re-explaining your stack, your rules, your past decisions. One setup gives it persistent, searchable memory. Runs 100% locally on your Mac. Then it never happens again.
           </p>
           <div className="hero-actions" style={{marginTop:'0'}}>
             <div style={{display:'flex', alignItems:'center', gap:'10px', marginBottom:'4px'}}>
@@ -448,6 +448,9 @@ export default function Home() {
               <span className="hero-note-item">Instant download</span>
               <span className="hero-note-item">7-day refund</span>
               <span className="hero-note-item">🔒 Secure checkout via Stripe</span>
+            </span>
+            <span style={{fontSize:'12px', color:'#52525b', marginTop:'2px', display:'flex', alignItems:'center', gap:'4px', flexWrap:'wrap'}}>
+              Requires: macOS 12+ · OpenClaw · <a href="#faq" style={{color:'#71717a', textDecoration:'underline', textDecorationColor:'rgba(113,113,122,0.4)', textUnderlineOffset:'2px'}}>Ollama (free)</a> — all free, all local
             </span>
           </div>
           <p className="hero-proof" style={{marginTop:'24px'}}>Built by <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a> — the exact memory system that&apos;s been running on my Mac mini in production since day one. Every session, no exceptions.</p>
@@ -725,7 +728,7 @@ export default function Home() {
       </div>
 
       {/* FAQ */}
-      <div className="faq">
+      <div className="faq" id="faq">
         <div className="wrap">
           <h2>Questions before you buy</h2>
           <div className="faq-list">
