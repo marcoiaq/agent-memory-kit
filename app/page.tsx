@@ -498,6 +498,12 @@ export default function Home() {
           <p style={{fontSize:'13px', color:'#52525b', marginTop:'20px', lineHeight:1.6}}>
             If you checked even two of these — this is for you. $10, 20 minutes, done.
           </p>
+          <div style={{marginTop:'24px', display:'flex', alignItems:'center', gap:'16px', flexWrap:'wrap'}}>
+            <a href="/api/create-checkout" className="cta-main" style={{fontSize:'15px', padding:'12px 24px'}}>
+              Fix My Agent&apos;s Memory — $10 →
+            </a>
+            <span style={{fontSize:'12px', color:'#52525b'}}>Instant download · 7-day refund</span>
+          </div>
         </div>
       </div>
 
@@ -713,6 +719,7 @@ export default function Home() {
           <a href="/api/create-checkout" className="cta-main" style={{alignSelf:'center'}}>
             Get Agent Memory Kit — $10 →
           </a>
+          <span style={{fontSize:'12px', color:'#f59e0b', fontWeight:600}}>⏳ Founding price — goes to $29 at launch</span>
           <span style={{fontSize:'12px', color:'#52525b'}}>$10 one-time · Instant download · 7-day refund</span>
         </div>
       </div>
