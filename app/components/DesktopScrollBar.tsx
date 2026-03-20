@@ -102,7 +102,7 @@ export default function DesktopScrollBar() {
           <div className="desktop-scroll-bar-left">
             <span className="desktop-scroll-bar-title">Agent Memory Kit</span>
             <div className="desktop-scroll-bar-trust">
-              <span className="desktop-scroll-bar-trust-item">$10 one-time</span>
+              <span className="desktop-scroll-bar-trust-item"><span style={{textDecoration:'line-through', color:'#3f3f46', marginRight:'4px'}}>$29</span>$10 one-time</span>
               <span className="desktop-scroll-bar-trust-item">Instant download</span>
               <span className="desktop-scroll-bar-trust-item">7-day refund</span>
             </div>
