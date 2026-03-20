@@ -377,6 +377,7 @@ export default function Home() {
           .step { gap: 14px; }
           .cta-main { width: 100%; justify-content: center; }
           body { padding-bottom: 88px; }
+          .who-grid { grid-template-columns: 1fr !important; }
           .mobile-buy-bar {
             display: block;
             position: fixed; bottom: 0; left: 0; right: 0; z-index: 100;
@@ -458,15 +459,45 @@ export default function Home() {
         <div className="wrap">
           <div className="proof-bar-inner">
             <div className="proof-stat">
-              ⚡ Saves ~10 min/session — never re-explain your stack again
+              ⚡ 20 min setup — works on your first session
             </div>
             <div className="proof-stat">
-              🔒 100% local — Ollama + SQLite, nothing leaves your machine
+              🔒 100% local — no cloud, no API keys, no subscriptions
             </div>
             <div className="proof-stat">
-              ✅ 7-day refund — doesn&apos;t work on your machine, full refund, no runaround
+              ✅ 7-day refund — if it doesn&apos;t work, you get every cent back
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* WHO IS THIS FOR */}
+      <div style={{padding:'48px 0', borderBottom:'1px solid #18181b'}}>
+        <div className="wrap">
+          <div style={{fontSize:'11px', fontWeight:700, letterSpacing:'0.1em', textTransform:'uppercase', color:'#71717a', marginBottom:'12px'}}>
+            Is this for you?
+          </div>
+          <h2 style={{fontSize:'clamp(20px, 3.5vw, 26px)', fontWeight:800, letterSpacing:'-0.03em', color:'#fafafa', marginBottom:'24px', lineHeight:1.2}}>
+            Check all that apply:
+          </h2>
+          <div className="who-grid" style={{display:'grid', gridTemplateColumns:'1fr 1fr', gap:'12px'}}>
+            {[
+              'You use OpenClaw on a Mac daily',
+              'You re-explain your stack or rules every new session',
+              'You\'ve lost a decision or context when a session ended',
+              'You want memory without cloud, subscriptions, or API keys',
+              'You\'re building something and your agent keeps forgetting where you left off',
+              'You\'ve thought "I wish my agent just knew this already"',
+            ].map((item) => (
+              <div key={item} style={{display:'flex', alignItems:'flex-start', gap:'10px', padding:'14px 16px', background:'#111114', border:'1px solid #1c1c1f', borderRadius:'10px'}}>
+                <span style={{color:'#22c55e', fontWeight:700, fontSize:'14px', flexShrink:0, marginTop:'1px'}}>✓</span>
+                <span style={{fontSize:'14px', color:'#a1a1aa', lineHeight:1.5}}>{item}</span>
+              </div>
+            ))}
+          </div>
+          <p style={{fontSize:'13px', color:'#52525b', marginTop:'20px', lineHeight:1.6}}>
+            If you checked even two of these — this is for you. $10, 20 minutes, done.
+          </p>
         </div>
       </div>
 
