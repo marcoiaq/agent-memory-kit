@@ -532,7 +532,7 @@ export default function Home() {
           <p className="demo-caption">Runs locally with Ollama · SQLite index · No API calls</p>
           <div style={{marginTop:'24px', display:'flex', alignItems:'center', gap:'14px', flexWrap:'wrap'}}>
             <a href="/api/create-checkout" className="cta-main" style={{fontSize:'15px', padding:'12px 24px'}}>
-              Get it — $10 →
+              Fix My Agent's Memory — $10 →
             </a>
             <span style={{fontSize:'12px', color:'#52525b'}}>Instant download · 7-day refund</span>
           </div>
@@ -585,7 +585,7 @@ export default function Home() {
             Seen enough? Grab it now — you&apos;ll be running in 20 minutes.
           </p>
           <a href="/api/create-checkout" className="cta-main" style={{flexShrink:0, fontSize:'15px', padding:'12px 24px'}}>
-            Get it — $10 →
+            Fix My Agent's Memory — $10 →
           </a>
         </div>
       </div>
@@ -634,7 +634,7 @@ export default function Home() {
             Three steps. 20 minutes. Your agent never starts from scratch again.
           </p>
           <a href="/api/create-checkout" className="cta-main" style={{flexShrink:0, fontSize:'15px', padding:'12px 24px'}}>
-            Get it — $10 →
+            Fix My Agent's Memory — $10 →
           </a>
         </div>
       </div>
@@ -661,7 +661,7 @@ export default function Home() {
             </ul>
             <div style={{display:'flex', alignItems:'center', gap:'16px', flexWrap:'wrap'}}>
               <a href="/api/create-checkout" className="cta-main" style={{fontSize:'15px', padding:'12px 24px'}}>
-                Get it — $10 →
+                Fix My Agent's Memory — $10 →
               </a>
               <a href="https://openclaw.ai" target="_blank" rel="noopener noreferrer" className="openclaw-link">
                 New to OpenClaw? Start here →
@@ -864,7 +864,7 @@ export default function Home() {
             Founding price · 7-day refund
           </div>
           <a href="/api/create-checkout" className="mobile-buy-bar-btn">
-            Get it — $10 →
+            Fix Memory — $10 →
           </a>
         </div>
       </div>
