@@ -450,8 +450,8 @@ export default function Home() {
               <span className="hero-note-item">7-day refund</span>
               <span className="hero-note-item">🔒 Secure checkout via Stripe</span>
             </span>
-            <span style={{fontSize:'12px', color:'#52525b', marginTop:'2px', display:'flex', alignItems:'center', gap:'4px', flexWrap:'wrap'}}>
-              Requires: macOS 12+ · OpenClaw · <a href="#faq" style={{color:'#71717a', textDecoration:'underline', textDecorationColor:'rgba(113,113,122,0.4)', textUnderlineOffset:'2px'}}>Ollama (free, no GPU needed)</a> — runs on CPU, 100% local
+            <span style={{fontSize:'12px', color:'#71717a', marginTop:'2px', display:'flex', alignItems:'center', gap:'4px', flexWrap:'wrap'}}>
+              Requires: macOS 12+ · OpenClaw · <a href="#faq" style={{color:'#a1a1aa', textDecoration:'underline', textDecorationColor:'rgba(161,161,170,0.4)', textUnderlineOffset:'2px'}}>Ollama (free, no GPU needed)</a> — runs on CPU, 100% local
             </span>
           </div>
         </div>
@@ -843,8 +843,14 @@ export default function Home() {
             <span className="price-launch">↑ Founding price — $10 now, goes to $29 at launch. Yours forever.</span>
             <a href="/api/create-checkout" className="cta-btn">Get Agent Memory Kit — $10 →</a>
             <p className="cta-meta" style={{marginTop:'14px', marginBottom:'8px', color:'#71717a'}}>Secure checkout via Stripe · Instant download · 7-day money-back guarantee</p>
-            <p style={{fontSize:'12px', color:'#3f3f46', marginTop:'6px'}}>
-              You pay → get download link by email in seconds → run 1 installer command → done in 20 min
+            <p style={{fontSize:'12px', color:'#71717a', marginTop:'8px', display:'flex', alignItems:'center', justifyContent:'center', gap:'8px', flexWrap:'wrap'}}>
+              <span>Pay ✓</span>
+              <span style={{color:'#3f3f46'}}>→</span>
+              <span>Email with download link (seconds)</span>
+              <span style={{color:'#3f3f46'}}>→</span>
+              <span>Run 1 installer command</span>
+              <span style={{color:'#3f3f46'}}>→</span>
+              <span>Done in 20 min</span>
             </p>
           </div>
         </div>
