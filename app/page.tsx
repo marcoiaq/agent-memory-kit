@@ -1,4 +1,5 @@
 import DesktopScrollBar from './components/DesktopScrollBar'
+import FaqAccordion from './components/FaqAccordion'
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -796,56 +797,7 @@ export default function Home() {
       <div className="faq" id="faq">
         <div className="wrap">
           <h2>Questions before you buy</h2>
-          <div className="faq-list">
-            <div className="faq-item">
-              <div className="faq-q">What do I need to use this?</div>
-              <div className="faq-a">A Mac running macOS 12 or later (M1, M2, M3, or Intel), <strong style={{color:'#fafafa'}}><a href="https://openclaw.ai" target="_blank" rel="noopener noreferrer" style={{color:'#fafafa', textDecoration:'underline', textDecorationColor:'rgba(250,250,250,0.3)', textUnderlineOffset:'2px'}}>OpenClaw</a></strong> installed, and <strong style={{color:'#fafafa'}}>Ollama</strong> running locally. Ollama is free and handles all the memory extraction — no GPU required, runs on CPU fine.</div>
-            </div>
-            <div className="faq-item">
-              <div className="faq-q">What&apos;s OpenClaw and do I need it?</div>
-              <div className="faq-a">OpenClaw is a Claude-powered AI agent framework for Mac. Agent Memory Kit is an add-on for it — it hooks directly into OpenClaw&apos;s session files and workspace structure. If you don&apos;t have OpenClaw yet, get it at <a href="https://openclaw.ai" target="_blank" rel="noopener noreferrer" style={{color:'#818cf8', textDecoration:'underline', textDecorationColor:'rgba(129,140,248,0.4)', textUnderlineOffset:'2px'}}>openclaw.ai</a> first.</div>
-            </div>
-            <div className="faq-item">
-              <div className="faq-q">What do I actually get?</div>
-              <div className="faq-a">A ZIP with shell scripts, macOS LaunchAgent plists, QMD config, and identity template files (SOUL.md, AGENTS.md, MEMORY.md, TACIT.md) — plus a step-by-step setup guide. Everything pre-configured. You run the installer, load the services, and it works.</div>
-            </div>
-            <div className="faq-item">
-              <div className="faq-q">How long does setup take?</div>
-              <div className="faq-a">About 15–20 minutes. You&apos;ll run the installer script, load two macOS background services, and fill in a short config for your agent&apos;s identity. The setup guide walks through every step with exact commands — no guesswork.</div>
-            </div>
-            <div className="faq-item">
-              <div className="faq-q">Do I need to know how to code?</div>
-              <div className="faq-a">You need to be comfortable running commands in Terminal. The installer handles everything — you&apos;re not writing code, just running a few commands and filling in a config file. If you&apos;ve used npm or brew before, you can do this.</div>
-            </div>
-            <div className="faq-item">
-              <div className="faq-q">Is this a one-time payment or a subscription?</div>
-              <div className="faq-a">One-time. Pay once, own it forever. $10 now, that&apos;s it. No monthly fees, no annual renewals, no account to manage. You download the ZIP, you run the setup, it&apos;s yours.</div>
-            </div>
-            <div className="faq-item">
-              <div className="faq-q">Does it require any cloud services or API keys?</div>
-              <div className="faq-a">No. Memory extraction runs locally using Ollama. Search runs locally via SQLite. Nothing leaves your machine. No subscriptions, no recurring fees.</div>
-            </div>
-            <div className="faq-item">
-              <div className="faq-q">What if it doesn&apos;t work for me?</div>
-              <div className="faq-a">7-day money-back guarantee. If you followed the setup guide and it doesn&apos;t work on your machine, reply to your purchase receipt and you&apos;ll get a full refund. No runaround.</div>
-            </div>
-            <div className="faq-item">
-              <div className="faq-q">What AI agent does this work with?</div>
-              <div className="faq-a">Agent Memory Kit is built for <strong style={{color:'#fafafa'}}><a href="https://openclaw.ai" target="_blank" rel="noopener noreferrer" style={{color:'#fafafa', textDecoration:'underline', textDecorationColor:'rgba(250,250,250,0.3)', textUnderlineOffset:'2px'}}>OpenClaw</a></strong> — the Claude-powered agent framework for Mac. It hooks directly into OpenClaw&apos;s session files and workspace structure. It won&apos;t work with ChatGPT, Claude.ai, or other agents out of the box.</div>
-            </div>
-            <div className="faq-item">
-              <div className="faq-q">Do I get updates?</div>
-              <div className="faq-a">Yes. If the scripts improve or new features get added, you get them. I&apos;ll email all buyers directly with the updated ZIP — you don&apos;t have to ask. One price, you own it forever.</div>
-            </div>
-            <div className="faq-item">
-              <div className="faq-q">What if I get stuck during setup?</div>
-              <div className="faq-a">DM me on X (<a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer" style={{color:'#818cf8', textDecoration:'underline', textDecorationColor:'rgba(129,140,248,0.4)', textUnderlineOffset:'2px'}}>@alfredmarktr</a>) or reply to your purchase receipt. I typically reply same-day. I&apos;ve set this up from scratch multiple times and know exactly where it can trip people up — I&apos;ll get you unstuck.</div>
-            </div>
-            <div className="faq-item">
-              <div className="faq-q">Who built this?</div>
-              <div className="faq-a">I&apos;m <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer" style={{color:'#818cf8', textDecoration:'underline', textDecorationColor:'rgba(129,140,248,0.4)', textUnderlineOffset:'2px'}}>@alfredmarktr</a> — I run OpenClaw daily on a Mac mini and got tired of re-explaining the same context every single session. I built this for myself, it&apos;s the exact setup running in production, and I packaged it up so you don&apos;t have to figure it out from scratch. Questions? Reach out on X — I actually reply.</div>
-            </div>
-          </div>
+          <FaqAccordion />
         </div>
       </div>
 
