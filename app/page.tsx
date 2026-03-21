@@ -89,11 +89,16 @@ export default function Home() {
           padding: 14px 28px; border-radius: 10px;
           transition: background 0.15s;
           box-shadow: 0 4px 20px rgba(99,102,241,0.3);
-          animation: cta-pulse 2.8s ease-in-out infinite;
         }
         .cta-main:hover {
           background: #4f46e5;
           box-shadow: 0 4px 28px rgba(99,102,241,0.5);
+        }
+        /* Only apply pulse to the hero CTA — not every button on the page */
+        .cta-pulse {
+          animation: cta-pulse 2.8s ease-in-out infinite;
+        }
+        .cta-pulse:hover {
           animation: none;
         }
         .hero-note { font-size: 13px; color: #a1a1aa; display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
@@ -461,7 +466,7 @@ export default function Home() {
               <span style={{fontSize:'22px', fontWeight:900, color:'#fafafa', letterSpacing:'-0.03em'}}>$10</span>
               <span style={{fontSize:'11px', fontWeight:700, color:'#f59e0b', background:'rgba(245,158,11,0.1)', border:'1px solid rgba(245,158,11,0.25)', padding:'3px 8px', borderRadius:'4px', letterSpacing:'0.06em', textTransform:'uppercase'}}>Save $19</span>
             </div>
-            <a href="/api/create-checkout" className="cta-main">
+            <a href="/api/create-checkout" className="cta-main cta-pulse">
               Fix My Agent&apos;s Memory — $10 →
             </a>
             <span className="hero-note">
