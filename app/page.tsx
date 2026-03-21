@@ -464,18 +464,18 @@ export default function Home() {
             <a href="/api/create-checkout" className="cta-main">
               Fix My Agent&apos;s Memory — $10 →
             </a>
-            <span style={{fontSize:'12px', color:'#f59e0b', fontWeight:600, display:'flex', alignItems:'center', gap:'5px', marginTop:'2px'}}>
-              ⏳ Founding price — $10 now, goes to $29 at full launch. Buy once, own it forever.
-            </span>
-            <p className="hero-proof" style={{marginTop:'4px', marginBottom:0}}>Built by <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a> — the exact memory system that&apos;s been running on my Mac mini in production since day one. Every session, no exceptions.</p>
             <span className="hero-note">
               <span className="hero-note-item">$10 one-time</span>
               <span className="hero-note-item">Instant download</span>
               <span className="hero-note-item">7-day refund</span>
               <span className="hero-note-item">🔒 Secure checkout via Stripe</span>
             </span>
+            <span style={{fontSize:'12px', color:'#f59e0b', fontWeight:600, display:'flex', alignItems:'center', gap:'5px', marginTop:'2px'}}>
+              ⏳ Founding price — $10 now, goes to $29 at full launch. Buy once, own it forever.
+            </span>
+            <p className="hero-proof" style={{marginTop:'4px', marginBottom:0}}>Built by <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a> — the exact memory system that&apos;s been running on my Mac mini in production since day one. Every session, no exceptions.</p>
             <span style={{fontSize:'12px', color:'#71717a', marginTop:'2px', display:'flex', alignItems:'center', gap:'4px', flexWrap:'wrap'}}>
-              Requires: macOS 12+ · OpenClaw · <a href="#faq" style={{color:'#a1a1aa', textDecoration:'underline', textDecorationColor:'rgba(161,161,170,0.4)', textUnderlineOffset:'2px'}}>Ollama (free, no GPU needed)</a> — runs on CPU, 100% local
+              Requires: macOS 12+ · OpenClaw · <a href="#faq" style={{color:'#a1a1aa', textDecoration:'underline', textDecorationColor:'rgba(161,161,170,0.4)', textUnderlineOffset:'2px'}}>Ollama (~5 min free install, no GPU needed)</a> — runs on CPU, 100% local
             </span>
           </div>
         </div>
