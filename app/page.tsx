@@ -486,7 +486,7 @@ export default function Home() {
         <div className="wrap">
           <div className="proof-bar-inner">
             <div className="proof-stat">
-              📦 Pay → instant download on the thank-you page
+              📦 Instant download — link appears right after payment
             </div>
             <div className="proof-stat">
               🔒 100% local — zero cloud, zero API keys, zero subscriptions. Ever.
@@ -821,7 +821,7 @@ export default function Home() {
             <p style={{fontSize:'12px', color:'#71717a', marginTop:'8px', display:'flex', alignItems:'center', justifyContent:'center', gap:'8px', flexWrap:'wrap'}}>
               <span>Pay ✓</span>
               <span style={{color:'#3f3f46'}}>→</span>
-              <span>Email with download link (seconds)</span>
+              <span>Download link on confirmation page</span>
               <span style={{color:'#3f3f46'}}>→</span>
               <span>Run 1 installer command</span>
               <span style={{color:'#3f3f46'}}>→</span>
