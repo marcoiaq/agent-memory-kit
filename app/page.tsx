@@ -1,5 +1,22 @@
 import DesktopScrollBar from './components/DesktopScrollBar'
 
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Product',
+  name: 'Agent Memory Kit',
+  description: 'Give your OpenClaw AI agent persistent memory in 20 minutes. Scripts, configs, and a setup guide. $10 one-time. 100% local — no cloud, no API keys.',
+  url: 'https://alfredbuild.xyz',
+  brand: { '@type': 'Brand', name: 'Alfred Build' },
+  offers: {
+    '@type': 'Offer',
+    price: '10.00',
+    priceCurrency: 'USD',
+    availability: 'https://schema.org/InStock',
+    url: 'https://alfredbuild.xyz/api/create-checkout',
+    seller: { '@type': 'Organization', name: 'Alfred Build' },
+  },
+}
+
 export default function Home() {
   return (
     <>
@@ -404,6 +421,12 @@ export default function Home() {
         }
       `}</style>
 
+      {/* JSON-LD structured data for Google rich snippets */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       {/* NAV — sticky so the buy button is always visible */}
       <div className="nav-sticky">
         <div className="wrap">
@@ -532,7 +555,7 @@ export default function Home() {
               <span className="dim"># Context loaded. Agent answers without asking again.</span>
             </div>
           </div>
-          <p className="demo-caption">Runs locally with Ollama · SQLite index · No API calls</p>
+          <p className="demo-caption">Runs 100% on your Mac · No cloud · No API keys · No subscriptions</p>
           <div style={{marginTop:'24px', display:'flex', alignItems:'center', gap:'14px', flexWrap:'wrap'}}>
             <a href="/api/create-checkout" className="cta-main" style={{fontSize:'15px', padding:'12px 24px'}}>
               Fix My Agent's Memory — $10 →
