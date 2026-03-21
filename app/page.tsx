@@ -461,13 +461,13 @@ export default function Home() {
               <span style={{fontSize:'22px', fontWeight:900, color:'#fafafa', letterSpacing:'-0.03em'}}>$10</span>
               <span style={{fontSize:'11px', fontWeight:700, color:'#f59e0b', background:'rgba(245,158,11,0.1)', border:'1px solid rgba(245,158,11,0.25)', padding:'3px 8px', borderRadius:'4px', letterSpacing:'0.06em', textTransform:'uppercase'}}>Founding price</span>
             </div>
+            <p className="hero-proof" style={{marginTop:'4px', marginBottom:0}}>Built by <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a> — the exact memory system that&apos;s been running on my Mac mini in production since day one. Every session, no exceptions.</p>
             <a href="/api/create-checkout" className="cta-main">
               Fix My Agent&apos;s Memory — $10 →
             </a>
             <span style={{fontSize:'12px', color:'#f59e0b', fontWeight:600, display:'flex', alignItems:'center', gap:'5px', marginTop:'2px'}}>
               ⏳ Founding price — $10 now, goes to $29 at full launch. Buy once, own it forever.
             </span>
-            <p className="hero-proof" style={{marginTop:'4px', marginBottom:0}}>Built by <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a> — the exact memory system that&apos;s been running on my Mac mini in production since day one. Every session, no exceptions.</p>
             <span className="hero-note">
               <span className="hero-note-item">$10 one-time</span>
               <span className="hero-note-item">Instant download</span>
@@ -727,7 +727,7 @@ export default function Home() {
           </div>
           <div style={{marginTop:'32px', display:'flex', alignItems:'center', gap:'16px', flexWrap:'wrap'}}>
             <a href="/api/create-checkout" className="cta-main" style={{fontSize:'15px', padding:'12px 24px'}}>
-              Get Agent Memory Kit — $10 →
+              Fix My Agent&apos;s Memory — $10 →
             </a>
             <span style={{fontSize:'12px', color:'#52525b'}}>$10 one-time · Instant download · 7-day refund</span>
           </div>
@@ -786,7 +786,7 @@ export default function Home() {
         <div className="wrap" style={{display:'flex', flexDirection:'column', alignItems:'center', textAlign:'center', gap:'16px'}}>
           <p style={{fontSize:'15px', color:'#a1a1aa', maxWidth:'480px', lineHeight:'1.6'}}>Your agent just woke up blank. Again. Fix it once — permanently.</p>
           <a href="/api/create-checkout" className="cta-main" style={{alignSelf:'center'}}>
-            Get Agent Memory Kit — $10 →
+            Fix My Agent&apos;s Memory — $10 →
           </a>
           <span style={{fontSize:'12px', color:'#f59e0b', fontWeight:600}}>⏳ Founding price — goes to $29 at launch</span>
           <span style={{fontSize:'12px', color:'#52525b'}}>$10 one-time · Instant download · 7-day refund</span>
@@ -816,7 +816,7 @@ export default function Home() {
               <span className="price-word">one-time</span>
             </div>
             <span className="price-launch">↑ Founding price — $10 now, goes to $29 at launch. Yours forever.</span>
-            <a href="/api/create-checkout" className="cta-btn">Get Agent Memory Kit — $10 →</a>
+            <a href="/api/create-checkout" className="cta-btn">Fix My Agent&apos;s Memory — $10 →</a>
             <p className="cta-meta" style={{marginTop:'14px', marginBottom:'8px', color:'#71717a'}}>Secure checkout via Stripe · Instant download · 7-day money-back guarantee</p>
             <p style={{fontSize:'12px', color:'#71717a', marginTop:'8px', display:'flex', alignItems:'center', justifyContent:'center', gap:'8px', flexWrap:'wrap'}}>
               <span>Pay ✓</span>
