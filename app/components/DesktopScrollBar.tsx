@@ -6,10 +6,17 @@ export default function DesktopScrollBar() {
   const [visible, setVisible] = useState(false)
 
   useEffect(() => {
-    const onScroll = () => setVisible(window.scrollY > 480)
+    const onScroll = () => {
+      const shouldShow = window.scrollY > 480
+      setVisible(shouldShow)
+      document.body.classList.toggle('bar-visible', shouldShow)
+    }
     window.addEventListener('scroll', onScroll, { passive: true })
     onScroll()
-    return () => window.removeEventListener('scroll', onScroll)
+    return () => {
+      window.removeEventListener('scroll', onScroll)
+      document.body.classList.remove('bar-visible')
+    }
   }, [])
 
   return (
@@ -29,7 +36,6 @@ export default function DesktopScrollBar() {
             -webkit-backdrop-filter: blur(14px);
             border-top: 1px solid #27272a;
             padding: 12px 24px 16px;
-            transform: translateY(${visible ? '0' : '100%'});
             transition: transform 0.25s cubic-bezier(0.16, 1, 0.3, 1);
           }
           .desktop-scroll-bar-inner {
@@ -95,9 +101,15 @@ export default function DesktopScrollBar() {
             font-weight: 700;
             font-size: 11px;
           }
+          body.bar-visible {
+            padding-bottom: 72px;
+          }
         }
       `}</style>
-      <div className="desktop-scroll-bar">
+      <div
+        className="desktop-scroll-bar"
+        style={{ transform: visible ? 'translateY(0)' : 'translateY(100%)' }}
+      >
         <div className="desktop-scroll-bar-inner">
           <div className="desktop-scroll-bar-left">
             <span className="desktop-scroll-bar-title">Agent Memory Kit</span>
