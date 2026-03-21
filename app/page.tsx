@@ -459,7 +459,7 @@ export default function Home() {
             <div style={{display:'flex', alignItems:'center', gap:'10px', marginBottom:'4px'}}>
               <span style={{fontSize:'22px', color:'#52525b', textDecoration:'line-through', fontWeight:700, letterSpacing:'-0.02em'}}>$29</span>
               <span style={{fontSize:'22px', fontWeight:900, color:'#fafafa', letterSpacing:'-0.03em'}}>$10</span>
-              <span style={{fontSize:'11px', fontWeight:700, color:'#f59e0b', background:'rgba(245,158,11,0.1)', border:'1px solid rgba(245,158,11,0.25)', padding:'3px 8px', borderRadius:'4px', letterSpacing:'0.06em', textTransform:'uppercase'}}>Founding price</span>
+              <span style={{fontSize:'11px', fontWeight:700, color:'#f59e0b', background:'rgba(245,158,11,0.1)', border:'1px solid rgba(245,158,11,0.25)', padding:'3px 8px', borderRadius:'4px', letterSpacing:'0.06em', textTransform:'uppercase'}}>Save $19</span>
             </div>
             <a href="/api/create-checkout" className="cta-main">
               Fix My Agent&apos;s Memory — $10 →
@@ -475,7 +475,7 @@ export default function Home() {
             </span>
             <p className="hero-proof" style={{marginTop:'4px', marginBottom:0}}>Built by <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a> — the exact memory system that&apos;s been running on my Mac mini in production since day one. Every session, no exceptions.</p>
             <span style={{fontSize:'12px', color:'#71717a', marginTop:'2px', display:'flex', alignItems:'center', gap:'4px', flexWrap:'wrap'}}>
-              Requires: macOS 12+ · OpenClaw · <a href="#faq" style={{color:'#a1a1aa', textDecoration:'underline', textDecorationColor:'rgba(161,161,170,0.4)', textUnderlineOffset:'2px'}}>Ollama (~5 min free install, no GPU needed)</a> — runs on CPU, 100% local
+              Works on any Mac (12+) with OpenClaw · <a href="#faq" style={{color:'#a1a1aa', textDecoration:'underline', textDecorationColor:'rgba(161,161,170,0.4)', textUnderlineOffset:'2px'}}>Ollama free install (~5 min, no GPU)</a> — 100% local, nothing leaves your machine
             </span>
           </div>
         </div>
@@ -509,7 +509,7 @@ export default function Home() {
           </h2>
           <div className="who-grid" style={{display:'grid', gridTemplateColumns:'1fr 1fr', gap:'12px'}}>
             {[
-              'You use OpenClaw on a Mac daily',
+              'Your agent asks you things it already figured out last week',
               'You re-explain your stack or rules every new session',
               'You\'ve lost a decision or context when a session ended',
               'You want memory without cloud, subscriptions, or API keys',
