@@ -468,7 +468,7 @@ export default function Home() {
               <span className="hero-note-item">$10 one-time</span>
               <span className="hero-note-item">Instant download</span>
               <span className="hero-note-item">7-day refund</span>
-              <span className="hero-note-item">🔒 Secure checkout via Stripe</span>
+              <span className="hero-note-item">Secure checkout via Stripe</span>
             </span>
             <span style={{fontSize:'12px', color:'#f59e0b', fontWeight:600, display:'flex', alignItems:'center', gap:'5px', marginTop:'2px'}}>
               ⏳ Founding price — $10 now, goes to $29 at full launch. Buy once, own it forever.
@@ -486,7 +486,7 @@ export default function Home() {
         <div className="wrap">
           <div className="proof-bar-inner">
             <div className="proof-stat">
-              📦 Pay → download link in your email within seconds
+              📦 Pay → instant download on the thank-you page
             </div>
             <div className="proof-stat">
               🔒 100% local — zero cloud, zero API keys, zero subscriptions. Ever.
@@ -738,7 +738,7 @@ export default function Home() {
       <div className="inside">
         <div className="wrap">
           <h2>What&apos;s inside</h2>
-          <p className="inside-sub">Pre-configured and ready. Run one command — your agent never starts from scratch again.</p>
+          <p className="inside-sub">Pre-configured and ready. Run the installer — your agent never starts from scratch again.</p>
           <div className="chapters">
             {[
               ['01', 'Memory observer', 'Shell scripts that watch your agent\'s session files and automatically extract facts using a local LLM. Runs silently in the background.'],

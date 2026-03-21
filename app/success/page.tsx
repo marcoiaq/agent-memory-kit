@@ -68,7 +68,7 @@ function SuccessContent() {
                 ↓ Download Agent Memory Kit
               </a>
               <p className="note">
-                Bookmark this page — the download link is tied to your session and will keep working.
+                Bookmark this page or save the URL — the download link stays valid. Lost it? Reply to your Stripe receipt email and I&apos;ll sort you out.
               </p>
             </>
           ) : (
