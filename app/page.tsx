@@ -451,7 +451,7 @@ export default function Home() {
               <span className="hero-note-item">🔒 Secure checkout via Stripe</span>
             </span>
             <span style={{fontSize:'12px', color:'#52525b', marginTop:'2px', display:'flex', alignItems:'center', gap:'4px', flexWrap:'wrap'}}>
-              Requires: macOS 12+ · OpenClaw · <a href="#faq" style={{color:'#71717a', textDecoration:'underline', textDecorationColor:'rgba(113,113,122,0.4)', textUnderlineOffset:'2px'}}>Ollama (free)</a> — all free, all local
+              Requires: macOS 12+ · OpenClaw · <a href="#faq" style={{color:'#71717a', textDecoration:'underline', textDecorationColor:'rgba(113,113,122,0.4)', textUnderlineOffset:'2px'}}>Ollama (free, no GPU needed)</a> — runs on CPU, 100% local
             </span>
           </div>
         </div>
@@ -513,7 +513,10 @@ export default function Home() {
       {/* DEMO */}
       <div className="demo">
         <div className="wrap">
-          <div className="demo-label">Live example — memory search in action</div>
+          <h2 style={{fontSize:'clamp(22px, 3.5vw, 28px)', fontWeight:800, letterSpacing:'-0.03em', color:'#fafafa', marginBottom:'8px', lineHeight:1.2}}>
+            Your agent finds any past decision — instantly.
+          </h2>
+          <div className="demo-label" style={{marginBottom:'16px'}}>Live example — memory search in action</div>
           <div className="demo-terminal">
             <div className="demo-terminal-bar">
               <span className="dot dot-r"></span>
