@@ -461,13 +461,13 @@ export default function Home() {
               <span style={{fontSize:'22px', fontWeight:900, color:'#fafafa', letterSpacing:'-0.03em'}}>$10</span>
               <span style={{fontSize:'11px', fontWeight:700, color:'#f59e0b', background:'rgba(245,158,11,0.1)', border:'1px solid rgba(245,158,11,0.25)', padding:'3px 8px', borderRadius:'4px', letterSpacing:'0.06em', textTransform:'uppercase'}}>Founding price</span>
             </div>
-            <p className="hero-proof" style={{marginTop:'4px', marginBottom:0}}>Built by <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a> — the exact memory system that&apos;s been running on my Mac mini in production since day one. Every session, no exceptions.</p>
             <a href="/api/create-checkout" className="cta-main">
               Fix My Agent&apos;s Memory — $10 →
             </a>
             <span style={{fontSize:'12px', color:'#f59e0b', fontWeight:600, display:'flex', alignItems:'center', gap:'5px', marginTop:'2px'}}>
               ⏳ Founding price — $10 now, goes to $29 at full launch. Buy once, own it forever.
             </span>
+            <p className="hero-proof" style={{marginTop:'4px', marginBottom:0}}>Built by <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a> — the exact memory system that&apos;s been running on my Mac mini in production since day one. Every session, no exceptions.</p>
             <span className="hero-note">
               <span className="hero-note-item">$10 one-time</span>
               <span className="hero-note-item">Instant download</span>
@@ -540,7 +540,7 @@ export default function Home() {
           <h2 style={{fontSize:'clamp(22px, 3.5vw, 28px)', fontWeight:800, letterSpacing:'-0.03em', color:'#fafafa', marginBottom:'8px', lineHeight:1.2}}>
             Your agent finds any past decision — instantly.
           </h2>
-          <div className="demo-label" style={{marginBottom:'16px'}}>Live example — memory search in action</div>
+          <div className="demo-label" style={{marginBottom:'16px'}}>Real example — memory search in action</div>
           <div className="demo-terminal">
             <div className="demo-terminal-bar">
               <span className="dot dot-r"></span>
