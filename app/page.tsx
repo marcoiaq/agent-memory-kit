@@ -507,10 +507,10 @@ export default function Home() {
       <div style={{padding:'48px 0', borderBottom:'1px solid #18181b'}}>
         <div className="wrap">
           <div style={{fontSize:'11px', fontWeight:700, letterSpacing:'0.1em', textTransform:'uppercase', color:'#71717a', marginBottom:'12px'}}>
-            Is this for you?
+            Who it&apos;s for
           </div>
           <h2 style={{fontSize:'clamp(20px, 3.5vw, 26px)', fontWeight:800, letterSpacing:'-0.03em', color:'#fafafa', marginBottom:'24px', lineHeight:1.2}}>
-            Still re-explaining yourself?
+            You&apos;re starting from blank. Every single session.
           </h2>
           <div className="who-grid" style={{display:'grid', gridTemplateColumns:'1fr 1fr', gap:'12px'}}>
             {[
@@ -582,7 +582,7 @@ export default function Home() {
       {/* BEFORE / AFTER */}
       <div className="before-after">
         <div className="wrap">
-          <h2 className="before-after-heading">Every session without memory — and what one fix changes.</h2>
+          <h2 className="before-after-heading">Before. After. One 20-minute install.</h2>
           <div className="ba-cols">
             <div className="ba-col">
               <span className="ba-col-label before">Before</span>
@@ -622,7 +622,7 @@ export default function Home() {
       <div style={{padding:'28px 0', borderBottom:'1px solid #18181b', background:'#0d0d10'}}>
         <div className="wrap" style={{display:'flex', alignItems:'center', justifyContent:'space-between', gap:'20px', flexWrap:'wrap'}}>
           <p style={{fontSize:'14px', color:'#a1a1aa', lineHeight:'1.5', margin:0}}>
-            Seen enough? Grab it now — you&apos;ll be running in 20 minutes.
+            That&apos;s the gap. You&apos;re 20 minutes from the right column.
           </p>
           <a href="/api/create-checkout" className="cta-main" style={{flexShrink:0, fontSize:'15px', padding:'12px 24px'}}>
             Yes, Fix My Agent — $10 →
@@ -650,8 +650,8 @@ export default function Home() {
                 <div className="step-num">2</div>
               </div>
               <div>
-                <div className="step-title">Memory builds automatically</div>
-                <div className="step-desc">After each session, the memory observer extracts facts, decisions, and context into structured files your agent can search. You never touch it.</div>
+                <div className="step-title">Memory builds itself</div>
+                <div className="step-desc">After each session, the memory observer extracts facts, decisions, and context into structured files your agent can search. Set it once — runs silently forever.</div>
               </div>
             </div>
             <div className="step">
