@@ -439,7 +439,7 @@ export default function Home() {
           <nav>
             <div className="inner">
               <span className="logo">Agent Memory Kit</span>
-              <a href="/api/create-checkout" className="nav-btn">Get it — $10 →</a>
+              <a href="/api/create-checkout" className="nav-btn">Fix Memory — $10 →</a>
             </div>
           </nav>
         </div>
@@ -461,7 +461,7 @@ export default function Home() {
             Every session, your OpenClaw agent wakes up blank — re-explaining your stack, your rules, your past decisions. One setup gives it persistent, searchable memory. Runs 100% locally on your Mac. Then it never happens again.
           </p>
           <div className="hero-actions" style={{marginTop:'0'}}>
-            <div style={{display:'flex', alignItems:'center', gap:'10px', marginBottom:'4px'}}>
+            <div style={{display:'flex', alignItems:'center', gap:'10px', marginBottom:'4px', flexWrap:'wrap'}}>
               <span style={{fontSize:'22px', color:'#52525b', textDecoration:'line-through', fontWeight:700, letterSpacing:'-0.02em'}}>$29</span>
               <span style={{fontSize:'22px', fontWeight:900, color:'#fafafa', letterSpacing:'-0.03em'}}>$10</span>
               <span style={{fontSize:'11px', fontWeight:700, color:'#f59e0b', background:'rgba(245,158,11,0.1)', border:'1px solid rgba(245,158,11,0.25)', padding:'3px 8px', borderRadius:'4px', letterSpacing:'0.06em', textTransform:'uppercase'}}>Save $19</span>
@@ -471,7 +471,6 @@ export default function Home() {
               Fix My Agent&apos;s Memory — $10 →
             </a>
             <span className="hero-note">
-              <span className="hero-note-item">$10 one-time</span>
               <span className="hero-note-item">Instant download</span>
               <span className="hero-note-item">7-day refund</span>
               <span className="hero-note-item">Secure checkout via Stripe</span>
