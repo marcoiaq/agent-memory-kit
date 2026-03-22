@@ -354,7 +354,7 @@ export default function Home() {
         .price-num {
           font-size: 64px; font-weight: 900; letter-spacing: -0.06em; line-height: 1;
         }
-        .price-word { font-size: 15px; color: #52525b; }
+        .price-word { font-size: 15px; color: #a1a1aa; font-weight: 600; }
         .price-launch {
           font-size: 12px; font-weight: 700; color: #f59e0b;
           text-transform: uppercase; letter-spacing: 0.06em;
@@ -465,6 +465,7 @@ export default function Home() {
               <span style={{fontSize:'22px', color:'#52525b', textDecoration:'line-through', fontWeight:700, letterSpacing:'-0.02em'}}>$29</span>
               <span style={{fontSize:'22px', fontWeight:900, color:'#fafafa', letterSpacing:'-0.03em'}}>$10</span>
               <span style={{fontSize:'11px', fontWeight:700, color:'#f59e0b', background:'rgba(245,158,11,0.1)', border:'1px solid rgba(245,158,11,0.25)', padding:'3px 8px', borderRadius:'4px', letterSpacing:'0.06em', textTransform:'uppercase'}}>Save $19</span>
+              <span style={{fontSize:'11px', fontWeight:700, color:'#22c55e', background:'rgba(34,197,94,0.08)', border:'1px solid rgba(34,197,94,0.2)', padding:'3px 8px', borderRadius:'4px', letterSpacing:'0.04em', textTransform:'uppercase'}}>One-time</span>
             </div>
             <a href="/api/create-checkout" className="cta-main cta-pulse">
               Fix My Agent&apos;s Memory — $10 →
