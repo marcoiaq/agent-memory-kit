@@ -95,7 +95,7 @@ export default function DesktopScrollBar() {
             align-items: center;
             gap: 4px;
           }
-          .desktop-scroll-bar-trust-item::before {
+          .desktop-scroll-bar-trust-item.check::before {
             content: '✓';
             color: #22c55e;
             font-weight: 700;
@@ -122,9 +122,10 @@ export default function DesktopScrollBar() {
           <div className="desktop-scroll-bar-left">
             <span className="desktop-scroll-bar-title">Agent Memory Kit</span>
             <div className="desktop-scroll-bar-trust">
-              <span className="desktop-scroll-bar-trust-item"><span style={{textDecoration:'line-through', color:'#52525b', marginRight:'4px'}}>$29</span>$10 one-time</span>
-              <span className="desktop-scroll-bar-trust-item">Instant download</span>
-              <span className="desktop-scroll-bar-trust-item">7-day refund</span>
+              <span className="desktop-scroll-bar-trust-item"><span style={{textDecoration:'line-through', color:'#52525b', marginRight:'4px'}}>$29</span><strong style={{color:'#fafafa'}}>$10</strong>&nbsp;one-time</span>
+              <span className="desktop-scroll-bar-trust-item check">100% local</span>
+              <span className="desktop-scroll-bar-trust-item check">Instant download</span>
+              <span className="desktop-scroll-bar-trust-item check">7-day refund</span>
               <span className="desktop-scroll-bar-stripe">🔒 Stripe</span>
             </div>
           </div>

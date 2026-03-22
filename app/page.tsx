@@ -471,9 +471,9 @@ export default function Home() {
               Fix My Agent&apos;s Memory — $10 →
             </a>
             <span className="hero-note">
+              <span className="hero-note-item">100% local — no cloud, no API keys</span>
               <span className="hero-note-item">Instant download</span>
-              <span className="hero-note-item">7-day refund</span>
-              <span className="hero-note-item">Secure checkout via Stripe</span>
+              <span className="hero-note-item">7-day money-back guarantee</span>
             </span>
             <span style={{fontSize:'12px', color:'#f59e0b', fontWeight:600, display:'flex', alignItems:'center', gap:'5px', marginTop:'2px'}}>
               ⏳ Founding price — $10 now, goes to $29 at full launch. Buy once, own it forever.
