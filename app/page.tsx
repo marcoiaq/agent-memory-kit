@@ -556,7 +556,7 @@ export default function Home() {
             <div className="demo-code">
               <span className="dim"># Your agent searches its own memory before replying</span>{'\n'}
               <span className="cmd">$ qmd query</span>{' '}<span className="out">&quot;what stack are we using for the checkout&quot;</span>{'\n\n'}
-              <span className="highlight">→</span> <span className="out">memory/2026-03-10.md  — &quot;Using Stripe + Next.js. No PayPal, Marco hates it.&quot;</span>{'\n'}
+              <span className="highlight">→</span> <span className="out">memory/2026-03-10.md  — &quot;Using Stripe + Next.js. No PayPal — integration was a mess.&quot;</span>{'\n'}
               <span className="highlight">→</span> <span className="out">memory/TACIT.md       — &quot;Always use pnpm, never npm. Deploy to Vercel.&quot;</span>{'\n'}
               <span className="highlight">→</span> <span className="out">memory/DECISIONS.md   — &quot;Went with App Router, not Pages. Decided 2026-02-28.&quot;</span>{'\n\n'}
               <span className="dim"># Context loaded. Agent answers without asking again.</span>
