@@ -36,11 +36,11 @@ const faqs = [
   },
   {
     q: 'What do I actually get?',
-    a: 'A ZIP with shell scripts, macOS LaunchAgent plists, QMD config, and identity template files (SOUL.md, AGENTS.md, MEMORY.md, TACIT.md) — plus a step-by-step setup guide. Everything pre-configured. You run the installer, load the services, and it works.',
+    a: 'A ZIP with everything pre-configured: the memory extraction scripts, background services that auto-start on login, the semantic search setup, and identity template files (SOUL.md, AGENTS.md, MEMORY.md, TACIT.md) — plus a step-by-step setup guide with every command. You run the installer and it works.',
   },
   {
     q: 'How long does setup take?',
-    a: "About 15–20 minutes. You'll run the installer script, load two macOS background services, and fill in a short config for your agent's identity. The setup guide walks through every step with exact commands — no guesswork.",
+    a: "About 15–20 minutes. You'll run the installer script, let your memory services auto-configure, and fill in a short config for your agent's identity. The setup guide walks through every step with exact commands — no guesswork.",
   },
   {
     q: 'Do I need to know how to code?',

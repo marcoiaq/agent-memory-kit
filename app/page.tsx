@@ -635,7 +635,7 @@ export default function Home() {
               </div>
               <div>
                 <div className="step-title">Install in 20 minutes</div>
-                <div className="step-desc">Run the installer script. Load two macOS background services. Fill in your agent&apos;s identity in MEMORY.md. That&apos;s it.</div>
+                <div className="step-desc">Run the installer script. Memory services auto-configure and start on login. Fill in your agent&apos;s name and rules in MEMORY.md. That&apos;s it.</div>
               </div>
             </div>
             <div className="step">
@@ -748,7 +748,7 @@ export default function Home() {
           <div className="chapters">
             {[
               ['01', 'Memory observer', 'Shell scripts that watch your agent\'s session files and automatically extract facts using a local LLM. Runs silently in the background.'],
-              ['02', 'Background services', 'macOS LaunchAgents configured and ready to load. Memory extraction starts on login — no manual running required.'],
+              ['02', 'Background services', 'Auto-start on login — memory extraction runs silently from day one. Nothing to start, stop, or manage manually.'],
               ['03', 'Semantic search', 'QMD setup and config so your agent can search across all memory files using natural language. Find anything in seconds.'],
               ['04', 'Agent identity templates', 'SOUL.md, AGENTS.md, MEMORY.md, TACIT.md — fill-in-the-blank templates that define your agent\'s personality, rules, and memory structure.'],
               ['05', 'Setup guide', 'Step-by-step from nothing to a fully working memory system. Every command, every config, every decision explained.'],
