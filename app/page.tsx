@@ -472,6 +472,7 @@ export default function Home() {
             </a>
             <span className="hero-note">
               <span className="hero-note-item">100% local — no cloud, no API keys</span>
+              <span className="hero-note-item">No account required</span>
               <span className="hero-note-item">Instant download</span>
               <span className="hero-note-item">7-day money-back guarantee</span>
             </span>
@@ -836,7 +837,7 @@ export default function Home() {
             </div>
             <span className="price-launch">↑ Founding price — $10 now, goes to $29 at launch. Yours forever.</span>
             <a href="/api/create-checkout" className="cta-btn">Fix My Agent&apos;s Memory — $10 →</a>
-            <p className="cta-meta" style={{marginTop:'14px', marginBottom:'8px', color:'#71717a'}}>Secure checkout via Stripe · Instant download · 7-day money-back guarantee</p>
+            <p className="cta-meta" style={{marginTop:'14px', marginBottom:'8px', color:'#a1a1aa'}}>Secure checkout via Stripe · Instant download · 7-day money-back guarantee</p>
             <p style={{fontSize:'12px', color:'#71717a', marginTop:'8px', display:'flex', alignItems:'center', justifyContent:'center', gap:'8px', flexWrap:'wrap'}}>
               <span>Pay ✓</span>
               <span style={{color:'#3f3f46'}}>→</span>
