@@ -510,7 +510,7 @@ export default function Home() {
             Is this for you?
           </div>
           <h2 style={{fontSize:'clamp(20px, 3.5vw, 26px)', fontWeight:800, letterSpacing:'-0.03em', color:'#fafafa', marginBottom:'24px', lineHeight:1.2}}>
-            Sound familiar?
+            Still re-explaining yourself?
           </h2>
           <div className="who-grid" style={{display:'grid', gridTemplateColumns:'1fr 1fr', gap:'12px'}}>
             {[
@@ -530,6 +530,14 @@ export default function Home() {
           <p style={{fontSize:'13px', color:'#52525b', marginTop:'20px', lineHeight:1.6}}>
             If two of these hit — this is for you. $10, 20 minutes, done.
           </p>
+          <div style={{marginTop:'12px', display:'flex', alignItems:'center', gap:'8px', flexWrap:'wrap', padding:'10px 14px', background:'rgba(99,102,241,0.05)', border:'1px solid rgba(99,102,241,0.15)', borderRadius:'8px'}}>
+            <span style={{fontSize:'12px', color:'#71717a', fontWeight:700}}>Requires:</span>
+            <span style={{fontSize:'12px', color:'#a1a1aa'}}>Mac (macOS 12+)</span>
+            <span style={{fontSize:'12px', color:'#3f3f46'}}>·</span>
+            <span style={{fontSize:'12px', color:'#a1a1aa'}}><a href="https://openclaw.ai" target="_blank" rel="noopener noreferrer" style={{color:'#818cf8', textDecoration:'underline', textDecorationColor:'rgba(129,140,248,0.4)', textUnderlineOffset:'2px'}}>OpenClaw</a></span>
+            <span style={{fontSize:'12px', color:'#3f3f46'}}>·</span>
+            <span style={{fontSize:'12px', color:'#a1a1aa'}}>Ollama (free, ~5 min install, no GPU)</span>
+          </div>
           <div style={{marginTop:'24px', display:'flex', alignItems:'center', gap:'16px', flexWrap:'wrap'}}>
             <a href="/api/create-checkout" className="cta-main" style={{fontSize:'15px', padding:'12px 24px'}}>
               Fix My Agent&apos;s Memory — $10 →
@@ -791,7 +799,7 @@ export default function Home() {
         <div className="wrap" style={{display:'flex', flexDirection:'column', alignItems:'center', textAlign:'center', gap:'16px'}}>
           <p style={{fontSize:'15px', color:'#a1a1aa', maxWidth:'480px', lineHeight:'1.6'}}>Your agent is blank right now. Fix it once — it never happens again.</p>
           <a href="/api/create-checkout" className="cta-main" style={{alignSelf:'center'}}>
-            Get It Risk-Free — $10 →
+            Fix My Agent&apos;s Memory — $10 →
           </a>
           <span style={{fontSize:'12px', color:'#f59e0b', fontWeight:600}}>⏳ Founding price — goes to $29 at launch</span>
           <span style={{fontSize:'12px', color:'#52525b'}}>$10 one-time · Instant download · 7-day refund</span>
