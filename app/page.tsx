@@ -769,6 +769,12 @@ export default function Home() {
               </div>
             ))}
           </div>
+          <div style={{marginTop:'32px', display:'flex', alignItems:'center', gap:'16px', flexWrap:'wrap'}}>
+            <a href="/api/create-checkout" className="cta-main" style={{fontSize:'15px', padding:'12px 24px'}}>
+              Get Everything Inside — $10 →
+            </a>
+            <span style={{fontSize:'12px', color:'#52525b'}}>$10 one-time · Instant download · 7-day refund</span>
+          </div>
         </div>
       </div>
 
