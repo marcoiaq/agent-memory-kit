@@ -519,7 +519,7 @@ export default function Home() {
               'You\'ve lost a decision or context when a session ended',
               'You want memory without cloud, subscriptions, or API keys',
               'You\'re building something and your agent keeps forgetting where you left off',
-              'You\'ve thought "I wish my agent just knew this already"',
+              'You paste the same context block at the start of every new chat',
             ].map((item) => (
               <div key={item} style={{display:'flex', alignItems:'flex-start', gap:'10px', padding:'14px 16px', background:'#111114', border:'1px solid #1c1c1f', borderRadius:'10px'}}>
                 <span style={{color:'#22c55e', fontWeight:700, fontSize:'14px', flexShrink:0, marginTop:'1px'}}>✓</span>
@@ -574,7 +574,7 @@ export default function Home() {
       {/* BEFORE / AFTER */}
       <div className="before-after">
         <div className="wrap">
-          <h2 className="before-after-heading">Without memory vs. with memory</h2>
+          <h2 className="before-after-heading">Every session without memory — and what one fix changes.</h2>
           <div className="ba-cols">
             <div className="ba-col">
               <span className="ba-col-label before">Before</span>
@@ -801,7 +801,7 @@ export default function Home() {
       {/* FAQ */}
       <div className="faq" id="faq">
         <div className="wrap">
-          <h2>12 questions — everything answered</h2>
+          <h2>Everything you need to know before you buy</h2>
           <FaqAccordion />
         </div>
       </div>
