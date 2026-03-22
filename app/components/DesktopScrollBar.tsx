@@ -101,6 +101,14 @@ export default function DesktopScrollBar() {
             font-weight: 700;
             font-size: 11px;
           }
+          .desktop-scroll-bar-stripe {
+            font-size: 12px;
+            color: #52525b;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+            padding-left: 4px;
+          }
           body.bar-visible {
             padding-bottom: 72px;
           }
@@ -114,9 +122,10 @@ export default function DesktopScrollBar() {
           <div className="desktop-scroll-bar-left">
             <span className="desktop-scroll-bar-title">Agent Memory Kit</span>
             <div className="desktop-scroll-bar-trust">
-              <span className="desktop-scroll-bar-trust-item"><span style={{textDecoration:'line-through', color:'#3f3f46', marginRight:'4px'}}>$29</span>$10 one-time</span>
+              <span className="desktop-scroll-bar-trust-item"><span style={{textDecoration:'line-through', color:'#52525b', marginRight:'4px'}}>$29</span>$10 one-time</span>
               <span className="desktop-scroll-bar-trust-item">Instant download</span>
               <span className="desktop-scroll-bar-trust-item">7-day refund</span>
+              <span className="desktop-scroll-bar-stripe">🔒 Stripe</span>
             </div>
           </div>
           <a href="/api/create-checkout" className="desktop-scroll-bar-btn">

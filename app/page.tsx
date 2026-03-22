@@ -618,7 +618,7 @@ export default function Home() {
             Seen enough? Grab it now — you&apos;ll be running in 20 minutes.
           </p>
           <a href="/api/create-checkout" className="cta-main" style={{flexShrink:0, fontSize:'15px', padding:'12px 24px'}}>
-            Fix My Agent's Memory — $10 →
+            Yes, Fix My Agent — $10 →
           </a>
         </div>
       </div>
@@ -667,7 +667,7 @@ export default function Home() {
             Three steps. 20 minutes. Your agent never starts from scratch again.
           </p>
           <a href="/api/create-checkout" className="cta-main" style={{flexShrink:0, fontSize:'15px', padding:'12px 24px'}}>
-            Fix My Agent's Memory — $10 →
+            Get Set Up Now — $10 →
           </a>
         </div>
       </div>
@@ -733,7 +733,7 @@ export default function Home() {
           </div>
           <div style={{marginTop:'32px', display:'flex', alignItems:'center', gap:'16px', flexWrap:'wrap'}}>
             <a href="/api/create-checkout" className="cta-main" style={{fontSize:'15px', padding:'12px 24px'}}>
-              Fix My Agent&apos;s Memory — $10 →
+              Get Persistent Memory — $10 →
             </a>
             <span style={{fontSize:'12px', color:'#52525b'}}>$10 one-time · Instant download · 7-day refund</span>
           </div>
@@ -790,9 +790,9 @@ export default function Home() {
       {/* MID-FUNNEL CTA */}
       <div style={{padding:'40px 0', borderBottom:'1px solid #18181b'}}>
         <div className="wrap" style={{display:'flex', flexDirection:'column', alignItems:'center', textAlign:'center', gap:'16px'}}>
-          <p style={{fontSize:'15px', color:'#a1a1aa', maxWidth:'480px', lineHeight:'1.6'}}>Your agent just woke up blank. Again. Fix it once — permanently.</p>
+          <p style={{fontSize:'15px', color:'#a1a1aa', maxWidth:'480px', lineHeight:'1.6'}}>Your agent is blank right now. Fix it once — it never happens again.</p>
           <a href="/api/create-checkout" className="cta-main" style={{alignSelf:'center'}}>
-            Fix My Agent&apos;s Memory — $10 →
+            Get It Risk-Free — $10 →
           </a>
           <span style={{fontSize:'12px', color:'#f59e0b', fontWeight:600}}>⏳ Founding price — goes to $29 at launch</span>
           <span style={{fontSize:'12px', color:'#52525b'}}>$10 one-time · Instant download · 7-day refund</span>
@@ -802,7 +802,7 @@ export default function Home() {
       {/* FAQ */}
       <div className="faq" id="faq">
         <div className="wrap">
-          <h2>Questions before you buy</h2>
+          <h2>12 questions — everything answered</h2>
           <FaqAccordion />
         </div>
       </div>
