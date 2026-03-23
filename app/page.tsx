@@ -451,7 +451,7 @@ export default function Home() {
           <div className="hero-badge">
             Built for{' '}
             <a href="https://openclaw.ai" target="_blank" rel="noopener noreferrer">OpenClaw</a>
-            {' '}— Claude AI agent · macOS only · Runs 100% locally
+            {' '}— Claude AI agent · Mac · Runs 100% locally
           </div>
           <h1>Your AI agent<br />forgets everything.</h1>
           <p style={{fontSize: 'clamp(17px, 2.8vw, 21px)', fontWeight: 700, color: '#6366f1', letterSpacing: '-0.02em', marginBottom: '14px', lineHeight: 1.3}}>
@@ -473,6 +473,15 @@ export default function Home() {
             <a href="/api/create-checkout" className="cta-main cta-pulse">
               Fix My Agent&apos;s Memory — $10 →
             </a>
+            <span style={{fontSize:'12px', color:'#52525b', display:'flex', alignItems:'center', gap:'5px', flexWrap:'wrap', marginTop:'-4px'}}>
+              <span style={{color:'#71717a'}}>Pay</span>
+              <span>→</span>
+              <span style={{color:'#71717a'}}>Download link on confirmation page</span>
+              <span>→</span>
+              <span style={{color:'#71717a'}}>Run 1 installer command</span>
+              <span>→</span>
+              <span style={{color:'#22c55e', fontWeight:600}}>Done in 20 min</span>
+            </span>
             <span className="hero-note">
               <span className="hero-note-item">100% local — no cloud, no API keys</span>
               <span className="hero-note-item">No account required</span>
