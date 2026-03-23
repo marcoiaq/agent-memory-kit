@@ -481,7 +481,7 @@ export default function Home() {
             </span>
             <p className="hero-proof" style={{marginTop:'4px', marginBottom:0}}>Built by <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a> — the exact memory system that&apos;s been running on my Mac mini in production since day one. Every session, no exceptions.</p>
             <span style={{fontSize:'12px', color:'#71717a', marginTop:'2px', display:'flex', alignItems:'center', gap:'4px', flexWrap:'wrap'}}>
-              Works on any Mac (12+) with OpenClaw · <a href="#faq" style={{color:'#a1a1aa', textDecoration:'underline', textDecorationColor:'rgba(161,161,170,0.4)', textUnderlineOffset:'2px'}}>Ollama free install (~5 min, no GPU)</a> — 100% local, nothing leaves your machine
+              Works on any Mac (12+) with OpenClaw · <a href="https://ollama.ai" target="_blank" rel="noopener noreferrer" style={{color:'#a1a1aa', textDecoration:'underline', textDecorationColor:'rgba(161,161,170,0.4)', textUnderlineOffset:'2px'}}>Ollama free install (~5 min, no GPU)</a> — 100% local, nothing leaves your machine
             </span>
           </div>
         </div>
@@ -537,7 +537,7 @@ export default function Home() {
             <span style={{fontSize:'12px', color:'#3f3f46'}}>·</span>
             <span style={{fontSize:'12px', color:'#a1a1aa'}}><a href="https://openclaw.ai" target="_blank" rel="noopener noreferrer" style={{color:'#818cf8', textDecoration:'underline', textDecorationColor:'rgba(129,140,248,0.4)', textUnderlineOffset:'2px'}}>OpenClaw</a></span>
             <span style={{fontSize:'12px', color:'#3f3f46'}}>·</span>
-            <span style={{fontSize:'12px', color:'#a1a1aa'}}>Ollama (free, ~5 min install, no GPU)</span>
+            <span style={{fontSize:'12px', color:'#a1a1aa'}}><a href="https://ollama.ai" target="_blank" rel="noopener noreferrer" style={{color:'#a1a1aa', textDecoration:'underline', textDecorationColor:'rgba(161,161,170,0.35)', textUnderlineOffset:'2px'}}>Ollama</a> (free, ~5 min install, no GPU)</span>
           </div>
           <div style={{marginTop:'24px', display:'flex', alignItems:'center', gap:'16px', flexWrap:'wrap'}}>
             <a href="/api/create-checkout" className="cta-main" style={{fontSize:'15px', padding:'12px 24px'}}>

@@ -18,7 +18,7 @@ const faqs = [
             OpenClaw
           </a>
         </strong>{' '}
-        installed, and <strong style={{ color: '#fafafa' }}>Ollama</strong> running locally. Ollama is free and handles all the memory extraction — no GPU required, runs on CPU fine.
+        installed, and <strong style={{ color: '#fafafa' }}><a href="https://ollama.ai" target="_blank" rel="noopener noreferrer" style={{ color: '#fafafa', textDecoration: 'underline', textDecorationColor: 'rgba(250,250,250,0.3)', textUnderlineOffset: '2px' }}>Ollama</a></strong> running locally. Ollama is free and handles all the memory extraction — no GPU required, runs on CPU fine.
       </>
     ),
   },
@@ -52,7 +52,15 @@ const faqs = [
   },
   {
     q: 'Does it require any cloud services or API keys?',
-    a: 'No. Memory extraction runs locally using Ollama. Search runs locally via SQLite. Nothing leaves your machine. No subscriptions, no recurring fees.',
+    a: (
+      <>
+        No. Memory extraction runs locally using{' '}
+        <a href="https://ollama.ai" target="_blank" rel="noopener noreferrer" style={{ color: '#818cf8', textDecoration: 'underline', textDecorationColor: 'rgba(129,140,248,0.4)', textUnderlineOffset: '2px' }}>
+          Ollama
+        </a>
+        . Search runs locally via SQLite. Nothing leaves your machine. No subscriptions, no recurring fees.
+      </>
+    ),
   },
   {
     q: "What if it doesn't work for me?",
