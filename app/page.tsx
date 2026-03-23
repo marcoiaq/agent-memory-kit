@@ -473,13 +473,13 @@ export default function Home() {
             <a href="/api/create-checkout" className="cta-main cta-pulse">
               Fix My Agent&apos;s Memory — $10 →
             </a>
-            <span style={{fontSize:'12px', color:'#52525b', display:'flex', alignItems:'center', gap:'5px', flexWrap:'wrap', marginTop:'-4px'}}>
-              <span style={{color:'#71717a'}}>Pay</span>
-              <span>→</span>
-              <span style={{color:'#71717a'}}>Download link on confirmation page</span>
-              <span>→</span>
-              <span style={{color:'#71717a'}}>Run 1 installer command</span>
-              <span>→</span>
+            <span style={{fontSize:'12px', color:'#3f3f46', display:'flex', alignItems:'center', gap:'5px', flexWrap:'wrap', marginTop:'-4px'}}>
+              <span style={{color:'#a1a1aa'}}>Pay</span>
+              <span style={{color:'#52525b'}}>→</span>
+              <span style={{color:'#a1a1aa'}}>Download link on confirmation page</span>
+              <span style={{color:'#52525b'}}>→</span>
+              <span style={{color:'#a1a1aa'}}>Run 1 installer command</span>
+              <span style={{color:'#52525b'}}>→</span>
               <span style={{color:'#22c55e', fontWeight:600}}>Done in 20 min</span>
             </span>
             <span className="hero-note">
@@ -487,6 +487,10 @@ export default function Home() {
               <span className="hero-note-item">No account required</span>
               <span className="hero-note-item">Instant download</span>
               <span className="hero-note-item">7-day money-back guarantee</span>
+              <span style={{fontSize:'12px', color:'#71717a', display:'flex', alignItems:'center', gap:'4px'}}>
+                <span>🔒</span>
+                <span>Stripe secure checkout</span>
+              </span>
             </span>
             <p className="hero-proof" style={{marginTop:'4px', marginBottom:0}}>Built by <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a> — the exact memory system that&apos;s been running on my Mac mini in production since day one. Every session, no exceptions.</p>
             <span style={{fontSize:'12px', color:'#71717a', marginTop:'2px', display:'flex', alignItems:'center', gap:'4px', flexWrap:'wrap'}}>
