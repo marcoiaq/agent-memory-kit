@@ -523,7 +523,7 @@ export default function Home() {
               'You paste the same context block at the start of every new chat',
             ].map((item) => (
               <div key={item} style={{display:'flex', alignItems:'flex-start', gap:'10px', padding:'14px 16px', background:'#111114', border:'1px solid #1c1c1f', borderRadius:'10px'}}>
-                <span style={{color:'#22c55e', fontWeight:700, fontSize:'14px', flexShrink:0, marginTop:'1px'}}>✓</span>
+                <span style={{color:'#6366f1', fontWeight:700, fontSize:'14px', flexShrink:0, marginTop:'1px'}}>→</span>
                 <span style={{fontSize:'14px', color:'#a1a1aa', lineHeight:1.5}}>{item}</span>
               </div>
             ))}
