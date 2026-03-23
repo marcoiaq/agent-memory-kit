@@ -125,7 +125,7 @@ export default function DesktopScrollBar() {
               <span className="desktop-scroll-bar-trust-item"><span style={{textDecoration:'line-through', color:'#52525b', marginRight:'4px'}}>$29</span><strong style={{color:'#fafafa'}}>$10</strong>&nbsp;one-time</span>
               <span className="desktop-scroll-bar-trust-item check">100% local</span>
               <span className="desktop-scroll-bar-trust-item check">Instant download</span>
-              <span className="desktop-scroll-bar-trust-item check">7-day refund</span>
+              <span className="desktop-scroll-bar-trust-item check">7-day guarantee</span>
               <span className="desktop-scroll-bar-stripe">🔒 Stripe</span>
             </div>
           </div>

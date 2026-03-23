@@ -511,7 +511,7 @@ export default function Home() {
               🔒 100% local — zero cloud, zero API keys, zero subscriptions. Ever.
             </div>
             <div className="proof-stat">
-              ✅ 7-day refund — doesn&apos;t work on your Mac? Full refund, no questions.
+              ✅ 7-day guarantee — it works or you get a full refund. No questions.
             </div>
           </div>
         </div>
@@ -829,7 +829,7 @@ export default function Home() {
       {/* FAQ */}
       <div className="faq" id="faq">
         <div className="wrap">
-          <h2>Everything you need to know before you buy</h2>
+          <h2>Common questions, straight answers.</h2>
           <FaqAccordion />
         </div>
       </div>
