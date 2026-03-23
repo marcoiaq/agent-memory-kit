@@ -103,7 +103,7 @@ export default function DesktopScrollBar() {
           }
           .desktop-scroll-bar-stripe {
             font-size: 12px;
-            color: #52525b;
+            color: #71717a;
             display: flex;
             align-items: center;
             gap: 4px;

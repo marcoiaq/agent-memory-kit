@@ -172,7 +172,7 @@ export default function Home() {
         .out { color: #a1a1aa; }
         .highlight { color: #22c55e; }
         .demo-caption {
-          font-size: 13px; color: #52525b; margin-top: 14px; text-align: center;
+          font-size: 13px; color: #71717a; margin-top: 14px; text-align: center;
         }
 
         /* BEFORE / AFTER */
@@ -528,7 +528,7 @@ export default function Home() {
               </div>
             ))}
           </div>
-          <p style={{fontSize:'13px', color:'#52525b', marginTop:'20px', lineHeight:1.6}}>
+          <p style={{fontSize:'13px', color:'#a1a1aa', marginTop:'20px', lineHeight:1.6}}>
             If two of these hit — this is for you. $10, 20 minutes, done.
           </p>
           <div style={{marginTop:'12px', display:'flex', alignItems:'center', gap:'8px', flexWrap:'wrap', padding:'10px 14px', background:'rgba(99,102,241,0.05)', border:'1px solid rgba(99,102,241,0.15)', borderRadius:'8px'}}>
@@ -543,7 +543,7 @@ export default function Home() {
             <a href="/api/create-checkout" className="cta-main" style={{fontSize:'15px', padding:'12px 24px'}}>
               Fix My Agent&apos;s Memory — $10 →
             </a>
-            <span style={{fontSize:'12px', color:'#52525b'}}>Instant download · 7-day refund</span>
+            <span style={{fontSize:'12px', color:'#71717a'}}>Instant download · 7-day refund</span>
           </div>
         </div>
       </div>
@@ -575,7 +575,7 @@ export default function Home() {
             <a href="/api/create-checkout" className="cta-main" style={{fontSize:'15px', padding:'12px 24px'}}>
               Fix My Agent's Memory — $10 →
             </a>
-            <span style={{fontSize:'12px', color:'#52525b'}}>Instant download · 7-day refund</span>
+            <span style={{fontSize:'12px', color:'#71717a'}}>Instant download · 7-day refund</span>
           </div>
         </div>
       </div>
@@ -743,7 +743,7 @@ export default function Home() {
             <a href="/api/create-checkout" className="cta-main" style={{fontSize:'15px', padding:'12px 24px'}}>
               Get Persistent Memory — $10 →
             </a>
-            <span style={{fontSize:'12px', color:'#52525b'}}>$10 one-time · Instant download · 7-day refund</span>
+            <span style={{fontSize:'12px', color:'#71717a'}}>$10 one-time · Instant download · 7-day refund</span>
           </div>
         </div>
       </div>
@@ -774,7 +774,7 @@ export default function Home() {
             <a href="/api/create-checkout" className="cta-main" style={{fontSize:'15px', padding:'12px 24px'}}>
               Get Everything Inside — $10 →
             </a>
-            <span style={{fontSize:'12px', color:'#52525b'}}>$10 one-time · Instant download · 7-day refund</span>
+            <span style={{fontSize:'12px', color:'#71717a'}}>$10 one-time · Instant download · 7-day refund</span>
           </div>
         </div>
       </div>
@@ -809,7 +809,7 @@ export default function Home() {
             Fix My Agent&apos;s Memory — $10 →
           </a>
           <span style={{fontSize:'12px', color:'#f59e0b', fontWeight:600}}>⏳ Founding price — goes to $29 at launch</span>
-          <span style={{fontSize:'12px', color:'#52525b'}}>$10 one-time · Instant download · 7-day refund</span>
+          <span style={{fontSize:'12px', color:'#71717a'}}>$10 one-time · Instant download · 7-day refund</span>
         </div>
       </div>
 
