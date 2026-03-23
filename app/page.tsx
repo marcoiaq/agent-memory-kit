@@ -689,38 +689,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* BUILT FOR OPENCLAW */}
-      <div className="openclaw-section">
-        <div className="wrap">
-          <div className="openclaw-inner">
-            <span className="openclaw-eyebrow">Purpose-built</span>
-            <h2 className="openclaw-heading">Built specifically for OpenClaw — not an afterthought.</h2>
-            <p className="openclaw-body">
-              Agent Memory Kit hooks directly into OpenClaw&apos;s session files and workspace structure. Purpose-built for how OpenClaw agents work.
-              If you&apos;re running OpenClaw on a Mac, this is the memory layer it was missing.
-            </p>
-            <ul className="openclaw-features">
-              {[
-                'Reads OpenClaw session JSONL files automatically',
-                'Integrates with OpenClaw\'s workspace (MEMORY.md, SOUL.md, AGENTS.md)',
-                'Works with OpenClaw\'s tool calls and agent turns',
-                'Compatible with all OpenClaw models',
-              ].map((f) => (
-                <li className="openclaw-feature" key={f}>{f}</li>
-              ))}
-            </ul>
-            <div style={{display:'flex', alignItems:'center', gap:'16px', flexWrap:'wrap'}}>
-              <a href="/api/create-checkout" className="cta-main" style={{fontSize:'15px', padding:'12px 24px'}}>
-                Fix My Agent's Memory — $10 →
-              </a>
-              <a href="https://openclaw.ai" target="_blank" rel="noopener noreferrer" className="openclaw-link">
-                New to OpenClaw? Start here →
-              </a>
-            </div>
-          </div>
-        </div>
-      </div>
-
       {/* BENEFITS */}
       <div className="benefits">
         <div className="wrap">
@@ -753,6 +721,38 @@ export default function Home() {
               Get Persistent Memory — $10 →
             </a>
             <span style={{fontSize:'12px', color:'#71717a'}}>$10 one-time · Instant download · 7-day refund</span>
+          </div>
+        </div>
+      </div>
+
+      {/* BUILT FOR OPENCLAW */}
+      <div className="openclaw-section">
+        <div className="wrap">
+          <div className="openclaw-inner">
+            <span className="openclaw-eyebrow">Purpose-built</span>
+            <h2 className="openclaw-heading">Built specifically for OpenClaw — not an afterthought.</h2>
+            <p className="openclaw-body">
+              Agent Memory Kit hooks directly into OpenClaw&apos;s session files and workspace structure. Purpose-built for how OpenClaw agents work.
+              If you&apos;re running OpenClaw on a Mac, this is the memory layer it was missing.
+            </p>
+            <ul className="openclaw-features">
+              {[
+                'Reads OpenClaw session JSONL files automatically',
+                'Integrates with OpenClaw\'s workspace (MEMORY.md, SOUL.md, AGENTS.md)',
+                'Works with OpenClaw\'s tool calls and agent turns',
+                'Compatible with all OpenClaw models',
+              ].map((f) => (
+                <li className="openclaw-feature" key={f}>{f}</li>
+              ))}
+            </ul>
+            <div style={{display:'flex', alignItems:'center', gap:'16px', flexWrap:'wrap'}}>
+              <a href="/api/create-checkout" className="cta-main" style={{fontSize:'15px', padding:'12px 24px'}}>
+                Fix My Agent's Memory — $10 →
+              </a>
+              <a href="https://openclaw.ai" target="_blank" rel="noopener noreferrer" className="openclaw-link">
+                New to OpenClaw? Start here →
+              </a>
+            </div>
           </div>
         </div>
       </div>
