@@ -467,6 +467,9 @@ export default function Home() {
               <span style={{fontSize:'11px', fontWeight:700, color:'#f59e0b', background:'rgba(245,158,11,0.1)', border:'1px solid rgba(245,158,11,0.25)', padding:'3px 8px', borderRadius:'4px', letterSpacing:'0.06em', textTransform:'uppercase'}}>Save $19</span>
               <span style={{fontSize:'11px', fontWeight:700, color:'#22c55e', background:'rgba(34,197,94,0.08)', border:'1px solid rgba(34,197,94,0.2)', padding:'3px 8px', borderRadius:'4px', letterSpacing:'0.04em', textTransform:'uppercase'}}>One-time</span>
             </div>
+            <span style={{fontSize:'12px', color:'#f59e0b', fontWeight:600, display:'flex', alignItems:'center', gap:'5px', marginTop:'2px'}}>
+              ⏳ Founding price — $10 now, goes to $29 at full launch. Buy once, own it forever.
+            </span>
             <a href="/api/create-checkout" className="cta-main cta-pulse">
               Fix My Agent&apos;s Memory — $10 →
             </a>
@@ -475,9 +478,6 @@ export default function Home() {
               <span className="hero-note-item">No account required</span>
               <span className="hero-note-item">Instant download</span>
               <span className="hero-note-item">7-day money-back guarantee</span>
-            </span>
-            <span style={{fontSize:'12px', color:'#f59e0b', fontWeight:600, display:'flex', alignItems:'center', gap:'5px', marginTop:'2px'}}>
-              ⏳ Founding price — $10 now, goes to $29 at full launch. Buy once, own it forever.
             </span>
             <p className="hero-proof" style={{marginTop:'4px', marginBottom:0}}>Built by <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a> — the exact memory system that&apos;s been running on my Mac mini in production since day one. Every session, no exceptions.</p>
             <span style={{fontSize:'12px', color:'#71717a', marginTop:'2px', display:'flex', alignItems:'center', gap:'4px', flexWrap:'wrap'}}>
