@@ -458,7 +458,7 @@ export default function Home() {
             Fix it in 20 minutes. Never re-explain yourself again.
           </p>
           <p className="hero-desc">
-            Every session, your OpenClaw agent wakes up blank — re-explaining your stack, your rules, your past decisions. One install gives it persistent, searchable memory that runs 100% on your Mac. Done once — works every session after that.
+            Every session, your OpenClaw agent wakes up blank. You re-explain your stack, your rules, your past decisions. Again and again. One install ends that — persistent, searchable memory, 100% on your Mac. Set it up once. Never explain yourself again.
           </p>
           <div className="hero-actions" style={{marginTop:'0'}}>
             <div style={{display:'flex', alignItems:'center', gap:'10px', marginBottom:'4px', flexWrap:'wrap'}}>
@@ -528,12 +528,12 @@ export default function Home() {
           </h2>
           <div className="who-grid" style={{display:'grid', gridTemplateColumns:'1fr 1fr', gap:'12px'}}>
             {[
+              'You paste the same context block at the start of every new chat',
               'Your agent asks you things it already figured out last week',
               'You re-explain your stack or rules every new session',
+              'You\'re building something and your agent keeps forgetting where you left off',
               'You\'ve lost a decision or context when a session ended',
               'You want memory without cloud, subscriptions, or API keys',
-              'You\'re building something and your agent keeps forgetting where you left off',
-              'You paste the same context block at the start of every new chat',
             ].map((item) => (
               <div key={item} style={{display:'flex', alignItems:'flex-start', gap:'10px', padding:'14px 16px', background:'#111114', border:'1px solid #1c1c1f', borderRadius:'10px'}}>
                 <span style={{color:'#6366f1', fontWeight:700, fontSize:'14px', flexShrink:0, marginTop:'1px'}}>→</span>
