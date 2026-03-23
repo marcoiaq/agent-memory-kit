@@ -458,7 +458,7 @@ export default function Home() {
             Fix it in 20 minutes. Never re-explain yourself again.
           </p>
           <p className="hero-desc">
-            Every session, your OpenClaw agent wakes up blank — re-explaining your stack, your rules, your past decisions. One setup gives it persistent, searchable memory. Runs 100% locally on your Mac. Then it never happens again.
+            Every session, your OpenClaw agent wakes up blank — re-explaining your stack, your rules, your past decisions. One install gives it persistent, searchable memory that runs 100% on your Mac. Done once — works every session after that.
           </p>
           <div className="hero-actions" style={{marginTop:'0'}}>
             <div style={{display:'flex', alignItems:'center', gap:'10px', marginBottom:'4px', flexWrap:'wrap'}}>
@@ -813,7 +813,7 @@ export default function Home() {
       {/* MID-FUNNEL CTA */}
       <div style={{padding:'40px 0', borderBottom:'1px solid #18181b'}}>
         <div className="wrap" style={{display:'flex', flexDirection:'column', alignItems:'center', textAlign:'center', gap:'16px'}}>
-          <p style={{fontSize:'15px', color:'#a1a1aa', maxWidth:'480px', lineHeight:'1.6'}}>Your agent is blank right now. Fix it once — it never happens again.</p>
+          <p style={{fontSize:'15px', color:'#a1a1aa', maxWidth:'480px', lineHeight:'1.6'}}>Your agent is blank right now. Fix it once — every session after that, it already knows.</p>
           <a href="/api/create-checkout" className="cta-main" style={{alignSelf:'center'}}>
             Fix My Agent&apos;s Memory — $10 →
           </a>
