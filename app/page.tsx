@@ -458,7 +458,7 @@ export default function Home() {
             Fix it in 20 minutes. Never re-explain yourself again.
           </p>
           <p className="hero-desc">
-            Every session, your OpenClaw agent wakes up blank. You re-explain your stack, your rules, your past decisions. Again and again. One install ends that — persistent, searchable memory, 100% on your Mac. Set it up once. Never explain yourself again.
+            Every session, your OpenClaw agent wakes up blank. You re-explain your stack, your rules, your past decisions. Again and again. One install ends that — persistent, searchable memory, 100% on your Mac. Set it up once. Done.
           </p>
           <div className="hero-actions" style={{marginTop:'0'}}>
             <div style={{display:'flex', alignItems:'center', gap:'10px', marginBottom:'4px', flexWrap:'wrap'}}>
@@ -567,7 +567,7 @@ export default function Home() {
           <h2 style={{fontSize:'clamp(22px, 3.5vw, 28px)', fontWeight:800, letterSpacing:'-0.03em', color:'#fafafa', marginBottom:'8px', lineHeight:1.2}}>
             Your agent finds any past decision — instantly.
           </h2>
-          <div className="demo-label" style={{marginBottom:'16px'}}>Real example — memory search in action</div>
+          <div className="demo-label" style={{marginBottom:'16px'}}>What your agent does automatically before every response</div>
           <div className="demo-terminal">
             <div className="demo-terminal-bar">
               <span className="dot dot-r"></span>
@@ -575,15 +575,15 @@ export default function Home() {
               <span className="dot dot-g"></span>
             </div>
             <div className="demo-code">
-              <span className="dim"># Your agent searches its own memory before replying</span>{'\n'}
+              <span className="dim"># Agent runs this automatically — you never type this yourself</span>{'\n'}
               <span className="cmd">$ qmd query</span>{' '}<span className="out">&quot;what stack are we using for the checkout&quot;</span>{'\n\n'}
               <span className="highlight">→</span> <span className="out">memory/2026-03-10.md  — &quot;Using Stripe + Next.js. No PayPal — integration was a mess.&quot;</span>{'\n'}
               <span className="highlight">→</span> <span className="out">memory/TACIT.md       — &quot;Always use pnpm, never npm. Deploy to Vercel.&quot;</span>{'\n'}
               <span className="highlight">→</span> <span className="out">memory/DECISIONS.md   — &quot;Went with App Router, not Pages. Decided 2026-02-28.&quot;</span>{'\n\n'}
-              <span className="dim"># Context loaded. Agent answers without asking again.</span>
+              <span className="dim"># Done. Agent already knows — asks nothing, re-explains nothing.</span>
             </div>
           </div>
-          <p className="demo-caption">Runs 100% on your Mac · No cloud · No API keys · No subscriptions</p>
+          <p className="demo-caption">Automatic every session · No manual commands · Runs 100% on your Mac</p>
           <div style={{marginTop:'24px', display:'flex', alignItems:'center', gap:'14px', flexWrap:'wrap'}}>
             <a href="/api/create-checkout" className="cta-main" style={{fontSize:'15px', padding:'12px 24px'}}>
               Fix My Agent's Memory — $10 →
