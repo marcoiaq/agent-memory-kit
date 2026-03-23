@@ -39,6 +39,10 @@ const faqs = [
     a: 'A ZIP with everything pre-configured: the memory extraction scripts, background services that auto-start on login, the semantic search setup, and identity template files (SOUL.md, AGENTS.md, MEMORY.md, TACIT.md) — plus a step-by-step setup guide with every command. You run the installer and it works.',
   },
   {
+    q: "Does it slow down my Mac?",
+    a: "No. The memory extraction runs at the end of a session and takes a few seconds — then it stops. There's no background process constantly running or watching your screen. The search index is SQLite on your local disk, so queries resolve in under a second with no CPU overhead. On an M1 Mac mini with 8GB RAM, you'll never notice it.",
+  },
+  {
     q: 'How long does setup take?',
     a: "About 15–20 minutes. You'll run the installer script, let your memory services auto-configure, and fill in a short config for your agent's identity. The setup guide walks through every step with exact commands — no guesswork.",
   },

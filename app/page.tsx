@@ -505,7 +505,7 @@ export default function Home() {
         <div className="wrap">
           <div className="proof-bar-inner">
             <div className="proof-stat">
-              📦 Instant download — link appears right after payment
+              🔄 Free updates forever — all future versions included, no extra charge
             </div>
             <div className="proof-stat">
               🔒 100% local — zero cloud, zero API keys, zero subscriptions. Ever.
