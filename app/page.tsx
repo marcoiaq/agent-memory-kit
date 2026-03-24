@@ -524,7 +524,7 @@ export default function Home() {
             Who it&apos;s for
           </div>
           <h2 style={{fontSize:'clamp(20px, 3.5vw, 26px)', fontWeight:800, letterSpacing:'-0.03em', color:'#fafafa', marginBottom:'24px', lineHeight:1.2}}>
-            You&apos;re starting from blank. Every single session.
+            If any of these are your daily reality — this was built for you.
           </h2>
           <div className="who-grid" style={{display:'grid', gridTemplateColumns:'1fr 1fr', gap:'12px'}}>
             {[
@@ -542,7 +542,7 @@ export default function Home() {
             ))}
           </div>
           <p style={{fontSize:'13px', color:'#a1a1aa', marginTop:'20px', lineHeight:1.6}}>
-            If two of these hit — this is for you. $10, 20 minutes, done.
+            Two of those are enough. $10, 20 minutes — your agent never starts from scratch again.
           </p>
           <div style={{marginTop:'12px', display:'flex', alignItems:'center', gap:'8px', flexWrap:'wrap', padding:'10px 14px', background:'rgba(99,102,241,0.05)', border:'1px solid rgba(99,102,241,0.15)', borderRadius:'8px'}}>
             <span style={{fontSize:'12px', color:'#71717a', fontWeight:700}}>Requires:</span>
