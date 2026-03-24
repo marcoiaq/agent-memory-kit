@@ -470,6 +470,7 @@ export default function Home() {
             <span style={{fontSize:'12px', color:'#f59e0b', fontWeight:600, display:'flex', alignItems:'center', gap:'5px', marginTop:'2px'}}>
               ⏳ Founding price — $10 now, goes to $29 at full launch. Buy once, own it forever.
             </span>
+            <p className="hero-proof" style={{marginTop:'4px', marginBottom:0}}>Built by <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a> — the exact memory system that&apos;s been running on my Mac mini in production since day one. Every session, no exceptions.</p>
             <span className="hero-note">
               <span className="hero-note-item">100% local — no cloud, no API keys</span>
               <span className="hero-note-item">No account required</span>
@@ -492,7 +493,6 @@ export default function Home() {
               <span style={{color:'#71717a'}}>→</span>
               <span style={{color:'#22c55e', fontWeight:600}}>Done in 20 min</span>
             </span>
-            <p className="hero-proof" style={{marginTop:'4px', marginBottom:0}}>Built by <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a> — the exact memory system that&apos;s been running on my Mac mini in production since day one. Every session, no exceptions.</p>
             <span style={{fontSize:'12px', color:'#71717a', marginTop:'2px', display:'flex', alignItems:'center', gap:'4px', flexWrap:'wrap'}}>
               Works on any Mac (12+) with OpenClaw · <a href="https://ollama.ai" target="_blank" rel="noopener noreferrer" style={{color:'#a1a1aa', textDecoration:'underline', textDecorationColor:'rgba(161,161,170,0.4)', textUnderlineOffset:'2px'}}>Ollama free install (~5 min, no GPU)</a> — 100% local, nothing leaves your machine
             </span>
