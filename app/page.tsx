@@ -449,9 +449,9 @@ export default function Home() {
       <div className="hero">
         <div className="wrap">
           <div className="hero-badge">
-            Built for{' '}
+            For{' '}
             <a href="https://openclaw.ai" target="_blank" rel="noopener noreferrer">OpenClaw</a>
-            {' '}— Claude AI agent · Mac · Runs 100% locally
+            {' '}users · Mac only · no cloud · no API keys
           </div>
           <h1>Your AI agent<br />forgets everything.</h1>
           <p style={{fontSize: 'clamp(17px, 2.8vw, 21px)', fontWeight: 700, color: '#6366f1', letterSpacing: '-0.02em', marginBottom: '14px', lineHeight: 1.3}}>
@@ -853,13 +853,13 @@ export default function Home() {
             <a href="/api/create-checkout" className="cta-btn">Fix My Agent&apos;s Memory — $10 →</a>
             <p className="cta-meta" style={{marginTop:'14px', marginBottom:'8px', color:'#a1a1aa'}}>Secure checkout via Stripe · Instant download · 7-day money-back guarantee</p>
             <p style={{fontSize:'12px', color:'#71717a', marginTop:'8px', display:'flex', alignItems:'center', justifyContent:'center', gap:'8px', flexWrap:'wrap'}}>
-              <span>Pay ✓</span>
-              <span style={{color:'#3f3f46'}}>→</span>
-              <span>Download link on confirmation page</span>
-              <span style={{color:'#3f3f46'}}>→</span>
-              <span>Run 1 installer command</span>
-              <span style={{color:'#3f3f46'}}>→</span>
-              <span>Done in 20 min</span>
+              <span>Pay</span>
+              <span style={{color:'#71717a'}}>→</span>
+              <span>Instant download (ZIP)</span>
+              <span style={{color:'#71717a'}}>→</span>
+              <span>Run 1 installer script</span>
+              <span style={{color:'#71717a'}}>→</span>
+              <span style={{color:'#22c55e', fontWeight:600}}>Done in 20 min</span>
             </p>
           </div>
         </div>
