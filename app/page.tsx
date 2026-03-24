@@ -346,7 +346,7 @@ export default function Home() {
           font-size: clamp(24px, 4vw, 32px);
           font-weight: 900; letter-spacing: -0.04em; margin-bottom: 12px;
         }
-        .cta-desc { font-size: 15px; color: #71717a; margin-bottom: 32px; line-height: 1.65; }
+        .cta-desc { font-size: 15px; color: #a1a1aa; margin-bottom: 32px; line-height: 1.65; }
         .price-tag {
           display: flex; align-items: baseline; gap: 6px;
           justify-content: center; margin-bottom: 28px;
@@ -375,7 +375,7 @@ export default function Home() {
           animation: cta-btn-pulse 2.8s ease-in-out infinite;
         }
         .cta-btn:hover { background: #4f46e5; animation: none; }
-        .cta-meta { font-size: 12px; color: #52525b; margin-top: 16px; }
+        .cta-meta { font-size: 12px; color: #71717a; margin-top: 16px; }
 
         /* FOOTER */
         footer { border-top: 1px solid #18181b; padding: 24px 0; text-align: center; }
