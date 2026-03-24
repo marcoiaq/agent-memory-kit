@@ -586,7 +586,7 @@ export default function Home() {
           <p className="demo-caption">Automatic every session · No manual commands · Runs 100% on your Mac</p>
           <div style={{marginTop:'24px', display:'flex', alignItems:'center', gap:'14px', flexWrap:'wrap'}}>
             <a href="/api/create-checkout" className="cta-main" style={{fontSize:'15px', padding:'12px 24px'}}>
-              Fix My Agent's Memory — $10 →
+              Make My Agent Do This — $10 →
             </a>
             <span style={{fontSize:'12px', color:'#71717a'}}>Instant download · 7-day refund</span>
           </div>
@@ -819,7 +819,7 @@ export default function Home() {
         <div className="wrap" style={{display:'flex', flexDirection:'column', alignItems:'center', textAlign:'center', gap:'16px'}}>
           <p style={{fontSize:'15px', color:'#a1a1aa', maxWidth:'480px', lineHeight:'1.6'}}>Your agent is blank right now. Fix it once — every session after that, it already knows.</p>
           <a href="/api/create-checkout" className="cta-main" style={{alignSelf:'center'}}>
-            Fix My Agent&apos;s Memory — $10 →
+            Get It Risk-Free — $10 →
           </a>
           <span style={{fontSize:'12px', color:'#f59e0b', fontWeight:600}}>⏳ Founding price — goes to $29 at launch</span>
           <span style={{fontSize:'12px', color:'#71717a'}}>$10 one-time · Instant download · 7-day refund</span>
@@ -829,7 +829,7 @@ export default function Home() {
       {/* FAQ */}
       <div className="faq" id="faq">
         <div className="wrap">
-          <h2>Common questions, straight answers.</h2>
+          <h2>13 questions — all answered.</h2>
           <FaqAccordion />
         </div>
       </div>
