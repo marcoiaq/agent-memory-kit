@@ -505,7 +505,7 @@ export default function Home() {
         <div className="wrap">
           <div className="proof-bar-inner">
             <div className="proof-stat">
-              🔄 Free updates forever — all future versions included, no extra charge
+              🔄 Free updates forever — all future versions included
             </div>
             <div className="proof-stat">
               💬 Stuck? DM <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer" style={{color:'#a1a1aa', textDecoration:'underline', textDecorationColor:'rgba(161,161,170,0.35)', textUnderlineOffset:'2px'}}>@alfredmarktr</a> — personal, same-day reply
@@ -722,7 +722,7 @@ export default function Home() {
           </div>
           <div style={{marginTop:'32px', display:'flex', alignItems:'center', gap:'16px', flexWrap:'wrap'}}>
             <a href="/api/create-checkout" className="cta-main" style={{fontSize:'15px', padding:'12px 24px'}}>
-              Get Persistent Memory — $10 →
+              Make My Agent Remember — $10 →
             </a>
             <span style={{fontSize:'12px', color:'#71717a'}}>$10 one-time · Instant download · 7-day refund</span>
           </div>
@@ -764,6 +764,7 @@ export default function Home() {
       {/* WHAT'S INSIDE */}
       <div className="inside">
         <div className="wrap">
+          <div style={{fontSize:'11px', fontWeight:700, letterSpacing:'0.1em', textTransform:'uppercase', color:'#71717a', marginBottom:'10px'}}>Everything included</div>
           <h2>What&apos;s inside</h2>
           <p className="inside-sub">Pre-configured and ready. Run the installer — your agent never starts from scratch again.</p>
           <div className="chapters">
