@@ -67,6 +67,16 @@ const faqs = [
     ),
   },
   {
+    q: 'Is the installer safe? Can I inspect it before running?',
+    a: (
+      <>
+        Yes — everything in the package is plain text. The installer is a shell script you can open in any text editor and read line by line before running a single command. The package contains{' '}
+        <strong style={{ color: '#fafafa' }}>.sh scripts, .md markdown files, and JSON configs</strong>
+        {' '}— nothing compiled, nothing binary, nothing opaque. The setup creates files inside your OpenClaw workspace and sets up standard macOS background services (launchd, same as Homebrew uses). Nothing touches your system outside of those two locations.
+      </>
+    ),
+  },
+  {
     q: "What if it doesn't work for me?",
     a: "7-day money-back guarantee. If you followed the setup guide and it doesn't work on your machine, reply to your purchase receipt and you'll get a full refund. No runaround.",
   },
