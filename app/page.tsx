@@ -508,7 +508,7 @@ export default function Home() {
               🔄 Free updates forever — all future versions included, no extra charge
             </div>
             <div className="proof-stat">
-              🔒 100% local — zero cloud, zero API keys, zero subscriptions. Ever.
+              💬 Stuck? DM <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer" style={{color:'#a1a1aa', textDecoration:'underline', textDecorationColor:'rgba(161,161,170,0.35)', textUnderlineOffset:'2px'}}>@alfredmarktr</a> — personal, same-day reply
             </div>
             <div className="proof-stat">
               ✅ 7-day guarantee — it works or you get a full refund. No questions.
