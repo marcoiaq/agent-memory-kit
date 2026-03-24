@@ -829,7 +829,7 @@ export default function Home() {
       {/* FAQ */}
       <div className="faq" id="faq">
         <div className="wrap">
-          <h2>13 questions — all answered.</h2>
+          <h2>14 questions — all answered.</h2>
           <FaqAccordion />
         </div>
       </div>
