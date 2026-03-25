@@ -459,7 +459,7 @@ export default function Home() {
             Fix it in 20 minutes. Never re-explain yourself again.
           </p>
           <p className="hero-desc">
-            Every session, your OpenClaw agent starts blank. You re-explain your stack, your rules, your decisions — every time. One 20-minute install ends that, permanently.
+            Every session, your OpenClaw agent starts blank. You re-explain your stack, your rules, your decisions — every single time. One 20-minute install ends that. Permanently.
           </p>
           <p className="hero-proof" style={{marginTop:'0', marginBottom:'24px'}}>Built by <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a> — this is my actual daily-driver. Running on my Mac mini since day one, every session. I&apos;d be dead without it.</p>
           <div className="hero-actions" style={{marginTop:'0'}}>

@@ -70,6 +70,26 @@ function SuccessContent() {
               <p className="note">
                 Bookmark this page or save the URL — the download link stays valid. Lost it? Reply to your Stripe receipt email and I&apos;ll sort you out.
               </p>
+              <div style={{marginTop:'28px', padding:'22px 24px', background:'#111114', border:'1px solid #1c1c1f', borderRadius:'14px', textAlign:'left'}}>
+                <p style={{fontSize:'11px', fontWeight:700, color:'#71717a', marginBottom:'16px', letterSpacing:'0.08em', textTransform:'uppercase'}}>What to do next</p>
+                <div style={{display:'flex', flexDirection:'column', gap:'14px'}}>
+                  <div style={{display:'flex', alignItems:'flex-start', gap:'12px'}}>
+                    <span style={{width:'22px', height:'22px', background:'rgba(99,102,241,0.12)', border:'1px solid rgba(99,102,241,0.25)', borderRadius:'50%', display:'inline-flex', alignItems:'center', justifyContent:'center', fontSize:'11px', fontWeight:800, color:'#818cf8', flexShrink:0, marginTop:'1px'}}>1</span>
+                    <span style={{fontSize:'14px', color:'#a1a1aa', lineHeight:'1.5'}}>Unzip the downloaded file and open it in Finder</span>
+                  </div>
+                  <div style={{display:'flex', alignItems:'flex-start', gap:'12px'}}>
+                    <span style={{width:'22px', height:'22px', background:'rgba(99,102,241,0.12)', border:'1px solid rgba(99,102,241,0.25)', borderRadius:'50%', display:'inline-flex', alignItems:'center', justifyContent:'center', fontSize:'11px', fontWeight:800, color:'#818cf8', flexShrink:0, marginTop:'1px'}}>2</span>
+                    <span style={{fontSize:'14px', color:'#a1a1aa', lineHeight:'1.5'}}>Open Terminal, <code style={{background:'rgba(99,102,241,0.08)', padding:'1px 5px', borderRadius:'4px', fontSize:'13px', color:'#a5b4fc'}}>cd</code> into the folder, run <code style={{background:'rgba(99,102,241,0.08)', padding:'1px 5px', borderRadius:'4px', fontSize:'13px', color:'#a5b4fc'}}>./install.sh</code></span>
+                  </div>
+                  <div style={{display:'flex', alignItems:'flex-start', gap:'12px'}}>
+                    <span style={{width:'22px', height:'22px', background:'rgba(99,102,241,0.12)', border:'1px solid rgba(99,102,241,0.25)', borderRadius:'50%', display:'inline-flex', alignItems:'center', justifyContent:'center', fontSize:'11px', fontWeight:800, color:'#818cf8', flexShrink:0, marginTop:'1px'}}>3</span>
+                    <span style={{fontSize:'14px', color:'#a1a1aa', lineHeight:'1.5'}}>Fill in <code style={{background:'rgba(99,102,241,0.08)', padding:'1px 5px', borderRadius:'4px', fontSize:'13px', color:'#a5b4fc'}}>MEMORY.md</code> with your name, stack, and rules — your agent now remembers</span>
+                  </div>
+                </div>
+                <p style={{marginTop:'14px', fontSize:'12px', color:'#52525b', lineHeight:'1.5'}}>
+                  Full setup guide included in the ZIP. Takes 15–20 min total. Stuck? DM <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer" style={{color:'#71717a', textDecoration:'underline', textDecorationColor:'rgba(113,113,122,0.4)', textUnderlineOffset:'2px'}}>@alfredmarktr</a> — I reply same-day.
+                </p>
+              </div>
               <div style={{marginTop:'40px', padding:'24px', background:'rgba(99,102,241,0.06)', border:'1px solid rgba(99,102,241,0.15)', borderRadius:'14px'}}>
                 <p style={{fontSize:'14px', fontWeight:700, color:'#fafafa', marginBottom:'8px'}}>Enjoying it? Help another OpenClaw user find this.</p>
                 <p style={{fontSize:'13px', color:'#71717a', lineHeight:'1.6', marginBottom:'16px'}}>
