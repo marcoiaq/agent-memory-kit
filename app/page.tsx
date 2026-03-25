@@ -459,8 +459,9 @@ export default function Home() {
             Fix it in 20 minutes. Never re-explain yourself again.
           </p>
           <p className="hero-desc">
-            Every session, your OpenClaw agent wakes up blank. You re-explain your stack, your rules, your past decisions. Again and again. One install ends that — persistent, searchable memory, 100% on your Mac. Set it up once. Done.
+            Every session, your OpenClaw agent starts blank. You re-explain your stack, your rules, your decisions — every time. One 20-minute install ends that, permanently.
           </p>
+          <p className="hero-proof" style={{marginTop:'0', marginBottom:'24px'}}>Built by <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a> — this is my actual daily-driver. Running on my Mac mini since day one, every session. I&apos;d be dead without it.</p>
           <div className="hero-actions" style={{marginTop:'0'}}>
             <div style={{display:'flex', alignItems:'center', gap:'10px', marginBottom:'4px', flexWrap:'wrap'}}>
               <span style={{fontSize:'22px', color:'#52525b', textDecoration:'line-through', fontWeight:700, letterSpacing:'-0.02em'}}>$29</span>
@@ -474,15 +475,6 @@ export default function Home() {
             <a href="/api/create-checkout" className="cta-main cta-pulse">
               Fix My Agent&apos;s Memory — $10 →
             </a>
-            <span style={{fontSize:'12px', color:'#71717a', display:'flex', alignItems:'center', gap:'5px', flexWrap:'wrap', marginTop:'-4px'}}>
-              <span style={{color:'#a1a1aa'}}>Pay</span>
-              <span style={{color:'#71717a'}}>→</span>
-              <span style={{color:'#a1a1aa'}}>Instant download (ZIP)</span>
-              <span style={{color:'#71717a'}}>→</span>
-              <span style={{color:'#a1a1aa'}}>Run 1 installer command</span>
-              <span style={{color:'#71717a'}}>→</span>
-              <span style={{color:'#22c55e', fontWeight:600}}>Done in 20 min</span>
-            </span>
             <span className="hero-note">
               <span className="hero-note-item">100% local — no cloud, no API keys</span>
               <span className="hero-note-item">Instant download</span>
@@ -492,7 +484,6 @@ export default function Home() {
                 <span>Stripe secure checkout</span>
               </span>
             </span>
-            <p className="hero-proof" style={{marginTop:'4px', marginBottom:0}}>Built by <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a> — this is my actual daily-driver. Running on my Mac mini since day one, every session. I&apos;d be dead without it.</p>
             <span style={{fontSize:'12px', color:'#71717a', marginTop:'2px', display:'flex', alignItems:'center', gap:'4px', flexWrap:'wrap'}}>
               Works on any Mac (12+) with OpenClaw · <a href="https://ollama.ai" target="_blank" rel="noopener noreferrer" style={{color:'#a1a1aa', textDecoration:'underline', textDecorationColor:'rgba(161,161,170,0.4)', textUnderlineOffset:'2px'}}>Ollama free install (~5 min, no GPU)</a> — 100% local, nothing leaves your machine
             </span>
@@ -808,7 +799,6 @@ export default function Home() {
           <a href="/api/create-checkout" className="cta-main" style={{alignSelf:'center'}}>
             Own It Forever — $10 →
           </a>
-          <span style={{fontSize:'12px', color:'#f59e0b', fontWeight:600}}>⏳ Founding price — goes to $29 at launch</span>
           <span style={{fontSize:'12px', color:'#71717a'}}>$10 one-time · Instant download · 7-day refund</span>
         </div>
       </div>
@@ -816,8 +806,8 @@ export default function Home() {
       {/* FAQ */}
       <div className="faq" id="faq">
         <div className="wrap">
-          <div style={{fontSize:'11px', fontWeight:700, letterSpacing:'0.1em', textTransform:'uppercase', color:'#71717a', marginBottom:'10px'}}>Still not sure?</div>
-          <h2>14 questions — all answered.</h2>
+          <div style={{fontSize:'11px', fontWeight:700, letterSpacing:'0.1em', textTransform:'uppercase', color:'#71717a', marginBottom:'10px'}}>FAQ</div>
+          <h2>Common questions, answered.</h2>
           <FaqAccordion />
         </div>
       </div>
