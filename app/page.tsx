@@ -449,9 +449,9 @@ export default function Home() {
       <div className="hero">
         <div className="wrap">
           <div className="hero-badge">
-            For{' '}
+            Persistent memory for{' '}
             <a href="https://openclaw.ai" target="_blank" rel="noopener noreferrer">OpenClaw</a>
-            {' '}users · Mac only · no cloud · no API keys
+            {' '}· Mac only · 100% local, no API keys
           </div>
           <h1>Your AI agent<br />forgets everything.</h1>
           <p style={{fontSize: 'clamp(17px, 2.8vw, 21px)', fontWeight: 700, color: '#fafafa', letterSpacing: '-0.02em', marginBottom: '14px', lineHeight: 1.3}}>
@@ -638,7 +638,7 @@ export default function Home() {
             That&apos;s the difference. $10 and 20 minutes puts you in the right column — permanently.
           </p>
           <a href="/api/create-checkout" className="cta-main" style={{flexShrink:0, fontSize:'15px', padding:'12px 24px'}}>
-            Yes, Fix My Agent — $10 →
+            Fix My Agent Now — $10 →
           </a>
         </div>
       </div>
@@ -819,7 +819,7 @@ export default function Home() {
         <div className="wrap" style={{display:'flex', flexDirection:'column', alignItems:'center', textAlign:'center', gap:'16px'}}>
           <p style={{fontSize:'15px', color:'#a1a1aa', maxWidth:'480px', lineHeight:'1.6'}}>Your agent is blank right now. Fix it once — every session after that, it already knows.</p>
           <a href="/api/create-checkout" className="cta-main" style={{alignSelf:'center'}}>
-            Get It Risk-Free — $10 →
+            Own It Forever — $10 →
           </a>
           <span style={{fontSize:'12px', color:'#f59e0b', fontWeight:600}}>⏳ Founding price — goes to $29 at launch</span>
           <span style={{fontSize:'12px', color:'#71717a'}}>$10 one-time · Instant download · 7-day refund</span>
