@@ -130,7 +130,7 @@ const faqs = [
 ]
 
 export default function FaqAccordion() {
-  const [openIndex, setOpenIndex] = useState<number | null>(null)
+  const [openIndex, setOpenIndex] = useState<number | null>(2)
 
   return (
     <>
