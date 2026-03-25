@@ -507,7 +507,7 @@ export default function Home() {
               ✅ 7-day guarantee — doesn&apos;t work? Full refund, no questions.
             </div>
             <div className="proof-stat">
-              🔄 Free updates forever — all future versions included
+              🔄 Free updates forever — all future versions, no extra charge
             </div>
             <div className="proof-stat">
               💬 Stuck? DM <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer" style={{color:'#a1a1aa', textDecoration:'underline', textDecorationColor:'rgba(161,161,170,0.35)', textUnderlineOffset:'2px'}}>@alfredmarktr</a> — personal, same-day reply
@@ -829,6 +829,7 @@ export default function Home() {
       {/* FAQ */}
       <div className="faq" id="faq">
         <div className="wrap">
+          <div style={{fontSize:'11px', fontWeight:700, letterSpacing:'0.1em', textTransform:'uppercase', color:'#71717a', marginBottom:'10px'}}>Still not sure?</div>
           <h2>14 questions — all answered.</h2>
           <FaqAccordion />
         </div>
