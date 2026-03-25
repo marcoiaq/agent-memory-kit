@@ -476,9 +476,9 @@ export default function Home() {
               Fix My Agent&apos;s Memory — $10 →
             </a>
             <span className="hero-note">
+              <span className="hero-note-item">7-day money-back guarantee</span>
               <span className="hero-note-item">100% local — no cloud, no API keys</span>
               <span className="hero-note-item">Instant download</span>
-              <span className="hero-note-item">7-day money-back guarantee</span>
               <span style={{fontSize:'12px', color:'#71717a', display:'flex', alignItems:'center', gap:'4px'}}>
                 <span>🔒</span>
                 <span>Stripe secure checkout</span>
@@ -524,7 +524,7 @@ export default function Home() {
               'You re-explain your stack or rules every new session',
               'You\'re building something and your agent keeps forgetting where you left off',
               'You\'ve lost a decision or context when a session ended',
-              'You want memory without cloud, subscriptions, or API keys',
+              "You won't pay $20/month for a cloud memory service that ships your data off your machine",
             ].map((item) => (
               <div key={item} style={{display:'flex', alignItems:'flex-start', gap:'10px', padding:'14px 16px', background:'#111114', border:'1px solid #1c1c1f', borderRadius:'10px'}}>
                 <span style={{color:'#6366f1', fontWeight:700, fontSize:'14px', flexShrink:0, marginTop:'1px'}}>→</span>
