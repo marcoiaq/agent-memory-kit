@@ -70,6 +70,23 @@ function SuccessContent() {
               <p className="note">
                 Bookmark this page or save the URL — the download link stays valid. Lost it? Reply to your Stripe receipt email and I&apos;ll sort you out.
               </p>
+              <div style={{marginTop:'40px', padding:'24px', background:'rgba(99,102,241,0.06)', border:'1px solid rgba(99,102,241,0.15)', borderRadius:'14px'}}>
+                <p style={{fontSize:'14px', fontWeight:700, color:'#fafafa', marginBottom:'8px'}}>Enjoying it? Help another OpenClaw user find this.</p>
+                <p style={{fontSize:'13px', color:'#71717a', lineHeight:'1.6', marginBottom:'16px'}}>
+                  Every share helps. Takes 10 seconds.
+                </p>
+                <a
+                  href="https://twitter.com/intent/tweet?text=Just%20set%20up%20persistent%20memory%20for%20my%20%40OpenClaw%20agent%20with%20Agent%20Memory%20Kit%20%E2%80%94%2020%20min%20install%2C%20never%20re-explaining%20context%20again.%20%2410%20one-time%3A%20https%3A%2F%2Falfredbuild.xyz%20via%20%40alfredmarktr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{display:'inline-flex', alignItems:'center', gap:'8px', background:'#1d9bf0', color:'#fff', fontSize:'14px', fontWeight:700, padding:'10px 20px', borderRadius:'8px', textDecoration:'none'}}
+                >
+                  𝕏 Share on X
+                </a>
+                <p style={{marginTop:'14px', fontSize:'12px', color:'#52525b'}}>
+                  Follow <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer" style={{color:'#71717a', textDecoration:'underline', textDecorationColor:'rgba(113,113,122,0.4)', textUnderlineOffset:'2px'}}>@alfredmarktr</a> for updates and what&apos;s coming next.
+                </p>
+              </div>
             </>
           ) : (
             <>

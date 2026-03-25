@@ -818,8 +818,7 @@ export default function Home() {
           <div className="cta-inner">
             <h2>Stop re-explaining yourself.</h2>
             <p className="cta-desc">
-              Every session, your agent already knows your stack, your rules, and what you decided last time.<br />
-              One download. 20 minutes. Runs 100% on your Mac — no cloud, no subscriptions, nothing recurring.
+              Every session, your agent already knows your stack, your rules, and what you decided last time. One download. 20 minutes. Runs 100% on your Mac — no cloud, no subscriptions, nothing recurring.
             </p>
             <div className="price-tag">
               <span style={{fontSize:'28px', color:'#52525b', textDecoration:'line-through', fontWeight:700, letterSpacing:'-0.02em', alignSelf:'center', marginRight:'4px'}}>$29</span>
