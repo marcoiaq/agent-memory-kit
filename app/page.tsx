@@ -566,7 +566,7 @@ export default function Home() {
           <h2 style={{fontSize:'clamp(22px, 3.5vw, 28px)', fontWeight:800, letterSpacing:'-0.03em', color:'#fafafa', marginBottom:'8px', lineHeight:1.2}}>
             Your agent finds any past decision — instantly.
           </h2>
-          <div className="demo-label" style={{marginBottom:'16px'}}>What your agent does automatically before every response</div>
+          <div className="demo-label" style={{marginBottom:'16px'}}>What your agent does automatically before every new session</div>
           <div className="demo-terminal">
             <div className="demo-terminal-bar">
               <span className="dot dot-r"></span>
@@ -808,7 +808,7 @@ export default function Home() {
               <p style={{fontSize:'14px', color:'#a1a1aa', lineHeight:'1.65', margin:0, marginBottom:'10px'}}>
                 Follow the setup guide and it doesn&apos;t work on your machine — reply to your purchase receipt and I&apos;ll refund you same-day. No forms, no runaround, no questions. You shouldn&apos;t pay for something that doesn&apos;t work.
               </p>
-              <span style={{fontSize:'13px', color:'#52525b', fontStyle:'italic'}}>— @alfredmarktr</span>
+              <span style={{fontSize:'13px', color:'#71717a', fontStyle:'italic'}}>— @alfredmarktr</span>
             </div>
           </div>
         </div>
