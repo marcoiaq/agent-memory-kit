@@ -476,7 +476,7 @@ export default function Home() {
             <span style={{fontSize:'12px', color:'#71717a', display:'flex', alignItems:'center', gap:'5px', flexWrap:'wrap', marginTop:'-4px'}}>
               <span style={{color:'#a1a1aa'}}>Pay</span>
               <span style={{color:'#71717a'}}>→</span>
-              <span style={{color:'#a1a1aa'}}>Download link on confirmation page</span>
+              <span style={{color:'#a1a1aa'}}>Instant download (ZIP)</span>
               <span style={{color:'#71717a'}}>→</span>
               <span style={{color:'#a1a1aa'}}>Run 1 installer command</span>
               <span style={{color:'#71717a'}}>→</span>
@@ -553,7 +553,7 @@ export default function Home() {
           </div>
           <div style={{marginTop:'24px', display:'flex', alignItems:'center', gap:'16px', flexWrap:'wrap'}}>
             <a href="/api/create-checkout" className="cta-main" style={{fontSize:'15px', padding:'12px 24px'}}>
-              Fix My Agent&apos;s Memory — $10 →
+              Stop Re-Explaining Yourself — $10 →
             </a>
             <span style={{fontSize:'12px', color:'#71717a'}}>Instant download · 7-day refund</span>
           </div>
@@ -635,7 +635,7 @@ export default function Home() {
       <div style={{padding:'28px 0', borderBottom:'1px solid #18181b', background:'#0d0d10'}}>
         <div className="wrap" style={{display:'flex', alignItems:'center', justifyContent:'space-between', gap:'20px', flexWrap:'wrap'}}>
           <p style={{fontSize:'14px', color:'#a1a1aa', lineHeight:'1.5', margin:0}}>
-            That&apos;s the gap. You&apos;re 20 minutes from the right column.
+            That&apos;s the difference. $10 and 20 minutes puts you in the right column — permanently.
           </p>
           <a href="/api/create-checkout" className="cta-main" style={{flexShrink:0, fontSize:'15px', padding:'12px 24px'}}>
             Yes, Fix My Agent — $10 →
