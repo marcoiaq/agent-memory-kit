@@ -558,7 +558,6 @@ export default function Home() {
           <p style={{fontSize: 'clamp(17px, 2.8vw, 21px)', fontWeight: 700, color: '#fafafa', letterSpacing: '-0.02em', marginBottom: '14px', lineHeight: 1.3}}>
             Fix it in 20 minutes. Never re-explain yourself again.
           </p>
-          <p className="hero-proof" style={{marginTop:'0', marginBottom:'14px'}}>Built by <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a> — this is my actual daily-driver. 200+ sessions on my Mac mini without re-explaining my stack once.</p>
           <p className="hero-desc" style={{marginTop:'0', marginBottom:'18px'}}>
             Every session, your OpenClaw agent starts blank. You re-explain your stack, your rules, your decisions — every single time. One 20-minute install ends that. Permanently.
           </p>
@@ -588,6 +587,7 @@ export default function Home() {
               Works on any Mac (12+) with OpenClaw · <a href="https://ollama.ai" target="_blank" rel="noopener noreferrer" style={{color:'#a1a1aa', textDecoration:'underline', textDecorationColor:'rgba(161,161,170,0.4)', textUnderlineOffset:'2px'}}>Ollama free install (~5 min, no GPU)</a> — 100% local, nothing leaves your machine
             </span>
           </div>
+          <p className="hero-proof" style={{marginTop:'20px', marginBottom:'0'}}>Built by <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a> — this is my actual daily-driver. 200+ sessions on my Mac mini without re-explaining my stack once.</p>
         </div>
       </div>
 
