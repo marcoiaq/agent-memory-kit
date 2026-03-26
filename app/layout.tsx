@@ -5,6 +5,9 @@ export const metadata: Metadata = {
   title: 'Agent Memory Kit — Persistent Memory for Your AI Agent',
   description: 'Your OpenClaw agent forgets everything between sessions. Fix it in 20 minutes — persistent, searchable memory that runs 100% locally. $10 one-time. No cloud, no API keys.',
   metadataBase: new URL('https://alfredbuild.xyz'),
+  alternates: {
+    canonical: 'https://alfredbuild.xyz',
+  },
   openGraph: {
     title: 'Agent Memory Kit — Persistent Memory for Your AI Agent',
     description: 'Your OpenClaw agent forgets everything between sessions. Agent Memory Kit fixes that — persistent, searchable memory that runs 100% locally. $10 one-time.',

@@ -19,6 +19,101 @@ const jsonLd = {
   },
 }
 
+const faqJsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'FAQPage',
+  mainEntity: [
+    {
+      '@type': 'Question',
+      name: 'What do I need to use Agent Memory Kit?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'A Mac running macOS 12 or later (M1, M2, M3, or Intel), OpenClaw installed, and Ollama running locally. Ollama is free and handles all the memory extraction — no GPU required, runs on CPU fine.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is OpenClaw and do I need it?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'OpenClaw is a Claude-powered AI agent framework for Mac. Agent Memory Kit is an add-on for it — it hooks directly into OpenClaw\'s session files and workspace structure. If you don\'t have OpenClaw yet, get it at openclaw.ai first.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What do I actually get?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'A ZIP with everything pre-configured: the memory extraction scripts, background services that auto-start on login, the semantic search setup, and identity template files (SOUL.md, AGENTS.md, MEMORY.md, TACIT.md) — plus a step-by-step setup guide with every command. You run the installer and it works.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is this a one-time payment or a subscription?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'One-time. Pay once, own it forever. $10 now, that\'s it. No monthly fees, no annual renewals, no account to manage. You download the ZIP, you run the setup, it\'s yours.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Does Agent Memory Kit require any cloud services or API keys?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'No. Memory extraction runs locally using Ollama. Search runs locally via SQLite. Nothing leaves your machine. No subscriptions, no recurring fees.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'How long does the setup take?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'About 15–20 minutes. You\'ll run the installer script, let your memory services auto-configure, and fill in a short config for your agent\'s identity. The setup guide walks through every step with exact commands — no guesswork.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do I need to know how to code?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'You need to be comfortable running commands in Terminal. The installer handles everything — you\'re not writing code, just running a few commands and filling in a config file. If you\'ve used npm or brew before, you can do this.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What if Agent Memory Kit doesn\'t work for me?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: '7-day money-back guarantee. If you followed the setup guide and it doesn\'t work on your machine, reply to your purchase receipt and you\'ll get a full refund. No runaround.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Is the installer safe? Can I inspect it before running?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes — everything in the package is plain text. The installer is a shell script you can open in any text editor and read line by line before running a single command. The package contains .sh scripts, .md markdown files, and JSON configs — nothing compiled, nothing binary, nothing opaque.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What AI agent does Agent Memory Kit work with?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Agent Memory Kit is built specifically for OpenClaw — the Claude-powered agent framework for Mac. It hooks directly into OpenClaw\'s session files and workspace structure. It won\'t work with ChatGPT, Claude.ai, or other agents out of the box.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do I get future updates?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'Yes. If the scripts improve or new features get added, you get them. All buyers receive the updated ZIP directly — you don\'t have to ask. One price, you own it forever.',
+      },
+    },
+  ],
+}
+
 export default function Home() {
   return (
     <>
@@ -432,6 +527,11 @@ export default function Home() {
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+      {/* FAQ structured data — enables Google FAQ rich results in search */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqJsonLd) }}
       />
 
       {/* NAV — sticky so the buy button is always visible */}
