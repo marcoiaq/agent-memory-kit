@@ -452,7 +452,7 @@ export default function Home() {
           <div className="hero-badge">
             Persistent memory for{' '}
             <a href="https://openclaw.ai" target="_blank" rel="noopener noreferrer">OpenClaw</a>
-            {' '}· 100% local · No cloud, no API keys · macOS 12+
+            {' '}(Claude AI agent, Mac) · 100% local · No cloud, no API keys
           </div>
           <h1>Your AI agent<br />forgets everything.</h1>
           <p style={{fontSize: 'clamp(17px, 2.8vw, 21px)', fontWeight: 700, color: '#fafafa', letterSpacing: '-0.02em', marginBottom: '14px', lineHeight: 1.3}}>
