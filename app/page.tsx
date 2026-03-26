@@ -458,10 +458,10 @@ export default function Home() {
           <p style={{fontSize: 'clamp(17px, 2.8vw, 21px)', fontWeight: 700, color: '#fafafa', letterSpacing: '-0.02em', marginBottom: '14px', lineHeight: 1.3}}>
             Fix it in 20 minutes. Never re-explain yourself again.
           </p>
+          <p className="hero-proof" style={{marginTop:'0', marginBottom:'14px'}}>Built by <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a> — this is my actual daily-driver. 200+ sessions on my Mac mini without re-explaining my stack once.</p>
           <p className="hero-desc" style={{marginTop:'0', marginBottom:'18px'}}>
             Every session, your OpenClaw agent starts blank. You re-explain your stack, your rules, your decisions — every single time. One 20-minute install ends that. Permanently.
           </p>
-          <p className="hero-proof" style={{marginTop:'0', marginBottom:'18px'}}>Built by <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a> — this is my actual daily-driver. 200+ sessions on my Mac mini without re-explaining my stack once.</p>
           <div className="hero-actions" style={{marginTop:'0'}}>
             <div style={{display:'flex', alignItems:'center', gap:'10px', marginBottom:'4px', flexWrap:'wrap'}}>
               <span style={{fontSize:'22px', color:'#52525b', textDecoration:'line-through', fontWeight:700, letterSpacing:'-0.02em'}}>$29</span>
