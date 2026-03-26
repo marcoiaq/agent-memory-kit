@@ -587,7 +587,7 @@ export default function Home() {
               Works on any Mac (12+) with OpenClaw · <a href="https://ollama.ai" target="_blank" rel="noopener noreferrer" style={{color:'#a1a1aa', textDecoration:'underline', textDecorationColor:'rgba(161,161,170,0.4)', textUnderlineOffset:'2px'}}>Ollama free install (~5 min, no GPU)</a> — 100% local, nothing leaves your machine
             </span>
           </div>
-          <p className="hero-proof" style={{marginTop:'20px', marginBottom:'0'}}>Built by <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a> — this is my actual daily-driver. 200+ sessions on my Mac mini without re-explaining my stack once.</p>
+          <p className="hero-proof" style={{marginTop:'20px', marginBottom:'0'}}>Built by <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a> — my actual daily driver. 200+ sessions on a Mac mini, zero context resets. I never typed &quot;my stack is...&quot; again.</p>
         </div>
       </div>
 
@@ -596,7 +596,7 @@ export default function Home() {
         <div className="wrap">
           <div className="proof-bar-inner">
             <div className="proof-stat">
-              🚫 No account required — pay once, download instantly
+              ✅ No account required — pay once, download instantly
             </div>
             <div className="proof-stat">
               🔄 Free updates forever — all future versions, no extra charge
