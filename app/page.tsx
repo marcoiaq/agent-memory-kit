@@ -524,7 +524,7 @@ export default function Home() {
               'You re-explain your stack or rules every new session',
               'You\'re building something and your agent keeps forgetting where you left off',
               'You\'ve lost a decision or context when a session ended',
-              "You won't pay $20/month for a cloud memory service that ships your data off your machine",
+              "You're not sending your agent's memory to someone else's cloud — you want it local, private, and yours",
             ].map((item) => (
               <div key={item} style={{display:'flex', alignItems:'flex-start', gap:'10px', padding:'14px 16px', background:'#111114', border:'1px solid #1c1c1f', borderRadius:'10px'}}>
                 <span style={{color:'#6366f1', fontWeight:700, fontSize:'14px', flexShrink:0, marginTop:'1px'}}>→</span>
