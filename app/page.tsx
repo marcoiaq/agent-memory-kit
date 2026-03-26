@@ -496,7 +496,7 @@ export default function Home() {
         <div className="wrap">
           <div className="proof-bar-inner">
             <div className="proof-stat">
-              ✅ 7-day guarantee — doesn&apos;t work? Full refund, no questions.
+              🚫 No account required — pay once, download instantly
             </div>
             <div className="proof-stat">
               🔄 Free updates forever — all future versions, no extra charge
