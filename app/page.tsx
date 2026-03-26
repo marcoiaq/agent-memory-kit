@@ -459,9 +459,6 @@ export default function Home() {
             Fix it in 20 minutes. Never re-explain yourself again.
           </p>
           <p className="hero-proof" style={{marginTop:'0', marginBottom:'18px'}}>Built by <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a> — this is my actual daily-driver. 200+ sessions on my Mac mini without re-explaining my stack once.</p>
-          <p className="hero-desc">
-            Every session, your OpenClaw agent starts blank. You re-explain your stack, your rules, your decisions — every single time. One 20-minute install ends that. Permanently.
-          </p>
           <div className="hero-actions" style={{marginTop:'0'}}>
             <div style={{display:'flex', alignItems:'center', gap:'10px', marginBottom:'4px', flexWrap:'wrap'}}>
               <span style={{fontSize:'22px', color:'#52525b', textDecoration:'line-through', fontWeight:700, letterSpacing:'-0.02em'}}>$29</span>
@@ -470,7 +467,7 @@ export default function Home() {
               <span style={{fontSize:'11px', fontWeight:700, color:'#22c55e', background:'rgba(34,197,94,0.08)', border:'1px solid rgba(34,197,94,0.2)', padding:'3px 8px', borderRadius:'4px', letterSpacing:'0.04em', textTransform:'uppercase'}}>One-time</span>
             </div>
             <span style={{fontSize:'12px', color:'#f59e0b', fontWeight:600, display:'flex', alignItems:'center', gap:'5px', marginTop:'2px'}}>
-              ⏳ Founding price — $10 now, goes to $29 at full launch. Buy once, own it forever.
+              ⏳ Beta price — $10 during beta, $29 when out of beta. Buy once, own it forever.
             </span>
             <a href="/api/create-checkout" className="cta-main cta-pulse">
               Fix My Agent&apos;s Memory — $10 →
@@ -488,6 +485,9 @@ export default function Home() {
               Works on any Mac (12+) with OpenClaw · <a href="https://ollama.ai" target="_blank" rel="noopener noreferrer" style={{color:'#a1a1aa', textDecoration:'underline', textDecorationColor:'rgba(161,161,170,0.4)', textUnderlineOffset:'2px'}}>Ollama free install (~5 min, no GPU)</a> — 100% local, nothing leaves your machine
             </span>
           </div>
+          <p className="hero-desc" style={{marginTop:'20px'}}>
+            Every session, your OpenClaw agent starts blank. You re-explain your stack, your rules, your decisions — every single time. One 20-minute install ends that. Permanently.
+          </p>
         </div>
       </div>
 
@@ -825,7 +825,7 @@ export default function Home() {
               <span className="price-num">$10</span>
               <span className="price-word">one-time</span>
             </div>
-            <span className="price-launch">↑ Founding price — $10 now, goes to $29 at launch. Yours forever.</span>
+            <span className="price-launch">↑ Beta price — $10 now, goes to $29 post-beta. Yours forever.</span>
             <a href="/api/create-checkout" className="cta-btn">Fix My Agent&apos;s Memory — $10 →</a>
             <p className="cta-meta" style={{marginTop:'14px', marginBottom:'8px', color:'#a1a1aa'}}>Secure checkout via Stripe · Instant download · 7-day money-back guarantee</p>
             <p style={{fontSize:'12px', color:'#71717a', marginTop:'8px', display:'flex', alignItems:'center', justifyContent:'center', gap:'8px', flexWrap:'wrap'}}>
