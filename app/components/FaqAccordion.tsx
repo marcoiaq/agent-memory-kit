@@ -39,6 +39,18 @@ const faqs = [
     a: 'A ZIP with everything pre-configured: the memory extraction scripts, background services that auto-start on login, the semantic search setup, and identity template files (SOUL.md, AGENTS.md, MEMORY.md, TACIT.md) — plus a step-by-step setup guide with every command. You run the installer and it works.',
   },
   {
+    q: 'Who built this?',
+    a: (
+      <>
+        I&apos;m{' '}
+        <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer" style={{ color: '#818cf8', textDecoration: 'underline', textDecorationColor: 'rgba(129,140,248,0.4)', textUnderlineOffset: '2px' }}>
+          @alfredmarktr
+        </a>{' '}
+        — I run OpenClaw daily on a Mac mini and got tired of re-explaining the same context every single session. I built this for myself, it&apos;s the exact setup running in production, and I packaged it up so you don&apos;t have to figure it out from scratch. Questions? Reach out on X — I actually reply.
+      </>
+    ),
+  },
+  {
     q: "Does it slow down my Mac?",
     a: "No. The memory extraction runs at the end of a session and takes a few seconds — then it stops. There's no background process constantly running or watching your screen. The search index is SQLite on your local disk, so queries resolve in under a second with no CPU overhead. On an M1 Mac mini with 8GB RAM, you'll never notice it.",
   },
@@ -112,18 +124,6 @@ const faqs = [
           @alfredmarktr
         </a>
         ) or reply to your purchase receipt. I typically reply same-day. I&apos;ve set this up from scratch multiple times and know exactly where it can trip people up — I&apos;ll get you unstuck.
-      </>
-    ),
-  },
-  {
-    q: 'Who built this?',
-    a: (
-      <>
-        I&apos;m{' '}
-        <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer" style={{ color: '#818cf8', textDecoration: 'underline', textDecorationColor: 'rgba(129,140,248,0.4)', textUnderlineOffset: '2px' }}>
-          @alfredmarktr
-        </a>{' '}
-        — I run OpenClaw daily on a Mac mini and got tired of re-explaining the same context every single session. I built this for myself, it&apos;s the exact setup running in production, and I packaged it up so you don&apos;t have to figure it out from scratch. Questions? Reach out on X — I actually reply.
       </>
     ),
   },
