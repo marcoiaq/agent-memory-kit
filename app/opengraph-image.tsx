@@ -1,7 +1,7 @@
 import { ImageResponse } from 'next/og'
 
 export const runtime = 'edge'
-export const alt = 'Agent Memory Kit — Persistent Memory for Your AI Agent'
+export const alt = 'Agent Memory Kit — Your AI Agent Forgets Everything. Fix It in 20 Minutes.'
 export const size = { width: 1200, height: 630 }
 export const contentType = 'image/png'
 

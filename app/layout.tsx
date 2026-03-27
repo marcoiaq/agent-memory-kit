@@ -2,23 +2,23 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  title: 'Agent Memory Kit — Persistent Memory for Your AI Agent',
-  description: 'Your OpenClaw agent forgets everything between sessions. Fix it in 20 minutes — persistent, searchable memory that runs 100% locally. $10 one-time. No cloud, no API keys.',
+  title: 'Agent Memory Kit — Your AI Agent Forgets Everything. Fix It in 20 Minutes.',
+  description: 'Stop re-explaining yourself every session. Give your OpenClaw agent persistent, searchable memory in 20 minutes. Runs 100% locally on your Mac — no cloud, no API keys. $10 one-time.',
   metadataBase: new URL('https://alfredbuild.xyz'),
   alternates: {
     canonical: 'https://alfredbuild.xyz',
   },
   openGraph: {
-    title: 'Agent Memory Kit — Persistent Memory for Your AI Agent',
-    description: 'Your OpenClaw agent forgets everything between sessions. Agent Memory Kit fixes that — persistent, searchable memory that runs 100% locally. $10 one-time.',
+    title: 'Your AI Agent Forgets Everything. Fix It in 20 Minutes.',
+    description: 'Every session your agent starts blank. One 20-minute install gives it persistent, searchable memory — 100% local on your Mac. $10 one-time. No cloud, no subscriptions.',
     url: 'https://alfredbuild.xyz',
     siteName: 'Alfred Build',
     type: 'website',
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Agent Memory Kit — Persistent Memory for Your AI Agent',
-    description: 'Your OpenClaw agent forgets everything between sessions. Agent Memory Kit fixes that — persistent, searchable memory that runs 100% locally. $10 one-time.',
+    title: 'Your AI Agent Forgets Everything. Fix It in 20 Minutes.',
+    description: 'Every session your agent starts blank. One install gives it persistent memory — 100% local, no cloud. $10 one-time. Never re-explain yourself again.',
     creator: '@alfredmarktr',
     site: '@alfredmarktr',
   },
