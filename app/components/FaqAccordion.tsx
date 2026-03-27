@@ -4,6 +4,40 @@ import { useState } from 'react'
 
 const faqs = [
   {
+    q: 'What do I actually get?',
+    a: 'A ZIP with everything pre-configured: the memory extraction scripts, background services that auto-start on login, the semantic search setup, and identity template files (SOUL.md, AGENTS.md, MEMORY.md, TACIT.md) — plus a step-by-step setup guide with every command. You run the installer and it works.',
+  },
+  {
+    q: 'Is this a one-time payment or a subscription?',
+    a: "One-time. Pay once, own it forever. $10 now, that's it. No monthly fees, no annual renewals, no account to manage. You download the ZIP, you run the setup, it's yours.",
+  },
+  {
+    q: "What if it doesn't work for me?",
+    a: "7-day money-back guarantee. If you followed the setup guide and it doesn't work on your machine, reply to your purchase receipt and you'll get a full refund. No runaround.",
+  },
+  {
+    q: 'How long does setup take?',
+    a: "About 15–20 minutes. You'll run the installer script, let your memory services auto-configure, and fill in a short config for your agent's identity. The setup guide walks through every step with exact commands — no guesswork.",
+  },
+  {
+    q: 'Do I need to know how to code?',
+    a: "You need to be comfortable running commands in Terminal. The installer handles everything — you're not writing code, just running a few commands and filling in a config file. If you've used npm or brew before, you can do this.",
+  },
+  {
+    q: 'Is the installer safe? Can I inspect it before running?',
+    a: (
+      <>
+        Yes — everything in the package is plain text. The installer is a shell script you can open in any text editor and read line by line before running a single command. The package contains{' '}
+        <strong style={{ color: '#fafafa' }}>.sh scripts, .md markdown files, and JSON configs</strong>
+        {' '}— nothing compiled, nothing binary, nothing opaque. The setup creates files inside your OpenClaw workspace and sets up standard macOS background services (launchd, same as Homebrew uses). Nothing touches your system outside of those two locations.
+      </>
+    ),
+  },
+  {
+    q: "Does it slow down my Mac?",
+    a: "No. The memory extraction runs at the end of a session and takes a few seconds — then it stops. There's no background process constantly running or watching your screen. The search index is SQLite on your local disk, so queries resolve in under a second with no CPU overhead. On an M1 Mac mini with 8GB RAM, you'll never notice it.",
+  },
+  {
     q: 'What do I need to use this?',
     a: (
       <>
@@ -35,10 +69,6 @@ const faqs = [
     ),
   },
   {
-    q: 'What do I actually get?',
-    a: 'A ZIP with everything pre-configured: the memory extraction scripts, background services that auto-start on login, the semantic search setup, and identity template files (SOUL.md, AGENTS.md, MEMORY.md, TACIT.md) — plus a step-by-step setup guide with every command. You run the installer and it works.',
-  },
-  {
     q: 'Who built this?',
     a: (
       <>
@@ -49,22 +79,6 @@ const faqs = [
         — I run OpenClaw daily on a Mac mini and got tired of re-explaining the same context every single session. I built this for myself, it&apos;s the exact setup running in production, and I packaged it up so you don&apos;t have to figure it out from scratch. Questions? Reach out on X — I actually reply.
       </>
     ),
-  },
-  {
-    q: "Does it slow down my Mac?",
-    a: "No. The memory extraction runs at the end of a session and takes a few seconds — then it stops. There's no background process constantly running or watching your screen. The search index is SQLite on your local disk, so queries resolve in under a second with no CPU overhead. On an M1 Mac mini with 8GB RAM, you'll never notice it.",
-  },
-  {
-    q: 'How long does setup take?',
-    a: "About 15–20 minutes. You'll run the installer script, let your memory services auto-configure, and fill in a short config for your agent's identity. The setup guide walks through every step with exact commands — no guesswork.",
-  },
-  {
-    q: 'Do I need to know how to code?',
-    a: "You need to be comfortable running commands in Terminal. The installer handles everything — you're not writing code, just running a few commands and filling in a config file. If you've used npm or brew before, you can do this.",
-  },
-  {
-    q: 'Is this a one-time payment or a subscription?',
-    a: "One-time. Pay once, own it forever. $10 now, that's it. No monthly fees, no annual renewals, no account to manage. You download the ZIP, you run the setup, it's yours.",
   },
   {
     q: 'Does it require any cloud services or API keys?',
@@ -79,18 +93,20 @@ const faqs = [
     ),
   },
   {
-    q: 'Is the installer safe? Can I inspect it before running?',
-    a: (
-      <>
-        Yes — everything in the package is plain text. The installer is a shell script you can open in any text editor and read line by line before running a single command. The package contains{' '}
-        <strong style={{ color: '#fafafa' }}>.sh scripts, .md markdown files, and JSON configs</strong>
-        {' '}— nothing compiled, nothing binary, nothing opaque. The setup creates files inside your OpenClaw workspace and sets up standard macOS background services (launchd, same as Homebrew uses). Nothing touches your system outside of those two locations.
-      </>
-    ),
+    q: 'Do I get updates?',
+    a: "Yes. If the scripts improve or new features get added, you get them. I'll email all buyers directly with the updated ZIP — you don't have to ask. One price, you own it forever.",
   },
   {
-    q: "What if it doesn't work for me?",
-    a: "7-day money-back guarantee. If you followed the setup guide and it doesn't work on your machine, reply to your purchase receipt and you'll get a full refund. No runaround.",
+    q: 'What if I get stuck during setup?',
+    a: (
+      <>
+        DM me on X (
+        <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer" style={{ color: '#818cf8', textDecoration: 'underline', textDecorationColor: 'rgba(129,140,248,0.4)', textUnderlineOffset: '2px' }}>
+          @alfredmarktr
+        </a>
+        ) or reply to your purchase receipt. I typically reply same-day. I&apos;ve set this up from scratch multiple times and know exactly where it can trip people up — I&apos;ll get you unstuck.
+      </>
+    ),
   },
   {
     q: 'What AI agent does this work with?',
@@ -111,26 +127,10 @@ const faqs = [
       </>
     ),
   },
-  {
-    q: 'Do I get updates?',
-    a: "Yes. If the scripts improve or new features get added, you get them. I'll email all buyers directly with the updated ZIP — you don't have to ask. One price, you own it forever.",
-  },
-  {
-    q: 'What if I get stuck during setup?',
-    a: (
-      <>
-        DM me on X (
-        <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer" style={{ color: '#818cf8', textDecoration: 'underline', textDecorationColor: 'rgba(129,140,248,0.4)', textUnderlineOffset: '2px' }}>
-          @alfredmarktr
-        </a>
-        ) or reply to your purchase receipt. I typically reply same-day. I&apos;ve set this up from scratch multiple times and know exactly where it can trip people up — I&apos;ll get you unstuck.
-      </>
-    ),
-  },
 ]
 
 export default function FaqAccordion() {
-  const [openIndex, setOpenIndex] = useState<number | null>(2)
+  const [openIndex, setOpenIndex] = useState<number | null>(0)
 
   return (
     <>

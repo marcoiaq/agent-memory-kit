@@ -907,7 +907,7 @@ export default function Home() {
       <div className="faq" id="faq">
         <div className="wrap">
           <div style={{fontSize:'11px', fontWeight:700, letterSpacing:'0.1em', textTransform:'uppercase', color:'#71717a', marginBottom:'10px'}}>FAQ</div>
-          <h2>Common questions, answered.</h2>
+          <h2>On the fence? Read these first.</h2>
           <FaqAccordion />
         </div>
       </div>
