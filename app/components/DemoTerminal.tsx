@@ -24,7 +24,6 @@ export default function DemoTerminal() {
   const ref = useRef<HTMLDivElement>(null)
   const [visibleCount, setVisibleCount] = useState(0)
   const [played, setPlayed] = useState(false)
-  const [showCursor, setShowCursor] = useState(true)
 
   useEffect(() => {
     const el = ref.current
@@ -44,25 +43,25 @@ export default function DemoTerminal() {
 
   useEffect(() => {
     if (!played) return
-    let i = 0
     let cumDelay = 0
-
     const timers: ReturnType<typeof setTimeout>[] = []
 
     LINES.forEach((line, idx) => {
       cumDelay += line.delay
       const t = setTimeout(() => {
         setVisibleCount(idx + 1)
-        if (idx === LINES.length - 1) {
-          // keep cursor blinking after done
-        }
       }, cumDelay)
       timers.push(t)
-      i++
     })
 
     return () => timers.forEach(clearTimeout)
   }, [played])
+
+  const handleReplay = () => {
+    setVisibleCount(0)
+    setPlayed(false)
+    setTimeout(() => setPlayed(true), 50)
+  }
 
   const renderedLines: React.ReactNode[] = []
 
@@ -86,53 +85,54 @@ export default function DemoTerminal() {
     }
   })
 
-  // Show blinking cursor while playing or at end
   const isDone = visibleCount >= LINES.length
 
   return (
-    <div ref={ref} className="demo-terminal">
-      <div className="demo-terminal-bar">
-        <span className="dot dot-r" />
-        <span className="dot dot-y" />
-        <span className="dot dot-g" />
-      </div>
-      <div className="demo-code">
-        {played ? (
-          <>
-            {renderedLines}
-            {!isDone && (
+    <>
+      <div ref={ref} className="demo-terminal">
+        <div className="demo-terminal-bar">
+          <span className="dot dot-r" />
+          <span className="dot dot-y" />
+          <span className="dot dot-g" />
+        </div>
+        <div className="demo-code">
+          {played ? (
+            <>
+              {renderedLines}
               <span className="demo-cursor" />
-            )}
-            {isDone && (
+            </>
+          ) : (
+            // SSR / pre-play: render full content statically (no flash)
+            <>
+              <span className="dim" style={{ display: 'block' }}># Agent runs this automatically — you never type this yourself</span>
+              <span style={{ display: 'block' }}>&nbsp;</span>
+              <span style={{ display: 'block' }}>
+                <span className="cmd">$ qmd query</span>
+                <span className="out"> &quot;what stack are we using for the checkout&quot;</span>
+              </span>
+              <span style={{ display: 'block' }}>&nbsp;</span>
+              <span style={{ display: 'block' }}>
+                <span className="highlight">→</span>
+                <span className="out"> memory/2026-03-10.md  — &quot;Using Stripe + Next.js. No PayPal — integration was a mess.&quot;</span>
+              </span>
+              <span style={{ display: 'block' }}>
+                <span className="highlight">→</span>
+                <span className="out"> memory/TACIT.md       — &quot;Always use pnpm, never npm. Deploy to Vercel.&quot;</span>
+              </span>
+              <span style={{ display: 'block' }}>
+                <span className="highlight">→</span>
+                <span className="out"> memory/DECISIONS.md   — &quot;Went with App Router, not Pages. Decided 2026-02-28.&quot;</span>
+              </span>
+              <span style={{ display: 'block' }}>&nbsp;</span>
+              <span className="dim" style={{ display: 'block' }}># Done. Agent already knows — asks nothing, re-explains nothing.</span>
               <span className="demo-cursor" />
-            )}
-          </>
-        ) : (
-          // SSR / pre-play: render full content statically (no flash)
-          <>
-            <span className="dim" style={{ display: 'block' }}># Agent runs this automatically — you never type this yourself</span>
-            <span style={{ display: 'block' }}>&nbsp;</span>
-            <span style={{ display: 'block' }}>
-              <span className="cmd">$ qmd query</span>
-              <span className="out"> &quot;what stack are we using for the checkout&quot;</span>
-            </span>
-            <span style={{ display: 'block' }}>&nbsp;</span>
-            <span style={{ display: 'block' }}>
-              <span className="highlight">→</span>
-              <span className="out"> memory/2026-03-10.md  — &quot;Using Stripe + Next.js. No PayPal — integration was a mess.&quot;</span>
-            </span>
-            <span style={{ display: 'block' }}>
-              <span className="highlight">→</span>
-              <span className="out"> memory/TACIT.md       — &quot;Always use pnpm, never npm. Deploy to Vercel.&quot;</span>
-            </span>
-            <span style={{ display: 'block' }}>
-              <span className="highlight">→</span>
-              <span className="out"> memory/DECISIONS.md   — &quot;Went with App Router, not Pages. Decided 2026-02-28.&quot;</span>
-            </span>
-            <span style={{ display: 'block' }}>&nbsp;</span>
-            <span className="dim" style={{ display: 'block' }}># Done. Agent already knows — asks nothing, re-explains nothing.</span>
-            <span className="demo-cursor" />
-          </>
+            </>
+          )}
+        </div>
+        {isDone && played && (
+          <div style={{ textAlign: 'right', padding: '8px 16px 10px', borderTop: '1px solid #1c1c1f' }}>
+            <button onClick={handleReplay} className="demo-replay-btn">↺ replay</button>
+          </div>
         )}
       </div>
       <style>{`
@@ -151,7 +151,21 @@ export default function DemoTerminal() {
           0%, 100% { opacity: 0.85; }
           50% { opacity: 0; }
         }
+        .demo-replay-btn {
+          background: none;
+          border: none;
+          cursor: pointer;
+          color: #52525b;
+          font-size: 12px;
+          font-family: 'SF Mono', 'Fira Code', 'Menlo', monospace;
+          letter-spacing: 0.02em;
+          transition: color 0.15s;
+          padding: 0;
+        }
+        .demo-replay-btn:hover {
+          color: #818cf8;
+        }
       `}</style>
-    </div>
+    </>
   )
 }
