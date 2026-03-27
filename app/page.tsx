@@ -569,8 +569,9 @@ export default function Home() {
               <span style={{fontSize:'11px', fontWeight:700, color:'#22c55e', background:'rgba(34,197,94,0.08)', border:'1px solid rgba(34,197,94,0.2)', padding:'3px 8px', borderRadius:'4px', letterSpacing:'0.04em', textTransform:'uppercase'}}>One-time</span>
             </div>
             <span style={{fontSize:'12px', color:'#f59e0b', fontWeight:600, display:'flex', alignItems:'center', gap:'5px', marginTop:'2px'}}>
-              ⏳ Beta price — $10 now. Goes to $29 when out of beta.
+              ⏳ Beta price — locked at $10 now. Goes to $29 post-beta.
             </span>
+            <p className="hero-proof" style={{marginTop:'8px', marginBottom:'4px'}}>Built by <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a> — my actual daily driver. 200+ sessions on a Mac mini, zero context resets. I never typed &quot;my stack is...&quot; again.</p>
             <a href="/api/create-checkout" className="cta-main cta-pulse">
               Fix My Agent&apos;s Memory — $10 →
             </a>
@@ -587,7 +588,7 @@ export default function Home() {
               Works on any Mac (12+) with OpenClaw · <a href="https://ollama.ai" target="_blank" rel="noopener noreferrer" style={{color:'#a1a1aa', textDecoration:'underline', textDecorationColor:'rgba(161,161,170,0.4)', textUnderlineOffset:'2px'}}>Ollama free install (~5 min, no GPU)</a>
             </span>
           </div>
-          <p className="hero-proof" style={{marginTop:'20px', marginBottom:'0'}}>Built by <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a> — my actual daily driver. 200+ sessions on a Mac mini, zero context resets. I never typed &quot;my stack is...&quot; again.</p>
+
         </div>
       </div>
 
@@ -596,7 +597,7 @@ export default function Home() {
         <div className="wrap">
           <div className="proof-bar-inner">
             <div className="proof-stat">
-              ✅ No account required — pay once, download instantly
+              🧠 My actual daily driver — 200+ sessions, zero context resets
             </div>
             <div className="proof-stat">
               🔄 Free updates forever — all future versions, no extra charge
@@ -925,7 +926,7 @@ export default function Home() {
               <span className="price-num">$10</span>
               <span className="price-word">one-time</span>
             </div>
-            <span className="price-launch">↑ Beta price — $10 now, goes to $29 post-beta. Yours forever.</span>
+            <span className="price-launch">↑ Beta price — locked at $10 now. Goes to $29 post-beta. Product yours forever.</span>
             <a href="/api/create-checkout" className="cta-btn">Fix My Agent&apos;s Memory — $10 →</a>
             <p className="cta-meta" style={{marginTop:'14px', marginBottom:'8px', color:'#a1a1aa'}}>Secure checkout via Stripe · Instant download · 7-day money-back guarantee</p>
             <p style={{fontSize:'12px', color:'#71717a', marginTop:'8px', display:'flex', alignItems:'center', justifyContent:'center', gap:'8px', flexWrap:'wrap'}}>
