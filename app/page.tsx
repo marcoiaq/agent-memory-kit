@@ -728,6 +728,37 @@ export default function Home() {
               ))}
             </div>
           </div>
+
+          {/* CONVERSATION PREVIEW — makes the before/after visceral */}
+          <div style={{marginTop:'20px', display:'grid', gridTemplateColumns:'1fr 1fr', gap:'16px'}} className="ba-convo-cols">
+            <div style={{background:'#0d0d10', border:'1px solid #27272a', borderRadius:'12px', padding:'18px 20px'}}>
+              <div style={{fontSize:'11px', fontWeight:700, textTransform:'uppercase', letterSpacing:'0.08em', color:'#ef4444', marginBottom:'14px'}}>What your agent says now</div>
+              <div style={{fontSize:'13px', marginBottom:'10px', lineHeight:1.55}}>
+                <span style={{color:'#52525b', fontWeight:600}}>You: </span>
+                <span style={{color:'#a1a1aa'}}>Let&apos;s keep building the checkout.</span>
+              </div>
+              <div style={{fontSize:'13px', lineHeight:1.55}}>
+                <span style={{color:'#52525b', fontWeight:600}}>Agent: </span>
+                <span style={{color:'#ef4444'}}>Sure! What framework are you using? What have you built so far? Where did we leave off last time?</span>
+              </div>
+            </div>
+            <div style={{background:'rgba(34,197,94,0.04)', border:'1px solid rgba(34,197,94,0.18)', borderRadius:'12px', padding:'18px 20px'}}>
+              <div style={{fontSize:'11px', fontWeight:700, textTransform:'uppercase', letterSpacing:'0.08em', color:'#22c55e', marginBottom:'14px'}}>What your agent says after</div>
+              <div style={{fontSize:'13px', marginBottom:'10px', lineHeight:1.55}}>
+                <span style={{color:'#52525b', fontWeight:600}}>You: </span>
+                <span style={{color:'#a1a1aa'}}>Let&apos;s keep building the checkout.</span>
+              </div>
+              <div style={{fontSize:'13px', lineHeight:1.55}}>
+                <span style={{color:'#52525b', fontWeight:600}}>Agent: </span>
+                <span style={{color:'#22c55e'}}>On it. Next.js + Stripe, App Router. Last session you finished the product page — picking up at the checkout API route.</span>
+              </div>
+            </div>
+          </div>
+          <style>{`
+            @media (max-width: 520px) {
+              .ba-convo-cols { grid-template-columns: 1fr !important; }
+            }
+          `}</style>
         </div>
       </div>
 
