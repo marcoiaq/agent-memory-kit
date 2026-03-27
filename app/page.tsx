@@ -328,6 +328,14 @@ export default function Home() {
           display: flex; flex-direction: column; align-items: center;
           flex-shrink: 0; gap: 6px;
         }
+        .step:not(:last-child) .step-num-wrap::after {
+          content: '';
+          display: block;
+          width: 1px;
+          min-height: 44px;
+          background: linear-gradient(to bottom, rgba(99,102,241,0.35), transparent);
+          margin-top: 2px;
+        }
         .step-num {
           width: 36px; height: 36px; border-radius: 50%;
           background: rgba(99,102,241,0.12); border: 1px solid rgba(99,102,241,0.25);
@@ -634,7 +642,7 @@ export default function Home() {
             ))}
           </div>
           <p style={{fontSize:'13px', color:'#a1a1aa', marginTop:'20px', lineHeight:1.6}}>
-            Two of those are enough. $10, 20 minutes — your agent never starts from scratch again.
+            Even one is enough. $10, 20 minutes — your agent never starts from scratch again.
           </p>
           <div style={{marginTop:'12px', display:'flex', alignItems:'center', gap:'8px', flexWrap:'wrap', padding:'10px 14px', background:'rgba(99,102,241,0.05)', border:'1px solid rgba(99,102,241,0.15)', borderRadius:'8px'}}>
             <span style={{fontSize:'12px', color:'#71717a', fontWeight:700}}>Requires:</span>
