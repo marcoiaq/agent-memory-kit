@@ -169,11 +169,7 @@ export default function Home() {
           line-height: 1.04; color: #fafafa;
           margin-bottom: 20px;
         }
-        .hero-desc {
-          font-size: clamp(15px, 2.5vw, 17px);
-          color: #a1a1aa; line-height: 1.7;
-          max-width: 500px; margin-bottom: 28px;
-        }
+
         .hero-actions { display: flex; flex-direction: column; align-items: flex-start; gap: 12px; }
         @keyframes cta-pulse {
           0%, 100% { box-shadow: 0 4px 20px rgba(99,102,241,0.3); }
@@ -511,7 +507,7 @@ export default function Home() {
         /* MOBILE */
         @media (max-width: 520px) {
           .hero { padding: 48px 0 40px; }
-          .hero-desc { margin-bottom: 20px; }
+
           .cards { grid-template-columns: 1fr; }
           .cta-inner { padding: 36px 20px; }
           .price-num { font-size: 52px; }
@@ -625,7 +621,7 @@ export default function Home() {
         <div className="wrap">
           <div className="proof-bar-inner">
             <div className="proof-stat">
-              🧠 Creator&apos;s daily driver — 200+ sessions logged, zero cold starts
+              🧠 Creator&apos;s daily driver — 200+ sessions. Never once re-explained my stack.
             </div>
             {/* Live buyer count — renders only if count ≥ 5, falls back silently */}
             <BuyerCount />
