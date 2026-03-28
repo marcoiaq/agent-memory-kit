@@ -203,19 +203,18 @@ export default function Home() {
         .hero-note-item::before { content: '✓'; color: #22c55e; font-weight: 700; font-size: 12px; }
         .hero-proof {
           font-size: 13px; color: #a1a1aa; margin-top: 20px; margin-bottom: 0;
-          display: inline-flex; align-items: center; gap: 8px;
-          background: rgba(34,197,94,0.06); border: 1px solid rgba(34,197,94,0.18);
-          padding: 7px 14px; border-radius: 8px;
-          line-height: 1.4;
+          display: inline-flex; align-items: flex-start; gap: 10px;
+          background: rgba(99,102,241,0.06); border: 1px solid rgba(99,102,241,0.18);
+          padding: 10px 14px; border-radius: 8px;
+          line-height: 1.5;
         }
-        .hero-proof::before {
-          content: ''; display: inline-block;
-          width: 6px; height: 6px; border-radius: 50%;
-          background: #22c55e; flex-shrink: 0;
-          box-shadow: 0 0 5px rgba(34,197,94,0.5);
+        .hero-proof-label {
+          font-size: 11px; font-weight: 700; letter-spacing: 0.06em;
+          text-transform: uppercase; color: #818cf8;
+          white-space: nowrap; flex-shrink: 0; padding-top: 1px;
         }
-        .hero-proof a { color: #86efac; text-decoration: underline; text-decoration-color: rgba(134,239,172,0.35); text-underline-offset: 2px; }
-        .hero-proof a:hover { color: #bbf7d0; }
+        .hero-proof a { color: #a5b4fc; text-decoration: underline; text-decoration-color: rgba(165,180,252,0.35); text-underline-offset: 2px; }
+        .hero-proof a:hover { color: #c7d2fe; }
 
         /* SOCIAL PROOF BAR */
         .proof-bar {
@@ -588,7 +587,10 @@ export default function Home() {
             Fix it in 20 minutes. Never re-explain yourself again.
           </p>
           <div className="hero-actions" style={{marginTop:'16px'}}>
-            <p className="hero-proof" style={{marginTop:'0', marginBottom:'12px'}}>Built by <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a> — my actual daily driver on a Mac mini. I never typed &quot;my stack is...&quot; again.</p>
+            <p className="hero-proof" style={{marginTop:'0', marginBottom:'12px'}}>
+              <span className="hero-proof-label">Creator:</span>
+              <span>Built by <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a> — runs on my daily Mac mini. I haven&apos;t typed &quot;my stack is...&quot; in months.</span>
+            </p>
             <div style={{display:'flex', alignItems:'center', gap:'10px', marginBottom:'4px', flexWrap:'wrap'}}>
               <span style={{fontSize:'22px', color:'#52525b', textDecoration:'line-through', fontWeight:700, letterSpacing:'-0.02em'}}>$29</span>
               <span style={{fontSize:'22px', fontWeight:900, color:'#fafafa', letterSpacing:'-0.03em'}}>$10</span>
@@ -623,7 +625,7 @@ export default function Home() {
         <div className="wrap">
           <div className="proof-bar-inner">
             <div className="proof-stat">
-              🧠 200+ sessions run — zero cold starts, zero re-explaining
+              🧠 Creator&apos;s daily driver — 200+ sessions logged, zero cold starts
             </div>
             {/* Live buyer count — renders only if count ≥ 5, falls back silently */}
             <BuyerCount />
