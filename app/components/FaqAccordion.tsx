@@ -16,12 +16,8 @@ const faqs = [
     a: "7-day money-back guarantee. If you followed the setup guide and it doesn't work on your machine, reply to your purchase receipt and you'll get a full refund. No runaround.",
   },
   {
-    q: 'How long does setup take?',
-    a: "About 15–20 minutes. You'll run the installer script, let your memory services auto-configure, and fill in a short config for your agent's identity. The setup guide walks through every step with exact commands — no guesswork.",
-  },
-  {
-    q: 'Do I need to know how to code?',
-    a: "You need to be comfortable running commands in Terminal. The installer handles everything — you're not writing code, just running a few commands and filling in a config file. If you've used npm or brew before, you can do this.",
+    q: "Does it slow down my Mac?",
+    a: "No. The memory extraction runs at the end of a session and takes a few seconds — then it stops. There's no background process constantly running or watching your screen. The search index is SQLite on your local disk, so queries resolve in under a second with no CPU overhead. On an M1 Mac mini with 8GB RAM, you'll never notice it.",
   },
   {
     q: 'Is the installer safe? Can I inspect it before running?',
@@ -34,8 +30,24 @@ const faqs = [
     ),
   },
   {
-    q: "Does it slow down my Mac?",
-    a: "No. The memory extraction runs at the end of a session and takes a few seconds — then it stops. There's no background process constantly running or watching your screen. The search index is SQLite on your local disk, so queries resolve in under a second with no CPU overhead. On an M1 Mac mini with 8GB RAM, you'll never notice it.",
+    q: 'Does it require any cloud services or API keys?',
+    a: (
+      <>
+        No. Memory extraction runs locally using{' '}
+        <a href="https://ollama.ai" target="_blank" rel="noopener noreferrer" style={{ color: '#818cf8', textDecoration: 'underline', textDecorationColor: 'rgba(129,140,248,0.4)', textUnderlineOffset: '2px' }}>
+          Ollama
+        </a>
+        . Search runs locally via SQLite. Nothing leaves your machine. No subscriptions, no recurring fees.
+      </>
+    ),
+  },
+  {
+    q: 'How long does setup take?',
+    a: "About 15–20 minutes. You'll run the installer script, let your memory services auto-configure, and fill in a short config for your agent's identity. The setup guide walks through every step with exact commands — no guesswork.",
+  },
+  {
+    q: 'Do I need to know how to code?',
+    a: "You need to be comfortable running commands in Terminal. The installer handles everything — you're not writing code, just running a few commands and filling in a config file. If you've used npm or brew before, you can do this.",
   },
   {
     q: 'What do I need to use this?',
@@ -77,18 +89,6 @@ const faqs = [
           @alfredmarktr
         </a>{' '}
         — I run OpenClaw daily on a Mac mini and got tired of re-explaining the same context every single session. I built this for myself, it&apos;s the exact setup running in production, and I packaged it up so you don&apos;t have to figure it out from scratch. Questions? Reach out on X — I actually reply.
-      </>
-    ),
-  },
-  {
-    q: 'Does it require any cloud services or API keys?',
-    a: (
-      <>
-        No. Memory extraction runs locally using{' '}
-        <a href="https://ollama.ai" target="_blank" rel="noopener noreferrer" style={{ color: '#818cf8', textDecoration: 'underline', textDecorationColor: 'rgba(129,140,248,0.4)', textUnderlineOffset: '2px' }}>
-          Ollama
-        </a>
-        . Search runs locally via SQLite. Nothing leaves your machine. No subscriptions, no recurring fees.
       </>
     ),
   },
