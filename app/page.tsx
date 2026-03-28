@@ -1,6 +1,7 @@
 import DesktopScrollBar from './components/DesktopScrollBar'
 import FaqAccordion from './components/FaqAccordion'
 import DemoTerminal from './components/DemoTerminal'
+import BuyerCount from './components/BuyerCount'
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -618,11 +619,10 @@ export default function Home() {
         <div className="wrap">
           <div className="proof-bar-inner">
             <div className="proof-stat">
-              🧠 My actual daily driver — 200+ sessions, zero context resets
+              🧠 My actual daily driver — 200+ sessions, zero cold starts
             </div>
-            <div className="proof-stat">
-              🔄 Free updates forever — all future versions, no extra charge
-            </div>
+            {/* Live buyer count — renders only if count ≥ 5, falls back silently */}
+            <BuyerCount />
             <div className="proof-stat">
               💬 Stuck? DM <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer" style={{color:'#a1a1aa', textDecoration:'underline', textDecorationColor:'rgba(161,161,170,0.35)', textUnderlineOffset:'2px'}}>@alfredmarktr</a> — personal, same-day reply
             </div>
@@ -904,6 +904,7 @@ export default function Home() {
               ['03', 'Semantic search', 'QMD setup and config so your agent can search across all memory files using natural language. Find anything in seconds.'],
               ['04', 'Agent identity templates', 'SOUL.md, AGENTS.md, MEMORY.md, TACIT.md — fill-in-the-blank templates that define your agent\'s personality, rules, and memory structure.'],
               ['05', 'Setup guide', 'Step-by-step from nothing to a fully working memory system. Every command, every config, every decision explained.'],
+              ['∞', 'Free updates forever', 'Scripts improve, new features get added — all buyers get the updated ZIP directly. No extra charge, no need to ask. One price, owned forever.'],
             ].map(([num, title, desc]) => (
               <div className="chapter" key={num}>
                 <span className="chapter-num">{num}</span>
