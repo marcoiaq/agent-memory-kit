@@ -152,7 +152,7 @@ export default function Home() {
         .nav-btn:hover { opacity: 0.85; }
 
         /* HERO */
-        .hero { padding: 72px 0 64px; border-bottom: 1px solid #18181b; }
+        .hero { padding: 56px 0 48px; border-bottom: 1px solid #18181b; }
         .hero-badge {
           display: inline-flex; align-items: center; gap: 8px;
           background: rgba(99,102,241,0.08); border: 1px solid rgba(99,102,241,0.2);
@@ -504,7 +504,7 @@ export default function Home() {
 
         /* COMPACT HERO — for laptops/browsers with limited viewport height */
         @media (max-height: 900px) and (min-width: 521px) {
-          .hero { padding: 48px 0 48px; }
+          .hero { padding: 36px 0 36px; }
           .hero-badge { margin-bottom: 16px; }
           h1 { margin-bottom: 12px; }
         }
@@ -587,10 +587,8 @@ export default function Home() {
           <p style={{fontSize: 'clamp(17px, 2.8vw, 21px)', fontWeight: 700, color: '#fafafa', letterSpacing: '-0.02em', marginBottom: '14px', lineHeight: 1.3}}>
             Fix it in 20 minutes. Never re-explain yourself again.
           </p>
-          <p className="hero-desc" style={{marginTop:'0', marginBottom:'18px'}}>
-            Every session, your OpenClaw agent starts blank. You re-explain your stack, your rules, your decisions — every single time. One 20-minute install ends that. Permanently.
-          </p>
-          <div className="hero-actions" style={{marginTop:'0'}}>
+          <div className="hero-actions" style={{marginTop:'16px'}}>
+            <p className="hero-proof" style={{marginTop:'0', marginBottom:'12px'}}>Built by <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a> — my actual daily driver on a Mac mini. I never typed &quot;my stack is...&quot; again.</p>
             <div style={{display:'flex', alignItems:'center', gap:'10px', marginBottom:'4px', flexWrap:'wrap'}}>
               <span style={{fontSize:'22px', color:'#52525b', textDecoration:'line-through', fontWeight:700, letterSpacing:'-0.02em'}}>$29</span>
               <span style={{fontSize:'22px', fontWeight:900, color:'#fafafa', letterSpacing:'-0.03em'}}>$10</span>
@@ -603,7 +601,6 @@ export default function Home() {
             <a href="/api/create-checkout" className="cta-main cta-pulse">
               Fix My Agent&apos;s Memory — $10 →
             </a>
-            <p className="hero-proof" style={{marginTop:'4px', marginBottom:'4px'}}>Built by <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a> — my actual daily driver on a Mac mini. I never typed &quot;my stack is...&quot; again.</p>
             <span className="hero-note">
               <span className="hero-note-item">7-day money-back guarantee</span>
               <span className="hero-note-item">100% local — no cloud, no API keys</span>
