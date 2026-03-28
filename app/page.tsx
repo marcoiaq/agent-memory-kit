@@ -502,6 +502,13 @@ export default function Home() {
         /* MOBILE STICKY BUY BAR */
         .mobile-buy-bar { display: none; }
 
+        /* COMPACT HERO — for laptops/browsers with limited viewport height */
+        @media (max-height: 900px) and (min-width: 521px) {
+          .hero { padding: 48px 0 48px; }
+          .hero-badge { margin-bottom: 16px; }
+          h1 { margin-bottom: 12px; }
+        }
+
         /* MOBILE */
         @media (max-width: 520px) {
           .hero { padding: 48px 0 40px; }
