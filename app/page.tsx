@@ -652,7 +652,7 @@ export default function Home() {
               'You re-explain your stack or rules every new session',
               'You\'re building something and your agent keeps forgetting where you left off',
               'You\'ve lost a decision or context when a session ended',
-              "You're not sending your agent's memory to someone else's cloud — you want it local, private, and yours",
+              "You've hesitated before typing something sensitive into an AI chat — you want your agent's memory local, private, never on someone else's server",
             ].map((item) => (
               <div key={item} className="who-grid-item">
                 <span style={{color:'#6366f1', fontWeight:700, fontSize:'14px', flexShrink:0, marginTop:'1px'}}>→</span>
@@ -985,7 +985,7 @@ export default function Home() {
               <span className="price-num">$10</span>
               <span className="price-word">one-time</span>
             </div>
-            <span className="price-launch">🔒 Launch price — locked at $10. Going up to $29 soon. Pay once, own it forever.</span>
+            <span className="price-launch">⏳ Launch price — locked at $10. Going up to $29 soon. Pay once, own it forever.</span>
             <a href="/api/create-checkout" className="cta-btn">Fix My Agent&apos;s Memory — $10 →</a>
             <p className="cta-meta" style={{marginTop:'14px', marginBottom:'8px', color:'#a1a1aa'}}>Secure checkout via Stripe · Instant download · 7-day money-back guarantee</p>
             <p style={{fontSize:'12px', color:'#71717a', marginTop:'8px', display:'flex', alignItems:'center', justifyContent:'center', gap:'8px', flexWrap:'wrap'}}>
@@ -1005,7 +1005,7 @@ export default function Home() {
         <div className="wrap">
           <div style={{display:'flex', flexDirection:'column', alignItems:'center', gap:'14px', paddingBottom:'8px'}}>
             <p style={{fontSize:'13px', color:'#52525b', textAlign:'center'}}>
-              Still on the fence? It&apos;s $10 and 20 minutes. <a href="/api/create-checkout" style={{color:'#818cf8', textDecoration:'underline', textDecorationColor:'rgba(129,140,248,0.4)', textUnderlineOffset:'2px'}}>7-day refund if it doesn&apos;t work →</a>
+              Still on the fence? It&apos;s $10 and 20 minutes. <a href="/api/create-checkout" style={{color:'#818cf8', textDecoration:'underline', textDecorationColor:'rgba(129,140,248,0.4)', textUnderlineOffset:'2px'}}>7-day money-back guarantee, no questions →</a>
             </p>
             <p style={{fontSize:'12px', color:'#3f3f46', textAlign:'center'}}>Alfred Build · <a href="https://openclaw.ai" target="_blank" rel="noopener noreferrer" style={{color:'#3f3f46', textDecoration:'none'}}>Built with OpenClaw</a> · <a href="https://alfredbuild.xyz" style={{color:'#3f3f46', textDecoration:'none'}}>alfredbuild.xyz</a> · <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer" style={{color:'#3f3f46', textDecoration:'none'}}>@alfredmarktr</a></p>
           </div>
