@@ -598,7 +598,7 @@ export default function Home() {
               <span style={{fontSize:'11px', fontWeight:700, color:'#22c55e', background:'rgba(34,197,94,0.08)', border:'1px solid rgba(34,197,94,0.2)', padding:'3px 8px', borderRadius:'4px', letterSpacing:'0.04em', textTransform:'uppercase'}}>One-time</span>
             </div>
             <span style={{fontSize:'12px', color:'#f59e0b', fontWeight:600, display:'flex', alignItems:'center', gap:'5px', marginTop:'2px'}}>
-              ⏳ Launch price — $10 now, raises to $29 post-beta.
+              ⏳ Launch price — $10 now. Going up to $29 soon.
             </span>
             <a href="/api/create-checkout" className="cta-main cta-pulse">
               Fix My Agent&apos;s Memory — $10 →
@@ -626,7 +626,7 @@ export default function Home() {
         <div className="wrap">
           <div className="proof-bar-inner">
             <div className="proof-stat">
-              🧠 My actual daily driver — 200+ sessions, zero cold starts
+              🧠 200+ sessions run — zero cold starts, zero re-explaining
             </div>
             {/* Live buyer count — renders only if count ≥ 5, falls back silently */}
             <BuyerCount />
@@ -986,7 +986,7 @@ export default function Home() {
               <span className="price-num">$10</span>
               <span className="price-word">one-time</span>
             </div>
-            <span className="price-launch">🔒 Launch price — locked at $10. Raises to $29 post-beta. Pay once, own it forever.</span>
+            <span className="price-launch">🔒 Launch price — locked at $10. Going up to $29 soon. Pay once, own it forever.</span>
             <a href="/api/create-checkout" className="cta-btn">Fix My Agent&apos;s Memory — $10 →</a>
             <p className="cta-meta" style={{marginTop:'14px', marginBottom:'8px', color:'#a1a1aa'}}>Secure checkout via Stripe · Instant download · 7-day money-back guarantee</p>
             <p style={{fontSize:'12px', color:'#71717a', marginTop:'8px', display:'flex', alignItems:'center', justifyContent:'center', gap:'8px', flexWrap:'wrap'}}>
@@ -1004,7 +1004,12 @@ export default function Home() {
 
       <footer>
         <div className="wrap">
-          <p>Alfred Build · <a href="https://openclaw.ai" target="_blank" rel="noopener noreferrer" style={{color:'#52525b', textDecoration:'none'}}>Built with OpenClaw</a> · <a href="https://alfredbuild.xyz" style={{color:'#52525b', textDecoration:'none'}}>alfredbuild.xyz</a> · <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer" style={{color:'#52525b', textDecoration:'none'}}>@alfredmarktr</a></p>
+          <div style={{display:'flex', flexDirection:'column', alignItems:'center', gap:'14px', paddingBottom:'8px'}}>
+            <p style={{fontSize:'13px', color:'#52525b', textAlign:'center'}}>
+              Still on the fence? It&apos;s $10 and 20 minutes. <a href="/api/create-checkout" style={{color:'#818cf8', textDecoration:'underline', textDecorationColor:'rgba(129,140,248,0.4)', textUnderlineOffset:'2px'}}>7-day refund if it doesn&apos;t work →</a>
+            </p>
+            <p style={{fontSize:'12px', color:'#3f3f46', textAlign:'center'}}>Alfred Build · <a href="https://openclaw.ai" target="_blank" rel="noopener noreferrer" style={{color:'#3f3f46', textDecoration:'none'}}>Built with OpenClaw</a> · <a href="https://alfredbuild.xyz" style={{color:'#3f3f46', textDecoration:'none'}}>alfredbuild.xyz</a> · <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer" style={{color:'#3f3f46', textDecoration:'none'}}>@alfredmarktr</a></p>
+          </div>
         </div>
       </footer>
 
