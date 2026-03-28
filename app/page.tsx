@@ -1016,7 +1016,7 @@ export default function Home() {
         <div className="mobile-buy-bar-inner">
           <div className="mobile-buy-bar-text">
             <strong>$10 one-time</strong><br />
-            Beta price · 7-day refund
+            Launch price · 7-day refund
           </div>
           <a href="/api/create-checkout" className="mobile-buy-bar-btn">
             Fix Memory — $10 →
