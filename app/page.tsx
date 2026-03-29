@@ -150,6 +150,11 @@ export default function Home() {
           display: inline-block;
         }
         .nav-btn:hover { opacity: 0.85; }
+        .nav-faq-link {
+          font-size: 13px; font-weight: 600;
+          color: #71717a; transition: color 0.15s;
+        }
+        .nav-faq-link:hover { color: #a1a1aa; }
 
         /* HERO */
         .hero { padding: 56px 0 48px; border-bottom: 1px solid #18181b; }
@@ -564,7 +569,10 @@ export default function Home() {
           <nav>
             <div className="inner">
               <span className="logo">Agent Memory Kit</span>
-              <a href="/api/create-checkout" className="nav-btn">Fix Memory — $10 →</a>
+              <div style={{display:'flex', alignItems:'center', gap:'20px'}}>
+                <a href="#faq" className="nav-faq-link">FAQ</a>
+                <a href="/api/create-checkout" className="nav-btn">Fix Memory — $10 →</a>
+              </div>
             </div>
           </nav>
         </div>
