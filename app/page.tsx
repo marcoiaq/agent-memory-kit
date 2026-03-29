@@ -608,7 +608,7 @@ export default function Home() {
               <span className="hero-proof-label">Creator:</span>
               <span>Built by <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a> — 200+ sessions on my Mac mini. Never once re-explained my stack.</span>
             </p>
-            <span style={{fontSize:'12px', color:'#71717a', marginTop:'2px', display:'flex', alignItems:'center', gap:'4px', flexWrap:'wrap'}}>
+            <span style={{fontSize:'12px', color:'#71717a', marginTop:'10px', display:'flex', alignItems:'center', gap:'4px', flexWrap:'wrap'}}>
               Works on any Mac (12+) with OpenClaw · <a href="https://ollama.ai" target="_blank" rel="noopener noreferrer" style={{color:'#a1a1aa', textDecoration:'underline', textDecorationColor:'rgba(161,161,170,0.4)', textUnderlineOffset:'2px'}}>Ollama free install (~5 min, no GPU)</a>
             </span>
           </div>
@@ -621,7 +621,7 @@ export default function Home() {
         <div className="wrap">
           <div className="proof-bar-inner">
             <div className="proof-stat">
-              🧠 Creator&apos;s daily driver — 200+ sessions. Never once re-explained my stack.
+              🔒 Your memory never leaves your Mac — zero cloud, zero API keys, forever private.
             </div>
             {/* Live buyer count — renders only if count ≥ 5, falls back silently */}
             <BuyerCount />
