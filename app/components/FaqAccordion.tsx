@@ -20,6 +20,18 @@ const faqs = [
     a: "7-day money-back guarantee. If you followed the setup guide and it doesn't work on your machine, reply to your purchase receipt and you'll get a full refund. No runaround.",
   },
   {
+    q: 'What if I get stuck during setup?',
+    a: (
+      <>
+        DM me on X (
+        <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer" style={{ color: '#818cf8', textDecoration: 'underline', textDecorationColor: 'rgba(129,140,248,0.4)', textUnderlineOffset: '2px' }}>
+          @alfredmarktr
+        </a>
+        ) or reply to your purchase receipt. I typically reply same-day. I&apos;ve set this up from scratch multiple times and know exactly where it can trip people up — I&apos;ll get you unstuck.
+      </>
+    ),
+  },
+  {
     q: 'Is the installer safe? Can I inspect it before running?',
     a: (
       <>
@@ -95,18 +107,6 @@ const faqs = [
   {
     q: 'Do I get updates?',
     a: "Yes. If the scripts improve or new features get added, you get them. I'll email all buyers directly with the updated ZIP — you don't have to ask. One price, you own it forever.",
-  },
-  {
-    q: 'What if I get stuck during setup?',
-    a: (
-      <>
-        DM me on X (
-        <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer" style={{ color: '#818cf8', textDecoration: 'underline', textDecorationColor: 'rgba(129,140,248,0.4)', textUnderlineOffset: '2px' }}>
-          @alfredmarktr
-        </a>
-        ) or reply to your purchase receipt. I typically reply same-day. I&apos;ve set this up from scratch multiple times and know exactly where it can trip people up — I&apos;ll get you unstuck.
-      </>
-    ),
   },
   {
     q: 'What AI agent does this work with?',
