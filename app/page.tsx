@@ -606,7 +606,7 @@ export default function Home() {
             </span>
             <p className="hero-proof" style={{marginTop:'12px', marginBottom:'0'}}>
               <span className="hero-proof-label">Creator:</span>
-              <span>Built by <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a> — built this to fix my own frustration. 200+ sessions in on my Mac mini. Not one blank start.</span>
+              <span>Built by <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a> — built this to fix my own frustration. 200+ sessions on my Mac mini. Not one blank start.</span>
             </p>
             <span style={{fontSize:'12px', color:'#71717a', marginTop:'10px', display:'flex', alignItems:'center', gap:'4px', flexWrap:'wrap'}}>
               Works on any Mac (12+) with OpenClaw · <a href="https://ollama.ai" target="_blank" rel="noopener noreferrer" style={{color:'#a1a1aa', textDecoration:'underline', textDecorationColor:'rgba(161,161,170,0.4)', textUnderlineOffset:'2px'}}>Ollama free install (~5 min, no GPU)</a>
@@ -648,7 +648,7 @@ export default function Home() {
               'You re-explain your stack or rules every new session',
               'You\'re building something and your agent keeps forgetting where you left off',
               'You\'ve lost a decision or context when a session ended',
-              "You've hesitated before typing something sensitive into an AI chat — you want your agent's memory local, private, never on someone else's server",
+              "You've hesitated before typing something sensitive — you want your agent's memory private, on your Mac, never on someone else's server",
             ].map((item) => (
               <div key={item} className="who-grid-item">
                 <span style={{color:'#6366f1', fontWeight:700, fontSize:'14px', flexShrink:0, marginTop:'1px'}}>→</span>
