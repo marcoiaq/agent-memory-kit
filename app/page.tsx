@@ -606,7 +606,7 @@ export default function Home() {
             </span>
             <p className="hero-proof" style={{marginTop:'12px', marginBottom:'0'}}>
               <span className="hero-proof-label">Creator:</span>
-              <span>Built by <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a> — runs on my daily Mac mini. I haven&apos;t typed &quot;my stack is...&quot; in months.</span>
+              <span>Built by <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a> — 200+ sessions on my Mac mini. Never once re-explained my stack.</span>
             </p>
             <span style={{fontSize:'12px', color:'#71717a', marginTop:'2px', display:'flex', alignItems:'center', gap:'4px', flexWrap:'wrap'}}>
               Works on any Mac (12+) with OpenClaw · <a href="https://ollama.ai" target="_blank" rel="noopener noreferrer" style={{color:'#a1a1aa', textDecoration:'underline', textDecorationColor:'rgba(161,161,170,0.4)', textUnderlineOffset:'2px'}}>Ollama free install (~5 min, no GPU)</a>
@@ -682,7 +682,7 @@ export default function Home() {
           <h2 style={{fontSize:'clamp(22px, 3.5vw, 28px)', fontWeight:800, letterSpacing:'-0.03em', color:'#fafafa', marginBottom:'8px', lineHeight:1.2}}>
             Your agent finds any past decision — instantly.
           </h2>
-          <div className="demo-label" style={{marginBottom:'16px'}}>What your agent does automatically before every new session</div>
+          <div className="demo-label" style={{marginBottom:'16px'}}>Runs automatically before every session — you type nothing</div>
           <DemoTerminal />
           <p className="demo-caption">Automatic every session · No manual commands · Runs 100% on your Mac</p>
           <div style={{marginTop:'24px', display:'flex', alignItems:'center', gap:'14px', flexWrap:'wrap'}}>
