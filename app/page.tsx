@@ -574,9 +574,8 @@ export default function Home() {
       <div className="hero">
         <div className="wrap">
           <div className="hero-badge">
-            Persistent memory for{' '}
             <a href="https://openclaw.ai" target="_blank" rel="noopener noreferrer">OpenClaw</a>
-            {' '}(Claude AI agent, Mac) · 100% local · No cloud, no API keys
+            {' '}add-on · Mac only · 100% local · No cloud, no API keys
           </div>
           <h1>Your AI agent<br />forgets everything.</h1>
           <p style={{fontSize: 'clamp(17px, 2.8vw, 21px)', fontWeight: 700, color: '#d4d4d8', letterSpacing: '-0.02em', marginBottom: '14px', lineHeight: 1.3}}>
@@ -605,8 +604,8 @@ export default function Home() {
               </span>
             </span>
             <p className="hero-proof" style={{marginTop:'12px', marginBottom:'0'}}>
-              <span className="hero-proof-label">Creator:</span>
-              <span>Built by <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a> — built this to fix my own frustration. 200+ sessions on my Mac mini. Not one blank start.</span>
+              <span className="hero-proof-label">Builder:</span>
+              <span><span style={{fontStyle:'italic', color:'#d4d4d8'}}>"I run OpenClaw daily on my Mac mini. 200+ sessions with this running — never once started blank."</span>{' '}— <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a></span>
             </p>
             <span style={{fontSize:'12px', color:'#71717a', marginTop:'10px', display:'flex', alignItems:'center', gap:'4px', flexWrap:'wrap'}}>
               Works on any Mac (12+) with OpenClaw · <a href="https://ollama.ai" target="_blank" rel="noopener noreferrer" style={{color:'#a1a1aa', textDecoration:'underline', textDecorationColor:'rgba(161,161,170,0.4)', textUnderlineOffset:'2px'}}>Ollama free install (~5 min, no GPU)</a>

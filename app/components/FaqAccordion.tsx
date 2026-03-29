@@ -8,16 +8,16 @@ const faqs = [
     a: 'A ZIP with everything pre-configured: the memory extraction scripts, background services that auto-start on login, the semantic search setup, and identity template files (SOUL.md, AGENTS.md, MEMORY.md, TACIT.md) — plus a step-by-step setup guide with every command. You run the installer and it works.',
   },
   {
+    q: "Does it slow down my Mac?",
+    a: "No. The memory extraction runs at the end of a session and takes a few seconds — then it stops. There's no background process constantly running or watching your screen. The search index is SQLite on your local disk, so queries resolve in under a second with no CPU overhead. On an M1 Mac mini with 8GB RAM, you'll never notice it.",
+  },
+  {
     q: 'Is this a one-time payment or a subscription?',
     a: "One-time. Pay once, own it forever. $10 now, that's it. No monthly fees, no annual renewals, no account to manage. You download the ZIP, you run the setup, it's yours.",
   },
   {
     q: "What if it doesn't work for me?",
     a: "7-day money-back guarantee. If you followed the setup guide and it doesn't work on your machine, reply to your purchase receipt and you'll get a full refund. No runaround.",
-  },
-  {
-    q: "Does it slow down my Mac?",
-    a: "No. The memory extraction runs at the end of a session and takes a few seconds — then it stops. There's no background process constantly running or watching your screen. The search index is SQLite on your local disk, so queries resolve in under a second with no CPU overhead. On an M1 Mac mini with 8GB RAM, you'll never notice it.",
   },
   {
     q: 'Is the installer safe? Can I inspect it before running?',
