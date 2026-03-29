@@ -592,11 +592,7 @@ export default function Home() {
             <span style={{fontSize:'12px', color:'#f59e0b', fontWeight:600, display:'flex', alignItems:'center', gap:'5px', marginTop:'2px'}}>
               ⏳ Launch price — $10 now. Going up to $29 soon.
             </span>
-            <p className="hero-proof" style={{marginTop:'4px', marginBottom:'0'}}>
-              <span className="hero-proof-label">Creator:</span>
-              <span>Built by <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a> — runs on my daily Mac mini. I haven&apos;t typed &quot;my stack is...&quot; in months.</span>
-            </p>
-            <a href="/api/create-checkout" className="cta-main cta-pulse">
+            <a href="/api/create-checkout" className="cta-main cta-pulse" style={{marginTop:'8px'}}>
               Fix My Agent&apos;s Memory — $10 →
             </a>
             <span className="hero-note">
@@ -608,6 +604,10 @@ export default function Home() {
                 <span>Stripe secure checkout</span>
               </span>
             </span>
+            <p className="hero-proof" style={{marginTop:'12px', marginBottom:'0'}}>
+              <span className="hero-proof-label">Creator:</span>
+              <span>Built by <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a> — runs on my daily Mac mini. I haven&apos;t typed &quot;my stack is...&quot; in months.</span>
+            </p>
             <span style={{fontSize:'12px', color:'#71717a', marginTop:'2px', display:'flex', alignItems:'center', gap:'4px', flexWrap:'wrap'}}>
               Works on any Mac (12+) with OpenClaw · <a href="https://ollama.ai" target="_blank" rel="noopener noreferrer" style={{color:'#a1a1aa', textDecoration:'underline', textDecorationColor:'rgba(161,161,170,0.4)', textUnderlineOffset:'2px'}}>Ollama free install (~5 min, no GPU)</a>
             </span>
