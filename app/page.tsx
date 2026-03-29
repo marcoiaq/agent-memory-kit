@@ -579,7 +579,7 @@ export default function Home() {
             {' '}(Claude AI agent, Mac) · 100% local · No cloud, no API keys
           </div>
           <h1>Your AI agent<br />forgets everything.</h1>
-          <p style={{fontSize: 'clamp(17px, 2.8vw, 21px)', fontWeight: 700, color: '#fafafa', letterSpacing: '-0.02em', marginBottom: '14px', lineHeight: 1.3}}>
+          <p style={{fontSize: 'clamp(17px, 2.8vw, 21px)', fontWeight: 700, color: '#d4d4d8', letterSpacing: '-0.02em', marginBottom: '14px', lineHeight: 1.3}}>
             Fix it in 20 minutes. Never re-explain yourself again.
           </p>
           <div className="hero-actions" style={{marginTop:'16px'}}>
@@ -592,6 +592,10 @@ export default function Home() {
             <span style={{fontSize:'12px', color:'#f59e0b', fontWeight:600, display:'flex', alignItems:'center', gap:'5px', marginTop:'2px'}}>
               ⏳ Launch price — $10 now. Going up to $29 soon.
             </span>
+            <p className="hero-proof" style={{marginTop:'4px', marginBottom:'0'}}>
+              <span className="hero-proof-label">Creator:</span>
+              <span>Built by <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a> — runs on my daily Mac mini. I haven&apos;t typed &quot;my stack is...&quot; in months.</span>
+            </p>
             <a href="/api/create-checkout" className="cta-main cta-pulse">
               Fix My Agent&apos;s Memory — $10 →
             </a>
@@ -604,10 +608,6 @@ export default function Home() {
                 <span>Stripe secure checkout</span>
               </span>
             </span>
-            <p className="hero-proof" style={{marginTop:'8px', marginBottom:'0'}}>
-              <span className="hero-proof-label">Creator:</span>
-              <span>Built by <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a> — runs on my daily Mac mini. I haven&apos;t typed &quot;my stack is...&quot; in months.</span>
-            </p>
             <span style={{fontSize:'12px', color:'#71717a', marginTop:'2px', display:'flex', alignItems:'center', gap:'4px', flexWrap:'wrap'}}>
               Works on any Mac (12+) with OpenClaw · <a href="https://ollama.ai" target="_blank" rel="noopener noreferrer" style={{color:'#a1a1aa', textDecoration:'underline', textDecorationColor:'rgba(161,161,170,0.4)', textUnderlineOffset:'2px'}}>Ollama free install (~5 min, no GPU)</a>
             </span>
