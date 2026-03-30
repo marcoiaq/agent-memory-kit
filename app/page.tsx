@@ -603,8 +603,11 @@ export default function Home() {
             {' '}add-on · Mac only · 100% local · No cloud, no API keys
           </div>
           <h1>Your AI agent<br />forgets everything.</h1>
-          <p style={{fontSize: 'clamp(17px, 2.8vw, 21px)', fontWeight: 700, color: '#d4d4d8', letterSpacing: '-0.02em', marginBottom: '14px', lineHeight: 1.3}}>
+          <p style={{fontSize: 'clamp(17px, 2.8vw, 21px)', fontWeight: 700, color: '#d4d4d8', letterSpacing: '-0.02em', marginBottom: '10px', lineHeight: 1.3}}>
             Give it persistent memory in 20 minutes. Never re-explain yourself again.
+          </p>
+          <p style={{fontSize: '14px', color: '#71717a', marginBottom: '0', lineHeight: 1.55, letterSpacing: '-0.01em'}}>
+            Pre-built scripts, config files, and a step-by-step setup guide — <span style={{color:'#a1a1aa', fontWeight:600}}>one ZIP download</span>. Install once, runs silently forever.
           </p>
           <div className="hero-actions" style={{marginTop:'16px'}}>
             <div style={{display:'flex', alignItems:'center', gap:'10px', marginBottom:'4px', flexWrap:'wrap'}}>
