@@ -608,8 +608,8 @@ export default function Home() {
           </p>
           <div className="hero-actions" style={{marginTop:'16px'}}>
             <div style={{display:'flex', alignItems:'center', gap:'10px', marginBottom:'4px', flexWrap:'wrap'}}>
-              <span style={{fontSize:'22px', color:'#52525b', textDecoration:'line-through', fontWeight:700, letterSpacing:'-0.02em'}}>$29</span>
-              <span style={{fontSize:'22px', fontWeight:900, color:'#fafafa', letterSpacing:'-0.03em'}}>$10</span>
+              <span style={{fontSize:'18px', color:'#52525b', textDecoration:'line-through', fontWeight:700, letterSpacing:'-0.02em'}}>$29</span>
+              <span style={{fontSize:'28px', fontWeight:900, color:'#fafafa', letterSpacing:'-0.03em'}}>$10</span>
               <span style={{fontSize:'11px', fontWeight:700, color:'#f59e0b', background:'rgba(245,158,11,0.1)', border:'1px solid rgba(245,158,11,0.25)', padding:'3px 8px', borderRadius:'4px', letterSpacing:'0.06em', textTransform:'uppercase'}}>65% off</span>
               <span style={{fontSize:'11px', fontWeight:700, color:'#22c55e', background:'rgba(34,197,94,0.08)', border:'1px solid rgba(34,197,94,0.2)', padding:'3px 8px', borderRadius:'4px', letterSpacing:'0.04em', textTransform:'uppercase'}}>One-time</span>
             </div>
@@ -622,14 +622,14 @@ export default function Home() {
             <span className="hero-note">
               <span className="hero-note-item">7-day money-back guarantee</span>
               <span className="hero-note-item">100% local — no cloud, no API keys</span>
-              <span className="hero-note-item">Instant download</span>
+              <span className="hero-note-item">Instant download (ZIP + guide)</span>
               <span style={{fontSize:'12px', color:'#71717a', display:'flex', alignItems:'center', gap:'4px'}}>
                 <span>🔒</span>
                 <span>Stripe secure checkout</span>
               </span>
             </span>
             <p className="hero-proof" style={{marginTop:'12px', marginBottom:'0'}}>
-              <span className="hero-proof-label">200+ sessions in production:</span>
+              <span className="hero-proof-label">My track record with this:</span>
               <span><span style={{fontStyle:'italic', color:'#d4d4d8'}}>"I run OpenClaw daily on my Mac mini. 200+ sessions with this running — never once started blank."</span>{' '}— <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a></span>
             </p>
             <span style={{fontSize:'12px', color:'#71717a', marginTop:'10px', display:'flex', alignItems:'center', gap:'4px', flexWrap:'wrap'}}>
