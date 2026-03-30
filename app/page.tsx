@@ -528,6 +528,7 @@ export default function Home() {
 
         /* MOBILE */
         @media (max-width: 520px) {
+          .nav-faq-link { display: none; }
           .hero { padding: 48px 0 40px; }
 
           .cards { grid-template-columns: 1fr; }
