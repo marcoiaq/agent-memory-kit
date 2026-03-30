@@ -623,14 +623,14 @@ export default function Home() {
             <span className="hero-note">
               <span className="hero-note-item">7-day money-back guarantee</span>
               <span className="hero-note-item">100% local — no cloud, no API keys</span>
-              <span className="hero-note-item">Instant download (kit + guide)</span>
+              <span className="hero-note-item">Instant ZIP download after checkout</span>
               <span style={{fontSize:'12px', color:'#71717a', display:'flex', alignItems:'center', gap:'4px'}}>
                 <span>🔒</span>
                 <span>Stripe secure checkout</span>
               </span>
             </span>
             <p style={{fontSize: '13px', color: '#71717a', marginTop: '12px', marginBottom: '0', lineHeight: 1.55, letterSpacing: '-0.01em'}}>
-              Pre-configured scripts, background services, and a step-by-step setup guide — <span style={{color:'#a1a1aa', fontWeight:600}}>one download</span>. Run the installer; it runs silently every session after that.
+              You get a ZIP with 5 pre-configured components: memory extraction scripts, auto-start background services, semantic search (QMD), agent identity templates, and a step-by-step setup guide. Run the installer — <span style={{color:'#a1a1aa', fontWeight:600}}>everything else is automatic from session one</span>.
             </p>
             <p className="hero-proof" style={{marginTop:'12px', marginBottom:'0'}}>
               <span className="hero-proof-label">Dogfooded daily — by the builder:</span>
@@ -815,8 +815,8 @@ export default function Home() {
                 <div className="step-num">1</div>
               </div>
               <div>
-                <div className="step-title">Install in 20 minutes</div>
-                <div className="step-desc">Run the installer script. Memory services auto-configure and start on login. Fill in your agent&apos;s name and rules in MEMORY.md. That&apos;s it.</div>
+                <div className="step-title">20-minute one-time setup — automatic after that</div>
+                <div className="step-desc">Run the installer script (~10 min). Memory services auto-configure and start on login. Fill in your agent&apos;s name and a few rules in MEMORY.md (~5 min). Done. You never touch it again.</div>
               </div>
             </div>
             <div className="step">
