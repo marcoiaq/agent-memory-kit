@@ -629,11 +629,11 @@ export default function Home() {
                 <span>Stripe secure checkout</span>
               </span>
             </span>
-            <p style={{fontSize: '13px', color: '#71717a', marginTop: '12px', marginBottom: '0', lineHeight: 1.55, letterSpacing: '-0.01em'}}>
-              You get a ZIP with 5 pre-configured components: memory extraction scripts, auto-start background services, semantic search (QMD), agent identity templates, and a step-by-step setup guide. Run the installer — <span style={{color:'#a1a1aa', fontWeight:600}}>everything else is automatic from session one</span>.
+            <p style={{fontSize: '13px', color: '#a1a1aa', marginTop: '12px', marginBottom: '0', lineHeight: 1.55, letterSpacing: '-0.01em'}}>
+              You get a ZIP with 5 pre-configured components: memory extraction scripts, auto-start background services, semantic search (QMD), agent identity templates, and a step-by-step setup guide. Run the installer — <span style={{color:'#d4d4d8', fontWeight:600}}>everything else is automatic from session one</span>.
             </p>
             <p className="hero-proof" style={{marginTop:'12px', marginBottom:'0'}}>
-              <span className="hero-proof-label">Dogfooded daily — by the builder:</span>
+              <span className="hero-proof-label">200+ sessions — zero blank starts:</span>
               <span><span style={{fontStyle:'italic', color:'#d4d4d8'}}>"I run OpenClaw daily on my Mac mini. 200+ sessions with this running — never once started blank."</span>{' '}— <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a></span>
             </p>
             <span style={{fontSize:'12px', color:'#71717a', marginTop:'10px', display:'flex', alignItems:'center', gap:'4px', flexWrap:'wrap'}}>
