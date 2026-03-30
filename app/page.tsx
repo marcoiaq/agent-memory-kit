@@ -607,7 +607,7 @@ export default function Home() {
             Give it persistent memory in 20 minutes. Never re-explain yourself again.
           </p>
           <p style={{fontSize: '14px', color: '#71717a', marginBottom: '0', lineHeight: 1.55, letterSpacing: '-0.01em'}}>
-            Pre-built scripts, config files, and a step-by-step setup guide — <span style={{color:'#a1a1aa', fontWeight:600}}>one ZIP download</span>. Install once, runs silently forever.
+            Pre-configured scripts, background services, and a step-by-step setup guide — <span style={{color:'#a1a1aa', fontWeight:600}}>one download</span>. Run the installer; it runs silently every session after that.
           </p>
           <div className="hero-actions" style={{marginTop:'16px'}}>
             <div style={{display:'flex', alignItems:'center', gap:'10px', marginBottom:'4px', flexWrap:'wrap'}}>
@@ -625,7 +625,7 @@ export default function Home() {
             <span className="hero-note">
               <span className="hero-note-item">7-day money-back guarantee</span>
               <span className="hero-note-item">100% local — no cloud, no API keys</span>
-              <span className="hero-note-item">Instant download (ZIP + guide)</span>
+              <span className="hero-note-item">Instant download (kit + guide)</span>
               <span style={{fontSize:'12px', color:'#71717a', display:'flex', alignItems:'center', gap:'4px'}}>
                 <span>🔒</span>
                 <span>Stripe secure checkout</span>
