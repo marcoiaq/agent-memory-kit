@@ -633,7 +633,7 @@ export default function Home() {
               You get a kit with everything pre-configured: memory extraction scripts, background services that start on login, plain-English search, identity templates, and a setup guide. Run the installer — <span style={{color:'#d4d4d8', fontWeight:600}}>everything else is automatic from session one</span>.
             </p>
             <p className="hero-proof" style={{marginTop:'12px', marginBottom:'0'}}>
-              <span className="hero-proof-label">200+ sessions — zero blank starts:</span>
+              <span className="hero-proof-label">Built &amp; battle-tested by the creator:</span>
               <span><span style={{fontStyle:'italic', color:'#d4d4d8'}}>"I run OpenClaw daily on my Mac mini. 200+ sessions with this running — never once started blank."</span>{' '}— <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a></span>
             </p>
             <span style={{fontSize:'12px', color:'#71717a', marginTop:'10px', display:'flex', alignItems:'center', gap:'4px', flexWrap:'wrap'}}>
@@ -1043,8 +1043,8 @@ export default function Home() {
       <div className="mobile-buy-bar">
         <div className="mobile-buy-bar-inner">
           <div className="mobile-buy-bar-text">
-            <strong>$10 one-time</strong><br />
-            Launch price · 7-day refund
+            <span style={{fontSize:'11px', color:'#71717a', textDecoration:'line-through', marginRight:'3px'}}>$29</span><strong>$10</strong><span style={{fontWeight:400, color:'#71717a', fontSize:'12px'}}> one-time</span><br />
+            <span style={{color:'#f59e0b', fontWeight:700, fontSize:'11px'}}>⏳ Launch price</span><span style={{color:'#71717a', fontSize:'11px'}}> · 7-day refund</span>
           </div>
           <a href="/api/create-checkout" className="mobile-buy-bar-btn">
             Fix Memory — $10 →
