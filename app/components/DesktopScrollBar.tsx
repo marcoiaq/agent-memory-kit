@@ -112,6 +112,13 @@ export default function DesktopScrollBar() {
           body.bar-visible {
             padding-bottom: 72px;
           }
+          /* On narrower desktops/laptops, hide secondary trust items to prevent overflow */
+          @media (min-width: 521px) and (max-width: 880px) {
+            .desktop-scroll-bar-trust-item.check,
+            .desktop-scroll-bar-stripe {
+              display: none;
+            }
+          }
         }
       `}</style>
       <div

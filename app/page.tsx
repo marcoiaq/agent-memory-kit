@@ -629,7 +629,7 @@ export default function Home() {
               </span>
             </span>
             <p className="hero-proof" style={{marginTop:'12px', marginBottom:'0'}}>
-              <span className="hero-proof-label">My track record with this:</span>
+              <span className="hero-proof-label">Dogfooded daily — by the builder:</span>
               <span><span style={{fontStyle:'italic', color:'#d4d4d8'}}>"I run OpenClaw daily on my Mac mini. 200+ sessions with this running — never once started blank."</span>{' '}— <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a></span>
             </p>
             <span style={{fontSize:'12px', color:'#71717a', marginTop:'10px', display:'flex', alignItems:'center', gap:'4px', flexWrap:'wrap'}}>
