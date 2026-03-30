@@ -24,22 +24,7 @@ const faqJsonLd = {
   '@context': 'https://schema.org',
   '@type': 'FAQPage',
   mainEntity: [
-    {
-      '@type': 'Question',
-      name: 'What do I need to use Agent Memory Kit?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'A Mac running macOS 12 or later (M1, M2, M3, or Intel), OpenClaw installed, and Ollama running locally. Ollama is free and handles all the memory extraction — no GPU required, runs on CPU fine.',
-      },
-    },
-    {
-      '@type': 'Question',
-      name: 'What is OpenClaw and do I need it?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'OpenClaw is a Claude-powered AI agent framework for Mac. Agent Memory Kit is an add-on for it — it hooks directly into OpenClaw\'s session files and workspace structure. If you don\'t have OpenClaw yet, get it at openclaw.ai first.',
-      },
-    },
+    // High-value questions first — Google shows top 2-3 in rich snippets
     {
       '@type': 'Question',
       name: 'What do I actually get?',
@@ -58,10 +43,10 @@ const faqJsonLd = {
     },
     {
       '@type': 'Question',
-      name: 'Does Agent Memory Kit require any cloud services or API keys?',
+      name: 'Does it slow down my Mac?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'No. Memory extraction runs locally using Ollama. Search runs locally via SQLite. Nothing leaves your machine. No subscriptions, no recurring fees.',
+        text: 'No. The memory extraction runs at the end of a session and takes a few seconds — then it stops. There\'s no background process constantly running or watching your screen. The search index is SQLite on your local disk, so queries resolve in under a second with no CPU overhead. On an M1 Mac mini with 8GB RAM, you\'ll never notice it.',
       },
     },
     {
@@ -74,14 +59,6 @@ const faqJsonLd = {
     },
     {
       '@type': 'Question',
-      name: 'Do I need to know how to code?',
-      acceptedAnswer: {
-        '@type': 'Answer',
-        text: 'You need to be comfortable running commands in Terminal. The installer handles everything — you\'re not writing code, just running a few commands and filling in a config file. If you\'ve used npm or brew before, you can do this.',
-      },
-    },
-    {
-      '@type': 'Question',
       name: 'What if Agent Memory Kit doesn\'t work for me?',
       acceptedAnswer: {
         '@type': 'Answer',
@@ -90,10 +67,50 @@ const faqJsonLd = {
     },
     {
       '@type': 'Question',
+      name: 'What if I get stuck during setup?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'DM @alfredmarktr on X or reply to your purchase receipt. I typically reply same-day. I\'ve set this up from scratch multiple times and know exactly where it can trip people up — I\'ll get you unstuck.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Does Agent Memory Kit require any cloud services or API keys?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'No. Memory extraction runs locally using Ollama. Search runs locally via SQLite. Nothing leaves your machine. No subscriptions, no recurring fees.',
+      },
+    },
+    {
+      '@type': 'Question',
       name: 'Is the installer safe? Can I inspect it before running?',
       acceptedAnswer: {
         '@type': 'Answer',
         text: 'Yes — everything in the package is plain text. The installer is a shell script you can open in any text editor and read line by line before running a single command. The package contains .sh scripts, .md markdown files, and JSON configs — nothing compiled, nothing binary, nothing opaque.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'Do I need to know how to code?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'You need to be comfortable running commands in Terminal. The installer handles everything — you\'re not writing code, just running a few commands and filling in a config file. If you\'ve used npm or brew before, you can do this.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What do I need to use Agent Memory Kit?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'A Mac running macOS 12 or later (M1, M2, M3, or Intel), OpenClaw installed, and Ollama running locally. Ollama is free and handles all the memory extraction — no GPU required, runs on CPU fine.',
+      },
+    },
+    {
+      '@type': 'Question',
+      name: 'What is OpenClaw and do I need it?',
+      acceptedAnswer: {
+        '@type': 'Answer',
+        text: 'OpenClaw is a Claude-powered AI agent framework for Mac. Agent Memory Kit is an add-on for it — it hooks directly into OpenClaw\'s session files and workspace structure. If you don\'t have OpenClaw yet, get it at openclaw.ai first.',
       },
     },
     {
