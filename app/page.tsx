@@ -605,7 +605,7 @@ export default function Home() {
           </div>
           <h1>Your AI agent<br />forgets everything.</h1>
           <p style={{fontSize: 'clamp(17px, 2.8vw, 21px)', fontWeight: 700, color: '#d4d4d8', letterSpacing: '-0.02em', marginBottom: '0', lineHeight: 1.3}}>
-            Give it persistent memory in 20 minutes. Never re-explain yourself again.
+            Give it persistent memory in 20 minutes — never re-explain yourself again.
           </p>
           <div className="hero-actions" style={{marginTop:'20px'}}>
             <div style={{display:'flex', alignItems:'center', gap:'10px', marginBottom:'4px', flexWrap:'wrap'}}>
@@ -630,7 +630,7 @@ export default function Home() {
               </span>
             </span>
             <p style={{fontSize: '13px', color: '#a1a1aa', marginTop: '12px', marginBottom: '0', lineHeight: 1.55, letterSpacing: '-0.01em'}}>
-              You get a ZIP with 5 pre-configured components: memory extraction scripts, auto-start background services, semantic search (QMD), agent identity templates, and a step-by-step setup guide. Run the installer — <span style={{color:'#d4d4d8', fontWeight:600}}>everything else is automatic from session one</span>.
+              You get a kit with everything pre-configured: memory extraction scripts, background services that start on login, plain-English search, identity templates, and a setup guide. Run the installer — <span style={{color:'#d4d4d8', fontWeight:600}}>everything else is automatic from session one</span>.
             </p>
             <p className="hero-proof" style={{marginTop:'12px', marginBottom:'0'}}>
               <span className="hero-proof-label">200+ sessions — zero blank starts:</span>
