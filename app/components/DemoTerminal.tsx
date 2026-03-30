@@ -2,28 +2,43 @@
 
 import { useEffect, useRef, useState } from 'react'
 
+// Compute relative dates at module load — always looks like a recent project
+function daysAgo(n: number): string {
+  const d = new Date()
+  d.setDate(d.getDate() - n)
+  return d.toISOString().slice(0, 10)
+}
+
+const RECENT_DATE = daysAgo(18)   // ~2.5 weeks ago — recent daily note
+const OLDER_DATE  = daysAgo(33)   // ~5 weeks ago — older decision
+
 type Segment = { cls: string; content: string }
 type Line =
   | { kind: 'text'; cls: string; content: string; delay: number }
   | { kind: 'multi'; parts: Segment[]; delay: number }
   | { kind: 'blank'; delay: number }
 
-const LINES: Line[] = [
-  { kind: 'text',  cls: 'dim',  content: '# Agent runs this automatically — you never type this yourself', delay: 200 },
-  { kind: 'blank', delay: 100 },
-  { kind: 'multi', parts: [{ cls: 'cmd', content: '$ qmd query' }, { cls: 'out', content: ' "what stack are we using for the checkout"' }], delay: 400 },
-  { kind: 'blank', delay: 600 },
-  { kind: 'multi', parts: [{ cls: 'highlight', content: '→' }, { cls: 'out', content: ' memory/2026-03-10.md  — "Using Stripe + Next.js. No PayPal — integration was a mess."' }], delay: 180 },
-  { kind: 'multi', parts: [{ cls: 'highlight', content: '→' }, { cls: 'out', content: ' memory/TACIT.md       — "Always use pnpm, never npm. Deploy to Vercel."' }], delay: 140 },
-  { kind: 'multi', parts: [{ cls: 'highlight', content: '→' }, { cls: 'out', content: ' memory/DECISIONS.md   — "Went with App Router, not Pages. Decided 2026-02-28."' }], delay: 160 },
-  { kind: 'blank', delay: 200 },
-  { kind: 'text',  cls: 'dim',  content: '# Done. Agent already knows — asks nothing, re-explains nothing.', delay: 100 },
-]
+function buildLines(): Line[] {
+  return [
+    { kind: 'text',  cls: 'dim',  content: '# Agent runs this automatically — you never type this yourself', delay: 200 },
+    { kind: 'blank', delay: 100 },
+    { kind: 'multi', parts: [{ cls: 'cmd', content: '$ qmd query' }, { cls: 'out', content: ' "what stack are we using for the checkout"' }], delay: 400 },
+    { kind: 'blank', delay: 600 },
+    { kind: 'multi', parts: [{ cls: 'highlight', content: '→' }, { cls: 'out', content: ` memory/${RECENT_DATE}.md  — "Using Stripe + Next.js. No PayPal — integration was a mess."` }], delay: 180 },
+    { kind: 'multi', parts: [{ cls: 'highlight', content: '→' }, { cls: 'out', content: ' memory/TACIT.md           — "Always use pnpm, never npm. Deploy to Vercel."' }], delay: 140 },
+    { kind: 'multi', parts: [{ cls: 'highlight', content: '→' }, { cls: 'out', content: ` memory/DECISIONS.md       — "Went with App Router, not Pages. Decided ${OLDER_DATE}."` }], delay: 160 },
+    { kind: 'blank', delay: 200 },
+    { kind: 'text',  cls: 'dim',  content: '# Done. Agent already knows — asks nothing, re-explains nothing.', delay: 100 },
+  ]
+}
 
 export default function DemoTerminal() {
   const ref = useRef<HTMLDivElement>(null)
   const [visibleCount, setVisibleCount] = useState(0)
   const [played, setPlayed] = useState(false)
+
+  // Build lines once on mount (client only — avoids SSR/client date mismatch)
+  const [LINES] = useState<Line[]>(() => buildLines())
 
   useEffect(() => {
     const el = ref.current
@@ -55,7 +70,7 @@ export default function DemoTerminal() {
     })
 
     return () => timers.forEach(clearTimeout)
-  }, [played])
+  }, [played, LINES])
 
   const handleReplay = () => {
     setVisibleCount(0)
@@ -102,7 +117,7 @@ export default function DemoTerminal() {
               <span className="demo-cursor" />
             </>
           ) : (
-            // SSR / pre-play: render full content statically (no flash)
+            // SSR / pre-play: static placeholder (dates will update after hydration)
             <>
               <span className="dim" style={{ display: 'block' }}># Agent runs this automatically — you never type this yourself</span>
               <span style={{ display: 'block' }}>&nbsp;</span>
@@ -113,15 +128,15 @@ export default function DemoTerminal() {
               <span style={{ display: 'block' }}>&nbsp;</span>
               <span style={{ display: 'block' }}>
                 <span className="highlight">→</span>
-                <span className="out"> memory/2026-03-10.md  — &quot;Using Stripe + Next.js. No PayPal — integration was a mess.&quot;</span>
+                <span className="out"> memory/{RECENT_DATE}.md  — &quot;Using Stripe + Next.js. No PayPal — integration was a mess.&quot;</span>
               </span>
               <span style={{ display: 'block' }}>
                 <span className="highlight">→</span>
-                <span className="out"> memory/TACIT.md       — &quot;Always use pnpm, never npm. Deploy to Vercel.&quot;</span>
+                <span className="out"> memory/TACIT.md           — &quot;Always use pnpm, never npm. Deploy to Vercel.&quot;</span>
               </span>
               <span style={{ display: 'block' }}>
                 <span className="highlight">→</span>
-                <span className="out"> memory/DECISIONS.md   — &quot;Went with App Router, not Pages. Decided 2026-02-28.&quot;</span>
+                <span className="out"> memory/DECISIONS.md       — &quot;Went with App Router, not Pages. Decided {OLDER_DATE}.&quot;</span>
               </span>
               <span style={{ display: 'block' }}>&nbsp;</span>
               <span className="dim" style={{ display: 'block' }}># Done. Agent already knows — asks nothing, re-explains nothing.</span>
