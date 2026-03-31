@@ -604,7 +604,7 @@ export default function Home() {
             {' '}add-on · Mac only · 100% local · No cloud, no API keys
           </div>
           <h1>Your AI agent<br />forgets everything.</h1>
-          <p style={{fontSize: 'clamp(17px, 2.8vw, 21px)', fontWeight: 700, color: '#d4d4d8', letterSpacing: '-0.02em', marginBottom: '0', lineHeight: 1.3}}>
+          <p style={{fontSize: 'clamp(18px, 2.8vw, 22px)', fontWeight: 700, color: '#f4f4f5', letterSpacing: '-0.02em', marginBottom: '0', lineHeight: 1.3}}>
             Give it persistent memory in 20 minutes — never re-explain yourself again.
           </p>
           <div className="hero-actions" style={{marginTop:'20px'}}>
@@ -629,8 +629,21 @@ export default function Home() {
                 <span>Stripe secure checkout</span>
               </span>
             </span>
-            <p style={{fontSize: '13px', color: '#a1a1aa', marginTop: '12px', marginBottom: '0', lineHeight: 1.55, letterSpacing: '-0.01em'}}>
-              Pre-built ZIP: extraction scripts, background services, semantic search, identity templates, and a step-by-step setup guide — <span style={{color:'#d4d4d8', fontWeight:600}}>everything configured. Run one installer. Automatic from your first session.</span>
+            <div style={{display:'flex', flexWrap:'wrap', gap:'7px', marginTop:'12px'}}>
+              {[
+                ['🛠️', 'Extraction scripts'],
+                ['⚙️', 'Background services'],
+                ['🔍', 'Semantic search'],
+                ['📝', 'Identity templates'],
+                ['📖', 'Setup guide'],
+              ].map(([icon, label]) => (
+                <span key={label} style={{display:'inline-flex', alignItems:'center', gap:'5px', background:'rgba(255,255,255,0.04)', border:'1px solid #27272a', borderRadius:'6px', padding:'4px 10px', fontSize:'12px', color:'#a1a1aa', fontWeight:500}}>
+                  {icon} {label}
+                </span>
+              ))}
+            </div>
+            <p style={{fontSize:'12px', color:'#71717a', marginTop:'8px', marginBottom:0, lineHeight:1.5}}>
+              Everything pre-configured. Run one installer. <span style={{color:'#d4d4d8', fontWeight:600}}>Automatic from your first session.</span>
             </p>
             <p className="hero-proof" style={{marginTop:'12px', marginBottom:'0'}}>
               <span className="hero-proof-label">Built &amp; battle-tested by the creator:</span>
