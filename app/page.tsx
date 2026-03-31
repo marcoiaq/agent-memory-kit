@@ -615,7 +615,7 @@ export default function Home() {
               <span style={{fontSize:'11px', fontWeight:700, color:'#22c55e', background:'rgba(34,197,94,0.08)', border:'1px solid rgba(34,197,94,0.2)', padding:'3px 8px', borderRadius:'4px', letterSpacing:'0.04em', textTransform:'uppercase'}}>One-time</span>
             </div>
             <span style={{fontSize:'12px', color:'#f59e0b', fontWeight:600, display:'flex', alignItems:'center', gap:'5px', marginTop:'2px'}}>
-              ⏳ Launch price — locked at $10. Going up to $29 soon.
+              ⏳ Launch price — $10 now. Raises to $29 with the next version.
             </span>
             <a href="/api/create-checkout" className="cta-main cta-pulse" style={{marginTop:'8px'}}>
               Fix My Agent&apos;s Memory — $10 →
@@ -629,7 +629,11 @@ export default function Home() {
                 <span>Stripe secure checkout</span>
               </span>
             </span>
-            <div style={{display:'flex', flexWrap:'wrap', gap:'7px', marginTop:'12px'}}>
+            <p className="hero-proof" style={{marginTop:'14px', marginBottom:'0'}}>
+              <span className="hero-proof-label">Built &amp; used daily by the creator:</span>
+              <span><span style={{fontStyle:'italic', color:'#d4d4d8'}}>"I run OpenClaw daily on my Mac mini. 200+ sessions with this running — never once started blank."</span>{' '}— <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a></span>
+            </p>
+            <div style={{display:'flex', flexWrap:'wrap', gap:'7px', marginTop:'14px'}}>
               {[
                 ['🛠️', 'Extraction scripts'],
                 ['⚙️', 'Background services'],
@@ -644,10 +648,6 @@ export default function Home() {
             </div>
             <p style={{fontSize:'12px', color:'#71717a', marginTop:'8px', marginBottom:0, lineHeight:1.5}}>
               Everything pre-configured. Run one installer. <span style={{color:'#d4d4d8', fontWeight:600}}>Automatic from your first session.</span>
-            </p>
-            <p className="hero-proof" style={{marginTop:'12px', marginBottom:'0'}}>
-              <span className="hero-proof-label">Built &amp; battle-tested by the creator:</span>
-              <span><span style={{fontStyle:'italic', color:'#d4d4d8'}}>"I run OpenClaw daily on my Mac mini. 200+ sessions with this running — never once started blank."</span>{' '}— <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a></span>
             </p>
             <span style={{fontSize:'12px', color:'#71717a', marginTop:'10px', display:'flex', alignItems:'center', gap:'4px', flexWrap:'wrap'}}>
               Works on any Mac (12+) with OpenClaw · <a href="https://ollama.ai" target="_blank" rel="noopener noreferrer" style={{color:'#a1a1aa', textDecoration:'underline', textDecorationColor:'rgba(161,161,170,0.4)', textUnderlineOffset:'2px'}}>Ollama free install (~5 min, no GPU)</a>
@@ -1022,7 +1022,7 @@ export default function Home() {
               <span className="price-num">$10</span>
               <span className="price-word">one-time</span>
             </div>
-            <span className="price-launch">⏳ Launch price — locked at $10. Going up to $29 soon. Pay once, own it forever.</span>
+            <span className="price-launch">⏳ Launch price — $10 now. Raises to $29 with the next version. Pay once, own it forever.</span>
             <a href="/api/create-checkout" className="cta-btn">Fix My Agent&apos;s Memory — $10 →</a>
             <p className="cta-meta" style={{marginTop:'14px', marginBottom:'8px', color:'#a1a1aa'}}>Secure checkout via Stripe · Instant download · 7-day money-back guarantee</p>
             <p style={{fontSize:'12px', color:'#71717a', marginTop:'8px', display:'flex', alignItems:'center', justifyContent:'center', gap:'8px', flexWrap:'wrap'}}>
