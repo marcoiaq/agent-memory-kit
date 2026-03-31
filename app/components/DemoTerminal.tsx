@@ -50,7 +50,7 @@ export default function DemoTerminal() {
           observer.disconnect()
         }
       },
-      { threshold: 0.4 }
+      { threshold: 0.25 }
     )
     observer.observe(el)
     return () => observer.disconnect()
