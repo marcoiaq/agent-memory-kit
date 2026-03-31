@@ -6,12 +6,23 @@ import { useEffect, useState } from 'react'
 const MIN_DISPLAY_COUNT = 5
 
 // Fallback stat shown when buyer count is below threshold
-// Shows the guarantee — a distinct trust signal not shown elsewhere in the proof bar
+// Shows real usage data from the creator — distinct from trust signals already in the hero
 function FallbackStat() {
   return (
     <div className="proof-stat" style={{ display: 'flex', alignItems: 'center', gap: '7px' }}>
-      <span style={{ fontSize: '15px', flexShrink: 0, lineHeight: 1 }}>🛡️</span>
-      <span>7-day money-back guarantee — if it doesn&apos;t work, reply to your receipt for a full refund</span>
+      <span style={{
+        display: 'inline-block',
+        width: '7px',
+        height: '7px',
+        borderRadius: '50%',
+        background: '#6366f1',
+        flexShrink: 0,
+        boxShadow: '0 0 5px rgba(99,102,241,0.5)',
+      }} />
+      <span>
+        <strong style={{ color: '#fafafa', fontWeight: 700 }}>200+ sessions</strong>
+        {' '}tracked — zero blank starts since install
+      </span>
     </div>
   )
 }
