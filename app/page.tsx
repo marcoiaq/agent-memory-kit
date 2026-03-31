@@ -630,7 +630,7 @@ export default function Home() {
               </span>
             </span>
             <p style={{fontSize: '13px', color: '#a1a1aa', marginTop: '12px', marginBottom: '0', lineHeight: 1.55, letterSpacing: '-0.01em'}}>
-              Pre-built ZIP: extraction scripts, background services, semantic search, identity templates, and a step-by-step setup guide — <span style={{color:'#d4d4d8', fontWeight:600}}>everything configured. Run one installer. Automatic from session one.</span>
+              Pre-built ZIP: extraction scripts, background services, semantic search, identity templates, and a step-by-step setup guide — <span style={{color:'#d4d4d8', fontWeight:600}}>everything configured. Run one installer. Automatic from your first session.</span>
             </p>
             <p className="hero-proof" style={{marginTop:'12px', marginBottom:'0'}}>
               <span className="hero-proof-label">Built &amp; battle-tested by the creator:</span>
@@ -926,11 +926,11 @@ export default function Home() {
         <div className="wrap">
           <div style={{fontSize:'11px', fontWeight:700, letterSpacing:'0.1em', textTransform:'uppercase', color:'#71717a', marginBottom:'10px'}}>Everything included</div>
           <h2>What&apos;s inside</h2>
-          <p className="inside-sub">Pre-configured and ready. Run the installer — your agent never starts from scratch again.</p>
+          <p className="inside-sub">Pre-configured and ready to go. Run the installer — your agent never starts from scratch again.</p>
           <div className="chapters">
             {[
               ['01', 'Memory observer', 'Shell scripts that watch your agent\'s session files and automatically extract facts using a local LLM. Runs silently in the background.'],
-              ['02', 'Background services', 'Auto-start on login — memory extraction runs silently from day one. Nothing to start, stop, or manage manually.'],
+              ['02', 'Background services', 'Auto-start on login — memory extraction runs silently from your first session. Nothing to start, stop, or manage manually.'],
               ['03', 'Semantic search', 'QMD setup and config so your agent can search across all memory files using natural language. Find anything in seconds.'],
               ['04', 'Agent identity templates', 'SOUL.md, AGENTS.md, MEMORY.md, TACIT.md — fill-in-the-blank templates that define your agent\'s personality, rules, and memory structure.'],
               ['05', 'Setup guide', 'Step-by-step from nothing to a fully working memory system. Every command, every config, every decision explained.'],
