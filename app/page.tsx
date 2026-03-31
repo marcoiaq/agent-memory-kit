@@ -630,7 +630,7 @@ export default function Home() {
               </span>
             </span>
             <p style={{fontSize: '13px', color: '#a1a1aa', marginTop: '12px', marginBottom: '0', lineHeight: 1.55, letterSpacing: '-0.01em'}}>
-              You get a kit with everything pre-configured: memory extraction scripts, background services that start on login, plain-English search, identity templates, and a setup guide. Run the installer — <span style={{color:'#d4d4d8', fontWeight:600}}>everything else is automatic from session one</span>.
+              Pre-built ZIP: extraction scripts, background services, semantic search, identity templates, and a step-by-step setup guide — <span style={{color:'#d4d4d8', fontWeight:600}}>everything configured. Run one installer. Automatic from session one.</span>
             </p>
             <p className="hero-proof" style={{marginTop:'12px', marginBottom:'0'}}>
               <span className="hero-proof-label">Built &amp; battle-tested by the creator:</span>

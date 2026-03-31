@@ -6,12 +6,12 @@ import { useEffect, useState } from 'react'
 const MIN_DISPLAY_COUNT = 5
 
 // Fallback stat shown when buyer count is below threshold
-// Highlights the transparency/security angle — plain-text package, nothing compiled
+// Highlights setup speed — reinforces the "20 minutes" headline claim
 function FallbackStat() {
   return (
     <div className="proof-stat" style={{ display: 'flex', alignItems: 'center', gap: '7px' }}>
-      <span style={{ fontSize: '15px', flexShrink: 0, lineHeight: 1 }}>📦</span>
-      <span>Plain-text scripts &amp; configs — inspect every line before running</span>
+      <span style={{ fontSize: '15px', flexShrink: 0, lineHeight: 1 }}>⚡</span>
+      <span>20-min setup · memory runs automatically from session one</span>
     </div>
   )
 }
