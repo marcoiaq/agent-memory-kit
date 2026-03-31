@@ -544,6 +544,8 @@ export default function Home() {
           .cta-main { width: 100%; justify-content: center; }
           body { padding-bottom: 88px; }
           .who-grid { grid-template-columns: 1fr !important; }
+          .hero-note { flex-direction: column; align-items: flex-start; gap: 6px; }
+          .hero-proof { display: flex; width: 100%; }
           .mobile-buy-bar {
             display: block;
             position: fixed; bottom: 0; left: 0; right: 0; z-index: 100;
