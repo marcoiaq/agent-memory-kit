@@ -633,25 +633,6 @@ export default function Home() {
               <span className="hero-proof-label">Built &amp; used daily by the creator:</span>
               <span><span style={{fontStyle:'italic', color:'#d4d4d8'}}>"I run OpenClaw daily on my Mac mini. 200+ sessions with this running — never once started blank."</span>{' '}— <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a></span>
             </p>
-            <div style={{display:'flex', flexWrap:'wrap', gap:'7px', marginTop:'14px'}}>
-              {[
-                ['🛠️', 'Extraction scripts'],
-                ['⚙️', 'Background services'],
-                ['🔍', 'Semantic search'],
-                ['📝', 'Identity templates'],
-                ['📖', 'Setup guide'],
-              ].map(([icon, label]) => (
-                <span key={label} style={{display:'inline-flex', alignItems:'center', gap:'5px', background:'rgba(255,255,255,0.04)', border:'1px solid #27272a', borderRadius:'6px', padding:'4px 10px', fontSize:'12px', color:'#a1a1aa', fontWeight:500}}>
-                  {icon} {label}
-                </span>
-              ))}
-            </div>
-            <p style={{fontSize:'12px', color:'#71717a', marginTop:'8px', marginBottom:0, lineHeight:1.5}}>
-              Everything pre-configured. Run one installer. <span style={{color:'#d4d4d8', fontWeight:600}}>Automatic from your first session.</span>
-            </p>
-            <span style={{fontSize:'12px', color:'#71717a', marginTop:'10px', display:'flex', alignItems:'center', gap:'4px', flexWrap:'wrap'}}>
-              Works on any Mac (12+) with OpenClaw · <a href="https://ollama.ai" target="_blank" rel="noopener noreferrer" style={{color:'#a1a1aa', textDecoration:'underline', textDecorationColor:'rgba(161,161,170,0.4)', textUnderlineOffset:'2px'}}>Ollama free install (~5 min, no GPU)</a>
-            </span>
           </div>
 
         </div>
