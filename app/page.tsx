@@ -612,7 +612,7 @@ export default function Home() {
             {' '}— your agent never forgets again.
           </p>
           <p style={{fontSize:'15px', color:'#71717a', lineHeight:1.65, marginTop:'12px', marginBottom:'0'}}>
-            Scripts, background services, and a step-by-step guide — gives your OpenClaw agent persistent, searchable memory. Runs silently on your Mac, 100% local, forever.
+            Your OpenClaw agent starts every session knowing your stack, your decisions, and exactly where you left off. Zero re-explaining. Zero blank slates. Runs silently on your Mac — 100% local, 100% private, forever.
           </p>
           <div className="hero-actions" style={{marginTop:'20px'}}>
             <div style={{display:'flex', alignItems:'center', gap:'10px', marginBottom:'4px', flexWrap:'wrap'}}>
