@@ -658,6 +658,24 @@ export default function Home() {
         </div>
       </div>
 
+      {/* DEMO — show the product working before asking who it's for */}
+      <div className="demo">
+        <div className="wrap">
+          <h2 style={{fontSize:'clamp(22px, 3.5vw, 28px)', fontWeight:800, letterSpacing:'-0.03em', color:'#fafafa', marginBottom:'8px', lineHeight:1.2}}>
+            Your agent finds any past decision — instantly.
+          </h2>
+          <div className="demo-label" style={{marginBottom:'16px'}}>Runs automatically before every session — you type nothing</div>
+          <DemoTerminal />
+          <p className="demo-caption">Automatic every session · No manual commands · Runs 100% on your Mac</p>
+          <div style={{marginTop:'24px', display:'flex', alignItems:'center', gap:'14px', flexWrap:'wrap'}}>
+            <a href="/api/create-checkout" className="cta-main" style={{fontSize:'15px', padding:'12px 24px'}}>
+              Make My Agent Do This — $10 →
+            </a>
+            <span style={{fontSize:'12px', color:'#71717a'}}>Instant download · 7-day refund</span>
+          </div>
+        </div>
+      </div>
+
       {/* WHO IS THIS FOR */}
       <div style={{padding:'48px 0', borderBottom:'1px solid #18181b'}}>
         <div className="wrap">
@@ -696,24 +714,6 @@ export default function Home() {
           <div style={{marginTop:'24px', display:'flex', alignItems:'center', gap:'16px', flexWrap:'wrap'}}>
             <a href="/api/create-checkout" className="cta-main" style={{fontSize:'15px', padding:'12px 24px'}}>
               Stop Re-Explaining Yourself — $10 →
-            </a>
-            <span style={{fontSize:'12px', color:'#71717a'}}>Instant download · 7-day refund</span>
-          </div>
-        </div>
-      </div>
-
-      {/* DEMO */}
-      <div className="demo">
-        <div className="wrap">
-          <h2 style={{fontSize:'clamp(22px, 3.5vw, 28px)', fontWeight:800, letterSpacing:'-0.03em', color:'#fafafa', marginBottom:'8px', lineHeight:1.2}}>
-            Your agent finds any past decision — instantly.
-          </h2>
-          <div className="demo-label" style={{marginBottom:'16px'}}>Runs automatically before every session — you type nothing</div>
-          <DemoTerminal />
-          <p className="demo-caption">Automatic every session · No manual commands · Runs 100% on your Mac</p>
-          <div style={{marginTop:'24px', display:'flex', alignItems:'center', gap:'14px', flexWrap:'wrap'}}>
-            <a href="/api/create-checkout" className="cta-main" style={{fontSize:'15px', padding:'12px 24px'}}>
-              Make My Agent Do This — $10 →
             </a>
             <span style={{fontSize:'12px', color:'#71717a'}}>Instant download · 7-day refund</span>
           </div>
