@@ -634,7 +634,7 @@ export default function Home() {
               </span>
             </span>
             <p className="hero-proof" style={{marginTop:'14px', marginBottom:'0'}}>
-              <span className="hero-proof-label">Built &amp; used daily by the creator:</span>
+              <span className="hero-proof-label">Running on my own Mac — every day:</span>
               <span><span style={{fontStyle:'italic', color:'#d4d4d8'}}>"I run OpenClaw daily on my Mac mini. 200+ sessions with this running — <strong style={{color:'#fafafa', fontStyle:'normal', fontWeight:800}}>never once started blank.</strong>"</span>{' '}— <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a></span>
             </p>
           </div>
@@ -1010,14 +1010,14 @@ export default function Home() {
             <span className="price-launch">⏳ Launch price — $10 now. Raises to $29 with the next version. Pay once, own it forever.</span>
             <a href="/api/create-checkout" className="cta-btn">Fix My Agent&apos;s Memory — $10 →</a>
             <p className="cta-meta" style={{marginTop:'14px', marginBottom:'8px', color:'#a1a1aa'}}>Secure checkout via Stripe · Instant download · 7-day money-back guarantee</p>
-            <p style={{fontSize:'12px', color:'#71717a', marginTop:'8px', display:'flex', alignItems:'center', justifyContent:'center', gap:'8px', flexWrap:'wrap'}}>
+            <p style={{fontSize:'13px', color:'#a1a1aa', marginTop:'8px', display:'flex', alignItems:'center', justifyContent:'center', gap:'8px', flexWrap:'wrap'}}>
               <span>Pay</span>
-              <span style={{color:'#71717a'}}>→</span>
+              <span style={{color:'#52525b'}}>→</span>
               <span>Instant download (ZIP)</span>
-              <span style={{color:'#71717a'}}>→</span>
+              <span style={{color:'#52525b'}}>→</span>
               <span>Run 1 installer script</span>
-              <span style={{color:'#71717a'}}>→</span>
-              <span style={{color:'#22c55e', fontWeight:600}}>Done in 20 min</span>
+              <span style={{color:'#52525b'}}>→</span>
+              <span style={{color:'#22c55e', fontWeight:700}}>Done in 20 min</span>
             </p>
           </div>
         </div>
