@@ -611,9 +611,6 @@ export default function Home() {
             <span style={{color: '#fafafa', fontWeight: 900, background: 'rgba(99,102,241,0.12)', borderRadius: '4px', padding: '1px 6px', letterSpacing: '-0.03em'}}>20-minute install</span>
             {' '}— your agent never forgets again.
           </p>
-          <p style={{fontSize:'15px', color:'#a1a1aa', lineHeight:1.65, marginTop:'12px', marginBottom:'0'}}>
-            Your OpenClaw agent starts every session knowing your stack, your decisions, and exactly where you left off. Zero re-explaining. Zero blank slates. Runs silently on your Mac — 100% local, 100% private, forever.
-          </p>
           <div className="hero-actions" style={{marginTop:'20px'}}>
             <div style={{display:'flex', alignItems:'center', gap:'10px', marginBottom:'4px', flexWrap:'wrap'}}>
               <span style={{fontSize:'18px', color:'#52525b', textDecoration:'line-through', fontWeight:700, letterSpacing:'-0.02em'}}>$29</span>
@@ -622,7 +619,7 @@ export default function Home() {
               <span style={{fontSize:'11px', fontWeight:700, color:'#818cf8', background:'rgba(99,102,241,0.08)', border:'1px solid rgba(99,102,241,0.2)', padding:'3px 8px', borderRadius:'4px', letterSpacing:'0.04em', textTransform:'uppercase'}}>Early adopter</span>
             </div>
             <span style={{fontSize:'12px', color:'#f59e0b', fontWeight:600, display:'flex', alignItems:'center', gap:'5px', marginTop:'2px'}}>
-              ⏳ Early adopter price — goes up as the product grows. Pay once, locked in forever.
+              ⏳ Early adopter price — pay $10 now and you&apos;re locked in at this price while it goes up.
             </span>
             <a href="/api/create-checkout" className="cta-main cta-pulse" style={{marginTop:'8px'}}>
               Fix My Agent&apos;s Memory — $10 →
