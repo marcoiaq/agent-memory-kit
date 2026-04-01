@@ -611,6 +611,9 @@ export default function Home() {
             <span style={{color: '#fafafa', fontWeight: 900, background: 'rgba(99,102,241,0.12)', borderRadius: '4px', padding: '1px 6px', letterSpacing: '-0.03em'}}>20-minute install</span>
             {' '}— your agent never forgets again.
           </p>
+          <p style={{fontSize:'15px', color:'#71717a', lineHeight:1.65, marginTop:'12px', marginBottom:'0'}}>
+            Scripts, background services, and a step-by-step guide — gives your OpenClaw agent persistent, searchable memory. Runs silently on your Mac, 100% local, forever.
+          </p>
           <div className="hero-actions" style={{marginTop:'20px'}}>
             <div style={{display:'flex', alignItems:'center', gap:'10px', marginBottom:'4px', flexWrap:'wrap'}}>
               <span style={{fontSize:'18px', color:'#52525b', textDecoration:'line-through', fontWeight:700, letterSpacing:'-0.02em'}}>$29</span>
