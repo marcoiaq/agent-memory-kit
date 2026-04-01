@@ -611,7 +611,7 @@ export default function Home() {
             <span style={{color: '#fafafa', fontWeight: 900, background: 'rgba(99,102,241,0.12)', borderRadius: '4px', padding: '1px 6px', letterSpacing: '-0.03em'}}>20-minute install</span>
             {' '}— your agent never forgets again.
           </p>
-          <p style={{fontSize:'15px', color:'#71717a', lineHeight:1.65, marginTop:'12px', marginBottom:'0'}}>
+          <p style={{fontSize:'15px', color:'#a1a1aa', lineHeight:1.65, marginTop:'12px', marginBottom:'0'}}>
             Your OpenClaw agent starts every session knowing your stack, your decisions, and exactly where you left off. Zero re-explaining. Zero blank slates. Runs silently on your Mac — 100% local, 100% private, forever.
           </p>
           <div className="hero-actions" style={{marginTop:'20px'}}>
