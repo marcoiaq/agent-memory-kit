@@ -46,8 +46,8 @@ export default function BuyerCount() {
       })
   }, [])
 
-  // Before fetch resolves, render nothing (avoids layout shift)
-  if (!loaded) return null
+  // Before fetch resolves, render fallback (prevents proof bar layout shift)
+  if (!loaded) return <FallbackStat />
 
   if (count !== null) {
     return (
