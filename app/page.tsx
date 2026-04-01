@@ -607,19 +607,19 @@ export default function Home() {
           </div>
           <h1>Your AI agent<br />forgets everything.</h1>
           <p style={{fontSize: 'clamp(18px, 2.8vw, 22px)', fontWeight: 700, color: '#f4f4f5', letterSpacing: '-0.02em', marginBottom: '0', lineHeight: 1.3}}>
-            Give it persistent memory in{' '}
-            <span style={{color: '#fafafa', fontWeight: 900, background: 'rgba(99,102,241,0.12)', borderRadius: '4px', padding: '1px 6px', letterSpacing: '-0.03em'}}>20 minutes</span>
-            {' '}— never re-explain yourself again.
+            One{' '}
+            <span style={{color: '#fafafa', fontWeight: 900, background: 'rgba(99,102,241,0.12)', borderRadius: '4px', padding: '1px 6px', letterSpacing: '-0.03em'}}>20-minute install</span>
+            {' '}— your agent never forgets again.
           </p>
           <div className="hero-actions" style={{marginTop:'20px'}}>
             <div style={{display:'flex', alignItems:'center', gap:'10px', marginBottom:'4px', flexWrap:'wrap'}}>
               <span style={{fontSize:'18px', color:'#52525b', textDecoration:'line-through', fontWeight:700, letterSpacing:'-0.02em'}}>$29</span>
               <span style={{fontSize:'28px', fontWeight:900, color:'#fafafa', letterSpacing:'-0.03em'}}>$10</span>
-              <span style={{fontSize:'11px', fontWeight:700, color:'#f59e0b', background:'rgba(245,158,11,0.1)', border:'1px solid rgba(245,158,11,0.25)', padding:'3px 8px', borderRadius:'4px', letterSpacing:'0.06em', textTransform:'uppercase'}}>65% off</span>
               <span style={{fontSize:'11px', fontWeight:700, color:'#22c55e', background:'rgba(34,197,94,0.08)', border:'1px solid rgba(34,197,94,0.2)', padding:'3px 8px', borderRadius:'4px', letterSpacing:'0.04em', textTransform:'uppercase'}}>One-time</span>
+              <span style={{fontSize:'11px', fontWeight:700, color:'#818cf8', background:'rgba(99,102,241,0.08)', border:'1px solid rgba(99,102,241,0.2)', padding:'3px 8px', borderRadius:'4px', letterSpacing:'0.04em', textTransform:'uppercase'}}>Early adopter</span>
             </div>
             <span style={{fontSize:'12px', color:'#f59e0b', fontWeight:600, display:'flex', alignItems:'center', gap:'5px', marginTop:'2px'}}>
-              ⏳ Launch price — $10 now. Raises to $29 with the next version.
+              ⏳ Early adopter price — goes up as the product grows. Pay once, locked in forever.
             </span>
             <a href="/api/create-checkout" className="cta-main cta-pulse" style={{marginTop:'8px'}}>
               Fix My Agent&apos;s Memory — $10 →
@@ -1007,7 +1007,7 @@ export default function Home() {
               <span className="price-num">$10</span>
               <span className="price-word">one-time</span>
             </div>
-            <span className="price-launch">⏳ Launch price — $10 now. Raises to $29 with the next version. Pay once, own it forever.</span>
+            <span className="price-launch">⏳ Early adopter price — goes up as the product grows. Pay once, locked in forever.</span>
             <a href="/api/create-checkout" className="cta-btn">Fix My Agent&apos;s Memory — $10 →</a>
             <p className="cta-meta" style={{marginTop:'14px', marginBottom:'8px', color:'#a1a1aa'}}>Secure checkout via Stripe · Instant download · 7-day money-back guarantee</p>
             <p style={{fontSize:'13px', color:'#a1a1aa', marginTop:'8px', display:'flex', alignItems:'center', justifyContent:'center', gap:'8px', flexWrap:'wrap'}}>
