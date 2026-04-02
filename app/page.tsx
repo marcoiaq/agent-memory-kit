@@ -607,10 +607,13 @@ export default function Home() {
             {' '}add-on · Mac only · 100% local · No cloud, no API keys
           </div>
           <h1>Your AI agent<br />forgets everything.</h1>
+          <p style={{fontSize: 'clamp(16px, 2.5vw, 19px)', color: '#71717a', letterSpacing: '-0.01em', marginBottom: '10px', lineHeight: 1.5, fontWeight: 500}}>
+            Every session starts blank. You re-explain your stack. Again.
+          </p>
           <p style={{fontSize: 'clamp(18px, 2.8vw, 22px)', fontWeight: 700, color: '#f4f4f5', letterSpacing: '-0.02em', marginBottom: '0', lineHeight: 1.3}}>
             One{' '}
-            <span style={{color: '#fafafa', fontWeight: 900, background: 'rgba(99,102,241,0.12)', borderRadius: '4px', padding: '1px 6px', letterSpacing: '-0.03em'}}>20-minute install</span>
-            {' '}— your agent knows your stack, your rules, every past decision.
+            <span style={{color: '#fafafa', fontWeight: 900, background: 'rgba(99,102,241,0.12)', borderRadius: '4px', padding: '1px 6px', letterSpacing: '-0.03em'}}>20-minute setup</span>
+            {' '}— every session after that, your agent already knows. No blank slates. No re-explaining.
           </p>
           <div className="hero-actions" style={{marginTop:'20px'}}>
             <div style={{display:'flex', alignItems:'center', gap:'10px', marginBottom:'4px', flexWrap:'wrap'}}>
@@ -635,7 +638,7 @@ export default function Home() {
               </span>
             </span>
             <p className="hero-proof" style={{marginTop:'14px', marginBottom:'0'}}>
-              <span className="hero-proof-label">From the builder — running daily in production since late 2025:</span>
+              <span className="hero-proof-label">In production since December 2025 — here&apos;s what it actually does:</span>
               <span><span style={{fontStyle:'italic', color:'#d4d4d8'}}>"It knows my stack, decisions I made months ago, and what I was building last week. I open a new session and it just <strong style={{color:'#fafafa', fontStyle:'normal', fontWeight:800}}>already knows.</strong> Never asks me to repeat myself."</span>{' '}— <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a></span>
             </p>
           </div>
