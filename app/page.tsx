@@ -635,7 +635,7 @@ export default function Home() {
               </span>
             </span>
             <p className="hero-proof" style={{marginTop:'14px', marginBottom:'0'}}>
-              <span className="hero-proof-label">Built to scratch my own itch — 200+ sessions daily, never once blank:</span>
+              <span className="hero-proof-label">In production on my Mac mini — 200+ daily sessions, never blank once:</span>
               <span><span style={{fontStyle:'italic', color:'#d4d4d8'}}>"I run OpenClaw daily on my Mac mini. Every session picks up exactly where the last one left off — <strong style={{color:'#fafafa', fontStyle:'normal', fontWeight:800}}>never once started blank.</strong>"</span>{' '}— <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a></span>
             </p>
           </div>
