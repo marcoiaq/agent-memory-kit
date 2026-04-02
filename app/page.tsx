@@ -8,14 +8,14 @@ const jsonLd = {
   '@type': 'Product',
   name: 'Agent Memory Kit',
   description: 'Give your OpenClaw AI agent persistent memory in 20 minutes. Scripts, configs, and a setup guide. $10 one-time. 100% local — no cloud, no API keys.',
-  url: 'https://alfredbuild.xyz',
+  url: 'https://www.alfredbuild.xyz',
   brand: { '@type': 'Brand', name: 'Alfred Build' },
   offers: {
     '@type': 'Offer',
     price: '10.00',
     priceCurrency: 'USD',
     availability: 'https://schema.org/InStock',
-    url: 'https://alfredbuild.xyz/api/create-checkout',
+    url: 'https://www.alfredbuild.xyz/api/create-checkout',
     seller: { '@type': 'Organization', name: 'Alfred Build' },
   },
 }
@@ -635,7 +635,7 @@ export default function Home() {
               </span>
             </span>
             <p className="hero-proof" style={{marginTop:'14px', marginBottom:'0'}}>
-              <span className="hero-proof-label">From the builder — 200+ sessions, not once blank:</span>
+              <span className="hero-proof-label">In daily use — 200+ sessions, never once blank:</span>
               <span><span style={{fontStyle:'italic', color:'#d4d4d8'}}>"I run OpenClaw daily on my Mac mini. Every session picks up exactly where the last one left off — <strong style={{color:'#fafafa', fontStyle:'normal', fontWeight:800}}>never once started blank.</strong>"</span>{' '}— <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a></span>
             </p>
           </div>

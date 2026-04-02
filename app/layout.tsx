@@ -8,14 +8,14 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   title: 'Agent Memory Kit — Your AI Agent Forgets Everything. Fix It in 20 Minutes.',
   description: 'Stop re-explaining yourself every session. Give your OpenClaw agent persistent, searchable memory in 20 minutes. Runs 100% locally on your Mac — no cloud, no API keys. $10 one-time.',
-  metadataBase: new URL('https://alfredbuild.xyz'),
+  metadataBase: new URL('https://www.alfredbuild.xyz'),
   alternates: {
-    canonical: 'https://alfredbuild.xyz',
+    canonical: 'https://www.alfredbuild.xyz',
   },
   openGraph: {
     title: 'Your AI Agent Forgets Everything. Fix It in 20 Minutes.',
     description: 'Every session your agent starts blank. One 20-minute install gives it persistent, searchable memory — 100% local on your Mac. $10 one-time. No cloud, no subscriptions.',
-    url: 'https://alfredbuild.xyz',
+    url: 'https://www.alfredbuild.xyz',
     siteName: 'Alfred Build',
     type: 'website',
   },
