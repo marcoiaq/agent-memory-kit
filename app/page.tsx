@@ -689,11 +689,11 @@ export default function Home() {
           <div className="who-grid" style={{display:'grid', gridTemplateColumns:'1fr 1fr', gap:'12px'}}>
             {[
               'You paste the same context block at the start of every new chat',
+              "You've hesitated before typing something sensitive — you want your agent's memory private, on your Mac, never on someone else's server",
               'Your agent asks you things it already figured out last week',
               'You re-explain your stack or rules every new session',
               'You\'re building something and your agent keeps forgetting where you left off',
               'You\'ve lost a decision or context when a session ended',
-              "You've hesitated before typing something sensitive — you want your agent's memory private, on your Mac, never on someone else's server",
             ].map((item) => (
               <div key={item} className="who-grid-item">
                 <span style={{color:'#6366f1', fontWeight:700, fontSize:'14px', flexShrink:0, marginTop:'1px'}}>→</span>

@@ -193,6 +193,7 @@ export default function FaqAccordion() {
         .faq-accordion-body.open {
           opacity: 1;
         }
+        /* Ensure long answers (e.g. "Is it safe?") are never clipped */
         .faq-accordion-inner {
           font-size: 14px;
           color: #71717a;
@@ -215,7 +216,7 @@ export default function FaqAccordion() {
               </button>
               <div
                 className={`faq-accordion-body${isOpen ? ' open' : ''}`}
-                style={{ maxHeight: isOpen ? '600px' : '0' }}
+                style={{ maxHeight: isOpen ? '900px' : '0' }}
               >
                 <div className="faq-accordion-inner">{item.a}</div>
               </div>
