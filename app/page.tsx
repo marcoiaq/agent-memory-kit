@@ -635,8 +635,8 @@ export default function Home() {
               </span>
             </span>
             <p className="hero-proof" style={{marginTop:'14px', marginBottom:'0'}}>
-              <span className="hero-proof-label">In production on my Mac mini — 200+ daily sessions, never blank once:</span>
-              <span><span style={{fontStyle:'italic', color:'#d4d4d8'}}>"I run OpenClaw daily on my Mac mini. Every session picks up exactly where the last one left off — <strong style={{color:'#fafafa', fontStyle:'normal', fontWeight:800}}>never once started blank.</strong>"</span>{' '}— <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a></span>
+              <span className="hero-proof-label">From the builder — running daily in production since late 2025:</span>
+              <span><span style={{fontStyle:'italic', color:'#d4d4d8'}}>"It knows my stack, decisions I made months ago, and what I was building last week. I open a new session and it just <strong style={{color:'#fafafa', fontStyle:'normal', fontWeight:800}}>already knows.</strong> Never asks me to repeat myself."</span>{' '}— <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a></span>
             </p>
           </div>
 
@@ -847,7 +847,7 @@ export default function Home() {
             Three steps. 20 minutes. Your agent never starts from scratch again.
           </p>
           <a href="/api/create-checkout" className="cta-main" style={{flexShrink:0, fontSize:'15px', padding:'12px 24px'}}>
-            Get Set Up Now — $10 →
+            Start in 20 Minutes — $10 →
           </a>
         </div>
       </div>
@@ -900,7 +900,7 @@ export default function Home() {
             </p>
             <ul className="openclaw-features">
               {[
-                'Reads OpenClaw session JSONL files automatically',
+                'Reads OpenClaw session files automatically — no manual logging',
                 'Integrates with OpenClaw\'s workspace (MEMORY.md, SOUL.md, AGENTS.md)',
                 'Works with OpenClaw\'s tool calls and agent turns',
                 'Compatible with all OpenClaw models',
