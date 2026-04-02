@@ -545,7 +545,8 @@ export default function Home() {
           body { padding-bottom: 88px; }
           .who-grid { grid-template-columns: 1fr !important; }
           .hero-note { flex-direction: column; align-items: flex-start; gap: 6px; }
-          .hero-proof { display: flex; width: 100%; }
+          .hero-proof { display: flex; width: 100%; flex-direction: column; gap: 6px; }
+          .hero-proof-label { white-space: normal; }
           .mobile-buy-bar {
             display: block;
             position: fixed; bottom: 0; left: 0; right: 0; z-index: 100;
@@ -634,8 +635,8 @@ export default function Home() {
               </span>
             </span>
             <p className="hero-proof" style={{marginTop:'14px', marginBottom:'0'}}>
-              <span className="hero-proof-label">Running on my own Mac — every day:</span>
-              <span><span style={{fontStyle:'italic', color:'#d4d4d8'}}>"I run OpenClaw daily on my Mac mini. 200+ sessions with this running — <strong style={{color:'#fafafa', fontStyle:'normal', fontWeight:800}}>never once started blank.</strong>"</span>{' '}— <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a></span>
+              <span className="hero-proof-label">My production setup — 200+ sessions, not once blank:</span>
+              <span><span style={{fontStyle:'italic', color:'#d4d4d8'}}>"I run OpenClaw daily on my Mac mini. Every session picks up exactly where the last one left off — <strong style={{color:'#fafafa', fontStyle:'normal', fontWeight:800}}>never once started blank.</strong>"</span>{' '}— <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a></span>
             </p>
           </div>
 
