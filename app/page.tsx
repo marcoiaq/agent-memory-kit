@@ -635,7 +635,7 @@ export default function Home() {
               </span>
             </span>
             <p className="hero-proof" style={{marginTop:'14px', marginBottom:'0'}}>
-              <span className="hero-proof-label">My production setup — 200+ sessions, not once blank:</span>
+              <span className="hero-proof-label">From the builder — 200+ sessions, not once blank:</span>
               <span><span style={{fontStyle:'italic', color:'#d4d4d8'}}>"I run OpenClaw daily on my Mac mini. Every session picks up exactly where the last one left off — <strong style={{color:'#fafafa', fontStyle:'normal', fontWeight:800}}>never once started blank.</strong>"</span>{' '}— <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a></span>
             </p>
           </div>
@@ -704,19 +704,19 @@ export default function Home() {
           <p style={{fontSize:'13px', color:'#a1a1aa', marginTop:'20px', lineHeight:1.6}}>
             Even one is enough. $10, 20 minutes — your agent never starts from scratch again.
           </p>
-          <div style={{marginTop:'12px', display:'flex', alignItems:'center', gap:'8px', flexWrap:'wrap', padding:'10px 14px', background:'rgba(99,102,241,0.05)', border:'1px solid rgba(99,102,241,0.15)', borderRadius:'8px'}}>
+          <div style={{marginTop:'20px', display:'flex', alignItems:'center', gap:'16px', flexWrap:'wrap'}}>
+            <a href="/api/create-checkout" className="cta-main" style={{fontSize:'15px', padding:'12px 24px'}}>
+              Stop Re-Explaining Yourself — $10 →
+            </a>
+            <span style={{fontSize:'12px', color:'#71717a'}}>Instant download · 7-day refund</span>
+          </div>
+          <div style={{marginTop:'14px', display:'flex', alignItems:'center', gap:'8px', flexWrap:'wrap', padding:'10px 14px', background:'rgba(99,102,241,0.05)', border:'1px solid rgba(99,102,241,0.15)', borderRadius:'8px'}}>
             <span style={{fontSize:'12px', color:'#71717a', fontWeight:700}}>Requires:</span>
             <span style={{fontSize:'12px', color:'#a1a1aa'}}>Mac (macOS 12+)</span>
             <span style={{fontSize:'12px', color:'#3f3f46'}}>·</span>
             <span style={{fontSize:'12px', color:'#a1a1aa'}}><a href="https://openclaw.ai" target="_blank" rel="noopener noreferrer" style={{color:'#818cf8', textDecoration:'underline', textDecorationColor:'rgba(129,140,248,0.4)', textUnderlineOffset:'2px'}}>OpenClaw</a></span>
             <span style={{fontSize:'12px', color:'#3f3f46'}}>·</span>
             <span style={{fontSize:'12px', color:'#a1a1aa'}}><a href="https://ollama.ai" target="_blank" rel="noopener noreferrer" style={{color:'#a1a1aa', textDecoration:'underline', textDecorationColor:'rgba(161,161,170,0.35)', textUnderlineOffset:'2px'}}>Ollama</a> (free, ~5 min install, no GPU)</span>
-          </div>
-          <div style={{marginTop:'24px', display:'flex', alignItems:'center', gap:'16px', flexWrap:'wrap'}}>
-            <a href="/api/create-checkout" className="cta-main" style={{fontSize:'15px', padding:'12px 24px'}}>
-              Stop Re-Explaining Yourself — $10 →
-            </a>
-            <span style={{fontSize:'12px', color:'#71717a'}}>Instant download · 7-day refund</span>
           </div>
         </div>
       </div>
