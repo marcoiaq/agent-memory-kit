@@ -620,7 +620,7 @@ export default function Home() {
               <span style={{fontSize:'11px', fontWeight:700, color:'#818cf8', background:'rgba(99,102,241,0.08)', border:'1px solid rgba(99,102,241,0.2)', padding:'3px 8px', borderRadius:'4px', letterSpacing:'0.04em', textTransform:'uppercase'}}>Early adopter</span>
             </div>
             <span style={{fontSize:'12px', color:'#f59e0b', fontWeight:600, display:'flex', alignItems:'center', gap:'5px', marginTop:'2px'}}>
-              ⏳ Raises to $29 soon — pay $10 now, locked in forever.
+              ⏳ Raises to $29 soon — lock in $10 now, yours forever.
             </span>
             <a href="/api/create-checkout" className="cta-main cta-pulse" style={{marginTop:'8px'}}>
               Fix My Agent&apos;s Memory — $10 →
@@ -635,7 +635,7 @@ export default function Home() {
               </span>
             </span>
             <p className="hero-proof" style={{marginTop:'14px', marginBottom:'0'}}>
-              <span className="hero-proof-label">In daily use — 200+ sessions, never once blank:</span>
+              <span className="hero-proof-label">Built to scratch my own itch — 200+ sessions daily, never once blank:</span>
               <span><span style={{fontStyle:'italic', color:'#d4d4d8'}}>"I run OpenClaw daily on my Mac mini. Every session picks up exactly where the last one left off — <strong style={{color:'#fafafa', fontStyle:'normal', fontWeight:800}}>never once started blank.</strong>"</span>{' '}— <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a></span>
             </p>
           </div>
