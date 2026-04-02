@@ -1046,10 +1046,10 @@ export default function Home() {
         <div className="mobile-buy-bar-inner">
           <div className="mobile-buy-bar-text">
             <span style={{fontSize:'11px', color:'#71717a', textDecoration:'line-through', marginRight:'3px'}}>$29</span><strong>$10</strong><span style={{fontWeight:400, color:'#71717a', fontSize:'12px'}}> one-time</span><br />
-            <span style={{color:'#f59e0b', fontWeight:700, fontSize:'11px'}}>⏳ Launch price</span><span style={{color:'#71717a', fontSize:'11px'}}> · 7-day refund</span>
+            <span style={{color:'#f59e0b', fontWeight:700, fontSize:'11px'}}>⏳ Goes to $29 soon</span><span style={{color:'#71717a', fontSize:'11px'}}> · 7-day refund</span>
           </div>
           <a href="/api/create-checkout" className="mobile-buy-bar-btn">
-            Fix Memory — $10 →
+            Fix My Agent — $10 →
           </a>
         </div>
       </div>

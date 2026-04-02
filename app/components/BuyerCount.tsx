@@ -6,7 +6,7 @@ import { useEffect, useState } from 'react'
 const MIN_DISPLAY_COUNT = 5
 
 // Fallback stat shown when buyer count is below threshold
-// Addresses the #1 security objection for downloading scripts — distinct from "200+ sessions" usage stat already in the hero creator quote
+// Addresses the #1 security objection for downloading scripts (open source / inspect before running)
 function FallbackStat() {
   return (
     <div className="proof-stat" style={{ display: 'flex', alignItems: 'center', gap: '7px' }}>
