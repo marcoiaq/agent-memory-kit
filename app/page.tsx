@@ -610,7 +610,7 @@ export default function Home() {
           <p style={{fontSize: 'clamp(18px, 2.8vw, 22px)', fontWeight: 700, color: '#f4f4f5', letterSpacing: '-0.02em', marginBottom: '0', lineHeight: 1.3}}>
             One{' '}
             <span style={{color: '#fafafa', fontWeight: 900, background: 'rgba(99,102,241,0.12)', borderRadius: '4px', padding: '1px 6px', letterSpacing: '-0.03em'}}>20-minute install</span>
-            {' '}— your agent never forgets again.
+            {' '}— your agent knows your stack, your rules, every past decision.
           </p>
           <div className="hero-actions" style={{marginTop:'20px'}}>
             <div style={{display:'flex', alignItems:'center', gap:'10px', marginBottom:'4px', flexWrap:'wrap'}}>
@@ -620,7 +620,7 @@ export default function Home() {
               <span style={{fontSize:'11px', fontWeight:700, color:'#818cf8', background:'rgba(99,102,241,0.08)', border:'1px solid rgba(99,102,241,0.2)', padding:'3px 8px', borderRadius:'4px', letterSpacing:'0.04em', textTransform:'uppercase'}}>Early adopter</span>
             </div>
             <span style={{fontSize:'12px', color:'#f59e0b', fontWeight:600, display:'flex', alignItems:'center', gap:'5px', marginTop:'2px'}}>
-              ⏳ Early adopter price — pay $10 now and you&apos;re locked in at this price while it goes up.
+              ⏳ Raises to $29 soon — pay $10 now, locked in forever.
             </span>
             <a href="/api/create-checkout" className="cta-main cta-pulse" style={{marginTop:'8px'}}>
               Fix My Agent&apos;s Memory — $10 →
