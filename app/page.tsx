@@ -630,7 +630,7 @@ export default function Home() {
             </a>
             <span className="hero-note">
               <span className="hero-note-item">7-day money-back guarantee</span>
-              <span className="hero-note-item">100% local — no cloud, no API keys</span>
+              <span className="hero-note-item">No subscription, ever</span>
               <span className="hero-note-item">Instant ZIP download after checkout</span>
               <span style={{fontSize:'12px', color:'#71717a', display:'flex', alignItems:'center', gap:'4px'}}>
                 <span>🔒</span>
