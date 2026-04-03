@@ -130,7 +130,7 @@ export default function DesktopScrollBar() {
             <span className="desktop-scroll-bar-title">Agent Memory Kit</span>
             <div className="desktop-scroll-bar-trust">
               <span className="desktop-scroll-bar-trust-item"><span style={{textDecoration:'line-through', color:'#52525b', marginRight:'4px'}}>$29</span><strong style={{color:'#fafafa'}}>$10</strong>&nbsp;one-time</span>
-              <span style={{fontSize:'11px', fontWeight:700, color:'#818cf8', background:'rgba(99,102,241,0.08)', border:'1px solid rgba(99,102,241,0.2)', padding:'2px 7px', borderRadius:'4px', letterSpacing:'0.04em', textTransform:'uppercase', whiteSpace:'nowrap'}}>Early adopter · v1 price</span>
+              <span style={{fontSize:'11px', fontWeight:700, color:'#f59e0b', background:'rgba(245,158,11,0.1)', border:'1px solid rgba(245,158,11,0.25)', padding:'2px 7px', borderRadius:'4px', letterSpacing:'0.06em', textTransform:'uppercase', whiteSpace:'nowrap'}}>65% off</span>
               <span className="desktop-scroll-bar-trust-item check">Instant download</span>
               <span className="desktop-scroll-bar-trust-item check">7-day guarantee</span>
               <span className="desktop-scroll-bar-stripe">🔒 Stripe</span>

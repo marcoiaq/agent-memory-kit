@@ -641,7 +641,7 @@ export default function Home() {
               </span>
             </span>
             <p className="hero-proof" style={{marginTop:'14px', marginBottom:'0'}}>
-              <span className="hero-proof-label">From the creator — 4+ months of daily use:</span>
+              <span className="hero-proof-label">4+ months daily use — never re-explained myself once:</span>
               <span>I built this for my own agent. It knows my stack, decisions from months ago, and what I was building last week. Every new session it just <strong style={{color:'#fafafa', fontWeight:800}}>already knows</strong> — I haven&apos;t re-explained myself once in over 4 months.{' '}<a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a></span>
             </p>
           </div>
