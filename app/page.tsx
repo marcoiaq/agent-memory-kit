@@ -634,15 +634,15 @@ export default function Home() {
             <span className="hero-note">
               <span className="hero-note-item">7-day money-back guarantee</span>
               <span className="hero-note-item">No subscription, ever</span>
-              <span className="hero-note-item">Instant ZIP download after checkout</span>
+              <span className="hero-note-item">Instant ZIP download</span>
               <span style={{fontSize:'12px', color:'#71717a', display:'flex', alignItems:'center', gap:'4px'}}>
                 <span>🔒</span>
                 <span>Stripe secure checkout</span>
               </span>
             </span>
             <p className="hero-proof" style={{marginTop:'14px', marginBottom:'0'}}>
-              <span className="hero-proof-label">4+ months daily use — never re-explained myself once:</span>
-              <span>I built this for my own agent. It knows my stack, decisions from months ago, and what I was building last week. Every new session it just <strong style={{color:'#fafafa', fontWeight:800}}>already knows</strong> — I haven&apos;t re-explained myself once in over 4 months.{' '}<a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a></span>
+              <span className="hero-proof-label">Built for my own Mac mini — 4 months in daily production:</span>
+              <span>Every new session my agent knows my stack, my rules, and what I was building last week. It surfaces decisions from months ago without being asked. <strong style={{color:'#fafafa', fontWeight:800}}>Zero blank slates. Zero re-explaining.</strong>{' '}<a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a></span>
             </p>
           </div>
 
@@ -697,7 +697,7 @@ export default function Home() {
               'You paste the same context block at the start of every new chat',
               "You've typed something sensitive and wished it stayed local — not on someone else's server",
               'Your agent asks you things it already figured out last week',
-              'You re-explain your stack or rules every new session',
+              'Your agent solved a problem last week — today you\'re watching it solve the same problem from scratch',
               'You\'re building something and your agent keeps forgetting where you left off',
               'You\'ve lost a decision or context when a session ended',
             ].map((item) => (
