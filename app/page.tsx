@@ -641,7 +641,7 @@ export default function Home() {
               </span>
             </span>
             <p className="hero-proof" style={{marginTop:'14px', marginBottom:'0'}}>
-              <span className="hero-proof-label">Built for my own Mac mini — 4 months in daily production:</span>
+              <span className="hero-proof-label">Running on my own Mac — 4 months straight in daily production:</span>
               <span>Every new session my agent knows my stack, my rules, and what I was building last week. It surfaces decisions from months ago without being asked. <strong style={{color:'#fafafa', fontWeight:800}}>Zero blank slates. Zero re-explaining.</strong>{' '}<a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a></span>
             </p>
           </div>
@@ -669,11 +669,13 @@ export default function Home() {
       <div className="demo">
         <div className="wrap">
           <h2 style={{fontSize:'clamp(22px, 3.5vw, 28px)', fontWeight:800, letterSpacing:'-0.03em', color:'#fafafa', marginBottom:'8px', lineHeight:1.2}}>
-            Your agent finds any past decision — instantly.
+            Runs automatically. You type nothing — ever.
           </h2>
-          <div className="demo-label" style={{marginBottom:'16px'}}>Runs automatically before every session — you type nothing</div>
+          <p style={{fontSize:'clamp(14px, 2vw, 16px)', color:'#71717a', marginBottom:'20px', lineHeight:1.6}}>
+            Before every session, your agent searches its own memory and surfaces exactly what it needs. No commands. No prompts. Just context, ready.
+          </p>
           <DemoTerminal />
-          <p className="demo-caption">Automatic every session · No manual commands · Runs 100% on your Mac</p>
+          <p className="demo-caption">Fires before every session · Zero manual steps · 100% on your Mac</p>
           <div style={{marginTop:'24px', display:'flex', alignItems:'center', gap:'14px', flexWrap:'wrap'}}>
             <a href="/api/create-checkout" className="cta-main" style={{fontSize:'15px', padding:'12px 24px'}}>
               Make My Agent Do This — $10 →
