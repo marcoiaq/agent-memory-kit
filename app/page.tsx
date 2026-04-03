@@ -821,7 +821,7 @@ export default function Home() {
               </div>
               <div>
                 <div className="step-title">20-minute one-time setup — automatic after that</div>
-                <div className="step-desc">Run the installer script (~10 min). Memory services auto-configure and start on login. Fill in your agent&apos;s identity templates (SOUL.md, AGENTS.md, MEMORY.md) using the included guides (~5 min). Done. You never touch it again.</div>
+                <div className="step-desc">Run the installer script (~10 min). Memory services auto-configure and start on login. Fill in your agent&apos;s identity templates (SOUL.md, AGENTS.md, MEMORY.md, TACIT.md) using the included guides (~5 min). Done. You never touch it again.</div>
               </div>
             </div>
             <div className="step">
