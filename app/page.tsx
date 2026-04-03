@@ -821,7 +821,7 @@ export default function Home() {
               </div>
               <div>
                 <div className="step-title">20-minute one-time setup — automatic after that</div>
-                <div className="step-desc">Run the installer script (~10 min). Memory services auto-configure and start on login. Fill in your agent&apos;s name and a few rules in MEMORY.md (~5 min). Done. You never touch it again.</div>
+                <div className="step-desc">Run the installer script (~10 min). Memory services auto-configure and start on login. Fill in your agent&apos;s identity templates (SOUL.md, AGENTS.md, MEMORY.md) using the included guides (~5 min). Done. You never touch it again.</div>
               </div>
             </div>
             <div className="step">
@@ -1007,7 +1007,7 @@ export default function Home() {
           <div className="cta-inner">
             <h2>Stop re-explaining yourself.</h2>
             <p className="cta-desc">
-              Every session, your agent already knows your stack, your rules, and what you decided last time. One download. 20 minutes. Runs 100% on your Mac — no cloud, no subscriptions, nothing recurring.
+              Every time you type &quot;we&apos;re using Next.js&quot; or &quot;I decided to go with Stripe&quot; again — that&apos;s a tax on your time and focus. $10 and 20 minutes eliminates that tax permanently. Runs 100% on your Mac, no cloud, no subscription, yours forever.
             </p>
             <div className="price-tag">
               <span style={{fontSize:'28px', color:'#52525b', textDecoration:'line-through', fontWeight:700, letterSpacing:'-0.02em', alignSelf:'center', marginRight:'4px'}}>$29</span>
