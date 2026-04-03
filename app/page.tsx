@@ -896,7 +896,7 @@ export default function Home() {
         <div className="wrap">
           <div className="openclaw-inner">
             <span className="openclaw-eyebrow">Purpose-built</span>
-            <h2 className="openclaw-heading">Built specifically for OpenClaw — not an afterthought.</h2>
+            <h2 className="openclaw-heading">Works natively with OpenClaw — reads your session files directly, nothing bolted on.</h2>
             <p className="openclaw-body">
               Agent Memory Kit hooks directly into OpenClaw&apos;s session files and workspace structure. Purpose-built for how OpenClaw agents work.
               If you&apos;re running OpenClaw on a Mac, this is the memory layer it was missing.
@@ -983,7 +983,7 @@ export default function Home() {
         <div className="wrap" style={{display:'flex', flexDirection:'column', alignItems:'center', textAlign:'center', gap:'16px'}}>
           <p style={{fontSize:'15px', color:'#a1a1aa', maxWidth:'480px', lineHeight:'1.6'}}>Your agent is blank right now. Fix it once — every session after that, it already knows.</p>
           <a href="/api/create-checkout" className="cta-main" style={{alignSelf:'center'}}>
-            Own It Forever — $10 →
+            Fix My Agent Now — $10 →
           </a>
           <span style={{fontSize:'12px', color:'#71717a'}}>$10 one-time · Instant download · 7-day refund</span>
         </div>
