@@ -656,7 +656,7 @@ export default function Home() {
             {/* Live buyer count — renders only if count ≥ 5, falls back silently */}
             <BuyerCount />
             <div className="proof-stat">
-              💬 200+ sessions in production · DM <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer" style={{color:'#a1a1aa', textDecoration:'underline', textDecorationColor:'rgba(161,161,170,0.35)', textUnderlineOffset:'2px'}}>@alfredmarktr</a> if stuck — same-day reply
+              💬 Stuck during setup? DM <a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer" style={{color:'#a1a1aa', textDecoration:'underline', textDecorationColor:'rgba(161,161,170,0.35)', textUnderlineOffset:'2px'}}>@alfredmarktr</a> on X — same-day reply
             </div>
           </div>
         </div>
@@ -692,7 +692,7 @@ export default function Home() {
           <div className="who-grid" style={{display:'grid', gridTemplateColumns:'1fr 1fr', gap:'12px'}}>
             {[
               'You paste the same context block at the start of every new chat',
-              "You've hesitated before typing something sensitive — you want your agent's memory private, on your Mac, never on someone else's server",
+              "You've typed something sensitive and wished it stayed local — not on someone else's server",
               'Your agent asks you things it already figured out last week',
               'You re-explain your stack or rules every new session',
               'You\'re building something and your agent keeps forgetting where you left off',
