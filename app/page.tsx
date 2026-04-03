@@ -297,6 +297,9 @@ export default function Home() {
           color: #fafafa; margin-bottom: 32px; line-height: 1.2;
           text-align: center;
         }
+        @media (max-width: 520px) {
+          .before-after-heading { text-align: left; }
+        }
         .ba-cols {
           display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
         }
@@ -638,8 +641,8 @@ export default function Home() {
               </span>
             </span>
             <p className="hero-proof" style={{marginTop:'14px', marginBottom:'0'}}>
-              <span className="hero-proof-label">From the creator — in daily use since December 2025:</span>
-              <span>I built this for my own agent. It knows my stack, decisions from months ago, and what I was building last week. Every new session it just <strong style={{color:'#fafafa', fontWeight:800}}>already knows</strong> — I haven&apos;t re-explained myself once since installing it.{' '}<a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a></span>
+              <span className="hero-proof-label">From the creator — 4+ months of daily use:</span>
+              <span>I built this for my own agent. It knows my stack, decisions from months ago, and what I was building last week. Every new session it just <strong style={{color:'#fafafa', fontWeight:800}}>already knows</strong> — I haven&apos;t re-explained myself once in over 4 months.{' '}<a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a></span>
             </p>
           </div>
 
@@ -707,19 +710,19 @@ export default function Home() {
           <p style={{fontSize:'13px', color:'#a1a1aa', marginTop:'20px', lineHeight:1.6}}>
             Even one is enough. $10, 20 minutes — your agent never starts from scratch again.
           </p>
-          <div style={{marginTop:'20px', display:'flex', alignItems:'center', gap:'16px', flexWrap:'wrap'}}>
-            <a href="/api/create-checkout" className="cta-main" style={{fontSize:'15px', padding:'12px 24px'}}>
-              Stop Re-Explaining Yourself — $10 →
-            </a>
-            <span style={{fontSize:'12px', color:'#71717a'}}>Instant download · 7-day refund</span>
-          </div>
-          <div style={{marginTop:'14px', display:'flex', alignItems:'center', gap:'8px', flexWrap:'wrap', padding:'10px 14px', background:'rgba(99,102,241,0.05)', border:'1px solid rgba(99,102,241,0.15)', borderRadius:'8px'}}>
+          <div style={{marginTop:'14px', marginBottom:'20px', display:'flex', alignItems:'center', gap:'8px', flexWrap:'wrap', padding:'10px 14px', background:'rgba(99,102,241,0.05)', border:'1px solid rgba(99,102,241,0.15)', borderRadius:'8px'}}>
             <span style={{fontSize:'12px', color:'#71717a', fontWeight:700}}>Requires:</span>
             <span style={{fontSize:'12px', color:'#a1a1aa'}}>Mac (macOS 12+)</span>
             <span style={{fontSize:'12px', color:'#3f3f46'}}>·</span>
             <span style={{fontSize:'12px', color:'#a1a1aa'}}><a href="https://openclaw.ai" target="_blank" rel="noopener noreferrer" style={{color:'#818cf8', textDecoration:'underline', textDecorationColor:'rgba(129,140,248,0.4)', textUnderlineOffset:'2px'}}>OpenClaw</a></span>
             <span style={{fontSize:'12px', color:'#3f3f46'}}>·</span>
             <span style={{fontSize:'12px', color:'#a1a1aa'}}><a href="https://ollama.ai" target="_blank" rel="noopener noreferrer" style={{color:'#a1a1aa', textDecoration:'underline', textDecorationColor:'rgba(161,161,170,0.35)', textUnderlineOffset:'2px'}}>Ollama</a> (free, ~5 min install, no GPU)</span>
+          </div>
+          <div style={{display:'flex', alignItems:'center', gap:'16px', flexWrap:'wrap'}}>
+            <a href="/api/create-checkout" className="cta-main" style={{fontSize:'15px', padding:'12px 24px'}}>
+              Stop Re-Explaining Yourself — $10 →
+            </a>
+            <span style={{fontSize:'12px', color:'#71717a'}}>Instant download · 7-day refund</span>
           </div>
         </div>
       </div>
