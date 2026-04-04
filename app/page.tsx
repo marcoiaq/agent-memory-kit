@@ -250,7 +250,7 @@ export default function Home() {
           font-size: 13px; font-weight: 600; color: #a1a1aa;
         }
         .proof-stat + .proof-stat {
-          border-left: 1px solid #18181b;
+          border-left: 1px solid #27272a;
         }
         .proof-dot {
           display: none;
@@ -541,7 +541,7 @@ export default function Home() {
           .demo-code { font-size: 11px; }
           .ba-cols { grid-template-columns: 1fr; }
           .proof-bar-inner { flex-direction: column; gap: 0; }
-          .proof-stat + .proof-stat { border-left: none; border-top: 1px solid #18181b; }
+          .proof-stat + .proof-stat { border-left: none; border-top: 1px solid #27272a; }
           .openclaw-inner { padding: 28px 20px; }
           .step { gap: 14px; }
           .cta-main { width: 100%; justify-content: center; }
@@ -673,7 +673,7 @@ export default function Home() {
         <div className="wrap">
           <div className="proof-bar-inner">
             <div className="proof-stat">
-              🔒 Your memory never leaves your Mac — zero cloud, zero API keys, forever private.
+              🔒 Your memory never leaves your Mac — no cloud, no API keys.
             </div>
             {/* Live buyer count — renders only if count ≥ 5, falls back silently */}
             <BuyerCount />
