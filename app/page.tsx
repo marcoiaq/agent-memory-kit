@@ -634,7 +634,7 @@ export default function Home() {
             <span className="hero-note">
               <span className="hero-note-item">7-day money-back guarantee</span>
               <span className="hero-note-item">No subscription, ever</span>
-              <span className="hero-note-item">100% local — no cloud</span>
+              <span className="hero-note-item">No GPU needed</span>
               <span className="hero-note-item">Instant ZIP download</span>
               <span style={{fontSize:'12px', color:'#71717a', display:'flex', alignItems:'center', gap:'4px'}}>
                 <span>🔒</span>
@@ -642,7 +642,7 @@ export default function Home() {
               </span>
             </span>
             <p className="hero-proof" style={{marginTop:'14px', marginBottom:'0'}}>
-              <span className="hero-proof-label">Built by the creator · used daily for 4+ months:</span>
+              <span className="hero-proof-label">Running on my own Mac — 4+ months straight in daily production:</span>
               <span>Every new session my agent knows my stack, my rules, and what I was building last week. It surfaces decisions from months ago without being asked. <strong style={{color:'#fafafa', fontWeight:800}}>Zero blank slates. Zero re-explaining.</strong>{' '}<a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a></span>
             </p>
           </div>
@@ -700,7 +700,7 @@ export default function Home() {
               'You paste the same context block at the start of every new chat',
               "You've typed something sensitive and wished it stayed local — not on someone else's server",
               'Your agent asks you things it already figured out last week',
-              'Your agent solved a problem last week — today you\'re watching it solve the same problem from scratch',
+              'Your agent solved a problem last week and is solving it again from scratch today',
               'You\'re building something and your agent keeps forgetting where you left off',
               'You\'ve lost a decision or context when a session ended',
             ].map((item) => (
