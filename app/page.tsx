@@ -481,8 +481,8 @@ export default function Home() {
         }
         .price-word { font-size: 15px; color: #a1a1aa; font-weight: 600; }
         .price-launch {
-          font-size: 12px; font-weight: 700; color: #f59e0b;
-          text-transform: uppercase; letter-spacing: 0.06em;
+          font-size: 12px; font-weight: 600; color: #a1a1aa;
+          text-transform: none; letter-spacing: 0em;
           margin-top: 4px; margin-bottom: 24px; display: block;
         }
         @keyframes cta-btn-pulse {
@@ -625,8 +625,8 @@ export default function Home() {
               <span style={{fontSize:'11px', fontWeight:700, color:'#22c55e', background:'rgba(34,197,94,0.08)', border:'1px solid rgba(34,197,94,0.2)', padding:'3px 8px', borderRadius:'4px', letterSpacing:'0.04em', textTransform:'uppercase'}}>One-time</span>
               <span style={{fontSize:'11px', fontWeight:700, color:'#f59e0b', background:'rgba(245,158,11,0.1)', border:'1px solid rgba(245,158,11,0.25)', padding:'3px 8px', borderRadius:'4px', letterSpacing:'0.06em', textTransform:'uppercase'}}>65% off</span>
             </div>
-            <span style={{fontSize:'12px', color:'#f59e0b', fontWeight:600, display:'flex', alignItems:'center', gap:'5px', marginTop:'2px'}}>
-              ⏳ Raises to $29 soon — lock in $10 now, yours forever.
+            <span style={{fontSize:'12px', color:'#a1a1aa', fontWeight:600, display:'flex', alignItems:'center', gap:'5px', marginTop:'2px'}}>
+              ✓ One-time · free updates forever · yours permanently
             </span>
             <a href="/api/create-checkout" className="cta-main cta-pulse" style={{marginTop:'8px'}}>
               Fix My Agent&apos;s Memory — $10 →
@@ -1017,7 +1017,7 @@ export default function Home() {
               <span className="price-num">$10</span>
               <span className="price-word">one-time</span>
             </div>
-            <span className="price-launch">⏳ Raises to $29 soon — lock in $10 now, yours forever.</span>
+            <span className="price-launch">✓ One-time payment · free updates forever · yours permanently</span>
             <a href="/api/create-checkout" className="cta-btn">Fix My Agent&apos;s Memory — $10 →</a>
             <p className="cta-meta" style={{marginTop:'14px', marginBottom:'8px', color:'#a1a1aa'}}>Secure checkout via Stripe · Instant download · 7-day money-back guarantee</p>
             <p style={{fontSize:'13px', color:'#a1a1aa', marginTop:'8px', display:'flex', alignItems:'center', justifyContent:'center', gap:'8px', flexWrap:'wrap'}}>
@@ -1051,8 +1051,8 @@ export default function Home() {
       <div className="mobile-buy-bar">
         <div className="mobile-buy-bar-inner">
           <div className="mobile-buy-bar-text">
-            <span style={{fontSize:'11px', color:'#71717a', textDecoration:'line-through', marginRight:'3px'}}>$29</span><strong>$10</strong><span style={{fontWeight:400, color:'#71717a', fontSize:'12px'}}> one-time</span><br />
-            <span style={{color:'#f59e0b', fontWeight:700, fontSize:'11px'}}>⏳ Goes to $29 soon</span><span style={{color:'#71717a', fontSize:'11px'}}> · 7-day refund</span>
+            <span style={{fontSize:'11px', color:'#71717a', textDecoration:'line-through', marginRight:'3px'}}>$29</span><strong>$10</strong><span style={{fontWeight:400, color:'#71717a', fontSize:'12px'}}> one-time · no subscription</span><br />
+            <span style={{color:'#71717a', fontSize:'11px'}}>✓ Free updates forever · 7-day refund</span>
           </div>
           <a href="/api/create-checkout" className="mobile-buy-bar-btn">
             Fix My Agent — $10 →
