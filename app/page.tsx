@@ -628,6 +628,9 @@ export default function Home() {
             <span style={{fontSize:'12px', color:'#a1a1aa', fontWeight:600, display:'flex', alignItems:'center', gap:'5px', marginTop:'2px'}}>
               ✓ One-time · free updates forever · yours permanently
             </span>
+            <span style={{fontSize:'11px', color:'#f59e0b', fontWeight:600, display:'flex', alignItems:'center', gap:'5px', marginTop:'1px'}}>
+              ⚡ Launch pricing — won&apos;t stay $10 forever
+            </span>
             <a href="/api/create-checkout" className="cta-main cta-pulse" style={{marginTop:'8px'}}>
               Fix My Agent&apos;s Memory — $10 →
             </a>
@@ -641,10 +644,24 @@ export default function Home() {
                 <span>Stripe secure checkout</span>
               </span>
             </span>
-            <p className="hero-proof" style={{marginTop:'14px', marginBottom:'0'}}>
-              <span className="hero-proof-label">Running on my own Mac — 4+ months straight in daily production:</span>
-              <span>Every new session my agent knows my stack, my rules, and what I was building last week. It surfaces decisions from months ago without being asked. <strong style={{color:'#fafafa', fontWeight:800}}>Zero blank slates. Zero re-explaining.</strong>{' '}<a href="https://x.com/alfredmarktr" target="_blank" rel="noopener noreferrer">@alfredmarktr</a></span>
-            </p>
+            <div style={{
+              marginTop:'18px',
+              background:'rgba(99,102,241,0.07)',
+              border:'1px solid rgba(99,102,241,0.22)',
+              borderLeft:'3px solid #6366f1',
+              borderRadius:'10px',
+              padding:'14px 16px',
+              maxWidth:'520px',
+            }}>
+              <p style={{fontSize:'14px', color:'#d4d4d8', lineHeight:1.6, margin:0, marginBottom:'8px'}}>
+                &ldquo;Every new session my agent knows my stack, my rules, and what I was building last week. It surfaces decisions from months ago without being asked.{' '}
+                <strong style={{color:'#fafafa', fontWeight:800}}>Zero blank slates. Zero re-explaining.&rdquo;</strong>
+              </p>
+              <span style={{fontSize:'12px', color:'#818cf8', fontWeight:700}}>
+                @alfredmarktr
+              </span>
+              <span style={{fontSize:'12px', color:'#52525b', fontWeight:500}}> — running on my own Mac, 4+ months in daily production</span>
+            </div>
           </div>
 
         </div>
