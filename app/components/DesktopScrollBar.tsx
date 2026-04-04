@@ -7,7 +7,7 @@ export default function DesktopScrollBar() {
 
   useEffect(() => {
     const onScroll = () => {
-      const shouldShow = window.scrollY > 300
+      const shouldShow = window.scrollY > 600
       setVisible(shouldShow)
       document.body.classList.toggle('bar-visible', shouldShow)
     }
