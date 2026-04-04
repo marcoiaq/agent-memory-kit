@@ -607,7 +607,7 @@ export default function Home() {
         <div className="wrap">
           <div className="hero-badge">
             <a href="https://openclaw.ai" target="_blank" rel="noopener noreferrer">OpenClaw</a>
-            {' '}add-on · Mac only · 100% local · No GPU needed
+            {' '}add-on · Mac only · <a href="https://ollama.ai" target="_blank" rel="noopener noreferrer">Ollama</a> required (free) · No GPU needed
           </div>
           <h1>Your AI agent<br />forgets everything.</h1>
           <p style={{fontSize: 'clamp(16px, 2.5vw, 19px)', color: '#71717a', letterSpacing: '-0.01em', marginBottom: '10px', lineHeight: 1.5, fontWeight: 500}}>
@@ -653,6 +653,7 @@ export default function Home() {
               padding:'14px 16px',
               maxWidth:'520px',
             }}>
+              <span style={{fontSize:'10px', fontWeight:800, letterSpacing:'0.08em', textTransform:'uppercase', color:'#71717a', display:'block', marginBottom:'8px'}}>Builder&apos;s note</span>
               <p style={{fontSize:'14px', color:'#d4d4d8', lineHeight:1.6, margin:0, marginBottom:'8px'}}>
                 &ldquo;Every new session my agent knows my stack, my rules, and what I was building last week. It surfaces decisions from months ago without being asked.{' '}
                 <strong style={{color:'#fafafa', fontWeight:800}}>Zero blank slates. Zero re-explaining.&rdquo;</strong>
