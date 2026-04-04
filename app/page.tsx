@@ -610,11 +610,13 @@ export default function Home() {
             {' '}add-on · Mac only · <a href="https://ollama.ai" target="_blank" rel="noopener noreferrer">Ollama</a> required (free) · No GPU needed
           </div>
           <h1>Your AI agent<br />forgets everything.</h1>
-          <p style={{fontSize: 'clamp(16px, 2.5vw, 19px)', color: '#a1a1aa', letterSpacing: '-0.01em', marginBottom: '0', lineHeight: 1.6, fontWeight: 500}}>
-            Every session starts blank. You re-explain your stack — again and again.{' '}
-            <span style={{color: '#fafafa', fontWeight: 800}}>One{' '}
+          <p style={{fontSize: 'clamp(16px, 2.5vw, 19px)', color: '#71717a', letterSpacing: '-0.01em', marginBottom: '10px', lineHeight: 1.5, fontWeight: 500}}>
+            Every session starts blank. You re-explain your stack. Again.
+          </p>
+          <p style={{fontSize: 'clamp(18px, 2.8vw, 22px)', fontWeight: 700, color: '#f4f4f5', letterSpacing: '-0.02em', marginBottom: '0', lineHeight: 1.3}}>
+            One{' '}
             <span style={{color: '#fafafa', fontWeight: 900, background: 'rgba(99,102,241,0.12)', borderRadius: '4px', padding: '1px 6px', letterSpacing: '-0.03em'}}>20-minute setup</span>
-            {' '}ends that permanently.</span>
+            {' '}— every session after that, your agent already knows. No blank slates. No re-explaining.
           </p>
           <div className="hero-actions" style={{marginTop:'20px'}}>
             <div style={{display:'flex', alignItems:'center', gap:'10px', marginBottom:'4px', flexWrap:'wrap'}}>
