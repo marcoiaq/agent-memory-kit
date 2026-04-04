@@ -607,7 +607,7 @@ export default function Home() {
         <div className="wrap">
           <div className="hero-badge">
             <a href="https://openclaw.ai" target="_blank" rel="noopener noreferrer">OpenClaw</a>
-            {' '}add-on · Mac only · 100% local · No cloud, no API keys
+            {' '}add-on · Mac only · 100% local · No GPU needed
           </div>
           <h1>Your AI agent<br />forgets everything.</h1>
           <p style={{fontSize: 'clamp(16px, 2.5vw, 19px)', color: '#71717a', letterSpacing: '-0.01em', marginBottom: '10px', lineHeight: 1.5, fontWeight: 500}}>
